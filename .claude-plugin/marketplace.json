@@ -1,0 +1,78 @@
+{
+  "name": "ngpestelos-skills",
+  "owner": {
+    "name": "Nestor Pestelos",
+    "email": "ngpestelos@gmail.com"
+  },
+  "metadata": {
+    "description": "Production-tested Claude Code skills for software engineering, debugging, and process optimization",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "root-cause-investigation",
+      "source": "./skills/root-cause-investigation",
+      "description": "Dual-mode investigation framework combining Five Whys and Peeling the Onion for systematic root cause analysis",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": ["debugging", "root-cause", "five-whys", "investigation", "troubleshooting"],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "five-step-optimizer",
+      "source": "./skills/five-step-optimizer",
+      "description": "Apply Elon Musk's Five-Step Algorithm to systematically optimize any process, system, or workflow",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": ["optimization", "process", "workflow", "five-step", "systematic"],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "security-patterns",
+      "source": "./skills/security-patterns",
+      "description": "Proactive security analysis for XSS, CSRF, SQL injection, parameter logging, and OWASP top 10 vulnerabilities",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": ["security", "xss", "csrf", "owasp", "web-security", "code-review"],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "test-plan-methodology",
+      "source": "./skills/test-plan-methodology",
+      "description": "Systematic 4-phase test planning to prevent coverage blind spots in any codebase with tests",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": ["testing", "test-plan", "coverage", "quality", "methodology"],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "database-migration-termination-safety",
+      "source": "./skills/database-migration-termination-safety",
+      "description": "Guidance on what happens when database migrations are terminated mid-execution and how to design safe recoverable migrations",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": ["database", "migration", "safety", "rails", "postgresql", "recovery"],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    }
+  ]
+}
