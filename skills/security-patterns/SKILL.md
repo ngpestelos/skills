@@ -5,7 +5,7 @@ license: MIT
 compatibility: Best suited for Ruby on Rails applications, but patterns apply to any web framework.
 metadata:
   author: ngpestelos
-  version: "1.0"
+  version: "1.0.0"
 ---
 
 # Security-First Patterns

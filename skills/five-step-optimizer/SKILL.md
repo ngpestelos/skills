@@ -4,7 +4,7 @@ description: Apply Elon Musk's Five-Step Algorithm to systematically optimize an
 license: MIT
 metadata:
   author: ngpestelos
-  version: "1.0"
+  version: "1.0.0"
 ---
 
 # Five-Step Optimizer

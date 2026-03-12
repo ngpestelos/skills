@@ -5,7 +5,7 @@ license: MIT
 compatibility: Ruby on Rails with PostgreSQL. Heroku section requires Heroku CLI.
 metadata:
   author: ngpestelos
-  version: "1.0"
+  version: "1.0.0"
 ---
 
 # Database Migration Termination Safety

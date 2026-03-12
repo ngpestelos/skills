@@ -4,7 +4,7 @@ description: Dual-mode investigation framework combining Five Whys (systemic roo
 license: MIT
 metadata:
   author: ngpestelos
-  version: "1.0"
+  version: "1.0.0"
 ---
 
 # Root Cause Investigation
