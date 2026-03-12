@@ -4,6 +4,17 @@ Production-tested [Agent Skills](https://agentskills.io) for software engineerin
 
 ## Installation
 
+### All skills (symlink)
+
+```bash
+git clone git@github.com:ngpestelos/skills.git ~/src/skills
+cd ~/src/skills && ./install.sh
+```
+
+This symlinks every skill into `~/.claude/skills/` so they stay in sync with `git pull`.
+
+### Individual skills (plugin)
+
 ```bash
 # Add marketplace (one-time)
 /plugin marketplace add ngpestelos/skills
