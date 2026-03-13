@@ -25,6 +25,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 /plugin install security-patterns@ngpestelos-skills
 /plugin install test-plan-methodology@ngpestelos-skills
 /plugin install database-migration-termination-safety@ngpestelos-skills
+/plugin install claude-code-command-optimizer@ngpestelos-skills
 ```
 
 ## Available Skills
@@ -36,6 +37,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [security-patterns](skills/security-patterns/) | OWASP top 10 proactive security analysis |
 | [test-plan-methodology](skills/test-plan-methodology/) | 4-phase test planning to prevent coverage blind spots |
 | [database-migration-termination-safety](skills/database-migration-termination-safety/) | Safe, recoverable database migration design |
+| [claude-code-command-optimizer](skills/claude-code-command-optimizer/) | Design, debug, and optimize Claude Code custom commands |
 
 ## Compatibility
 

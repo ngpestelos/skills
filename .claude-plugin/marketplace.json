@@ -73,6 +73,19 @@
       "category": "development",
       "homepage": "https://github.com/ngpestelos/skills",
       "license": "MIT"
+    },
+    {
+      "name": "claude-code-command-optimizer",
+      "source": "./skills/claude-code-command-optimizer",
+      "description": "Expertise in designing, debugging, and optimizing Claude Code custom commands for reliability within LLM constraints",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": ["claude-code", "commands", "optimization", "token-management", "incremental-generation", "workflow"],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
     }
   ]
 }
