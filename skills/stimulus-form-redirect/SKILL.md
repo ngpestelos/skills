@@ -5,128 +5,59 @@ description: "Replace AJAX + DOM manipulation with form submission + server redi
 
 # Stimulus Form Submission Redirect Simplification
 
-### Before: Complex AJAX + DOM Manipulation
+Replace client-side DOM manipulation after AJAX with server redirect. Instead of parsing HTML responses and updating multiple DOM elements (sidebar, content, flash), let the server render the correct state on redirect.
+
+## The Pattern
 
 ```javascript
-// Complex pattern - maintaining client-side state
-export default class extends Controller {
-  submit(event) {
-    event.preventDefault()
+// WRONG - Complex DOM manipulation after AJAX
+handleSuccess(data) {
+  this.updateSidebar(data.sidebar_html)    // innerHTML = XSS risk
+  this.updateContent(data.content_html)
+  this.showActionsContainer()
+  window.App.showSuccessFlash(data.message)
+}
 
-    fetch(this.element.action, {
-      method: 'POST',
-      headers: { 'X-CSRF-Token': this.csrfToken },
-      body: new FormData(this.element)
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data.success) {
-        this.handleSuccess(data)
-      }
-    })
+// RIGHT - Server redirect handles state
+handleSuccess(data) {
+  if (data.redirect_url) {
+    window.location.href = data.redirect_url
+  } else {
+    window.location.reload()
   }
+}
 
-  handleSuccess(data) {
-    // Complex DOM manipulation
-    this.updateSidebar(data.sidebar_html)
-    this.updateContent(data.content_html)
-    this.showActionsContainer()
-    window.App.showSuccessFlash(data.message)
-  }
-
-  updateSidebar(html) {
-    const sidebar = document.getElementById('sidebar-list')
-    if (sidebar && html) {
-      sidebar.innerHTML = html // Potential XSS, complexity
-    }
-  }
+handleError(data) {
+  const errors = data.errors || ['An error occurred']
+  window.App.showErrorFlash(errors.join(', '))
 }
 ```
 
-### After: Simple Form Submission + Redirect
+## Bulk Operations via Hidden Form
 
-```javascript
-// Simplified pattern - server handles state
-export default class extends Controller {
-  submit(event) {
-    event.preventDefault()
-
-    fetch(this.element.action, {
-      method: 'POST',
-      headers: {
-        'X-CSRF-Token': this.csrfToken,
-        'Accept': 'application/json'
-      },
-      body: new FormData(this.element)
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data.success) {
-        this.handleSuccess(data)
-      } else {
-        this.handleError(data)
-      }
-    })
-  }
-
-  handleSuccess(data) {
-    // Simple redirect - server renders correct state
-    if (data.redirect_url) {
-      window.location.href = data.redirect_url
-    } else {
-      window.location.reload()
-    }
-  }
-
-  handleError(data) {
-    const errors = data.errors || ['An error occurred']
-    window.App.showErrorFlash(errors.join(', '))
-  }
-}
-```
-
-## Bulk Operations via Form Submission
-
-For bulk operations (deleting multiple items), create a hidden form:
+For bulk operations (deleting multiple items), create a hidden form and submit it. The server handles the redirect.
 
 ```javascript
 deleteSelected(event) {
   event.preventDefault()
-
   if (this.selectedItems.size === 0) return
+  if (!window.confirm(`Delete ${this.selectedItems.size} items?`)) return
 
-  if (!window.confirm(`Delete ${this.selectedItems.size} items?`)) {
-    return
-  }
-
-  // Create form dynamically
   const form = document.createElement('form')
   form.method = 'POST'
   form.action = '/items/bulk_destroy'
 
-  // Method override for DELETE
-  const methodInput = document.createElement('input')
-  methodInput.type = 'hidden'
-  methodInput.name = '_method'
-  methodInput.value = 'delete'
-  form.appendChild(methodInput)
-
-  // CSRF token
-  const csrfToken = document.querySelector('meta[name="csrf-token"]')?.content
-  const tokenInput = document.createElement('input')
-  tokenInput.type = 'hidden'
-  tokenInput.name = 'authenticity_token'
-  tokenInput.value = csrfToken
-  form.appendChild(tokenInput)
-
-  // Item IDs
-  this.selectedItems.forEach(id => {
-    const input = document.createElement('input')
-    input.type = 'hidden'
-    input.name = 'item_ids[]'
-    input.value = id
+  // Add hidden fields: _method=delete, authenticity_token, item_ids[]
+  const addField = (name, value) => {
+    const input = Object.assign(document.createElement('input'), {
+      type: 'hidden', name, value
+    })
     form.appendChild(input)
-  })
+  }
+
+  addField('_method', 'delete')
+  addField('authenticity_token', document.querySelector('meta[name="csrf-token"]')?.content)
+  this.selectedItems.forEach(id => addField('item_ids[]', id))
 
   document.body.appendChild(form)
   form.submit()
@@ -135,33 +66,10 @@ deleteSelected(event) {
 
 ## Server-Side Support
 
-Controller returns JSON with redirect_url:
+Controller returns JSON with `redirect_url` for AJAX, or redirects directly for form submissions.
 
 ```ruby
-def create
-  @record = current_scope.build(record_params)
-
-  respond_to do |format|
-    if @record.save
-      format.json do
-        render json: {
-          success: true,
-          redirect_url: records_path,
-          message: 'Created successfully'
-        }
-      end
-    else
-      format.json do
-        render json: {
-          success: false,
-          errors: @record.errors.full_messages
-        }
-      end
-    end
-  end
-end
-
-# Bulk operations use redirect directly
+# Bulk operations redirect directly
 def bulk_destroy
   ids = params[:item_ids]
 
@@ -176,63 +84,9 @@ def bulk_destroy
 end
 ```
 
-## Updating JavaScript Tests
-
-### Before: DOM Manipulation Tests
-
-```javascript
-// Tests for old DOM manipulation - no longer needed
-test('updates sidebar with new HTML', () => {
-  // Verified complex DOM updates
-})
-```
-
-### After: Redirect Behavior Tests
-
-```javascript
-describe('handleSuccess', () => {
-  let originalLocation
-
-  beforeEach(() => {
-    originalLocation = window.location
-    delete window.location
-    window.location = { href: '', reload: jest.fn() }
-  })
-
-  afterEach(() => {
-    window.location = originalLocation
-  })
-
-  test('redirects to redirect_url when provided', () => {
-    controller.handleSuccess({
-      success: true,
-      redirect_url: '/items'
-    })
-
-    expect(window.location.href).toBe('/items')
-  })
-
-  test('reloads page when no redirect_url', () => {
-    controller.handleSuccess({ success: true })
-
-    expect(window.location.reload).toHaveBeenCalled()
-  })
-})
-```
-
-## Benefits
-
-1. **Reduced Complexity**: No client-side HTML parsing or DOM updates
-2. **Single Source of Truth**: Server templates render correct state
-3. **Simpler Testing**: Test redirect behavior, not DOM manipulation
-4. **Fewer Edge Cases**: No partial update failures or stale DOM
-5. **Better Maintainability**: UI changes only need template updates
-6. **Security**: No XSS risk from client-side HTML insertion
-
 ## When NOT to Use
 
 - **Real-time Updates**: When immediate feedback without page flash is required
 - **Partial Updates**: When only small part of page needs updating (use Turbo)
 - **Long Lists**: When page reload would lose scroll position
 - **Form Wizards**: When multi-step forms need to preserve state
-
