@@ -38,6 +38,9 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [test-plan-methodology](skills/test-plan-methodology/) | 4-phase test planning to prevent coverage blind spots |
 | [database-migration-termination-safety](skills/database-migration-termination-safety/) | Safe, recoverable database migration design |
 | [claude-code-command-optimizer](skills/claude-code-command-optimizer/) | Design, debug, and optimize Claude Code custom commands |
+| [activerecord-query-performance-patterns](skills/activerecord-query-performance-patterns/) | Four techniques preventing 10-70x PostgreSQL query degradation |
+| [model-method-memoization-view-performance](skills/model-method-memoization-view-performance/) | Memoize model methods to reduce view rendering allocations |
+| [dead-code-detection](skills/dead-code-detection/) | Systematic orphaned file and dead code identification |
 
 ## Compatibility
 
