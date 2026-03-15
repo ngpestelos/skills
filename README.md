@@ -73,6 +73,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [security-patterns](skills/security-patterns/) | OWASP top 10 proactive security analysis |
 | [adversarial-agent-validation](skills/adversarial-agent-validation/) | Three-agent adversarial pattern (Finder/Adversary/Referee) for deep review |
 | [dead-code-detection](skills/dead-code-detection/) | Systematic orphaned file and dead code identification |
+| [cyclomatic-complexity-reduction](skills/cyclomatic-complexity-reduction/) | Reduce cyclomatic complexity via early-return extraction, guard unification, and safe access helpers |
 
 ### Process & Problem-Solving
 
@@ -80,6 +81,12 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 |-------|-------------|
 | [root-cause-investigation](skills/root-cause-investigation/) | Five Whys + Peeling the Onion dual-mode debugging framework |
 | [five-step-optimizer](skills/five-step-optimizer/) | Musk's Five-Step Algorithm for process optimization |
+
+### Communication & Framing
+
+| Skill | Description |
+|-------|-------------|
+| [response-diversity](skills/response-diversity/) | Vary response framing by context (learner, engineer, family, researcher) |
 
 ### Claude Code & Tooling
 
