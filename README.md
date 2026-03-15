@@ -88,6 +88,12 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 |-------|-------------|
 | [response-diversity](skills/response-diversity/) | Vary response framing by context (learner, engineer, family, researcher) |
 
+### Productivity
+
+| Skill | Description |
+|-------|-------------|
+| [scanned-document-extraction](skills/scanned-document-extraction/) | Extract structured data from scanned images/PDFs into markdown, preserving all granular detail |
+
 ### Claude Code & Tooling
 
 | Skill | Description |
