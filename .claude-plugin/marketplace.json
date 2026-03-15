@@ -39,7 +39,7 @@
       "name": "security-patterns",
       "source": "./skills/security-patterns",
       "description": "Proactive security analysis for XSS, CSRF, SQL injection, parameter logging, and OWASP top 10 vulnerabilities",
-      "version": "1.0.0",
+      "version": "2.0.0",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -97,6 +97,19 @@
       },
       "keywords": ["framing", "perspective", "tone", "response-style", "communication"],
       "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "scanned-document-extraction",
+      "source": "./skills/scanned-document-extraction",
+      "description": "Extract structured data from scanned documents (images, PDFs) into markdown notes, preserving all granular detail",
+      "version": "1.1.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": ["extraction", "scanning", "pdf", "receipt", "medical-records", "markdown"],
+      "category": "productivity",
       "homepage": "https://github.com/ngpestelos/skills",
       "license": "MIT"
     }
