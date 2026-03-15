@@ -86,6 +86,19 @@
       "category": "development",
       "homepage": "https://github.com/ngpestelos/skills",
       "license": "MIT"
+    },
+    {
+      "name": "response-diversity",
+      "source": "./skills/response-diversity",
+      "description": "Vary response framing by context (learner, engineer, family, researcher) instead of defaulting to consulting/business framing",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": ["framing", "perspective", "tone", "response-style", "communication"],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
     }
   ]
 }
