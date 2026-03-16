@@ -4,24 +4,18 @@ description: Extract structured data from scanned documents (images, PDFs) into 
 license: MIT
 metadata:
   author: ngpestelos
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # Scanned Document Extraction
 
-Extract all structured data from scanned images and PDFs into searchable, readable markdown. The purpose of extraction is to make scanned data queryable — compressing it into summaries defeats that purpose.
-
-## Core Rule
-
-**Preserve all granular detail.** Every line item, quantity, unit price, date, reference number, and name visible in the scan must appear in the output. Present both itemized detail AND a summary table — never drop line items to save space.
+Extract all structured data from scanned images and PDFs into searchable, readable markdown. The purpose of extraction is to make scanned data queryable — compressing it into summaries defeats that purpose. Every line item, quantity, unit price, date, and reference number visible in the scan must appear in the output.
 
 ## Workflow
 
-### Step 1: Read All Attachments
+### Step 1: Extract Per Document
 
-Locate all `![[embedded]]` files referenced in the note. Read each image and PDF. Do not skip any attachment — the text portion of a note may be incomplete without its embeds.
-
-### Step 2: Extract Per Document
+Locate all `![[embedded]]` files referenced in the note. Read every image and PDF — do not skip any attachment.
 
 For each scanned document, extract into the appropriate format:
 
@@ -35,13 +29,9 @@ For each scanned document, extract into the appropriate format:
 **Prescriptions / Medical Notes:**
 - Doctor: name, specialty, credentials, clinic location
 - Patient name, date of visit
-- Prescribed items or instructions (best-effort on handwriting)
+- Prescribed items or instructions (best-effort on handwriting — mark unclear portions with [unclear] or [Inference])
 
-**Contracts / Legal Documents:**
-- Parties, dates, key terms, obligations
-- Monetary amounts, schedules, conditions
-
-### Step 3: Structure the Note
+### Step 2: Structure the Note
 
 ```markdown
 # [Procedure/Transaction Name]
@@ -64,22 +54,7 @@ For each scanned document, extract into the appropriate format:
 |------|-----|-------|
 | [every line item from the scan] | | |
 
-## [Other sections as needed]
-
 ## Attachments
 
 ![[original attachments preserved]]
 ```
-
-### Step 4: Verify Completeness
-
-- Cross-check totals: do line items sum to the stated total?
-- Flag discrepancies (e.g., receipt amount differs from bill)
-- Ensure every attachment was read and extracted
-
-## Key Rules
-
-- **Summary does not replace detail** — always include both
-- **Handwritten text**: extract best-effort, mark unclear portions with [unclear] or [Inference]
-- **Multiple documents**: extract each separately, then add a cross-document summary if they relate (e.g., hospital bill + receipt = total cost breakdown)
-- **Preserve original attachments** at the bottom of the note — the extractions supplement, not replace, the scans
