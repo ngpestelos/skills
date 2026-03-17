@@ -98,7 +98,6 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 
 | Skill | Description |
 |-------|-------------|
-| [claude-code-command-optimizer](skills/claude-code-command-optimizer/) | Design, debug, and optimize Claude Code custom commands |
 | [hook-state-cascade-patterns](skills/hook-state-cascade-patterns/) | Stateful hook patterns: cascade routing, cooldowns, and state fallback |
 | [skill-decomposition-methodology](skills/skill-decomposition-methodology/) | Refactor bloated skills (>500 lines) into focused sub-skills |
 
