@@ -13,15 +13,7 @@ metadata:
 
 First decision when writing any job: does this error warrant a retry?
 
-```
-Is this a monitoring/audit job?
---- YES -> Non-fatal (log, don't re-raise)
---- NO  -> Is the error transient?
-           --- YES -> Fatal (re-raise for retry)
-           --- NO  -> Will retrying help?
-                      --- YES -> Fatal
-                      --- NO  -> Non-fatal
-```
+Monitoring/audit job? → Non-fatal. Otherwise: transient error? → Fatal. Will retrying help? → Fatal. Else → Non-fatal.
 
 **Fatal (Pattern A)**: Transient issues — network errors, timeouts, temporary DB locks. Wrap mutations in a transaction, log start/complete/fail with duration, always re-raise.
 
@@ -84,14 +76,9 @@ end
 
 `perform_later` inside transactions causes race conditions where workers execute before commit.
 
-```ruby
-# WRONG - Job enqueued inside transaction
-ActiveRecord::Base.transaction do
-  create_record
-  PublishJob.perform_later(@record.id)  # Worker may run before commit!
-end
+WRONG: `perform_later` inside transaction — worker may run before commit. RIGHT: enqueue after the transaction block.
 
-# RIGHT - Job enqueued AFTER transaction
+```ruby
 ActiveRecord::Base.transaction do
   create_record
 end
@@ -129,15 +116,10 @@ end
 
 Entity-based idempotency (checking `cloned_from_id`) prevents multiple intentional runs. Operation-based idempotency uses unique `operation_id` + cache to allow multiple intentional runs while preventing retry duplicates.
 
-```ruby
-# User clones template -> School A, School B, School C
-# Entity-based: BREAKS (can only clone once)
-# Operation-based: WORKS (different operation_ids)
-
-# User retries failed clone (network timeout)
-# Entity-based: Creates duplicate
-# Operation-based: Returns cached result (idempotent)
-```
+| Scenario | Entity-based | Operation-based |
+|----------|-------------|-----------------|
+| Clone template → A, B, C | BREAKS (one clone only) | WORKS (different operation_ids) |
+| Retry failed clone | Creates duplicate | Returns cached result |
 
 ### Cache Check BEFORE Processing (TOCTOU Prevention)
 
@@ -165,13 +147,4 @@ end
 
 ### Propagate Operation ID Through Job Chain
 
-Add `operation_id` as **last** parameter, **optional** with `nil` default for backward compatibility.
-
-```ruby
-class ProcessJob < ApplicationJob
-  def perform(dest_id, source_id, operation_id = nil)
-    @operation_id = operation_id || SecureRandom.uuid
-    NestedJob.perform_now(name: name, source: source, operation_id: @operation_id)
-  end
-end
-```
+Add `operation_id` as **last** parameter, **optional** with `nil` default for backward compatibility. Each job in the chain: `def perform(dest_id, source_id, operation_id = nil)` → `@operation_id = operation_id || SecureRandom.uuid` → pass to nested jobs.
