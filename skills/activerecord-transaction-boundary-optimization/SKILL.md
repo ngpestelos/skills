@@ -1,7 +1,10 @@
 ---
 name: activerecord-transaction-boundary-optimization
-description: "Optimizes ActiveRecord transaction boundaries by moving read operations outside transaction blocks to reduce lock time and contention. Covers pre-fetching, backward-compatible signatures, and minimizing scope. Trigger keywords: transaction optimization, lock contention, transaction boundary, read inside transaction, pre-fetch before transaction, minimize transaction scope, transaction deadlock prevention. (global)"
-allowed-tools: Read, Grep, Glob
+description: "Optimizes ActiveRecord transaction boundaries by moving read operations outside transaction blocks to reduce lock time and contention. Trigger keywords: transaction optimization, lock contention, transaction boundary, pre-fetch before transaction, minimize transaction scope. (global)"
+license: MIT
+metadata:
+  author: ngpestelos
+  version: "2.0.0"
 ---
 
 # ActiveRecord Transaction Boundary Optimization
@@ -34,25 +37,7 @@ def process_records(product, dest_sale)
 end
 ```
 
-## Backward Compatible Method Signatures
-
-Add optional parameters for pre-fetched data so callers can opt in without breaking existing code.
-
-```ruby
-def clone_classifications(cloned_product, uncategorized = nil, source_records_prefetch = nil, dest_records_prefetch = nil)
-  if source_records_prefetch && dest_records_prefetch
-    source_records = source_records_prefetch
-    dest_records = dest_records_prefetch
-  else
-    # Fallback to fetching (standalone usage)
-    source_record_ids = classifications.map(&:record_id).compact
-    source_records = Record.where(id: source_record_ids).index_by(&:id)
-    dest_records = dest_sale.records.index_by(&:name)
-  end
-
-  # Rest of method uses source_records and dest_records
-end
-```
+For backward compatibility, add optional params for pre-fetched data with fallback to fetching when called standalone.
 
 ## Preserving Atomicity
 

@@ -121,7 +121,7 @@
       "name": "activerecord-transaction-boundary-optimization",
       "source": "./skills/activerecord-transaction-boundary-optimization",
       "description": "Optimizes ActiveRecord transaction boundaries by moving read operations outside transaction blocks to reduce lock time and contention.",
-      "version": "1.0.0",
+      "version": "2.0.0",
       "author": {
         "name": "Nestor Pestelos"
       },
