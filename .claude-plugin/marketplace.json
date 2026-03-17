@@ -10,53 +10,217 @@
   },
   "plugins": [
     {
-      "name": "root-cause-investigation",
-      "source": "./skills/root-cause-investigation",
-      "description": "Dual-mode investigation framework combining Five Whys and Peeling the Onion for systematic root cause analysis",
+      "name": "activejob-design-patterns",
+      "source": "./skills/activejob-design-patterns",
+      "description": "Self-contained ActiveJob architecture with transaction safety, defensive programming, fatal vs non-fatal error handling, external API integration, ...",
       "version": "1.0.0",
       "author": {
         "name": "Nestor Pestelos"
       },
-      "keywords": ["debugging", "root-cause", "five-whys", "investigation", "troubleshooting"],
+      "keywords": [
+        "activejob",
+        "rails",
+        "background-jobs",
+        "idempotency"
+      ],
       "category": "development",
       "homepage": "https://github.com/ngpestelos/skills",
       "license": "MIT"
     },
     {
-      "name": "five-step-optimizer",
-      "source": "./skills/five-step-optimizer",
-      "description": "Apply Elon Musk's Five-Step Algorithm to systematically optimize any process, system, or workflow",
+      "name": "activerecord-application-query-optimization",
+      "source": "./skills/activerecord-application-query-optimization",
+      "description": "Prevents N+1 queries, duplicate joins, and missing eager loading in ActiveRecord.",
       "version": "2.0.0",
       "author": {
         "name": "Nestor Pestelos"
       },
-      "keywords": ["optimization", "process", "workflow", "five-step", "systematic"],
+      "keywords": [
+        "activerecord",
+        "n-plus-one",
+        "eager-loading",
+        "rails"
+      ],
       "category": "development",
       "homepage": "https://github.com/ngpestelos/skills",
       "license": "MIT"
     },
     {
-      "name": "security-patterns",
-      "source": "./skills/security-patterns",
-      "description": "Proactive security analysis for XSS, CSRF, SQL injection, parameter logging, and OWASP top 10 vulnerabilities",
-      "version": "2.0.0",
-      "author": {
-        "name": "Nestor Pestelos"
-      },
-      "keywords": ["security", "xss", "csrf", "owasp", "web-security", "code-review"],
-      "category": "development",
-      "homepage": "https://github.com/ngpestelos/skills",
-      "license": "MIT"
-    },
-    {
-      "name": "test-plan-methodology",
-      "source": "./skills/test-plan-methodology",
-      "description": "Systematic 4-phase test planning to prevent coverage blind spots in any codebase with tests",
+      "name": "activerecord-eager-loading-testing-patterns",
+      "source": "./skills/activerecord-eager-loading-testing-patterns",
+      "description": "Testing patterns for ActiveRecord eager loading: .association(:name).loaded? verification, query count tests via ActiveSupport::Notifications, patt...",
       "version": "1.0.0",
       "author": {
         "name": "Nestor Pestelos"
       },
-      "keywords": ["testing", "test-plan", "coverage", "quality", "methodology"],
+      "keywords": [
+        "activerecord",
+        "testing",
+        "eager-loading",
+        "rails"
+      ],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "activerecord-graceful-corrupted-data-handling",
+      "source": "./skills/activerecord-graceful-corrupted-data-handling",
+      "description": "Graceful handling of missing/corrupted foreign key data: .find_by instead of .find for optional lookups, safe navigation with fallbacks, callback n...",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "activerecord",
+        "error-handling",
+        "nil-safety",
+        "rails"
+      ],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "activerecord-idempotent-create-patterns",
+      "source": "./skills/activerecord-idempotent-create-patterns",
+      "description": "Idempotent API endpoints using find_or_create_by! to prevent race conditions and duplicate records.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "activerecord",
+        "idempotent",
+        "race-conditions",
+        "rails"
+      ],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "activerecord-query-performance-patterns",
+      "source": "./skills/activerecord-query-performance-patterns",
+      "description": "Four query performance techniques preventing 10-70x PostgreSQL degradation: ILIKE index usage, duplicate joins prevention, two-phase DISTINCT optim...",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "activerecord",
+        "postgresql",
+        "query-optimization",
+        "rails"
+      ],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "activerecord-transaction-boundary-optimization",
+      "source": "./skills/activerecord-transaction-boundary-optimization",
+      "description": "Optimizes ActiveRecord transaction boundaries by moving read operations outside transaction blocks to reduce lock time and contention.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "activerecord",
+        "transactions",
+        "performance",
+        "rails"
+      ],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "adversarial-agent-validation",
+      "source": "./skills/adversarial-agent-validation",
+      "description": "Three-agent adversarial validation pattern exploiting LLM sycophancy: Finder (find), Adversary (disprove), Referee (score).",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "testing",
+        "code-review",
+        "adversarial",
+        "agents"
+      ],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "controller-input-validation-edge-cases",
+      "source": "./skills/controller-input-validation-edge-cases",
+      "description": "Guidance on implementing comprehensive input validation in Rails controller actions before processing to prevent edge case failures.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "rails",
+        "controllers",
+        "validation",
+        "edge-cases"
+      ],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "controller-transaction-render-pattern",
+      "source": "./skills/controller-transaction-render-pattern",
+      "description": "Prevents double render errors and connection pool pollution in ActiveRecord transaction blocks.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "rails",
+        "controllers",
+        "transactions",
+        "double-render"
+      ],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "counterintuitive-analyst",
+      "source": "./skills/counterintuitive-analyst",
+      "description": "Framework for systematically questioning cultural trends and popular wisdom to reveal strategic insights.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "analysis",
+        "contrarian",
+        "strategy",
+        "critical-thinking"
+      ],
+      "category": "productivity",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "cyclomatic-complexity-reduction",
+      "source": "./skills/cyclomatic-complexity-reduction",
+      "description": "Reduce cyclomatic complexity in Ruby methods via early-return extraction, guard unification, and safe attribute access helpers.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "refactoring",
+        "complexity",
+        "rubocop",
+        "ruby"
+      ],
       "category": "development",
       "homepage": "https://github.com/ngpestelos/skills",
       "license": "MIT"
@@ -64,25 +228,181 @@
     {
       "name": "database-migration-termination-safety",
       "source": "./skills/database-migration-termination-safety",
-      "description": "Guidance on what happens when database migrations are terminated mid-execution and how to design safe recoverable migrations",
+      "description": "Guidance on what happens when database migrations are terminated mid-execution, how to design safe recoverable migrations, and running long migrati...",
       "version": "1.0.0",
       "author": {
         "name": "Nestor Pestelos"
       },
-      "keywords": ["database", "migration", "safety", "rails", "postgresql", "recovery"],
+      "keywords": [
+        "database",
+        "migration",
+        "safety",
+        "rails",
+        "postgresql"
+      ],
       "category": "development",
       "homepage": "https://github.com/ngpestelos/skills",
       "license": "MIT"
     },
-{
-      "name": "response-diversity",
-      "source": "./skills/response-diversity",
-      "description": "Vary response framing by context (learner, engineer, family, researcher) instead of defaulting to consulting/business framing",
+    {
+      "name": "dead-code-detection",
+      "source": "./skills/dead-code-detection",
+      "description": "Systematic methodology for identifying orphaned files and dead code after refactoring.",
       "version": "1.0.0",
       "author": {
         "name": "Nestor Pestelos"
       },
-      "keywords": ["framing", "perspective", "tone", "response-style", "communication"],
+      "keywords": [
+        "cleanup",
+        "dead-code",
+        "refactoring",
+        "maintenance"
+      ],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "first-principles-debugger",
+      "source": "./skills/first-principles-debugger",
+      "description": "Systematic first-principles methodology for debugging complex issues that resist conventional approaches.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "debugging",
+        "first-principles",
+        "root-cause",
+        "complex-bugs"
+      ],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "five-step-optimizer",
+      "source": "./skills/five-step-optimizer",
+      "description": "Apply Elon Musk's Five-Step Algorithm to systematically optimize any process, system, or workflow through questioning, elimination, optimization, a...",
+      "version": "2.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "optimization",
+        "process",
+        "workflow",
+        "five-step",
+        "systematic"
+      ],
+      "category": "productivity",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "hook-state-cascade-patterns",
+      "source": "./skills/hook-state-cascade-patterns",
+      "description": "Reusable patterns for stateful Claude Code hooks: priority cascade routing, per-route daily cooldown, CWD-first state fallback, portable date parsi...",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "claude-code",
+        "hooks",
+        "state-management",
+        "automation"
+      ],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "model-method-memoization-view-performance",
+      "source": "./skills/model-method-memoization-view-performance",
+      "description": "Memoize model methods called multiple times per object during view rendering to reduce Ruby CPU and memory allocations.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "rails",
+        "performance",
+        "memoization",
+        "views"
+      ],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "multi-panel-formdata-sync",
+      "source": "./skills/multi-panel-formdata-sync",
+      "description": "Fixes the querySelector('form') first-form bug when a Stimulus controller wraps a repeated list where each panel has its own hidden-field form.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "stimulus",
+        "forms",
+        "javascript",
+        "rails"
+      ],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "rails-testing-patterns",
+      "source": "./skills/rails-testing-patterns",
+      "description": "Test type selection prioritizing integration tests (89-95% faster than system tests).",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "rails",
+        "testing",
+        "integration-tests",
+        "factories"
+      ],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "response-diversity",
+      "source": "./skills/response-diversity",
+      "description": "Vary response framing by context (learner, engineer, family, researcher) instead of defaulting to consulting/business framing.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "framing",
+        "perspective",
+        "tone",
+        "communication"
+      ],
+      "category": "productivity",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "root-cause-investigation",
+      "source": "./skills/root-cause-investigation",
+      "description": "Dual-mode investigation framework combining Five Whys (systemic root cause analysis from Toyota/IDEO) and Peeling the Onion (psychological layer ex...",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "debugging",
+        "root-cause",
+        "five-whys",
+        "investigation"
+      ],
       "category": "development",
       "homepage": "https://github.com/ngpestelos/skills",
       "license": "MIT"
@@ -90,13 +410,110 @@
     {
       "name": "scanned-document-extraction",
       "source": "./skills/scanned-document-extraction",
-      "description": "Extract structured data from scanned documents (images, PDFs) into markdown notes, preserving all granular detail",
+      "description": "Extract structured data from scanned documents (images, PDFs) into markdown notes, preserving all granular detail.",
       "version": "1.1.0",
       "author": {
         "name": "Nestor Pestelos"
       },
-      "keywords": ["extraction", "scanning", "pdf", "receipt", "medical-records", "markdown"],
+      "keywords": [
+        "extraction",
+        "scanning",
+        "pdf",
+        "receipt",
+        "markdown"
+      ],
       "category": "productivity",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "security-patterns",
+      "source": "./skills/security-patterns",
+      "description": "Quick-reference security checklist for XSS, CSRF, PII logging, console statements, multi-tenant isolation, and state machine security in Rails view...",
+      "version": "2.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "security",
+        "xss",
+        "csrf",
+        "owasp",
+        "web-security"
+      ],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "skill-decomposition-methodology",
+      "source": "./skills/skill-decomposition-methodology",
+      "description": "Systematic methodology for refactoring bloated skills (>500 lines) into focused sub-skills.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "claude-code",
+        "skills",
+        "refactoring",
+        "optimization"
+      ],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "stimulus-controller-integration",
+      "source": "./skills/stimulus-controller-integration",
+      "description": "Stimulus controller patterns for AJAX initialization, CustomEvent communication, and controller reuse.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "stimulus",
+        "javascript",
+        "ajax",
+        "rails"
+      ],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "stimulus-form-redirect",
+      "source": "./skills/stimulus-form-redirect",
+      "description": "Replace AJAX + DOM manipulation with form submission + server redirect.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "stimulus",
+        "forms",
+        "redirect",
+        "rails"
+      ],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "test-plan-methodology",
+      "source": "./skills/test-plan-methodology",
+      "description": "Systematic 4-phase test planning approach to prevent coverage blind spots.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "testing",
+        "test-plan",
+        "coverage",
+        "quality"
+      ],
+      "category": "development",
       "homepage": "https://github.com/ngpestelos/skills",
       "license": "MIT"
     }

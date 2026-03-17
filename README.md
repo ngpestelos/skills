@@ -81,6 +81,8 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 |-------|-------------|
 | [root-cause-investigation](skills/root-cause-investigation/) | Five Whys + Peeling the Onion dual-mode debugging framework |
 | [five-step-optimizer](skills/five-step-optimizer/) | Musk's Five-Step Algorithm for process optimization |
+| [first-principles-debugger](skills/first-principles-debugger/) | First-principles debugging for complex issues that resist conventional approaches |
+| [counterintuitive-analyst](skills/counterintuitive-analyst/) | Systematically question popular wisdom to reveal strategic insights |
 
 ### Communication & Framing
 
