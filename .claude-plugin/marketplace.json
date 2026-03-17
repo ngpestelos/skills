@@ -48,8 +48,8 @@
     {
       "name": "activerecord-eager-loading-testing-patterns",
       "source": "./skills/activerecord-eager-loading-testing-patterns",
-      "description": "Testing patterns for ActiveRecord eager loading: .association(:name).loaded? verification, query count tests via ActiveSupport::Notifications, patt...",
-      "version": "1.0.0",
+      "description": "Testing patterns for ActiveRecord eager loading: .association(:name).loaded? verification, query count tests, pattern-matching counts, and anti-patterns.",
+      "version": "2.0.0",
       "author": {
         "name": "Nestor Pestelos"
       },
