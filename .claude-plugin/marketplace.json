@@ -12,8 +12,8 @@
     {
       "name": "activejob-design-patterns",
       "source": "./skills/activejob-design-patterns",
-      "description": "Self-contained ActiveJob architecture with transaction safety, defensive programming, fatal vs non-fatal error handling, external API integration, ...",
-      "version": "1.0.0",
+      "description": "ActiveJob architecture patterns: fatal vs non-fatal error handling, transaction safety, external API integration, async enqueuing, internal batching, and operation-based idempotency.",
+      "version": "2.0.0",
       "author": {
         "name": "Nestor Pestelos"
       },
