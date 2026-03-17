@@ -102,8 +102,8 @@
     {
       "name": "activerecord-query-performance-patterns",
       "source": "./skills/activerecord-query-performance-patterns",
-      "description": "Four query performance techniques preventing 10-70x PostgreSQL degradation: ILIKE index usage, duplicate joins prevention, two-phase DISTINCT optim...",
-      "version": "1.0.0",
+      "description": "Three query performance techniques preventing 10-1000x PostgreSQL degradation: ILIKE index usage, two-phase DISTINCT optimization, and UNION ALL OR-splitting.",
+      "version": "2.0.0",
       "author": {
         "name": "Nestor Pestelos"
       },
