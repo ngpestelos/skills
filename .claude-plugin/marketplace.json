@@ -84,8 +84,8 @@
     {
       "name": "activerecord-idempotent-create-patterns",
       "source": "./skills/activerecord-idempotent-create-patterns",
-      "description": "Idempotent API endpoints using find_or_create_by! to prevent race conditions and duplicate records.",
-      "version": "1.0.0",
+      "description": "Idempotent API endpoints using find_or_create_by! to prevent race conditions and duplicate records. Covers case-insensitive dedup and guard vs idempotent pattern.",
+      "version": "2.0.0",
       "author": {
         "name": "Nestor Pestelos"
       },
