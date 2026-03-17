@@ -66,8 +66,8 @@
     {
       "name": "activerecord-graceful-corrupted-data-handling",
       "source": "./skills/activerecord-graceful-corrupted-data-handling",
-      "description": "Graceful handling of missing/corrupted foreign key data: .find_by instead of .find for optional lookups, safe navigation with fallbacks, callback n...",
-      "version": "1.0.0",
+      "description": "Graceful handling of missing/corrupted foreign key data: .find_by for optional lookups, safe navigation with fallbacks, and callback nil guards with throw(:abort).",
+      "version": "2.0.0",
       "author": {
         "name": "Nestor Pestelos"
       },
