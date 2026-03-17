@@ -1,137 +1,81 @@
 ---
 name: multi-panel-formdata-sync
-description: "Fixes the querySelector('form') first-form bug when a Stimulus controller wraps a repeated list where each panel has its own hidden-field form. Auto-activates when: panel list with per-item forms, radio selection with hidden fields, Stimulus findFormElement, wrong form submitted, first address shown. Covers: data attribute DOM contract, FormData sync after radio resolution, conditional ERB attribute emission. Trigger keywords: querySelector form first, wrong form submitted, hidden field sync, shipping method panel, formData delete append. (project)"
+version: 2.0
+description: "Fixes the querySelector('form') first-form bug in controllers wrapping repeated panels with per-item forms. Trigger: wrong form submitted, hidden field from first panel, querySelector form first, FormData sync."
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
 # Multi-Panel FormData Sync
 
-> **Purpose**: Fix the "first form wins" bug in Stimulus controllers that call `querySelector('form')` over a repeated panel list where each panel has its own hidden fields.
+> **Problem**: `this.element.querySelector('form')` returns the **first** `<form>` in the subtree — not the one belonging to the selected panel. Any hidden field that varies per panel submits stale data.
 
-## Core Principles
+## Principles
 
-1. `this.element.querySelector('form')` always returns the **first** `<form>` in the DOM subtree — not the one belonging to the selected panel.
-2. Per-panel identifiers must flow from server (ERB data attribute) to client (JS reads dataset), not from which form was collected.
-3. FormData sync (`delete` + `append`) corrects stale field values after the initial collection.
-4. Emit data attributes **conditionally** — only when the server has a real value; never render `data-foo=""`.
+1. Per-panel identity flows from server (data attribute) to client (dataset read), not from which form was collected.
+2. `formData.delete()` + `formData.append()` corrects stale fields after initial `new FormData(form)`.
+3. Emit data attributes **conditionally** — never render `data-foo=""` when the value is nil.
 
-## ✅ REQUIRED Patterns
+## Required Pattern
 
-### Step 1: ERB — emit data attribute on each panel container (conditionally)
+**ERB** — conditional data attribute on each panel container:
 
 ```erb
 <div class="panel-container"
      id="panel-container-<%= item.id %>"
-     <%= "data-item-address-id=\"#{item.bulk_address_id}\"" if item.bulk_address_id %>
-     style="<%= panel_style %>">
+     <%= "data-item-address-id=\"#{item.bulk_address_id}\"" if item.bulk_address_id %>>
 ```
 
-### Step 2: JS — sync FormData after radio selection resolves
+**JS** — sync FormData after radio selection resolves:
 
 ```javascript
-// Inside addShippingMethodParameter (or equivalent):
+const form = this.element.querySelector('form'); // OK for shared fields
+const formData = new FormData(form);
 formData.append('shipping_methods', shippingMethodId);
 
-// Sync hidden field to match the selected panel, not the first form
-const selectedPanel = document.getElementById(
-  `panel-container-${shippingMethodId}`
-);
-const panelValue = selectedPanel?.dataset.itemAddressId;
+// Sync per-panel hidden field from the SELECTED panel's data attribute
+const panel = document.getElementById(`panel-container-${shippingMethodId}`);
+const panelValue = panel?.dataset.itemAddressId;
 if (panelValue) {
   formData.delete('hidden_field_name');
   formData.append('hidden_field_name', panelValue);
 }
 ```
 
-## ❌ FORBIDDEN Patterns
+The panel container ID must use the same identifier carried by the radio value so the lookup works.
 
-### Always-first form selection
+## Forbidden Pattern
 
 ```javascript
-// WRONG — picks the first <form> regardless of which panel is active
+// WRONG — hidden fields come from panel 1 even when panel 3 is selected
 const form = this.element.querySelector('form');
 const formData = new FormData(form);
-// formData now has hidden fields from panel 1 even if panel 3 is selected
+// formData now has stale per-panel values
 ```
 
-### Unconditional nil data attribute
+## Decision Table
 
-```erb
-<%# WRONG — renders data-foo="" on every item when value is nil %>
-<div data-foo="<%= item.some_id %>">
-```
-
-## Quick Decision Tree
-
-| Situation | Solution |
-|-----------|----------|
+| Situation | Action |
+|-----------|--------|
 | One form per controller | `querySelector('form')` is fine |
 | Multiple panels, each with a form | Data attribute on panel + FormData sync |
-| Hidden field differs per panel | Always sync via `formData.delete` + `formData.append` |
-| Value may be nil/absent | Conditionally emit the attribute |
+| Hidden field varies per panel | `formData.delete` + `formData.append` after radio resolve |
+| Value may be nil | Conditional ERB emission (no bare `data-foo="<%= val %>"`) |
 
-## Common Mistakes
+## Common Mistake
 
-1. **Fixing only `shipping_methods` but not `default_shipping_address_id`** — the radio detection correctly finds the selected method ID, but any other hidden field that encodes per-panel state must also be synced explicitly.
-2. **Empty-string data attribute** — `data-foo=""` is falsy in JS (`dataset.foo === ""`) so the `if (panelValue)` guard works, but the attribute is still misleading HTML. Always use conditional ERB emission.
-3. **Wrong ID convention** — the panel container ID must use the same identifier that the radio value carries (e.g., `panel-container-${shippingMethodId}` matches `value="${shippingMethodId}"`).
-
-## Examples
-
-### ❌ WRONG — First form's hidden field always submitted
-
-```javascript
-// findFormElement() returns Newport's form even when SAC is selected
-const form = this.element.querySelector('form');
-const formData = new FormData(form);
-// formData['default_shipping_address_id'] = Newport's ID  ← bug
-formData.append('shipping_methods', sacMethodId);  // correct method ID
-// server gets: shipping_methods=SAC, default_shipping_address_id=Newport  ← wrong address
-```
-
-### ✅ RIGHT — Sync from panel data attribute
-
-```javascript
-const form = this.element.querySelector('form');  // still OK to use for other fields
-const formData = new FormData(form);
-
-// After resolving the selected radio:
-formData.append('shipping_methods', shippingMethodId);
-
-const selectedPanel = document.getElementById(
-  `shipping-method-panel-container-${shippingMethodId}`
-);
-const bulkAddressId = selectedPanel?.dataset.bulkAddressId;
-if (bulkAddressId) {
-  formData.delete('default_shipping_address_id');
-  formData.append('default_shipping_address_id', bulkAddressId);
-}
-// server gets: shipping_methods=SAC, default_shipping_address_id=SAC  ← correct
-```
+Syncing only the primary field (e.g., `shipping_methods`) but forgetting other per-panel hidden fields (e.g., `default_shipping_address_id`). Every hidden field that encodes per-panel state needs explicit `delete` + `append`.
 
 ## Violation Detection
 
 ```bash
-# Find Stimulus controllers that use querySelector('form') on a wrapping element
-grep -n "querySelector.*'form'" app/javascript/controllers/*.js
-
-# Find ERB partials rendering unconditional data-*-id attributes that might be nil
-grep -n 'data-.*-id="<%= ' app/views/shared/*.erb | grep -v "if "
+# Controllers using querySelector('form') on a wrapping element
+grep -rn "querySelector.*'form'" app/javascript/controllers/
+# ERB with unconditional data-*-id that might be nil
+grep -rn 'data-.*-id="<%= ' app/views/ | grep -v "if "
 ```
 
-## Integration
+## Activation Triggers
 
-- **Related Skills**: [Stimulus Form Redirect skill](/.claude/skills/stimulus-form-redirect/SKILL.md)
-- **Discovered**: 2026-03-04, fixing `fix-wrong-shipping-address-shown-order-review` (Carl Baker report)
-
-## When to Use This Skill
-
-Auto-activates when:
-- A Stimulus controller wraps a list of panels where each panel has a `<form>` with hidden fields
-- A bug report says "wrong address/option shown" after selecting a non-first item from a list
-- `findFormElement()` or `querySelector('form')` appears in a controller that handles multi-option selection
-- Debugging why a submitted parameter matches the first item's value regardless of selection
-
-## Key Takeaway
-
-`querySelector('form')` is unaware of which panel the user selected. Use a `data-*` attribute on the panel container (emitted conditionally from ERB) and sync the affected FormData fields in JS using `delete` + `append` after radio resolution.
+- Bug report: "wrong address/option shown" after selecting a non-first item
+- `querySelector('form')` in a controller handling multi-option panel selection
+- Submitted parameter always matches the first item regardless of selection

@@ -303,7 +303,7 @@
       "name": "hook-state-cascade-patterns",
       "source": "./skills/hook-state-cascade-patterns",
       "description": "Reusable patterns for stateful Claude Code hooks: priority cascade routing, per-route daily cooldown, CWD-first state fallback, portable date parsi...",
-      "version": "1.0.0",
+      "version": "2.0",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -321,7 +321,7 @@
       "name": "model-method-memoization-view-performance",
       "source": "./skills/model-method-memoization-view-performance",
       "description": "Memoize model methods called multiple times per object during view rendering to reduce Ruby CPU and memory allocations.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -339,7 +339,7 @@
       "name": "multi-panel-formdata-sync",
       "source": "./skills/multi-panel-formdata-sync",
       "description": "Fixes the querySelector('form') first-form bug when a Stimulus controller wraps a repeated list where each panel has its own hidden-field form.",
-      "version": "1.0.0",
+      "version": "2.0",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -357,7 +357,7 @@
       "name": "rails-testing-patterns",
       "source": "./skills/rails-testing-patterns",
       "description": "Test type selection prioritizing integration tests (89-95% faster than system tests).",
-      "version": "1.0.0",
+      "version": "2.0",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -393,7 +393,7 @@
       "name": "root-cause-investigation",
       "source": "./skills/root-cause-investigation",
       "description": "Dual-mode investigation framework combining Five Whys (systemic root cause analysis from Toyota/IDEO) and Peeling the Onion (psychological layer ex...",
-      "version": "1.0.0",
+      "version": "2.0.0",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -449,7 +449,7 @@
       "name": "skill-decomposition-methodology",
       "source": "./skills/skill-decomposition-methodology",
       "description": "Systematic methodology for refactoring bloated skills (>500 lines) into focused sub-skills.",
-      "version": "1.0.0",
+      "version": "2.0",
       "author": {
         "name": "Nestor Pestelos"
       },
