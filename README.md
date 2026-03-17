@@ -49,6 +49,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [controller-input-validation-edge-cases](skills/controller-input-validation-edge-cases/) | Comprehensive input validation before processing to prevent edge case failures |
 | [controller-transaction-render-pattern](skills/controller-transaction-render-pattern/) | Prevent double render errors and connection pool pollution in transactions |
 | [model-method-memoization-view-performance](skills/model-method-memoization-view-performance/) | Memoize model methods to reduce view rendering allocations |
+| [rails-cache-performance](skills/rails-cache-performance/) | Cache invalidation, stale cache detection, request-scoped caching, TTL selection, and logging |
 | [rails-testing-patterns](skills/rails-testing-patterns/) | Integration-first test selection, factory pitfalls, and assert_select patterns |
 
 ### Stimulus & Frontend
@@ -82,6 +83,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [root-cause-investigation](skills/root-cause-investigation/) | Five Whys + Peeling the Onion dual-mode debugging framework |
 | [five-step-optimizer](skills/five-step-optimizer/) | Musk's Five-Step Algorithm for process optimization |
 | [first-principles-debugger](skills/first-principles-debugger/) | First-principles debugging for complex issues that resist conventional approaches |
+| [decision-timing-assessor](skills/decision-timing-assessor/) | Framework for optimal decision timing vs. information gathering (Type I/II decisions, reversibility) |
 | [counterintuitive-analyst](skills/counterintuitive-analyst/) | Systematically question popular wisdom to reveal strategic insights |
 
 ### Communication & Framing
