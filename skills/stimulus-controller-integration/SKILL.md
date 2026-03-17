@@ -1,26 +1,23 @@
 ---
 name: stimulus-controller-integration
-description: "Stimulus controller patterns for AJAX initialization, CustomEvent communication, and controller reuse. Trigger keywords: Stimulus controller, connect timing, MutationObserver, off-DOM construction, readiness polling, CustomEvent detail, sibling communication, dual dispatch, controller reuse, data-controller reinit, event bubbling, data attribute sync, cache key bump. (global)"
-allowed-tools: Read, Grep, Glob
+description: "Stimulus controller patterns for AJAX initialization, CustomEvent communication, and controller reuse. Trigger keywords: Stimulus controller, connect timing, MutationObserver, readiness polling, CustomEvent detail, sibling communication, event bubbling, data-controller reinit."
+license: MIT
+metadata:
+  author: ngpestelos
+  version: "2.0.0"
 ---
 
 # Stimulus Controller Integration
 
 ## Initialization
 
-### Decision Tree
-
-```
-Controllers not initializing?       -> Attribute Manipulation
-Parent controllers disconnecting?   -> Container Scoping
-MutationObserver not detecting?      -> Off-DOM Construction
-this.context still undefined?        -> Bypass Stimulus
-User clicks before ready?            -> Readiness Polling
-```
+Controllers not initializing? → Attribute Manipulation. Parent disconnecting? → Scope reinit to content container, not parent. MutationObserver not detecting? → Build complete off-DOM, attach once. `this.context` undefined? → Use `getControllerForElementAndIdentifier()` as escape hatch. User clicks before ready? → Readiness Polling.
 
 Add defensive guards in `connect()`: `if (!this.scope || !this.element) return;`
 
 ### Attribute Manipulation (Controllers Not Initializing)
+
+Remove and re-add `data-controller` to force Stimulus reconnection. Scope to content container (not parent wrapper) to avoid disconnecting parent controllers.
 
 ```javascript
 reinitializeStimulusControllers(container) {
@@ -33,51 +30,6 @@ reinitializeStimulusControllers(container) {
       }, 50);
     });
   }, 10);
-}
-```
-
-### Container Scoping (Parent Controllers Disconnecting)
-
-```javascript
-// WRONG - Wrapper includes parent controller
-this.reinitializeStimulusControllers(wrapper);
-
-// RIGHT - Only reinit content children
-const contentArea = wrapper.querySelector('.content');
-this.reinitializeStimulusControllers(contentArea);
-```
-
-### Off-DOM Construction (MutationObserver Not Detecting)
-
-```javascript
-// WRONG - Attach empty, add content later
-this.wrapper = document.createElement('div');
-document.body.appendChild(this.wrapper);
-this.wrapper.innerHTML = await fetch(url).then(r => r.text());
-
-// RIGHT - Build complete, attach once
-this.wrapper = document.createElement('div');
-this.wrapper.innerHTML = await fetch(url).then(r => r.text());
-document.body.appendChild(this.wrapper);
-```
-
-### Bypass Stimulus (Critical UI with Persistent Timing Issues)
-
-Use `getControllerForElementAndIdentifier()` to access the controller directly when event-based patterns aren't viable.
-
-```javascript
-setupDirectHandler() {
-  const button = this.wrapper.querySelector('[data-target="modal.button"]');
-  if (button.dataset.directHandler) return;
-  button.dataset.directHandler = 'true';
-
-  button.addEventListener('click', async (e) => {
-    e.preventDefault();
-    const controller = this.application.getControllerForElementAndIdentifier(
-      this.wrapper.querySelector('[data-controller*="modal"]'), 'modal'
-    );
-    if (controller?.save) await controller.save();
-  });
 }
 ```
 
@@ -100,17 +52,15 @@ async waitForControllerReady(element, identifier, { maxAttempts = 20, timeout = 
 
 ### CustomEvent Pattern
 
-Always assign data directly to `detail`, never nest it.
+Always assign data directly to `detail`, never nest it. Event naming: `namespace:action` (e.g., `product:selected`, `artwork:drop`).
 
 ```javascript
 // Dispatching
-triggerProductSelection() {
-  const event = new CustomEvent('product:selected', {
-    bubbles: true,
-    detail: this.productData  // Direct assignment (NOT { productData: ... })
-  });
-  this.element.dispatchEvent(event);
-}
+const event = new CustomEvent('product:selected', {
+  bubbles: true,
+  detail: this.productData  // Direct assignment (NOT { productData: ... })
+});
+this.element.dispatchEvent(event);
 
 // Handling
 handleProductSelected(event) {
@@ -118,8 +68,6 @@ handleProductSelected(event) {
   if (!productData?.id) return;
 }
 ```
-
-**Event naming**: `namespace:action` (e.g., `product:selected`, `colors:select`, `artwork:drop`).
 
 ### Dispatch/Listener Target Matching
 
@@ -133,28 +81,13 @@ Events dispatched to `document` will NOT be received by listeners on `this.eleme
 | `this.element` | `this.element` | Yes |
 | `this.element` | sibling element | No |
 
-**Rule**: If you dispatch to `document`, ALL listeners for that event should be on `document`.
+**Rule**: If you dispatch to `document`, ALL listeners must be on `document`.
 
-### Sibling Controller Communication
+### Sibling / Cross-Subtree Communication
 
-DOM events only bubble UP the tree, not sideways to siblings.
+DOM events only bubble UP, not sideways. Dispatch to `document` for siblings. When consumers span subtrees, dispatch on both `this.element` (for local bubbling) and `document` (for distant listeners). Attach in `connect()`, remove in `disconnect()`.
 
-**Option 1: Dispatch to specific sibling by ID**:
 ```javascript
-const sibling = document.getElementById('attachments-container');
-if (sibling) {
-  sibling.dispatchEvent(new CustomEvent('dropzone:queuecomplete', { bubbles: true }));
-}
-```
-
-**Option 2: Dispatch to document (global)**:
-```javascript
-// Dispatcher
-document.dispatchEvent(new CustomEvent('dropzone:queuecomplete', {
-  bubbles: true, detail: this.uploadResults
-}));
-
-// Listener - attach in connect(), remove in disconnect()
 connect() {
   this.handler = this.handleUpload.bind(this);
   document.addEventListener('dropzone:queuecomplete', this.handler);
@@ -164,61 +97,6 @@ disconnect() {
 }
 ```
 
-### Dual Dispatch for Cross-Subtree Consumers
-
-When consumers exist in different DOM subtrees, dispatch on both `this.element` (for local listeners that bubble) and `document` (for distant listeners).
-
-```javascript
-// Local consumers get it via bubbling
-this.element.dispatchEvent(new CustomEvent('dropzone:uploadsuccess', {
-  bubbles: true, detail: { file: {}, response: artwork }
-}));
-
-// Distant consumers get it via document
-document.dispatchEvent(new CustomEvent('dropzone:uploadsuccess', {
-  detail: { file: {}, response: artwork }
-}));
-```
-
-| Consumer Location | Same Event Name | Different Event Name |
-|-------------------|-----------------|----------------------|
-| Same subtree | Element only | Element with both names |
-| Different subtree | Element + document | Element with both + document |
-
 ## Reuse
 
-### Map Required Targets
-
-Before reusing a controller in a new context, analyze its `static targets`, data attributes, and `data-action` patterns. The new partial must provide all of them.
-
-```javascript
-export default class extends Controller {
-  static targets = ['quantityCell', 'staticDisplay', 'editInterface',
-                    'quantityInput', 'priceCell', 'totalCell'];
-  delete(event) { /* uses data-slug, data-id from button */ }
-}
-```
-
-### Adapt HTML Structure
-
-Change container elements while preserving all data-controller, data-target, and data-action attributes.
-
-**Original (table-based)**:
-```erb
-<tr data-controller="cart-row" data-sale-slug="<%= sale_slug %>">
-  <td data-target="cart-row.quantityCell">
-    <span data-target="cart-row.staticDisplay">Qty</span>
-  </td>
-</tr>
-```
-
-**Adapted (list-based)**:
-```erb
-<li data-controller="cart-row" data-sale-slug="<%= sale_slug %>">
-  <span data-target="cart-row.quantityCell">
-    <span data-target="cart-row.staticDisplay">Qty</span>
-  </span>
-</li>
-```
-
-For context-specific element logic (e.g., `tagName === 'TD'`), use CSS classes instead of inline styles to handle differences between container types.
+Before reusing a controller in a new context: verify all `static targets`, data attributes, and `data-action` patterns exist in the new partial. Change container elements freely (`<tr>` → `<li>`) but preserve all data attributes. Use CSS classes instead of `tagName` checks for context-specific styling.

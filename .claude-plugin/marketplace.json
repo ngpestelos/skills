@@ -467,7 +467,7 @@
       "name": "stimulus-controller-integration",
       "source": "./skills/stimulus-controller-integration",
       "description": "Stimulus controller patterns for AJAX initialization, CustomEvent communication, and controller reuse.",
-      "version": "1.0.0",
+      "version": "2.0.0",
       "author": {
         "name": "Nestor Pestelos"
       },
