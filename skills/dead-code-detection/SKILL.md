@@ -13,16 +13,10 @@ allowed-tools: Read, Grep, Glob, Bash
 Steps 1-2 can run in parallel, then Step 3:
 
 **Step 1 — Reference search** (app + test):
-```bash
-grep -r "name" app/ test/ --include="*.erb" --include="*.rb" --include="*.js" | grep -v "^$file:"
-grep -r "import.*filename" app/javascript/ --include="*.js"
-```
+Use Grep to search for the filename, partial name, class name, or method across `app/` and `test/` (include `*.erb`, `*.rb`, `*.js`). Exclude self-references. Also check JS imports in `app/javascript/`.
 
 **Step 2 — Git history**:
-```bash
-git log --oneline --all -10 -- path/to/file
-git log -1 --format="%ai %an" -- path/to/file
-```
+Check `git log --oneline --all -10 -- path/to/file` for recent activity and `git log -1 --format="%ai %an"` for last author.
 
 **Step 3 — Dynamic render enumeration** (MANDATORY):
 
