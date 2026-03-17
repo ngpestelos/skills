@@ -139,7 +139,7 @@
       "name": "adversarial-agent-validation",
       "source": "./skills/adversarial-agent-validation",
       "description": "Three-agent adversarial validation pattern exploiting LLM sycophancy: Finder (find), Adversary (disprove), Referee (score).",
-      "version": "1.0.0",
+      "version": "2.0",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -157,7 +157,7 @@
       "name": "controller-input-validation-edge-cases",
       "source": "./skills/controller-input-validation-edge-cases",
       "description": "Guidance on implementing comprehensive input validation in Rails controller actions before processing to prevent edge case failures.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -175,7 +175,7 @@
       "name": "controller-transaction-render-pattern",
       "source": "./skills/controller-transaction-render-pattern",
       "description": "Prevents double render errors and connection pool pollution in ActiveRecord transaction blocks.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": {
         "name": "Nestor Pestelos"
       },
