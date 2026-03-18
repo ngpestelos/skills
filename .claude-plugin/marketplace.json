@@ -229,7 +229,7 @@
       "name": "database-migration-termination-safety",
       "source": "./skills/database-migration-termination-safety",
       "description": "Guidance on what happens when database migrations are terminated mid-execution, how to design safe recoverable migrations, and running long migrati...",
-      "version": "1.0.0",
+      "version": "2.0.0",
       "author": {
         "name": "Nestor Pestelos"
       },
