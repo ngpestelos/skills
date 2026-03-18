@@ -105,6 +105,12 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [hook-state-cascade-patterns](skills/hook-state-cascade-patterns/) | Stateful hook patterns: cascade routing, cooldowns, state fallback, portable date parsing, and live file verification |
 | [skill-decomposition-methodology](skills/skill-decomposition-methodology/) | Refactor bloated skills (>500 lines) into focused sub-skills |
 
+### Third-Party
+
+| Skill | Description | Origin |
+|-------|-------------|--------|
+| [frontend-design](skills/frontend-design/) | Create distinctive, production-grade frontend interfaces with high design quality | [Anthropic](https://github.com/anthropics/claude-plugins-official) |
+
 ## Compatibility
 
 These skills follow the [Agent Skills specification](https://agentskills.io/specification) and work with any compatible agent:
