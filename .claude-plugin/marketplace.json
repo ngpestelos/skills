@@ -516,6 +516,312 @@
       "category": "development",
       "homepage": "https://github.com/ngpestelos/skills",
       "license": "MIT"
+    },
+    {
+      "name": "ai-coding-tool-portability",
+      "source": "./skills/ai-coding-tool-portability",
+      "description": "Guides portable configuration across Claude Code and OpenCode. Covers feature mapping, command mirroring via symlinks and home-manager, architecture layout.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "opencode",
+        "portability",
+        "claude-code",
+        "configuration"
+      ],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "changing-defaults-systematically",
+      "source": "./skills/changing-defaults-systematically",
+      "description": "Systematically change configuration defaults and constants while ensuring zero regressions. Covers finding all references, updating code/tests/docs, comprehensive validation.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "refactoring",
+        "constants",
+        "defaults",
+        "validation"
+      ],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "claude-code-hook-development",
+      "source": "./skills/claude-code-hook-development",
+      "description": "Guides creating, testing, and deploying Claude Code hooks via nix-darwin. Covers hook input JSON format, exit codes, stdout context injection, transcript JSONL parsing.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "claude-code",
+        "hooks",
+        "nix-darwin",
+        "automation"
+      ],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "configuring-dynamic-attribution",
+      "source": "./skills/configuring-dynamic-attribution",
+      "description": "Guides updating AI tool templates to use dynamic placeholders for model names instead of hardcoded values in commit attributions.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "git",
+        "attribution",
+        "co-author",
+        "templates"
+      ],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "git-atomic-commit-organizer",
+      "source": "./skills/git-atomic-commit-organizer",
+      "description": "Systematically analyze uncommitted changes and organize them into logical, atomic commits following best practices.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "git",
+        "commits",
+        "atomic",
+        "organization"
+      ],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "neovim-configuration",
+      "source": "./skills/neovim-configuration",
+      "description": "Guides Neovim configuration through home-manager programs.neovim module. Covers plugin management, nvim-tree, theme consistency, buffer navigation, and PATH issues.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "neovim",
+        "nix",
+        "home-manager",
+        "plugins"
+      ],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "nix-darwin-multi-user",
+      "source": "./skills/nix-darwin-multi-user",
+      "description": "Guides multi-user nix-darwin configuration with home-manager. Covers mkDarwinConfig, sharedSystemModule, activation scripts, home-manager file conflicts.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "nix-darwin",
+        "multi-user",
+        "home-manager",
+        "macos"
+      ],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "nix-darwin-zsh-completion",
+      "source": "./skills/nix-darwin-zsh-completion",
+      "description": "Fixes zsh compinit insecure directories warning in nix-darwin. Covers enableGlobalCompInit vs completionInit differences between nix-darwin and home-manager.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "nix-darwin",
+        "zsh",
+        "compinit",
+        "completion"
+      ],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "nix-github-release-packaging",
+      "source": "./skills/nix-github-release-packaging",
+      "description": "Packages pre-built binaries from GitHub releases as Nix derivations for home-manager. Covers stdenv.mkDerivation, fetchurl, SHA256 hash workflow.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "nix",
+        "github-releases",
+        "packaging",
+        "derivations"
+      ],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "nix-template-deployment",
+      "source": "./skills/nix-template-deployment",
+      "description": "Guides deploying nix-template shell.nix and .envrc to directories for per-directory package availability via direnv. Covers home.packages vs devShell distinction.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "nix",
+        "direnv",
+        "shell",
+        "devShell"
+      ],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "nodejs-version-management",
+      "source": "./skills/nodejs-version-management",
+      "description": "Guides Node.js and npm version management in Nix flakes. Covers system packages, activation scripts, devShells, version synchronization, pnpm configuration.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "nodejs",
+        "npm",
+        "nix",
+        "version-management"
+      ],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "overriding-flake-input-packages",
+      "source": "./skills/overriding-flake-input-packages",
+      "description": "Guides fixing build failures in external flake inputs by overriding their derivations with overrideAttrs.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "nix",
+        "flake",
+        "overrideAttrs",
+        "build-fix"
+      ],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "portable-ai-cli-patterns",
+      "source": "./skills/portable-ai-cli-patterns",
+      "description": "Guides dual-tool configuration for Claude Code and OpenCode. Covers compatibility matrix, single-source commands, skill/agent promotion workflow.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "claude-code",
+        "opencode",
+        "portability",
+        "dual-tool"
+      ],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "qmd-local-search",
+      "source": "./skills/qmd-local-search",
+      "description": "Core patterns for using QMD (Quick Markdown) semantic search. Covers MCP tool usage, search type selection, index rebuild protocol, and troubleshooting.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "qmd",
+        "semantic-search",
+        "mcp",
+        "vector-search"
+      ],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "reality-filter",
+      "source": "./skills/reality-filter",
+      "description": "Guides proper uncertainty labeling and verification standards during technical discussions. Covers evidence hierarchy, self-correction protocol.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "verification",
+        "uncertainty",
+        "claims",
+        "evidence"
+      ],
+      "category": "productivity",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "red-team-framework-review",
+      "source": "./skills/red-team-framework-review",
+      "description": "Systematic adversarial review of strategic frameworks. Challenges assumptions, identifies correlated failure modes, checks demand evidence.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "red-team",
+        "strategy",
+        "adversarial",
+        "review"
+      ],
+      "category": "productivity",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "skill-stack-deduplication",
+      "source": "./skills/skill-stack-deduplication",
+      "description": "Eliminates content duplication across Claude Code agent/skill/command layers by establishing clear separation of concerns and reference hierarchies.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "deduplication",
+        "skills",
+        "architecture",
+        "optimization"
+      ],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
     }
   ]
 }

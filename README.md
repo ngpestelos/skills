@@ -98,12 +98,39 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 |-------|-------------|
 | [scanned-document-extraction](skills/scanned-document-extraction/) | Extract structured data from scanned images/PDFs into markdown, preserving all granular detail |
 
+### Nix & System Configuration
+
+| Skill | Description |
+|-------|-------------|
+| [neovim-configuration](skills/neovim-configuration/) | Neovim config via home-manager: plugin management, nvim-tree, theme consistency, buffer navigation |
+| [nix-darwin-multi-user](skills/nix-darwin-multi-user/) | Multi-user nix-darwin with home-manager: mkDarwinConfig, activation scripts, file conflicts |
+| [nix-darwin-zsh-completion](skills/nix-darwin-zsh-completion/) | Fix compinit insecure directories warning: enableGlobalCompInit vs completionInit |
+| [nix-github-release-packaging](skills/nix-github-release-packaging/) | Package GitHub release binaries as Nix derivations: fetchurl, SHA256 hash workflow |
+| [nix-template-deployment](skills/nix-template-deployment/) | Deploy shell.nix + .envrc for per-directory packages via direnv |
+| [nodejs-version-management](skills/nodejs-version-management/) | Node.js/npm version management in Nix flakes: synchronization, pnpm, native installers |
+| [overriding-flake-input-packages](skills/overriding-flake-input-packages/) | Fix external flake input build failures with overrideAttrs |
+
+### AI Tool Configuration
+
+| Skill | Description |
+|-------|-------------|
+| [ai-coding-tool-portability](skills/ai-coding-tool-portability/) | Portable configuration across Claude Code and OpenCode: feature mapping, command mirroring |
+| [portable-ai-cli-patterns](skills/portable-ai-cli-patterns/) | Dual-tool Claude Code + OpenCode config: compatibility matrix, single-source commands |
+| [configuring-dynamic-attribution](skills/configuring-dynamic-attribution/) | Dynamic placeholders for model names in commit co-author attributions |
+
 ### Claude Code & Tooling
 
 | Skill | Description |
 |-------|-------------|
 | [hook-state-cascade-patterns](skills/hook-state-cascade-patterns/) | Stateful hook patterns: cascade routing, cooldowns, state fallback, portable date parsing, and live file verification |
 | [skill-decomposition-methodology](skills/skill-decomposition-methodology/) | Refactor bloated skills (>500 lines) into focused sub-skills |
+| [claude-code-hook-development](skills/claude-code-hook-development/) | Create and deploy Claude Code hooks: JSON input, exit codes, transcript JSONL parsing |
+| [skill-stack-deduplication](skills/skill-stack-deduplication/) | Eliminate duplication across agent/skill/command layers via reference hierarchies |
+| [reality-filter](skills/reality-filter/) | Uncertainty labeling and verification standards: evidence hierarchy, self-correction |
+| [red-team-framework-review](skills/red-team-framework-review/) | Adversarial review of strategic frameworks: assumption challenges, correlated failure modes |
+| [changing-defaults-systematically](skills/changing-defaults-systematically/) | Zero-regression constant/default changes: find all references, update atomically |
+| [git-atomic-commit-organizer](skills/git-atomic-commit-organizer/) | Organize uncommitted changes into logical, atomic commits |
+| [qmd-local-search](skills/qmd-local-search/) | QMD semantic search patterns: MCP tools, index rebuild, troubleshooting |
 
 ### Third-Party
 
