@@ -34,8 +34,8 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 
 | Skill | Description |
 |-------|-------------|
-| [activerecord-application-query-optimization](skills/activerecord-application-query-optimization/) | N+1 prevention, batch preloading, duplicate join detection, and eager loading patterns |
-| [activerecord-query-performance-patterns](skills/activerecord-query-performance-patterns/) | Four techniques preventing 10-70x PostgreSQL query degradation |
+| [activerecord-application-query-optimization](skills/activerecord-application-query-optimization/) | N+1 prevention, batch preloading, SQL CASE consolidation, duplicate join detection, and 8 N+1 discovery patterns |
+| [activerecord-query-performance-patterns](skills/activerecord-query-performance-patterns/) | Three techniques preventing 10-1000x PostgreSQL degradation: ILIKE indexing, two-phase DISTINCT, UNION ALL OR-splitting |
 | [activerecord-eager-loading-testing-patterns](skills/activerecord-eager-loading-testing-patterns/) | Testing eager loading with `.loaded?` verification and query count assertions |
 | [activerecord-graceful-corrupted-data-handling](skills/activerecord-graceful-corrupted-data-handling/) | Safe handling of missing/corrupted foreign key data with `.find_by` and nil guards |
 | [activerecord-idempotent-create-patterns](skills/activerecord-idempotent-create-patterns/) | Idempotent endpoints using `find_or_create_by!` to prevent race conditions |
@@ -71,7 +71,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | Skill | Description |
 |-------|-------------|
 | [test-plan-methodology](skills/test-plan-methodology/) | 4-phase test planning to prevent coverage blind spots |
-| [security-patterns](skills/security-patterns/) | OWASP top 10 proactive security analysis |
+| [security-patterns](skills/security-patterns/) | Rails security checklist: XSS, CSRF, PII logging, multi-tenant isolation, and state machine security |
 | [adversarial-agent-validation](skills/adversarial-agent-validation/) | Three-agent adversarial pattern (Finder/Adversary/Referee) for deep review |
 | [dead-code-detection](skills/dead-code-detection/) | Systematic orphaned file and dead code identification |
 | [cyclomatic-complexity-reduction](skills/cyclomatic-complexity-reduction/) | Reduce cyclomatic complexity via early-return extraction, guard unification, and safe access helpers |
@@ -102,7 +102,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 
 | Skill | Description |
 |-------|-------------|
-| [hook-state-cascade-patterns](skills/hook-state-cascade-patterns/) | Stateful hook patterns: cascade routing, cooldowns, and state fallback |
+| [hook-state-cascade-patterns](skills/hook-state-cascade-patterns/) | Stateful hook patterns: cascade routing, cooldowns, state fallback, portable date parsing, and live file verification |
 | [skill-decomposition-methodology](skills/skill-decomposition-methodology/) | Refactor bloated skills (>500 lines) into focused sub-skills |
 
 ## Compatibility
