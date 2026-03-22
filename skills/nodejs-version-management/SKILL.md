@@ -80,6 +80,32 @@ export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$HOME/.local/bin:$PNPM_HOME:$PATH:/opt/homebrew/bin"
 ```
 
+### Isolate Node runtime for npm-based CLI tools
+
+When an npm CLI tool (e.g., `@googleworkspace/cli`) needs `node` at runtime but you don't want Node system-wide (to avoid version conflicts with project devShells):
+
+```nix
+# Wrapper injects Node only for this tool — no system-wide Node pollution
+(pkgs.writeShellScriptBin "gws" ''
+  export PATH="${pkgs.nodejs}/bin:$PATH"
+  exec "$HOME/.local/share/pnpm/gws" "$@"
+'')
+```
+
+Auto-install the package on new machines via activation:
+
+```nix
+activation.installGlobalNpmPackages = lib.hm.dag.entryAfter ["setupPnpm"] ''
+  export PATH="${pkgs.nodejs}/bin:${pkgs.nodePackages.pnpm}/bin:$PATH"
+  export PNPM_HOME="$HOME/.local/share/pnpm"
+  if [ ! -f "$PNPM_HOME/gws" ]; then
+    $DRY_RUN_CMD pnpm add -g @googleworkspace/cli
+  fi
+'';
+```
+
+**Discovery (Mar 2026)**: `@googleworkspace/cli` installed via pnpm but failed with `exec: node: not found`. Adding Node system-wide would conflict with project devShells. The wrapper pattern injects Node only for the specific tool.
+
 ### Never leave version references out of sync
 
 ```nix
