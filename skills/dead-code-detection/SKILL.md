@@ -10,22 +10,19 @@ allowed-tools: Read, Grep, Glob, Bash
 
 ## Verification Process
 
-Steps 1-2 can run in parallel, then Step 3:
+Steps 1-2 run in parallel, then Step 3:
 
 **Step 1 — Reference search** (app + test):
 Use Grep to search for the filename, partial name, class name, or method across `app/` and `test/` (include `*.erb`, `*.rb`, `*.js`). Exclude self-references. Also check JS imports in `app/javascript/`.
 
 **Step 2 — Git history**:
-Check `git log --oneline --all -10 -- path/to/file` for recent activity and `git log -1 --format="%ai %an"` for last author.
+`git log --oneline --all -5 -- path/to/file` — sanity check for recent activity.
 
-**Step 3 — Dynamic render enumeration** (MANDATORY):
+**Step 3 — Dynamic render check + test gate** (MANDATORY for partials):
 
-> Discovered 2026-03-14: Deleted 93 "orphaned" partials; tests broke because 18 were
-> rendered via `"shared/prefix_#{variable}"`. Shell-level grep silently failed on `\#{`.
-
-Use the **Grep tool** (NOT bash grep) to find all dynamic renders:
+Use the **Grep tool** (NOT bash grep) to build an exclusion list:
 ```
-Pattern: render.*partial.*\#\{
+Pattern: render.*\#\{
 Scope: app/**/*.{erb,rb}
 ```
 
@@ -34,6 +31,15 @@ For each match targeting `shared/`:
 2. Enumerate ALL possible values
 3. Add `prefix_#{value}` for each value to an exclusion list
 4. Partials matching exclusions are NOT orphans — skip them
+
+**Then run the test gate** — even if Step 3 finds no dynamic renders matching a candidate:
+1. Trace the candidate partial → parent view → controller action
+2. **Run that controller's integration test file before deleting**
+3. `Missing partial` error = partial is alive
+4. No test file for the rendering path = cannot confirm dead — skip it
+
+> 2026-03-20: Dynamic render check was documented but tests weren't run before committing.
+> 4 partials deleted, tests broke. The test gate catches what static analysis misses.
 
 ### Common dynamic render sources
 
@@ -46,34 +52,18 @@ For each match targeting `shared/`:
 
 ## Dead Code Patterns
 
-> **11 Production-Verified Patterns** — detection command is in each row.
-
 | # | Pattern | Detection | Risk |
 |---|---------|-----------|------|
-| 1 | Orphaned partials after migration | `grep -r "partial_name" app/ test/` → zero matches | Low |
+| 1 | Orphaned partials | Reference search → zero matches + dynamic render check + test gate | Low |
 | 2 | Replaced helper modules | `grep "include.*Helper" app/helpers/application_helper.rb` | Medium |
 | 3 | Old controller actions | `rake routes \| grep controller_name` | Medium |
 | 4 | Legacy JS controllers | `grep -r "data-controller.*name" app/views/` (exclude `<%= %>` interpolation) | Low |
-| 5 | Deprecated test files | `find test/views/ -name "*_test.rb"` | Low |
 | 6 | Obsolete tests after removal | `grep -r "removed-controller" test/` | Low |
 | 8 | Orphaned service dependencies | Transitive dependency check (see below) | Medium |
 | 9 | Single-purpose services | 1 caller + <25 lines + no test file → inline | Low |
-| 10 | Test env bypass masking failures | `grep -r "Rails.env.test?" app/controllers/` | High |
-| 11 | Never-integrated partials | Only self-references; only creation commit in git log | Low |
 | 12 | Mailer templates | `grep -r "template_name" app/views/ app/mailers/` | Medium |
 
-**Pattern 1 chain detection**: When a file has only 1 reference, check if that parent is also orphaned.
-
-```bash
-# Search by partial NAME, not filename.
-for file in app/views/shared/_*.html.erb; do
-  name=$(basename "$file" .html.erb | sed 's/^_//')
-  count=$(grep -r "$name" app/ test/ --include="*.erb" --include="*.rb" --include="*.js" | grep -v "^$file:" | wc -l)
-  [ "$count" -eq 0 ] && echo "ORPHAN: $name"
-done
-```
-
-**Pattern 11 vs Pattern 1**: Pattern 1 = previously used, became orphaned (git log shows active usage). Pattern 11 = never used (only creation commit exists).
+**Chain detection**: When a file has only 1 reference, check if that parent is also orphaned.
 
 ### Pattern 8: Orphaned Dependencies After Service Consolidation
 
@@ -90,12 +80,6 @@ for dep in ServiceB ServiceC; do
   grep -r "$dep" app/ --include="*.rb" | grep -v "$SERVICE_FILE"
 done
 ```
-
-### Pattern 10: Test Environment Bypass
-
-`grep -r "Rails.env.test?" app/controllers/ --include="*.rb" -A5`
-
-**Red flags**: Test-specific CSS classes in assertions, missing partial dependencies, 4+ years without updates, `rescue StandardError` bypass.
 
 ## Commit Format
 
