@@ -154,6 +154,24 @@
       "license": "MIT"
     },
     {
+      "name": "claude-audit",
+      "source": "./skills/claude-audit",
+      "description": "Audit CLAUDE.md files for redundancy, verbosity, stale references, conflicting rules, and optimization opportunities.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "claude-md",
+        "optimization",
+        "audit",
+        "configuration"
+      ],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
       "name": "controller-input-validation-edge-cases",
       "source": "./skills/controller-input-validation-edge-cases",
       "description": "Guidance on implementing comprehensive input validation in Rails controller actions before processing to prevent edge case failures.",
