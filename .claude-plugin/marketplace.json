@@ -321,7 +321,7 @@
       "name": "hook-state-cascade-patterns",
       "source": "./claude-code/hook-state-cascade-patterns",
       "description": "Reusable patterns for stateful Claude Code hooks: priority cascade routing, per-route daily cooldown, CWD-first state fallback, portable date parsi...",
-      "version": "2.0",
+      "version": "2.1.0",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -485,7 +485,7 @@
       "name": "stimulus-controller-integration",
       "source": "./frontend/stimulus-controller-integration",
       "description": "Stimulus controller patterns for AJAX initialization, CustomEvent communication, and controller reuse.",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "author": {
         "name": "Nestor Pestelos"
       },

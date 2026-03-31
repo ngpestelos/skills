@@ -1,41 +1,32 @@
 ---
 name: stimulus-form-redirect
-description: "Replace AJAX + DOM manipulation with form submission + server redirect. Trigger keywords: form submission redirect, fetch to form submit, DOM manipulation removal, window.location.href, simplify Stimulus controller, handleSuccess pattern, updateSidebar, AJAX to redirect, bulk form submit, server-side redirect. (global)"
+description: "Replace AJAX + DOM manipulation with form submission + server redirect. Trigger keywords: form submission redirect, fetch to form submit, DOM manipulation removal, window.location.href, simplify Stimulus controller, handleSuccess pattern, AJAX to redirect, bulk form submit."
 ---
 
-# Stimulus Form Submission Redirect Simplification
+# Stimulus Form Redirect
 
-Replace client-side DOM manipulation after AJAX with server redirect. Instead of parsing HTML responses and updating multiple DOM elements (sidebar, content, flash), let the server render the correct state on redirect.
+Instead of parsing HTML responses and updating DOM elements (sidebar, content, flash) after AJAX, let the server render the correct state on redirect.
 
 ## The Pattern
 
 ```javascript
-// WRONG - Complex DOM manipulation after AJAX
+// WRONG — DOM manipulation after AJAX (innerHTML = XSS risk)
 handleSuccess(data) {
-  this.updateSidebar(data.sidebar_html)    // innerHTML = XSS risk
+  this.updateSidebar(data.sidebar_html)
   this.updateContent(data.content_html)
   this.showActionsContainer()
   window.App.showSuccessFlash(data.message)
 }
 
-// RIGHT - Server redirect handles state
+// RIGHT — server redirect handles state
 handleSuccess(data) {
-  if (data.redirect_url) {
-    window.location.href = data.redirect_url
-  } else {
-    window.location.reload()
-  }
-}
-
-handleError(data) {
-  const errors = data.errors || ['An error occurred']
-  window.App.showErrorFlash(errors.join(', '))
+  window.location.href = data.redirect_url || window.location.href
 }
 ```
 
 ## Bulk Operations via Hidden Form
 
-For bulk operations (deleting multiple items), create a hidden form and submit it. The server handles the redirect.
+For bulk operations, create a hidden form and submit it — the server handles the redirect.
 
 ```javascript
 deleteSelected(event) {
@@ -47,7 +38,6 @@ deleteSelected(event) {
   form.method = 'POST'
   form.action = '/items/bulk_destroy'
 
-  // Add hidden fields: _method=delete, authenticity_token, item_ids[]
   const addField = (name, value) => {
     const input = Object.assign(document.createElement('input'), {
       type: 'hidden', name, value
@@ -64,29 +54,24 @@ deleteSelected(event) {
 }
 ```
 
-## Server-Side Support
-
-Controller returns JSON with `redirect_url` for AJAX, or redirects directly for form submissions.
+## Server Side
 
 ```ruby
-# Bulk operations redirect directly
 def bulk_destroy
   ids = params[:item_ids]
-
   if ids.present?
-    destroyed_count = current_scope.where(id: ids).destroy_all.count
-    flash[:notice] = "#{destroyed_count} item(s) deleted"
+    count = current_scope.where(id: ids).destroy_all.count
+    flash[:notice] = "#{count} item(s) deleted"
   else
     flash[:error] = 'No items selected'
   end
-
   redirect_to records_path
 end
 ```
 
 ## When NOT to Use
 
-- **Real-time Updates**: When immediate feedback without page flash is required
-- **Partial Updates**: When only small part of page needs updating (use Turbo)
-- **Long Lists**: When page reload would lose scroll position
-- **Form Wizards**: When multi-step forms need to preserve state
+- **Real-time updates** — immediate feedback without page flash needed
+- **Partial updates** — only small part of page changes (use Turbo)
+- **Long lists** — page reload loses scroll position
+- **Form wizards** — multi-step forms need preserved state

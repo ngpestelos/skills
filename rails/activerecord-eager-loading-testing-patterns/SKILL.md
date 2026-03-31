@@ -46,19 +46,19 @@ end
 
 ## Testing Patterns
 
-### Association Preloading Verification
-
-Verify `.association(:name).loaded?` on returned records. For nested includes, chain: `record.association(:parent).loaded?` then `record.parent.association(:children).loaded?`. For public pages (no auth), use `assigns(:products)` after the request.
+### Association Preloading
 
 ```ruby
 result = SearchJob.perform_now(query: 'test')
 assert result[:products].first.association(:variants).loaded?,
        'variants should be eager loaded to prevent N+1 queries'
+# Nested: chain .loaded? at each level
+# Public pages (no auth): use assigns(:products) after the request
 ```
 
-### Query Count Testing
+### Query Count
 
-Access associations inside the block to trigger lazy loads — otherwise N+1 hides in the view. For full request cycle, use `get`/`post` instead of `perform_now` to catch view-triggered N+1.
+Access associations inside the block to trigger lazy loads — otherwise N+1 hides in the view.
 
 ```ruby
 queries_count = count_queries do
@@ -67,11 +67,10 @@ queries_count = count_queries do
 end
 assert queries_count <= 15,
        "Expected <= 15 queries with eager loading, got #{queries_count}"
+# For full request cycle, use get/post to catch view-triggered N+1
 ```
 
-### Pattern-Matching Query Count
-
-Isolate queries to a specific table to detect N+1 on one association.
+### Pattern-Matching Count
 
 ```ruby
 target_queries = count_queries_matching(/custom_fields/) do
@@ -81,13 +80,11 @@ assert target_queries <= 1,
        "Expected 1 query (batch), got #{target_queries} (N+1 detected)"
 ```
 
-## FORBIDDEN Anti-Patterns
+## Anti-Patterns
 
-| Anti-Pattern | Problem | Correct Approach |
-|---|---|---|
-| **Test data presence, not loading** `assert order.sale` | Passes with lazy loading; doesn't catch N+1 | `assert order.association(:store).loaded?` |
-| **Exact query count** `assert_equal 3, queries_count` | Brittle; Rails adds overhead queries | `assert queries_count <= 15` (threshold + buffer) |
-| **Not accessing associations** in query count test | N+1 exists in view but test passes | Mimic template: `products.each { \|p\| p.variants.each(&:images) }` |
-| **Only testing job, not view** | Job eager loads but template triggers N+1 | Add integration test exercising full request cycle |
-| **Threshold too high** `assert queries_count <= 50` | Doesn't detect N+1 of 40 queries | Set threshold = expected queries + small buffer |
-| **Individual finds in loops** `CustomField.find(id)` | N+1 queries | Batch: `CustomField.where(id: ids).index_by(&:id)` |
+| Anti-Pattern | Correct Approach |
+|---|---|
+| `assert order.sale` (tests data, not loading) | `assert order.association(:store).loaded?` |
+| `assert_equal 3, queries_count` (brittle) | `assert queries_count <= 15` (threshold + buffer) |
+| Not accessing associations in count block | Mimic template: `products.each { \|p\| p.variants.each(&:images) }` |
+| Only testing job, not full request cycle | Add integration test with `get`/`post` |

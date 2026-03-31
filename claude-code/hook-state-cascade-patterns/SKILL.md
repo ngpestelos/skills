@@ -1,20 +1,16 @@
 ---
 name: hook-state-cascade-patterns
-version: 2.0
+category: claude-code
 description: "Reusable patterns for stateful Claude Code hooks: priority cascade routing, per-route daily cooldown, CWD-first state fallback, portable date parsing (GNU/BSD), live file verification. Trigger keywords: hook cascade, cooldown, route priority, state fallback, date epoch portable, hook state, daily limit."
-allowed-tools: Read, Grep, Glob, Bash
+metadata:
+  version: "2.1.0"
 ---
 
 # Stateful Hook Cascade Patterns
 
-## Core Principles
+**Principles**: First match wins (exit after first suggestion). Daily limit per route via JSON cooldown (not hourly). Verify stale state against filesystem before suggesting.
 
-1. **First match wins** -- cascade through routes by priority; exit after first suggestion
-2. **Daily limit per route** -- each route fires at most once per calendar day via JSON cooldown file (not hourly timers -- those let one route dominate all day)
-3. **Silent fallback** -- when no route triggers, output nothing
-4. **Live verification** -- verify stale state against filesystem before suggesting
-
-## Pattern 1: Priority Cascade with Daily Cooldown
+## Priority Cascade with Daily Cooldown
 
 ```bash
 mkdir -p "$HOME/.claude/state"
@@ -32,7 +28,6 @@ record_route() {
     && mv "$tmp" "$COOLDOWN_FILE"
 }
 
-# First match wins -- each route independent
 if ! route_fired_today "route-a" && [ condition ]; then
   record_route "route-a"
   echo "Suggestion for route A"
@@ -48,9 +43,9 @@ fi
 exit 0  # silent fallback
 ```
 
-## Pattern 2: State File Fallback Chain
+## State File Fallback Chain
 
-Hooks run from any CWD. Resolve project state with CWD-local first, then hardcoded fallback.
+CWD-local first, then hardcoded fallback (hooks run from any CWD):
 
 ```bash
 CWD=$(echo "$INPUT" | jq -r '.cwd // ""')
@@ -60,12 +55,12 @@ if [ -n "$CWD" ] && [ -f "$CWD/.claude/state/data.json" ]; then
 elif [ -f "$HOME/src/primary-repo/.claude/state/data.json" ]; then
   STATE_FILE="$HOME/src/primary-repo/.claude/state/data.json"
 fi
-[ -z "$STATE_FILE" ] && exit 0  # no state = silent exit
+[ -z "$STATE_FILE" ] && exit 0
 ```
 
-## Pattern 3: Consolidated jq Extraction
+## Consolidated jq Extraction
 
-Extract all fields in one call (~9ms on 547-line file) instead of spawning jq per field:
+One jq call for all fields (~9ms on 547-line file) instead of one per field:
 
 ```bash
 read -r FIELD_A FIELD_B FIELD_C <<< \
@@ -76,13 +71,13 @@ read -r FIELD_A FIELD_B FIELD_C <<< \
   ] | @tsv' "$STATE_FILE")
 ```
 
-## Pattern 4: Live Verification Before Suggesting
+## Live Verification
 
-State files go stale. Before firing a suggestion, confirm the condition still holds against the filesystem. Example: state says a file is 925 lines, but `wc -l` shows 400 after optimization -- skip the suggestion.
+State files go stale. Before suggesting, confirm the condition still holds against the filesystem (e.g., check `wc -l` before citing a line count from state).
 
-## Pattern 5: Portable Date Arithmetic (GNU/BSD)
+## Portable Date Arithmetic (GNU/BSD)
 
-nix-managed environments replace macOS BSD coreutils with GNU. Try GNU first, BSD fallback:
+GNU first (nix-managed), BSD fallback (stock macOS):
 
 ```bash
 date_to_epoch() {
@@ -92,13 +87,3 @@ date_to_epoch() {
 }
 DAYS_SINCE=$(( ($(date "+%s") - $(date_to_epoch "$DATE_STR")) / 86400 ))
 ```
-
-## Pattern Selection
-
-| Need | Pattern |
-|------|---------|
-| Multiple suggestions, max 1/day each | 1: Priority cascade + daily cooldown |
-| Hook reads project-specific state | 2: State file fallback chain |
-| Multiple fields from one JSON | 3: Consolidated jq extraction |
-| State might be stale | 4: Live filesystem verification |
-| Date math on macOS + nix | 5: Portable date-to-epoch |

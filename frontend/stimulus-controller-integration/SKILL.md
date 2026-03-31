@@ -4,20 +4,18 @@ description: "Stimulus controller patterns for AJAX initialization, CustomEvent 
 license: MIT
 metadata:
   author: ngpestelos
-  version: "2.0.0"
+  version: "2.1.0"
 ---
 
 # Stimulus Controller Integration
 
 ## Initialization
 
-Controllers not initializing? → Attribute Manipulation. Parent disconnecting? → Scope reinit to content container, not parent. MutationObserver not detecting? → Build complete off-DOM, attach once. `this.context` undefined? → Use `getControllerForElementAndIdentifier()` as escape hatch. User clicks before ready? → Readiness Polling.
+Controllers not initializing? → Attribute Manipulation. Parent disconnecting? → Scope reinit to content container, not parent. `this.context` undefined? → `getControllerForElementAndIdentifier()`. User clicks before ready? → Readiness Polling. Always guard `connect()`: `if (!this.scope || !this.element) return;`
 
-Add defensive guards in `connect()`: `if (!this.scope || !this.element) return;`
+### Attribute Manipulation
 
-### Attribute Manipulation (Controllers Not Initializing)
-
-Remove and re-add `data-controller` to force Stimulus reconnection. Scope to content container (not parent wrapper) to avoid disconnecting parent controllers.
+Remove and re-add `data-controller` to force reconnection. Scope to content container (not parent) to avoid disconnecting parent controllers.
 
 ```javascript
 reinitializeStimulusControllers(container) {
@@ -33,7 +31,7 @@ reinitializeStimulusControllers(container) {
 }
 ```
 
-### Readiness Polling (User Can Click Before Controller Ready)
+### Readiness Polling
 
 ```javascript
 async waitForControllerReady(element, identifier, { maxAttempts = 20, timeout = 1000 } = {}) {
@@ -52,51 +50,34 @@ async waitForControllerReady(element, identifier, { maxAttempts = 20, timeout = 
 
 ### CustomEvent Pattern
 
-Always assign data directly to `detail`, never nest it. Event naming: `namespace:action` (e.g., `product:selected`, `artwork:drop`).
+Assign data directly to `detail` (never nest). Name events `namespace:action` (e.g., `product:selected`).
 
 ```javascript
-// Dispatching
-const event = new CustomEvent('product:selected', {
+// Dispatch
+this.element.dispatchEvent(new CustomEvent('product:selected', {
   bubbles: true,
-  detail: this.productData  // Direct assignment (NOT { productData: ... })
-});
-this.element.dispatchEvent(event);
+  detail: this.productData  // Direct — NOT { productData: ... }
+}));
 
-// Handling
+// Handle
 handleProductSelected(event) {
-  const productData = event.detail;  // Read directly
+  const productData = event.detail;
   if (!productData?.id) return;
 }
 ```
 
 ### Dispatch/Listener Target Matching
 
-Events dispatched to `document` will NOT be received by listeners on `this.element`.
-
 | Dispatch Target | Listener Target | Works? |
 |-----------------|-----------------|--------|
 | `document` | `document` | Yes |
-| `document` | `this.element` | No |
-| `this.element` | `document` | Yes (bubbles up) |
+| `document` | `this.element` | **No** |
+| `this.element` | `document` | Yes (bubbles) |
 | `this.element` | `this.element` | Yes |
-| `this.element` | sibling element | No |
+| `this.element` | sibling element | **No** |
 
-**Rule**: If you dispatch to `document`, ALL listeners must be on `document`.
-
-### Sibling / Cross-Subtree Communication
-
-DOM events only bubble UP, not sideways. Dispatch to `document` for siblings. When consumers span subtrees, dispatch on both `this.element` (for local bubbling) and `document` (for distant listeners). Attach in `connect()`, remove in `disconnect()`.
-
-```javascript
-connect() {
-  this.handler = this.handleUpload.bind(this);
-  document.addEventListener('dropzone:queuecomplete', this.handler);
-}
-disconnect() {
-  document.removeEventListener('dropzone:queuecomplete', this.handler);
-}
-```
+Siblings need `document` as dispatch target. For cross-subtree consumers, dispatch on both `this.element` and `document`. Always attach in `connect()`, remove in `disconnect()`.
 
 ## Reuse
 
-Before reusing a controller in a new context: verify all `static targets`, data attributes, and `data-action` patterns exist in the new partial. Change container elements freely (`<tr>` → `<li>`) but preserve all data attributes. Use CSS classes instead of `tagName` checks for context-specific styling.
+Before reusing a controller: verify all `static targets`, data attributes, and `data-action` exist in the new partial. Container elements can change (`<tr>` → `<li>`) — data attributes cannot. Use CSS classes instead of `tagName` checks.
