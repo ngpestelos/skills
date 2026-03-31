@@ -4,104 +4,44 @@ description: Systematic 4-phase test planning approach to prevent coverage blind
 license: MIT
 metadata:
   author: ngpestelos
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # Test Plan Methodology
 
-## Purpose
+## The Blind Spot: Feature-Based vs Usage-Based Coverage
 
-Prevent test coverage blind spots by enforcing **usage-based test planning** across all feature deployment locations. Discovered during analysis where shared partials had comprehensive tests in one context but ZERO coverage in other deployment locations.
-
-## Critical Discovery: Linter Blind Spot
-
-**Feature-based test organization creates coverage blind spots:**
+Coverage tools organize by file/feature, not by deployment location. A shared partial can show comprehensive coverage while entire pages using it have zero tests.
 
 ```
-Linter Report:
-  _shared_partial.html.erb - COMPREHENSIVE coverage (28 JS tests)
-  controller.rb - PARTIAL coverage (13 backend tests)
-
-Reality:
-  Primary Index page - ZERO coverage for shared partial
-  Secondary Edit page - 2 incidental assertions only
+Coverage Report Says:              Reality:
+  _shared_partial - 28 tests         Index page  - ZERO partial coverage
+  controller      - 13 tests         Edit page   - 2 incidental assertions
 ```
 
-**Why This Happens**: Linters organize tests by file/feature, not by usage location. A partial can have comprehensive tests in one context but ZERO tests in other deployment locations. Coverage reports don't reveal multi-location gaps.
+**Fix**: Plan tests per deployment location, not per source file.
 
-## 4-Phase Test Planning Methodology
+## 4-Phase Planning
 
-### Phase 1: Primary Page Integration Tests
+### 1. Primary Page Integration
+Test feature rendering, data attributes, and sub-partials on the main usage page.
 
-**Focus**: Test feature rendering and structure on main usage page
+### 2. Secondary Page Integration
+Test the same feature on every other page that uses it. Verify consistent rendering and data attributes across contexts.
 
-- Does the feature render on the primary page?
-- Are all data attributes present and correct?
-- Are CSS framework classes preserved?
-- Are sub-partials rendering correctly?
+### 3. Backend Integration
+Verify endpoint responses: success/error JSON, validation formatting, error handling.
 
-**Typical Test Count**: 4-6 tests per primary page
+### 4. Cross-Page Consistency
+Compare feature structure across pages. Check context-specific IDs and edge cases.
 
-### Phase 2: Secondary Page Integration Tests
+## Workflow
 
-**Focus**: Test feature rendering on ALL other deployment locations
-
-- Does the feature render on secondary pages?
-- Are data attributes consistent across pages?
-- Does the feature work identically in all contexts?
-
-**Typical Test Count**: 2-4 tests per secondary page
-
-### Phase 3: Backend Integration Tests
-
-**Focus**: Verify AJAX endpoint responses and JSON structure
-
-- Do endpoints return correct JSON for success/error cases?
-- Are validation errors properly formatted?
-- Are server errors handled gracefully?
-
-**Typical Test Count**: 3-5 tests per endpoint
-
-### Phase 4: Multi-Page Consistency Tests
-
-**Focus**: Verify feature behaves consistently across deployment locations
-
-- Is the feature structurally identical across pages?
-- Are unique IDs generated correctly for different contexts?
-- Are there any page-specific edge cases?
-
-**Typical Test Count**: 2-3 consistency tests
-
-## Steps: Planning Tests for a New Feature
-
-1. **Identify ALL usage locations**:
+1. **Find all deployment locations**:
    ```bash
    grep -r "render.*[partial_name]" app/views/
    ```
+2. **Plan tests per location** using the 4 phases above
+3. **Prioritize gaps**: zero coverage > partial coverage > consistency
 
-2. **Plan tests for EACH location separately**:
-   - Phase 1: Primary page integration tests (4-6 tests)
-   - Phase 2: Secondary page integration tests (2-4 tests per page)
-   - Phase 3: Backend integration tests (3-5 tests)
-   - Phase 4: Multi-page consistency tests (2-3 tests)
-
-3. **Don't rely on linter coverage reports alone** — feature-based organization hides multi-location gaps.
-
-## Gap Analysis Methodology
-
-1. Document current coverage per layer (JS, backend, integration)
-2. Identify ALL deployment locations
-3. Calculate target: ~15-25 tests for comprehensive coverage
-4. Prioritize by risk: HIGH (zero coverage) > MEDIUM (partial) > LOW (consistency)
-
-## Quick Decision Tree
-
-```
-Planning tests?
-  New feature -> Apply 4-phase methodology
-  Coverage review -> Check usage-based coverage
-    Find deployments -> grep render statements
-    Check each location -> Separate test files
-    Document gaps -> Create test plan
-  Gap discovery -> Systematic gap analysis
-```
+Never rely on coverage reports alone — they hide multi-location gaps.

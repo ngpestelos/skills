@@ -9,24 +9,18 @@ metadata:
 
 # Root Cause Investigation
 
-> **Purpose**: Investigate root causes through two complementary modes -- Five Whys for systemic/technical problems and Peeling the Onion for human motivations and psychological drivers.
-
 ## Mode 1: Five Whys (Systemic Root Cause)
 
-**Origin**: Toyota Production System (Taiichi Ohno) -> IDEO Method Cards -> Design Thinking
-
-Ask "Why?" iteratively until reaching an actionable root cause. Five is a heuristic -- stop when you reach something actionable. Fewer than 5 often stays at symptom level. More than 5 may be too abstract or circular.
+Ask "Why?" iteratively until reaching an actionable root cause. Five is a heuristic -- stop when actionable. Fewer than 5 stays at symptom level; more than 5 risks circularity.
 
 ### Template
 
 ```markdown
-## 5 Whys Analysis: [Problem]
-
-**Problem Statement**: [Clear description of what went wrong]
+## 5 Whys: [Problem]
 
 | Why # | Question | Answer |
 |-------|----------|--------|
-| 1 | Why did [problem] happen? | [Symptom/immediate cause] |
+| 1 | Why did [problem] happen? | [Immediate cause] |
 | 2 | Why did [answer 1] happen? | [Proximate cause] |
 | 3 | Why did [answer 2] happen? | [Contributing factor] |
 | 4 | Why did [answer 3] happen? | [Systemic issue] |
@@ -37,48 +31,42 @@ Ask "Why?" iteratively until reaching an actionable root cause. Five is a heuris
 **Wrong Fix** (treats symptom): [What NOT to do]
 ```
 
-### Domain Examples
+### Examples
 
 - **Software**: Page slow -> Query 3s -> Full table scan -> Missing index -> **Migration failed silently, no CI check** -> Add migration success check to CI
 - **Product**: Users churned -> Feature hard to find -> Buried in settings -> **PM assumed "advanced" without research** -> Require user research for UX decisions
-- **Personal**: Didn't finish report -> Morning consumed by meetings -> Didn't decline optional meetings -> **FOMO driving calendar choices** -> Establish meeting attendance criteria
+- **Personal**: Didn't finish report -> Morning consumed by meetings -> Didn't decline optional ones -> **FOMO driving calendar choices** -> Establish attendance criteria
 
 ### Variations
 
-- **5 Whys + 1 How**: After root cause, add "How do we prevent this?"
 - **Appreciative 5 Whys**: For successes -- "Why did this work so well?" Identifies what to replicate.
-- **Branching 5 Whys**: When multiple answers exist, explore each branch separately.
+- **Branching 5 Whys**: When multiple answers exist at a level, explore each branch separately.
 
 ### Common Mistakes
 
 1. **Stopping Too Early**: "We don't have budget" is rarely root cause -- keep going
-2. **Blaming People**: Ask "Why did the system allow that mistake?" not "Who made the mistake?"
-3. **Accepting Vague Answers**: "Communication breakdown" is not specific enough
+2. **Accepting Vague Answers**: "Communication breakdown" is not specific enough -- demand mechanisms
 
 ---
 
 ## Mode 2: Peeling the Onion (Psychological Layers)
 
-**Origin**: Paul Adams, developed at Google Research for field interview training
-
-Systematically explore human motivations by repeatedly asking **"I understand, but why is that?"** to strip away surface answers and reach core emotional or values-based truth. The phrase validates (prevents defensiveness) then pushes deeper.
+Systematically explore human motivations by repeatedly asking **"I understand, but why is that?"** to strip away surface answers. The phrase validates (prevents defensiveness) then pushes deeper.
 
 ### Layer Model
 
-| Layer | Type | Characteristics |
-|-------|------|-----------------|
-| 1 | Surface | Obvious, rational, socially acceptable |
+| Layer | Type | Signal |
+|-------|------|--------|
+| 1 | Surface | Obvious, socially acceptable |
 | 2 | Rationalization | Logical justification |
 | 3 | Belief | Underlying assumption or worldview |
 | 4 | Emotion | Feeling driving the belief |
-| **Core** | Value/Need | Fundamental human motivation (safety, belonging, esteem, autonomy). You've arrived when answers become circular or values-based. |
+| **Core** | Value/Need | Fundamental motivation (safety, belonging, esteem, autonomy). Answers become circular or values-based. |
 
 ### Template
 
 ```markdown
-## Peeling the Onion Analysis: [Subject/Decision]
-
-**Initial Question**: [What behavior/preference are we exploring?]
+## Peeling the Onion: [Subject/Decision]
 
 | Layer | Response |
 |-------|----------|
@@ -92,7 +80,7 @@ Systematically explore human motivations by repeatedly asking **"I understand, b
 **Implications**: [How should this change our approach?]
 ```
 
-### Application Examples
+### Examples
 
 | Scenario | Surface | Core | Insight |
 |----------|---------|------|---------|
@@ -104,8 +92,8 @@ Systematically explore human motivations by repeatedly asking **"I understand, b
 
 ## Combining Both Modes
 
-Use Five Whys to diagnose the systemic problem, then Peeling the Onion to understand the human factors that allowed or created it.
+Use Five Whys for the systemic problem, then Peeling the Onion for the human factors that allowed it.
 
 **Example** -- Bug shipped to production:
 - **Five Whys**: No test coverage -> No testing requirement -> **No CI/CD enforcement** (systemic fix)
-- **Peeling the Onion**: Developer skipped tests -> Time pressure -> Fear of missing deadline -> **Need for approval from manager** (human insight: address performance anxiety)
+- **Peeling the Onion**: Developer skipped tests -> Time pressure -> Fear of missing deadline -> **Need for approval from manager** (address performance anxiety)
