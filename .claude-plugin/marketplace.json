@@ -840,6 +840,24 @@
       "category": "development",
       "homepage": "https://github.com/ngpestelos/skills",
       "license": "MIT"
+    },
+    {
+      "name": "skills-audit",
+      "source": "./skills/skills-audit",
+      "description": "Inventory and audit skills for spec compliance and optimization. Two modes: triage (scan all) and deep audit (single skill).",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "skills",
+        "audit",
+        "spec-compliance",
+        "optimization"
+      ],
+      "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
     }
   ]
 }

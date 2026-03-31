@@ -1,8 +1,9 @@
 ---
 name: skills-audit
-version: 1.0
 description: "Inventory and audit skills for spec compliance and optimization. Two modes: triage (scan all) and deep audit (single skill). Auto-activates when auditing skills, checking skill quality, or optimizing skill files. Trigger keywords: skills audit, audit skill, skill quality, spec check, optimize skill."
-allowed-tools: Read, Grep, Glob, Bash
+allowed-tools: Read Grep Glob Bash
+metadata:
+  version: "1.0.0"
 ---
 
 # Skills Audit
