@@ -1,7 +1,7 @@
 ---
-name: commit-workflow
+name: commit
 version: 1.0
-description: "Organize uncommitted changes into atomic git commits with scope awareness. Auto-activates when committing changes, organizing commits, or preparing pushes. Trigger keywords: commit, git commit, atomic commit, push changes, organize commits."
+description: "Organize uncommitted changes into atomic git commits with scope awareness, grouping related files and confirming before including out-of-scope changes. Auto-activates when committing, pushing, or organizing changes. Trigger keywords: commit, git commit, atomic commit, push changes, organize commits, stage files, prepare push, commit workflow."
 allowed-tools: Read, Grep, Glob, Bash
 ---
 

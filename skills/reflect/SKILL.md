@@ -1,7 +1,7 @@
 ---
-name: session-reflect
+name: reflect
 version: 1.0
-description: "Summarize the current conversation session to answer 'where were we?' after interruptions or complex threads. Auto-activates when reflecting on session, asking where we left off, or needing orientation. Trigger keywords: reflect, where were we, session summary, what were we doing."
+description: "Summarize the current conversation session to answer 'where were we?' after interruptions or complex threads. Reviews progress, decisions, next steps, and open questions for quick re-orientation. Auto-activates when reflecting on session, asking where we left off, or needing orientation. Trigger keywords: reflect, where were we, session summary, what were we doing, catch me up, re-orient, session progress."
 allowed-tools: Read, Grep, Glob, Bash
 ---
 

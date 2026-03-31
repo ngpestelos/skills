@@ -1,7 +1,7 @@
 ---
-name: learn-from-session
+name: learn
 version: 1.0
-description: "Extract learnings from the current session and persist as skills, memory, or workflow improvements. Auto-activates when reviewing what was learned, extracting patterns, or persisting session insights. Trigger keywords: learn, session learnings, what did we learn, extract patterns."
+description: "Extract learnings from the current conversation session and persist them as new skills, memory entries, or workflow improvements. Reviews approaches used, errors resolved, and user corrections to propose actionable changes. Auto-activates when reviewing what was learned, extracting patterns, or persisting session insights. Trigger keywords: learn, session learnings, what did we learn, extract patterns, persist insights, capture learnings, skill proposal."
 allowed-tools: Read, Grep, Glob, Bash
 ---
 

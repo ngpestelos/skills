@@ -1,7 +1,7 @@
 ---
-name: session-recap
+name: recap
 version: 1.0
-description: "Summarize recent git commits for context restoration at session start or after context-switching. Auto-activates when recapping changes, reviewing recent work, or restoring session context. Trigger keywords: recap, recent changes, what happened, git summary, context restore."
+description: "Summarize recent git commits for context restoration at session start or after context-switching, grouping by directory or theme and highlighting resume points. Supports configurable time windows (24h, 2d, 1w, etc.). Auto-activates when recapping changes, reviewing recent work, or restoring session context. Trigger keywords: recap, recent changes, what happened, git summary, context restore, session start, pick up where I left off."
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
