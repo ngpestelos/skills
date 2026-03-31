@@ -827,7 +827,7 @@
       "name": "skill-stack-deduplication",
       "source": "./claude-code/skill-stack-deduplication",
       "description": "Eliminates content duplication across Claude Code agent/skill/command layers by establishing clear separation of concerns and reference hierarchies.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
