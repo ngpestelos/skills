@@ -1,6 +1,6 @@
 ---
 name: neovim-configuration
-description: "Guides Neovim configuration through home-manager programs.neovim module. Auto-activates when working with Neovim plugins, themes, nvim-tree, lualine, or LSP setup in flake.nix. Covers plugin management, file explorer configuration, theme consistency, duplicate installation prevention, buffer navigation, and PATH issues. Trigger keywords: neovim, nvim-tree, lualine, colorscheme, theme, plugin, extraLuaConfig, home-manager, buildInputs, devShells, direnv, duplicate, PATH, theme not found, buffer, buffer navigation, NvimTreeFocus, NvimTreeResize."
+description: "Guides Neovim configuration through home-manager programs.neovim module. Auto-activates when working with Neovim plugins, themes, nvim-tree, lualine, or LSP setup in flake.nix. Covers plugin management, file explorer configuration, theme consistency, duplicate installation prevention, and PATH issues. Trigger keywords: neovim, nvim-tree, lualine, colorscheme, theme, plugin, extraLuaConfig, home-manager, buildInputs, devShells, direnv, duplicate, PATH, theme not found, buffer, NvimTreeFocus, NvimTreeResize."
 metadata:
   version: 1.0.0
 ---
@@ -9,57 +9,47 @@ metadata:
 
 ## Core Principles
 
-1. **Single source of truth**: Use ONLY `programs.neovim` module for Neovim - never install bare `neovim` package in `home.packages` or `devShell.buildInputs`
-2. **Configuration in flake.nix**: All Neovim settings live in `programs.neovim` within home-manager configuration
-3. **Plugin consistency**: Plugins referenced in `plugins` list must match those configured in `extraLuaConfig`
-4. **Theme auto-detection**: Use `theme = 'auto'` in lualine to automatically match active colorscheme
-5. **User-friendly defaults**: Configure plugins with sensible defaults (e.g., nvim-tree stays open, adequate width)
+1. **Single source of truth**: Use ONLY `programs.neovim` — never install bare `neovim` in `home.packages` or `devShell.buildInputs`
+2. **All config in `programs.neovim`**: Plugins in `plugins` list, behavior in `extraLuaConfig`
+3. **Always pcall-wrap plugin setup**: Prevents crashes when plugin unavailable
+4. **Theme sync**: Plugin list, `colorscheme` command, and lualine `theme = 'auto'` must agree
 
 ## Required Patterns
 
-### Nvim-tree File Explorer Configuration
+### Protected Plugin Loading
 
-Three configuration tiers (each builds on the previous):
+```lua
+local plugin_ok, plugin = pcall(require, 'plugin-name')
+if plugin_ok then
+  plugin.setup({ --[[ config ]] })
+end
+```
 
-| Tier | Key Settings | Use When |
-|------|-------------|----------|
-| Basic | `width = 40`, `quit_on_open = false` | Minimum acceptable config |
-| Highlighting | + `update_focused_file.enable = true` | Default recommendation |
-| Dynamic width | + `width = { min = 30, max = 60 }`, resize keybindings | Full-featured setup |
+### Nvim-tree Configuration
 
-**Canonical configuration (Tier 3 — dynamic width with all features):**
+Use dynamic width with file highlighting and resize keybindings:
 
 ```lua
 local nvim_tree_ok, nvim_tree = pcall(require, 'nvim-tree')
 if nvim_tree_ok then
   nvim_tree.setup({
     view = {
-      width = {
-        min = 30,      -- Minimum width in columns
-        max = 60,      -- Maximum width (adapts to content)
-        padding = 1,
-      },
+      width = { min = 30, max = 60, padding = 1 },
     },
     actions = {
-      open_file = {
-        quit_on_open = false,  -- Keep tree open when opening files
-      },
+      open_file = { quit_on_open = false },
     },
     update_focused_file = {
-      enable = true,        -- Highlight current buffer's file in tree
-      update_root = false,  -- Don't change tree root to match file
+      enable = true,
+      update_root = false,
     },
   })
 
-  -- Tree visibility and focus
   vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', { desc = 'Toggle file tree' })
   vim.keymap.set('n', '<leader>ef', ':NvimTreeFocus<CR>', { desc = 'Focus file tree' })
-
-  -- Width adjustment keybindings
   vim.keymap.set('n', '<leader>w+', ':NvimTreeResize +5<CR>', { desc = 'Increase tree width' })
   vim.keymap.set('n', '<leader>w-', ':NvimTreeResize -5<CR>', { desc = 'Decrease tree width' })
 
-  -- Toggle between narrow and wide presets
   local is_wide = false
   vim.keymap.set('n', '<leader>ww', function()
     is_wide = not is_wide
@@ -68,209 +58,100 @@ if nvim_tree_ok then
 end
 ```
 
-**Navigation patterns:**
-- `<leader>e` — Toggle nvim-tree visibility
-- `<leader>ef` — Focus nvim-tree (move cursor to tree without toggling)
-- `Ctrl-h` / `Ctrl-l` — Navigate between windows (tree <-> editor)
-- `<leader>w+` / `<leader>w-` — Adjust width by 5 columns
-- `<leader>ww` — Toggle narrow (35) / wide (55) presets
-
-**Width options:** Static (`width = 40`), percentage (`width = "30%"`), dynamic bounds (`width = { min = 30, max = 60 }`), or function-based.
-
-### Buffer Navigation Keybindings
-
-```lua
--- Bracket-style navigation (follows Vim convention like [c/]c for quickfix)
-vim.keymap.set('n', '[b', ':bprevious<CR>', { desc = 'Previous buffer' })
-vim.keymap.set('n', ']b', ':bnext<CR>', { desc = 'Next buffer' })
-vim.keymap.set('n', '<leader>bd', ':bd<CR>', { desc = 'Delete buffer' })
-```
-
-Complements Telescope buffer picker (`<leader>fb`).
+Key settings: `quit_on_open = false` keeps tree open, `update_focused_file` highlights current buffer's file, dynamic `width` adapts to content. Width also accepts static (`40`), percentage (`"30%"`), or function values.
 
 ### Theme Consistency
 
-**Keep these three elements synchronized:**
+Keep these three synchronized:
 
-1. Plugin in `plugins` list:
 ```nix
-plugins = with pkgs.vimPlugins; [
-  tokyonight-nvim  # Current default theme
-];
+# 1. Plugin in list
+plugins = with pkgs.vimPlugins; [ tokyonight-nvim ];
 ```
 
-2. Default colorscheme in `extraLuaConfig`:
 ```lua
+-- 2. Colorscheme with fallback
 vim.defer_fn(function()
   local ok, _ = pcall(vim.cmd, "colorscheme tokyonight")
-  if not ok then
-    print("Theme tokyonight not found, using default")
-  end
+  if not ok then print("Theme tokyonight not found, using default") end
 end, 0)
-```
 
-3. Lualine theme — use `'auto'` to auto-detect from active colorscheme:
-```lua
+-- 3. Lualine auto-detects from active colorscheme
 local lualine_ok, lualine = pcall(require, 'lualine')
 if lualine_ok then
-  lualine.setup {
-    options = {
-      theme = 'auto'
-    }
-  }
+  lualine.setup { options = { theme = 'auto' } }
 end
 ```
 
-### Theme Switching Keybindings
-
-```lua
-vim.keymap.set('n', '<leader>tn', ':ThemeNext<CR>', { desc = 'Next theme' })
-vim.keymap.set('n', '<leader>tt', ':Telescope colorscheme<CR>', { desc = 'Choose theme with Telescope' })
-```
-
-### Protected Plugin Loading
-
-**ALWAYS wrap plugin setup with pcall:**
-
-```lua
-local plugin_ok, plugin = pcall(require, 'plugin-name')
-if plugin_ok then
-  plugin.setup({
-    -- configuration here
-  })
-end
-```
+Use `<leader>tt` for `:Telescope colorscheme` to browse themes interactively.
 
 ## Forbidden Patterns
 
-### DON'T Use Default nvim-tree Settings
-
-```lua
--- WRONG - Uses narrow width (30) and closes on file open
-nvim_tree.setup()
-```
-
-### DON'T Forget File Highlighting Configuration
-
-```lua
--- WRONG - No visual indication of current file in tree
-nvim_tree.setup({
-  view = { width = 40 },
-  actions = { open_file = { quit_on_open = false } },
-  -- Missing: update_focused_file configuration
-})
-```
-
-### DON'T Use Fixed Width Without Adjustment Options
-
-```lua
--- WRONG - Locked into single width with no flexibility
-nvim_tree.setup({
-  view = { width = 40 },
-})
--- No keybindings to resize
-```
-
-### DON'T Keep Unused Theme Plugins
+### Bare Neovim Package (Critical)
 
 ```nix
-# WRONG - Loading theme that's not used
-plugins = with pkgs.vimPlugins; [
-  gruvbox-material  # Not using this anymore
-  tokyonight-nvim   # Actually using this
-];
+-- WRONG: Creates TWO neovim installations; bare version takes PATH precedence
+-- (especially in direnv/nix-shell), causing "Theme not found" errors
+home.packages = with pkgs; [ neovim ];  -- Remove this
 ```
 
-### DON'T Mismatch Theme References
+Affects `home.packages`, `buildInputs` in devShells, and per-workstation configs. After removal, clear direnv cache: `rm -rf .direnv && direnv allow`.
+
+### Mismatched Themes
 
 ```lua
--- WRONG - Inconsistent theme references
+-- WRONG: colorscheme and lualine reference different themes
 vim.cmd("colorscheme tokyonight")
-lualine.setup { options = { theme = 'gruvbox-material' } }  -- Different theme!
+lualine.setup { options = { theme = 'gruvbox-material' } }
 ```
 
-### DON'T Install Bare Neovim Package
+Also remove unused theme plugins from `plugins` list.
 
-```nix
-# WRONG - Duplicate neovim installations
-home.packages = with pkgs; [ neovim ];  # AND ALSO:
-programs.neovim = { enable = true; plugins = [ /* ... */ ]; };
-```
-
-**Critical**: Creates TWO neovim installations — bare version takes PATH precedence (especially in direnv/nix-shell), causing "Theme not found" errors. Affects `home.packages`, `buildInputs` in devShells, and per-workstation configs. Remove ALL bare `neovim` packages; use ONLY `programs.neovim`.
-
-## Quick Decision Tree
-
-- **Adding a plugin?** -> Add to `plugins` list + setup in `extraLuaConfig` with pcall + rebuild
-- **Removing a plugin?** -> Remove from `plugins` + remove setup code + update theme/lualine refs + rebuild
-- **Changing default theme?** -> Ensure plugin in list + update `colorscheme` command + lualine uses `'auto'` + rebuild
-- **Configuring plugin behavior?** -> Find `.setup()` in `extraLuaConfig` + pass config table + check plugin docs
-
-## Common Mistakes
-
-### Mistake 1: Forgetting to Rebuild
-
-```bash
-# Just editing flake.nix — nvim still has old config
-# Edit AND rebuild:
-darwin-rebuild switch --flake .#<hostname>
-```
-
-### Mistake 2: Plugin Name Mismatch
-
-```nix
-# Nix package name: nvim-tree-lua
-# Lua require name: require('nvim-tree')  -- NOT require('nvim-tree-lua')
-```
-
-Check plugin documentation for correct require name.
-
-### Mistake 3: Missing Error Protection
+### Unprotected Require
 
 ```lua
--- Crashes if plugin not installed
+-- WRONG: crashes if plugin missing
 local telescope = require('telescope')
 
--- Protected call
+-- RIGHT: pcall wrapper
 local telescope_ok, telescope = pcall(require, 'telescope')
 if telescope_ok then telescope.setup{} end
 ```
 
-### Mistake 4: Not Refreshing Environment After Rebuild
+## Quick Decision Tree
 
-```bash
-# After darwin-rebuild, refresh shell:
-exec zsh                    # Restart shell
-# OR close and reopen terminal
+- **Adding a plugin?** Add to `plugins` + setup in `extraLuaConfig` with pcall + rebuild
+- **Removing a plugin?** Remove from `plugins` + remove setup code + update theme refs + rebuild
+- **Changing theme?** Update plugin list + `colorscheme` command + keep lualine `'auto'` + rebuild
 
-# Verify correct nvim:
-which nvim
-# Expected: /etc/profiles/per-user/$USER/bin/nvim
+## Common Mistakes
+
+### Plugin Name Mismatch
+
+Nix package name differs from Lua require name:
+```
+Nix: nvim-tree-lua    Lua: require('nvim-tree')
 ```
 
-### Mistake 5: Direnv/Nix-Shell Caching Issues
+### Post-Rebuild: Verify Correct Binary
 
-After removing neovim from devShell `buildInputs`, clear direnv cache:
 ```bash
-rm -rf .direnv && direnv allow
+which nvim  # Expected: /etc/profiles/per-user/$USER/bin/nvim
+exec zsh    # Refresh shell after darwin-rebuild
 ```
 
 ## Violation Detection
 
 ```bash
-# Minimal nvim-tree.setup() calls (missing explicit settings)
-grep -A 2 "nvim_tree.setup" flake.nix | grep -v "view\|actions"
+# Unprotected plugin calls
+grep -n "= require(" flake.nix
 
 # Theme inconsistencies
 grep "colorscheme\|theme.*=" flake.nix
 
-# Unprotected plugin calls (require without pcall)
-grep -n "= require(" flake.nix
-
 # Duplicate neovim installations
 awk '/home.packages|buildInputs/,/];/' flake.nix | grep -n "neovim"
 
-# Verify correct binary and plugin loading
-which nvim  # Should be /etc/profiles/per-user/$USER/bin/nvim
+# Verify theme loads
 nvim --headless +"colorscheme tokyonight" +"echo 'Success'" +quit 2>&1
 ```
