@@ -24,12 +24,27 @@ A collection of [Agent Skills](https://agentskills.io) distributed as a Claude C
 
 ## Repository Structure
 
-- `skills/<name>/SKILL.md` — Each skill is a single markdown file with YAML frontmatter
-- `skills/<name>/references/` — Optional supplementary files (only `database-migration-termination-safety` uses this)
+Skills are organized by category at the top level:
+
+- `<category>/<name>/SKILL.md` — Each skill is a single markdown file with YAML frontmatter
+- `<category>/<name>/references/` — Optional supplementary files (only `database-migration-termination-safety` uses this)
 - `.claude-plugin/marketplace.json` — Plugin registry for individual skill installation
 - `check.sh` — Spec validation (name format, description length, body size, version sync)
 - `install.sh` — Idempotent symlinker, also cleans stale links
 - `multi-repo-loader.sh` — Multi-repo skill aggregator (untracked, not yet committed)
+
+### Category Directories
+
+| Directory | Contents |
+|-----------|----------|
+| `rails/` | ActiveJob, ActiveRecord, controller, caching, testing patterns |
+| `nix/` | nix-darwin, home-manager, flake packaging |
+| `claude-code/` | Hooks, skills tooling, portability, auditing |
+| `frontend/` | Stimulus, forms, browser optimization |
+| `security/` | Security checklists and patterns |
+| `debugging/` | Root cause analysis, complexity reduction, dead code |
+| `workflow/` | Git, testing methodology, process optimization |
+| `general/` | Everything else (default category) |
 
 ## Skill File Format
 
@@ -45,21 +60,21 @@ metadata:
 ```
 Body must be < 500 lines and < 5000 estimated tokens.
 
-### Categories (Optional)
+### Categories
 
-Use the `category` field to group related skills:
-- `rails` - Ruby on Rails patterns (ActiveJob, ActiveRecord, controllers, caching, testing)
-- `python` - Python-specific patterns
-- `devops` - Infrastructure, deployment, CI/CD
-- `mlops` - ML training, inference, evaluation
-- `frontend` - React, Vue, Stimulus, CSS
+The `category` frontmatter field should match the directory the skill lives in:
+- `rails` - Ruby on Rails patterns
+- `nix` - Nix/nix-darwin/home-manager
+- `claude-code` - Claude Code tooling and portability
+- `frontend` - Stimulus, forms, browser optimization
 - `security` - Security patterns and audits
-
-Categories are optional but recommended for consistent organization.
+- `debugging` - Root cause analysis, complexity reduction
+- `workflow` - Git, testing, process optimization
+- `general` - Default for uncategorized skills
 
 ## Key Constraints
 
-- **Name must match directory**: `skills/foo-bar/SKILL.md` must have `name: foo-bar`
+- **Name must match directory**: `<category>/foo-bar/SKILL.md` must have `name: foo-bar`
 - **No consecutive hyphens** in skill names
 - **Version sync required**: `SKILL.md` frontmatter version must match `.claude-plugin/marketplace.json` version
 - **No non-standard frontmatter keys** outside `metadata:`
@@ -68,7 +83,7 @@ Categories are optional but recommended for consistent organization.
 
 **Updating a skill**: Edit SKILL.md, run `./check.sh <skill-name>`, bump version in both SKILL.md and marketplace.json.
 
-**Adding a skill**: Create `skills/<name>/SKILL.md`, run `./check.sh <name>`, add entry to marketplace.json, add row to README.md skills table.
+**Adding a skill**: Create `<category>/<name>/SKILL.md`, run `./check.sh <name>`, add entry to marketplace.json, add row to README.md skills table.
 
 Use `/skills-audit <skill-name>` for deeper spec compliance checking beyond what `check.sh` covers.
 

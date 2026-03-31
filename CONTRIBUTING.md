@@ -13,7 +13,7 @@
 
 ## Adding a New Skill
 
-1. Create `skills/<skill-name>/SKILL.md` with spec-compliant frontmatter
+1. Create `<category>/<skill-name>/SKILL.md` with spec-compliant frontmatter
 2. Run `/skills-audit <skill-name>` to validate
 3. Add an entry to `.claude-plugin/marketplace.json`
 4. Update the skills table in `README.md`
@@ -27,7 +27,7 @@ Use semver in `metadata.version`:
 - **Major** (1.0.0 → 2.0.0): Breaking changes to methodology or structure
 
 Both locations must stay in sync:
-- `skills/<name>/SKILL.md` frontmatter: `version` under `metadata:`
+- `<category>/<name>/SKILL.md` frontmatter: `version` under `metadata:`
 - `.claude-plugin/marketplace.json`: `version` field in the plugin entry
 
 ## Spec Compliance

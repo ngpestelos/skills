@@ -33,7 +33,7 @@ home.packages = with pkgs; [
 # Then: darwin-rebuild switch
 ```
 
-See [nodejs-version-management skill](../nodejs-version-management/SKILL.md) for why `npm install -g pnpm` and `corepack enable` fail.
+See [nodejs-version-management skill](../../nix/nodejs-version-management/SKILL.md) for why `npm install -g pnpm` and `corepack enable` fail.
 
 ### REQUIRED Steps
 
@@ -131,7 +131,7 @@ OpenClaw gives an AI agent access to your machine. The onboarding wizard walks t
 
 ### Integration
 
-- **Related Skills**: [nodejs-version-management](../nodejs-version-management/SKILL.md) for pnpm installation via Nix
+- **Related Skills**: [nodejs-version-management](../../nix/nodejs-version-management/SKILL.md) for pnpm installation via Nix
 - **Project Documentation**: See [CLAUDE.md](../../CLAUDE.md) for flake.nix structure
 - **Repository**: https://github.com/openclaw/openclaw
 

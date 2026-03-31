@@ -4,8 +4,8 @@
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-SKILLS_DIR="$SCRIPT_DIR/skills"
 MARKETPLACE="$SCRIPT_DIR/.claude-plugin/marketplace.json"
+CATEGORIES="rails nix claude-code frontend security debugging workflow general"
 
 errors=0
 
@@ -98,15 +98,27 @@ print('')
 
 # Run checks
 if [ -n "$1" ]; then
-  if [ -d "$SKILLS_DIR/$1" ]; then
-    check_skill "$SKILLS_DIR/$1"
-  else
+  # Find skill by name across all categories
+  found=0
+  for category in $CATEGORIES; do
+    if [ -d "$SCRIPT_DIR/$category/$1" ]; then
+      check_skill "$SCRIPT_DIR/$category/$1"
+      found=1
+      break
+    fi
+  done
+  if [ $found -eq 0 ]; then
     echo "Skill not found: $1"
     exit 1
   fi
 else
-  for skill_dir in "$SKILLS_DIR"/*/; do
-    check_skill "$skill_dir"
+  for category in $CATEGORIES; do
+    category_dir="$SCRIPT_DIR/$category"
+    [ -d "$category_dir" ] || continue
+    for skill_dir in "$category_dir"/*/; do
+      [ -d "$skill_dir" ] || continue
+      check_skill "$skill_dir"
+    done
   done
 fi
 
