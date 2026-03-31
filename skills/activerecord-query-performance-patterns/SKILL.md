@@ -1,6 +1,7 @@
 ---
 name: activerecord-query-performance-patterns
-description: "Three query performance techniques preventing 10-1000x PostgreSQL degradation: ILIKE index usage, two-phase DISTINCT optimization, and UNION ALL OR-splitting. Auto-activates when writing ActiveRecord queries with ILIKE or DISTINCT, debugging slow queries, or implementing search across multiple tables. Trigger keywords: ILIKE, leading wildcard, DISTINCT slow, UNION ALL, cross-table search, pg_trgm."
+category: rails
+description: "Three query performance techniques preventing 10-1000x PostgreSQL slowdowns: LIMIT without ORDER BY, unanchored text search, and strict_callback_checks."
 license: MIT
 metadata:
   author: ngpestelos

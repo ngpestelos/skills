@@ -1,6 +1,7 @@
 ---
 name: rails-testing-patterns
-description: "Test type selection prioritizing integration tests over system tests. Covers XSS dual-verification, assert_select scoping, staleness pitfalls, and contract testing. Trigger keywords: integration test, system test, factory association, flaky test, XSS testing, assert_select. (global)"
+category: rails
+description: "Test type selection prioritizing integration tests over system tests, shared context for reusable test data, and avoiding over-mocking in Rails."
 version: 2.0
 allowed-tools: Read, Grep, Glob, Bash
 ---

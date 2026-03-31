@@ -1,6 +1,7 @@
 ---
 name: controller-input-validation-edge-cases
-version: 1.1.0
+category: rails
+description: "Proactive input validation in Rails controllers to prevent downstream errors: type checking, bounds validation, and early failure patterns."
 license: MIT
 metadata:
   author: ngpestelos

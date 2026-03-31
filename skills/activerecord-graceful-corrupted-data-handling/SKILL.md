@@ -1,6 +1,7 @@
 ---
 name: activerecord-graceful-corrupted-data-handling
-description: "Graceful handling of missing/corrupted foreign key data: .find_by instead of .find for optional lookups, safe navigation with fallbacks, and callback nil guards with throw(:abort). Trigger keywords: ActiveRecord::RecordNotFound, .find_by, corrupted ID, 404 page, safe navigation, callback nil guard, throw(:abort). (global)"
+category: rails
+description: "Graceful handling of missing/corrupted foreign key data: defensively coded view methods that log warnings instead of crashing."
 license: MIT
 metadata:
   author: ngpestelos

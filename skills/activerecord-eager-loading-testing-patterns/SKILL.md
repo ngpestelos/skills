@@ -1,6 +1,7 @@
 ---
 name: activerecord-eager-loading-testing-patterns
-description: "Testing patterns for ActiveRecord eager loading: .association(:name).loaded? verification, query count tests via ActiveSupport::Notifications, pattern-matching counts, and anti-patterns. Trigger keywords: test eager loading, association loaded, query count test, N+1 test, count_queries_matching. (global)"
+category: rails
+description: "Testing patterns for ActiveRecord eager loading: .association.loaded? checks, bullet gem integration, performance regression tests, and query count assertions."
 license: MIT
 metadata:
   author: ngpestelos

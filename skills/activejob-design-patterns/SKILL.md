@@ -1,10 +1,11 @@
 ---
 name: activejob-design-patterns
+category: rails
 description: "ActiveJob architecture patterns: fatal vs non-fatal error handling, transaction safety, external API integration, async enqueuing, internal batching, and operation-based idempotency. Auto-activates when writing background jobs, handling job errors, or implementing idempotent operations. Trigger keywords: ActiveJob, perform_later, background job, retry, idempotent, operation_id, job error handling."
 license: MIT
 metadata:
   author: ngpestelos
-  version: "2.0.0"
+  version: "2.0.1"
 ---
 
 # ActiveJob Design Patterns

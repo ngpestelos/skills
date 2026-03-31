@@ -1,6 +1,7 @@
 ---
 name: activerecord-application-query-optimization
-description: "Prevents N+1 queries, duplicate joins, and missing eager loading in ActiveRecord. Covers batch preloading, SQL CASE count consolidation, .includes + .references join pattern, and 8 N+1 discovery patterns. Trigger keywords: N+1, eager loading, includes, joins, query count, slow query, batch preload, duplicate join."
+category: rails
+description: "Prevents N+1 queries, duplicate joins, and missing eager loading in ActiveRecord. Detects common patterns via EXPLAIN ANALYZE, bullet gem warnings, and production log analysis."
 license: MIT
 metadata:
   author: ngpestelos

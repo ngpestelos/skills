@@ -1,6 +1,7 @@
 ---
 name: activerecord-transaction-boundary-optimization
-description: "Optimizes ActiveRecord transaction boundaries by moving read operations outside transaction blocks to reduce lock time and contention. Trigger keywords: transaction optimization, lock contention, transaction boundary, pre-fetch before transaction, minimize transaction scope. (global)"
+category: rails
+description: "Optimizes ActiveRecord transaction boundaries by moving read operations outside transactions, reducing lock contention and improving throughput."
 license: MIT
 metadata:
   author: ngpestelos

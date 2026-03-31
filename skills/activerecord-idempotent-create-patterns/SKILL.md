@@ -1,6 +1,7 @@
 ---
 name: activerecord-idempotent-create-patterns
-description: "Idempotent API endpoints using find_or_create_by! to prevent race conditions and duplicate records. Covers case-insensitive dedup, whitespace normalization, and guard pattern vs idempotent pattern. Trigger keywords: idempotent, find_or_create_by, race condition, check-then-act, duplicate records, uniqueness violation. (global)"
+category: rails
+description: "Idempotent API endpoints using find_or_create_by! to prevent duplicate records on retries."
 license: MIT
 metadata:
   author: ngpestelos

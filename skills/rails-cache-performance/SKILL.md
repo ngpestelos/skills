@@ -1,6 +1,7 @@
 ---
 name: rails-cache-performance
-description: "Rails cache invalidation, stale cache detection, request-scoped caching, cache TTL selection, and logging performance. Covers fragment caching, multi-layer clearing, atomic fetch patterns, and Current.* attribute caching. Trigger keywords: cache invalidation, stale cache, fragment cache, cache TTL, 404 cache, Rails.cache, Current, lograge. (global)"
+category: rails
+description: "Rails cache invalidation, stale cache detection, request-level fragment caching, and Russian doll caching patterns."
 allowed-tools: Read, Grep, Glob
 ---
 
