@@ -37,12 +37,25 @@ Each SKILL.md has this structure:
 ```yaml
 ---
 name: lowercase-hyphenated    # must match directory name, 1-64 chars
+category: category-name       # optional: rails, python, devops, mlops, etc.
 description: "..."             # <= 1024 chars
 metadata:
   version: "1.0.0"            # semver, must match marketplace.json
 ---
 ```
 Body must be < 500 lines and < 5000 estimated tokens.
+
+### Categories (Optional)
+
+Use the `category` field to group related skills:
+- `rails` - Ruby on Rails patterns (ActiveJob, ActiveRecord, controllers, caching, testing)
+- `python` - Python-specific patterns
+- `devops` - Infrastructure, deployment, CI/CD
+- `mlops` - ML training, inference, evaluation
+- `frontend` - React, Vue, Stimulus, CSS
+- `security` - Security patterns and audits
+
+Categories are optional but recommended for consistent organization.
 
 ## Key Constraints
 
