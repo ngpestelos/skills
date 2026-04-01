@@ -95,6 +95,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [clerk-test](general/clerk-test/) | Rowan vs clerk diagnostic: are you executing or accumulating questions? |
 | [clean-commit-staging](workflow/clean-commit-staging/) | Prevent pre-staged files from parallel sessions contaminating your commits |
 | [code-review-methodology](workflow/code-review-methodology/) | Review only uncommitted changes with 4-tier priority framework |
+| [knowledge-synthesis-framework](general/knowledge-synthesis-framework/) | Cross-domain pattern recognition, paradox exploration, and association surfacing for insight generation |
 
 ### Decision-Making & Self-Coaching
 
