@@ -88,6 +88,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [vspt-planner](workflow/vspt-planner/) | Vision-Strategies-Projects-Tactics framework for breaking down overwhelming objectives |
 | [action-clarity-loop](workflow/action-clarity-loop/) | Generate clarity through action — minimum viable actions reveal information planning can't |
 | [iterative-refinement-workflow](workflow/iterative-refinement-workflow/) | Execute, measure, refine, repeat — continuous improvement through feedback loops |
+| [parallel-development-strategy](workflow/parallel-development-strategy/) | Build features in parallel — sketch-to-detail with best possible product at every moment |
 | [first-principles-debugger](debugging/first-principles-debugger/) | First-principles debugging for complex issues that resist conventional approaches |
 | [decision-timing-assessor](workflow/decision-timing-assessor/) | Framework for optimal decision timing vs. information gathering (Type I/II decisions, reversibility) |
 | [counterintuitive-analyst](general/counterintuitive-analyst/) | Systematically question popular wisdom to reveal strategic insights |
