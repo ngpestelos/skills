@@ -86,17 +86,28 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [decision-timing-assessor](skills/decision-timing-assessor/) | Framework for optimal decision timing vs. information gathering (Type I/II decisions, reversibility) |
 | [counterintuitive-analyst](skills/counterintuitive-analyst/) | Systematically question popular wisdom to reveal strategic insights |
 
+### Decision-Making & Self-Coaching
+
+| Skill | Description |
+|-------|-------------|
+| [agency-diagnostic](general/agency-diagnostic/) | Three-layer diagnostic for blocked action: blindness detection, low-agency traps, internal obstacle voices |
+| [action-plan-threat-assessment](general/action-plan-threat-assessment/) | Stress-test execution plans with weakness-threat interaction matrices and urgency-ordered defensive actions |
+| [anti-vision-builder](general/anti-vision-builder/) | Articulate the life you refuse to live — 5-step process producing a single-sentence decision filter |
+| [financial-decision-heuristics](general/financial-decision-heuristics/) | ATM Test, risk assessment, asset vs liability, trading up, carrying cost, and lifestyle creep detection |
+| [active-reading-to-wisdom](general/active-reading-to-wisdom/) | 2-step reading intention and application cycle — bridge insights to concrete life actions |
+| [reaction-gap-practice](general/reaction-gap-practice/) | Name-Pause-Choose protocol for creating space between emotional trigger and behavioral response |
+
 ### Communication & Framing
 
 | Skill | Description |
 |-------|-------------|
-| [response-diversity](skills/response-diversity/) | Vary response framing by context (learner, engineer, family, researcher) |
+| [response-diversity](general/response-diversity/) | Vary response framing by context (learner, engineer, family, researcher) |
 
 ### Productivity
 
 | Skill | Description |
 |-------|-------------|
-| [scanned-document-extraction](skills/scanned-document-extraction/) | Extract structured data from scanned images/PDFs into markdown, preserving all granular detail |
+| [scanned-document-extraction](general/scanned-document-extraction/) | Extract structured data from scanned images/PDFs into markdown, preserving all granular detail |
 
 ### Nix & System Configuration
 
@@ -142,6 +153,10 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 
 These skills follow the [Agent Skills specification](https://agentskills.io/specification) and work with any compatible agent:
 Claude Code, Cursor, VS Code Copilot, Gemini CLI, OpenCode, Goose, and others.
+
+## Author
+
+[Nestor Pestelos](https://ngpestelos.com) — freelance product developer, Manila.
 
 ## License
 
