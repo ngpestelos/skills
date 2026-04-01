@@ -113,6 +113,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | Skill | Description |
 |-------|-------------|
 | [response-diversity](general/response-diversity/) | Vary response framing by context (learner, engineer, family, researcher) |
+| [quick-document-summary](general/quick-document-summary/) | Concise verbal summaries without modifying files — lead with insights, not descriptions |
 | [term-definer](general/term-definer/) | Context-aware definitions with adaptive complexity: simple, moderate, or full treatment with etymology |
 
 ### Productivity
