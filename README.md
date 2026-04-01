@@ -87,6 +87,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [first-principles-debugger](skills/first-principles-debugger/) | First-principles debugging for complex issues that resist conventional approaches |
 | [decision-timing-assessor](skills/decision-timing-assessor/) | Framework for optimal decision timing vs. information gathering (Type I/II decisions, reversibility) |
 | [counterintuitive-analyst](skills/counterintuitive-analyst/) | Systematically question popular wisdom to reveal strategic insights |
+| [emerging-market-analysis](general/emerging-market-analysis/) | 5 frameworks: governance trauma cycle, CB signaling, FX-inflation feedback, valuation floors, capital rotation |
 | [bottleneck-identifier](general/bottleneck-identifier/) | Theory of Constraints diagnostic: find THE single constraint, exploit, subordinate, elevate |
 | [capability-building-roadmap](general/capability-building-roadmap/) | Transform abstract competence goals into concrete, time-calibrated 90-day action plans |
 | [clerk-test](general/clerk-test/) | Rowan vs clerk diagnostic: are you executing or accumulating questions? |
