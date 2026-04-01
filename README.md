@@ -86,6 +86,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [first-principles-debugger](skills/first-principles-debugger/) | First-principles debugging for complex issues that resist conventional approaches |
 | [decision-timing-assessor](skills/decision-timing-assessor/) | Framework for optimal decision timing vs. information gathering (Type I/II decisions, reversibility) |
 | [counterintuitive-analyst](skills/counterintuitive-analyst/) | Systematically question popular wisdom to reveal strategic insights |
+| [bottleneck-identifier](general/bottleneck-identifier/) | Theory of Constraints diagnostic: find THE single constraint, exploit, subordinate, elevate |
 
 ### Decision-Making & Self-Coaching
 
