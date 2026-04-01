@@ -51,3 +51,15 @@ Execute in strict sequence. Each step depends on completing the previous one.
 - Automation comes LAST. Automating a flawed process locks in the flaws
 - If someone suggests automating first, redirect to Step 1
 - Output: automation candidates from validated, optimized, accelerated process
+
+## Common Step 2 Deletions (Coaching/Framework Skills)
+
+When optimizing skills or methodology documents, these categories are consistently deletable:
+
+- **Decorative quotes** — literary/philosophical attributions that don't change execution
+- **Generic advice Claude already knows** — "search before creating," "use evidence not self-perception"
+- **Output templates** — Claude generates structured output naturally; templates constrain without adding value
+- **Key Rules that restate the steps** — if a rule says the same thing as a step, it's redundant
+- **Example lists** — static examples anchor instead of inspire; Claude generates better contextual ones
+- **"When to use" sections** — duplicates frontmatter trigger keywords
+- **`allowed-tools` constraints** — artificially restricts the skill from using Write/Bash when needed
