@@ -62,6 +62,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [stimulus-controller-integration](frontend/stimulus-controller-integration/) | AJAX initialization, CustomEvent communication, and controller reuse patterns |
 | [stimulus-form-redirect](frontend/stimulus-form-redirect/) | Replace AJAX + DOM manipulation with form submission + server redirect |
 | [multi-panel-formdata-sync](frontend/multi-panel-formdata-sync/) | Fix querySelector('form') first-form bug in multi-panel Stimulus controllers |
+| [static-html-app-development](frontend/static-html-app-development/) | Static HTML/CSS/JS patterns — prevents file:// localStorage trap, browser test suite |
 
 ### ActiveJob
 
