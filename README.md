@@ -99,6 +99,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [capability-building-roadmap](general/capability-building-roadmap/) | Transform abstract competence goals into concrete, time-calibrated 90-day action plans |
 | [clerk-test](general/clerk-test/) | Rowan vs clerk diagnostic: are you executing or accumulating questions? |
 | [system-purpose-auditor](general/system-purpose-auditor/) | Evaluate systems by what they DO — POSIWID principle for diagnosing intention-reality gaps |
+| [skill-tree-generator](general/skill-tree-generator/) | Prerequisite dependency trees — trunk/branch/leaf with ZPD calibration for learning |
 | [clean-commit-staging](workflow/clean-commit-staging/) | Prevent pre-staged files from parallel sessions contaminating your commits |
 | [code-review-methodology](workflow/code-review-methodology/) | Review only uncommitted changes with 4-tier priority framework |
 | [knowledge-synthesis-framework](general/knowledge-synthesis-framework/) | Cross-domain pattern recognition, paradox exploration, and association surfacing for insight generation |
