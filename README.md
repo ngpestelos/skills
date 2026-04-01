@@ -118,12 +118,6 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [quick-document-summary](general/quick-document-summary/) | Concise verbal summaries without modifying files — lead with insights, not descriptions |
 | [term-definer](general/term-definer/) | Context-aware definitions with adaptive complexity: simple, moderate, or full treatment with etymology |
 
-### Knowledge Management
-
-| Skill | Description |
-|-------|-------------|
-| [para-organizer](general/para-organizer/) | PARA Method guidance: actionability-based categorization, decision tree, Container Principle, topic synthesis |
-
 ### Productivity
 
 | Skill | Description |
