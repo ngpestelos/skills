@@ -51,6 +51,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [model-method-memoization-view-performance](skills/model-method-memoization-view-performance/) | Memoize model methods to reduce view rendering allocations |
 | [rails-cache-performance](skills/rails-cache-performance/) | Cache invalidation, stale cache detection, request-scoped caching, TTL selection, and logging |
 | [rails-testing-patterns](skills/rails-testing-patterns/) | Integration-first test selection, factory pitfalls, and assert_select patterns |
+| [backend-contract-format-compliance](rails/backend-contract-format-compliance/) | Detect and resolve format mismatches between frontend/backend with save-time normalization and gradual type strengthening |
 
 ### Stimulus & Frontend
 
