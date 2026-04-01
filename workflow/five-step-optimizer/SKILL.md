@@ -4,53 +4,42 @@ description: Apply Elon Musk's Five-Step Algorithm to systematically optimize an
 license: MIT
 metadata:
   author: ngpestelos
-  version: "2.0.0"
+  version: "3.0.0"
 ---
 
 # Five-Step Optimizer
 
-Applies Elon Musk's Five-Step Algorithm to optimize processes, systems, and workflows. Key insight: **most people work this backwards** — optimizing and automating things that shouldn't exist.
-
-Execute in strict sequence. Each step depends on completing the previous one.
+Optimize processes, systems, and workflows. Key insight: **most people work this backwards** — optimizing and automating things that shouldn't exist. Execute in strict sequence.
 
 ## Step 1: Make Requirements Less Dumb
 
-**Ask**: "Is this requirement actually necessary? Why does it exist? Who created it? Is it still valid?"
+**Ask**: "Is this requirement actually necessary? Why does it exist? Is it still valid?"
 
-- Question every requirement — especially from smart people (authority makes bad requirements harder to challenge)
-- "The requirement is dumb" until proven otherwise
-- Output: requirements marked [Validated] or [Questionable] with rationale
+Question every requirement. Mark each [Validated] or [Questionable] with rationale.
 
 ## Step 2: Delete
 
 **Ask**: "Can we eliminate this entirely?"
 
-- Remove components/steps rather than optimizing unnecessary elements
-- Target removing 10% initially. If you never add anything back, you didn't delete enough
-- "The best part is no part. The best process is no process."
-- Output: items deleted with impact assessment
+Remove components/steps rather than optimizing unnecessary elements. Target removing 10% initially — if you never add anything back, you didn't delete enough.
 
 ## Step 3: Optimize
 
 **Ask**: "How can we improve what remains?"
 
-- Only optimize what survived Steps 1-2. Optimizing something that shouldn't exist is the most common mistake
-- Output: improvements to remaining elements
+Only optimize what survived Steps 1-2. Optimizing something that shouldn't exist is the most common mistake.
 
 ## Step 4: Accelerate
 
 **Ask**: "How can we speed this up?"
 
-- Acceleration amplifies whatever exists — good or bad. Only accelerate after optimization
-- Output: speed/throughput improvements
+Acceleration amplifies whatever exists — good or bad. Only accelerate after optimization.
 
 ## Step 5: Automate
 
 **Ask**: "What can we automate?"
 
-- Automation comes LAST. Automating a flawed process locks in the flaws
-- If someone suggests automating first, redirect to Step 1
-- Output: automation candidates from validated, optimized, accelerated process
+Automation comes LAST. Automating a flawed process locks in the flaws. If someone suggests automating first, redirect to Step 1.
 
 ## Common Step 2 Deletions (Coaching/Framework Skills)
 

@@ -302,7 +302,7 @@
       "name": "five-step-optimizer",
       "source": "./workflow/five-step-optimizer",
       "description": "Apply Elon Musk's Five-Step Algorithm to systematically optimize any process, system, or workflow through questioning, elimination, optimization, a...",
-      "version": "2.0.0",
+      "version": "3.0.0",
       "author": {
         "name": "Nestor Pestelos"
       },
