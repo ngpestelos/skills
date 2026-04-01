@@ -90,6 +90,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [capability-building-roadmap](general/capability-building-roadmap/) | Transform abstract competence goals into concrete, time-calibrated 90-day action plans |
 | [clerk-test](general/clerk-test/) | Rowan vs clerk diagnostic: are you executing or accumulating questions? |
 | [clean-commit-staging](workflow/clean-commit-staging/) | Prevent pre-staged files from parallel sessions contaminating your commits |
+| [code-review-methodology](workflow/code-review-methodology/) | Review only uncommitted changes with 4-tier priority framework |
 
 ### Decision-Making & Self-Coaching
 
