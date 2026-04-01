@@ -123,6 +123,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | Skill | Description |
 |-------|-------------|
 | [cloudflare-pages-static-site](general/cloudflare-pages-static-site/) | Deploy static HTML/CSS to Cloudflare Pages with custom domain in under an hour |
+| [cloudflare-r2-bill-estimator](general/cloudflare-r2-bill-estimator/) | R2 pricing table with free tier — operations usually free, storage is the only billable component |
 | [scanned-document-extraction](general/scanned-document-extraction/) | Extract structured data from scanned images/PDFs into markdown, preserving all granular detail |
 
 ### Nix & System Configuration
