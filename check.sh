@@ -5,7 +5,7 @@ set -e
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 MARKETPLACE="$SCRIPT_DIR/.claude-plugin/marketplace.json"
-CATEGORIES="rails nix claude-code frontend security debugging workflow general"
+CATEGORIES="apple claude-code debugging frontend general hermes nix rails security workflow"
 
 errors=0
 
