@@ -101,6 +101,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [financial-decision-heuristics](general/financial-decision-heuristics/) | ATM Test, risk assessment, asset vs liability, trading up, carrying cost, and lifestyle creep detection |
 | [active-reading-to-wisdom](general/active-reading-to-wisdom/) | 2-step reading intention and application cycle — bridge insights to concrete life actions |
 | [reaction-gap-practice](general/reaction-gap-practice/) | Name-Pause-Choose protocol for creating space between emotional trigger and behavioral response |
+| [seasonal-grief-navigator](general/seasonal-grief-navigator/) | Navigate calendar-tied grief: anniversary patterns, navigate vs fix reframing, achievable peace |
 
 ### Communication & Framing
 
