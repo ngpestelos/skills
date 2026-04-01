@@ -18,9 +18,19 @@ Before publishing, scrub personal references:
 - Email addresses in examples → generic
 - Hostnames → `<hostname>`
 
+## Extractability Check
+
+A skill is extractable (portable) if it has NO references to:
+- PARA paths (`0 Projects/`, `1 Areas/`, `2 Resources/`, `3 Archives/`)
+- `[[wikilinks]]` to vault content (source attribution wikilinks can be deleted)
+- Hermes-specific paths (`~/.hermes/`)
+- Vault scripts (`.claude/scripts/`)
+
+If any are present and integral to the skill's operation → stays in project repo (vault-ops). If present only as attribution → delete and extract.
+
 ## Sequence
 
-1. **Classify** — skills referencing private projects stay in dotfiles
+1. **Classify** — run extractability check; skills referencing private projects stay in dotfiles
 2. **Redact** — apply checklist above to each skill
 3. **Write to target repo** — create `skills/<name>/SKILL.md`, add marketplace.json entry (copy existing entry as template), add to README.md table
 4. **Verify** — line counts under 500, `/skills-audit` passes
