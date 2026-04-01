@@ -122,6 +122,27 @@ else
   done
 fi
 
+# Check README.md links point to existing directories
+readme="$SCRIPT_DIR/README.md"
+if [ -f "$readme" ]; then
+  link_errors=0
+  while IFS= read -r line; do
+    # Extract markdown link paths like (general/some-skill/)
+    echo "$line" | grep -oE '\([a-z-]+/[a-z0-9-]+/?\)' | tr -d '()' | while read -r path; do
+      target="$SCRIPT_DIR/$path"
+      if [ ! -d "$target" ] && [ ! -d "${target%/}" ]; then
+        echo "LINK  README.md: broken link → $path"
+        echo "1" >> /tmp/skills-link-errors.$$
+      fi
+    done
+  done < "$readme"
+  if [ -f /tmp/skills-link-errors.$$ ]; then
+    link_errors=$(wc -l < /tmp/skills-link-errors.$$)
+    rm -f /tmp/skills-link-errors.$$
+    errors=$((errors + link_errors))
+  fi
+fi
+
 echo ""
 if [ $errors -gt 0 ]; then
   echo "FAILED: $errors error(s)"
