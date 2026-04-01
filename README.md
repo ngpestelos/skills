@@ -127,6 +127,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [nix-template-deployment](skills/nix-template-deployment/) | Deploy shell.nix + .envrc for per-directory packages via direnv |
 | [nodejs-version-management](skills/nodejs-version-management/) | Node.js/npm version management in Nix flakes: synchronization, pnpm, native installers |
 | [overriding-flake-input-packages](skills/overriding-flake-input-packages/) | Fix external flake input build failures with overrideAttrs |
+| [nix-managed-plugin-workaround](nix/nix-managed-plugin-workaround/) | Install Claude Code plugins when settings.json is a nix-managed symlink |
 
 ### AI Tool Configuration
 
