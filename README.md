@@ -149,6 +149,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [changing-defaults-systematically](skills/changing-defaults-systematically/) | Zero-regression constant/default changes: find all references, update atomically |
 | [git-atomic-commit-organizer](skills/git-atomic-commit-organizer/) | Organize uncommitted changes into logical, atomic commits |
 | [qmd-local-search](skills/qmd-local-search/) | QMD semantic search patterns: MCP tools, index rebuild, troubleshooting |
+| [vision-fallback-claude-code](claude-code/vision-fallback-claude-code/) | Fallback when vision analysis fails: CLI delegation and browser accessibility tree extraction |
 
 ### Third-Party
 
