@@ -1,7 +1,7 @@
 ---
 name: apple-reminders-cli
-version: 1.0.0
-description: "Install and use remindctl CLI for Apple Reminders. Covers brew installation, permission setup, and common operations. Trigger: remindctl, Apple Reminders CLI, reminders from terminal."
+version: 1.1.0
+description: "Use remindctl to manage Apple Reminders from terminal. Quick setup, common operations, troubleshooting. Trigger: remindctl, Apple Reminders CLI, terminal reminders."
 author: Hermes Agent
 license: MIT
 platforms: [macos]
@@ -12,81 +12,44 @@ metadata:
 
 # Apple Reminders CLI
 
-Use `remindctl` to manage Apple Reminders from the terminal. Tasks sync across all Apple devices via iCloud.
+Manage Apple Reminders from the terminal. Tasks sync to iPhone/iPad via iCloud.
 
-## Installation
+## Quick Start
 
 ```bash
-# Fix Homebrew permissions if needed (common on fresh installs)
+# One-time setup
 sudo chown -R $(whoami) /opt/homebrew
-
-# Install remindctl
 brew install steipete/tap/remindctl
-```
+remindctl authorize  # Grant Terminal access when prompted
 
-## Permission Setup
-
-Terminal needs Reminders access:
-
-1. Open **System Settings** → **Privacy & Security** → **Reminders**
-2. Add your terminal app (Terminal.app, iTerm, or Ghostty)
-3. Enable the checkbox
-
-Or run:
-```bash
-remindctl authorize
+# Create a reminder
+remindctl add "Buy milk" --due tomorrow
 ```
 
 ## Usage
 
-### View Reminders
 ```bash
 remindctl              # Today's reminders
 remindctl today        # Today
 remindctl tomorrow     # Tomorrow
 remindctl week         # This week
-remindctl overdue      # Past due
-remindctl all          # Everything
+remindctl add "Task" --due "2026-04-15 09:00"
+remindctl complete 1   # Complete by ID
+remindctl delete 2 --force
 ```
 
-### Create Reminders
-```bash
-remindctl add "Buy milk"
-remindctl add --title "Call mom" --list Personal --due tomorrow
-remindctl add --title "Meeting prep" --due "2026-04-15 09:00"
-```
-
-### Manage Lists
-```bash
-remindctl list                    # Show all lists
-remindctl list Work --create      # Create list
-remindctl list Work --delete      # Delete list
-```
-
-### Complete / Delete
-```bash
-remindctl complete 1 2 3          # Complete by ID
-remindctl delete 4A83 --force     # Delete by ID
-```
-
-## Date Formats
-
-- `today`, `tomorrow`, `yesterday`
-- `YYYY-MM-DD`
-- `YYYY-MM-DD HH:mm`
-- ISO 8601: `2026-04-15T09:00:00Z`
+See `remindctl --help` for all options and date formats.
 
 ## Troubleshooting
 
 | Issue | Solution |
 |-------|----------|
 | "command not found" | Ensure `/opt/homebrew/bin` is in PATH |
-| Permission denied | Grant Reminders access in System Settings |
-| Brew install fails | Run `sudo chown -R $(whoami) /opt/homebrew` |
-| Timeout / hangs | Terminal lacks Reminders permission - check System Settings |
+| Permission denied | System Settings → Privacy & Security → Reminders → Enable Terminal |
+| Brew install fails | `sudo chown -R $(whoami) /opt/homebrew` |
+| Timeout/hangs | Terminal lacks Reminders permission |
 
 ## Notes
 
-- Reminders sync via iCloud to iPhone/iPad
-- Uses native Apple Reminders.app backend
-- No separate account needed
+- Requires macOS with Reminders.app
+- Syncs via iCloud to all Apple devices
