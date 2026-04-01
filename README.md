@@ -110,6 +110,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [allostatic-load-monitor](general/allostatic-load-monitor/) | Track cumulative stress: Type 1 (energy deficit) vs Type 2 (ongoing conflict) with weekly/daily assessment |
 | [dmn-reset](general/dmn-reset/) | 5-minute protocol for interrupting racing thoughts: breathwork, anchoring, reframing, gratitude, autosuggestion |
 | [seasonal-grief-navigator](general/seasonal-grief-navigator/) | Navigate calendar-tied grief: anniversary patterns, navigate vs fix reframing, achievable peace |
+| [cutting-identifier](general/cutting-identifier/) | Identify the single decisive action that determines success in any domain (Musashi + Lynch synthesis) |
 
 ### Communication & Framing
 
