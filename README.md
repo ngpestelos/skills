@@ -89,6 +89,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [bottleneck-identifier](general/bottleneck-identifier/) | Theory of Constraints diagnostic: find THE single constraint, exploit, subordinate, elevate |
 | [capability-building-roadmap](general/capability-building-roadmap/) | Transform abstract competence goals into concrete, time-calibrated 90-day action plans |
 | [clerk-test](general/clerk-test/) | Rowan vs clerk diagnostic: are you executing or accumulating questions? |
+| [clean-commit-staging](workflow/clean-commit-staging/) | Prevent pre-staged files from parallel sessions contaminating your commits |
 
 ### Decision-Making & Self-Coaching
 
