@@ -111,6 +111,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [dmn-reset](general/dmn-reset/) | 5-minute protocol for interrupting racing thoughts: breathwork, anchoring, reframing, gratitude, autosuggestion |
 | [seasonal-grief-navigator](general/seasonal-grief-navigator/) | Navigate calendar-tied grief: anniversary patterns, navigate vs fix reframing, achievable peace |
 | [cutting-identifier](general/cutting-identifier/) | Identify the single decisive action that determines success in any domain (Musashi + Lynch synthesis) |
+| [decision-quality-framework](general/decision-quality-framework/) | Five-bias audit, pre-mortem failure analysis, six-dimension quality scoring — judge process, not outcome |
 
 ### Communication & Framing
 
