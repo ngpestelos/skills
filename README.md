@@ -85,6 +85,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 |-------|-------------|
 | [root-cause-investigation](general/root-cause-investigation/) | Five Whys + Peeling the Onion dual-mode debugging framework |
 | [five-step-optimizer](workflow/five-step-optimizer/) | Musk's Five-Step Algorithm for process optimization |
+| [vspt-planner](workflow/vspt-planner/) | Vision-Strategies-Projects-Tactics framework for breaking down overwhelming objectives |
 | [first-principles-debugger](debugging/first-principles-debugger/) | First-principles debugging for complex issues that resist conventional approaches |
 | [decision-timing-assessor](workflow/decision-timing-assessor/) | Framework for optimal decision timing vs. information gathering (Type I/II decisions, reversibility) |
 | [counterintuitive-analyst](general/counterintuitive-analyst/) | Systematically question popular wisdom to reveal strategic insights |
