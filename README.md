@@ -107,6 +107,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [action-plan-threat-assessment](general/action-plan-threat-assessment/) | Stress-test execution plans with weakness-threat interaction matrices and urgency-ordered defensive actions |
 | [anti-vision-builder](general/anti-vision-builder/) | Articulate the life you refuse to live — 5-step process producing a single-sentence decision filter |
 | [life-reset-protocol](general/life-reset-protocol/) | 1-day protocol for radical life clarity: morning excavation, autopilot interruption, evening synthesis |
+| [preparation-procrastination-detector](general/preparation-procrastination-detector/) | Flags when endless preparation substitutes for action — 20% rule, riskless audit, MVA test |
 | [financial-decision-heuristics](general/financial-decision-heuristics/) | ATM Test, risk assessment, asset vs liability, trading up, carrying cost, and lifestyle creep detection |
 | [active-reading-to-wisdom](general/active-reading-to-wisdom/) | 2-step reading intention and application cycle — bridge insights to concrete life actions |
 | [reaction-gap-practice](general/reaction-gap-practice/) | Name-Pause-Choose protocol for creating space between emotional trigger and behavioral response |
