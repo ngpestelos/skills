@@ -183,6 +183,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [git-atomic-commit-organizer](workflow/git-atomic-commit-organizer/) | Organize uncommitted changes into logical, atomic commits |
 | [source-verification](workflow/source-verification/) | Verify cited sources before publication — prevent WebFetch circular verification |
 | [git-stash-pull-pop](workflow/git-stash-pull-pop/) | Update from remote when pull is blocked by unstaged changes: stash, pull, pop |
+| [deployment-readiness](workflow/deployment-readiness/) | 5-phase production deployment checklist: verify, commit, PR, deploy, monitor |
 | [qmd-local-search](general/qmd-local-search/) | QMD semantic search patterns: MCP tools, index rebuild, troubleshooting |
 | [vision-fallback-claude-code](claude-code/vision-fallback-claude-code/) | Fallback when vision analysis fails: CLI delegation and browser accessibility tree extraction |
 

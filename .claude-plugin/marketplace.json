@@ -644,6 +644,25 @@
       "license": "MIT"
     },
     {
+      "name": "deployment-readiness",
+      "source": "./workflow/deployment-readiness",
+      "description": "Systematic 5-phase checklist for production deployment: verify completion, prepare commit, create PR, deploy, and monitor.",
+      "version": "1.1.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "deployment",
+        "production",
+        "checklist",
+        "pull-request",
+        "monitoring"
+      ],
+      "category": "workflow",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
       "name": "cv-customization-workflow",
       "source": "./writing/cv-customization-workflow",
       "description": "Role-specific CV variants and cover letters: skills match scoring, reframing, de-AI voice pass, and two-agent quality gate.",
