@@ -134,6 +134,12 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [quick-document-summary](general/quick-document-summary/) | Concise verbal summaries without modifying files — lead with insights, not descriptions |
 | [term-definer](general/term-definer/) | Context-aware definitions with adaptive complexity: simple, moderate, or full treatment with etymology |
 
+### Writing
+
+| Skill | Description |
+|-------|-------------|
+| [cv-customization-workflow](writing/cv-customization-workflow/) | Role-specific CV variants and cover letters: skills match scoring, reframing, de-AI voice pass, two-agent quality gate |
+
 ### Productivity
 
 | Skill | Description |
