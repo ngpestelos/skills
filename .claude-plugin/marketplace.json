@@ -626,6 +626,24 @@
       "license": "MIT"
     },
     {
+      "name": "git-stash-pull-pop",
+      "source": "./workflow/git-stash-pull-pop",
+      "description": "Gracefully update a git repository from remote when you have unstaged local changes. Stashes changes, pulls, then restores them.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "git",
+        "stash",
+        "pull",
+        "sync"
+      ],
+      "category": "workflow",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
       "name": "neovim-configuration",
       "source": "./general/neovim-configuration",
       "description": "Guides Neovim configuration through home-manager programs.neovim module. Covers plugin management, nvim-tree, theme consistency, buffer navigation, and PATH issues.",
