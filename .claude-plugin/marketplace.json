@@ -935,6 +935,25 @@
       "license": "MIT"
     },
     {
+      "name": "five-capabilities-audit",
+      "source": "./general/five-capabilities-audit",
+      "description": "Identify AI-era development priorities via 2-step audit across five irreplaceable human capabilities: Computation, Transformation, Variation, Selection, Attention.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "capability",
+        "ai-era",
+        "skill-development",
+        "human-advantage",
+        "priority"
+      ],
+      "category": "general",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
       "name": "first-principles-framework",
       "source": "./general/first-principles-framework",
       "description": "Three-mode first-principles methodology: problem decomposition with Rails/Stimulus debugging patterns, foundation building from observations to laws, and document summarization with length calibration.",
