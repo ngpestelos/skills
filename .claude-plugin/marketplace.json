@@ -1068,6 +1068,24 @@
       "license": "MIT"
     },
     {
+      "name": "execution-habits-checker",
+      "source": "./general/execution-habits-checker",
+      "description": "Self-assessment against the 10 execution habits from 'A Message to Garcia'. Rate, evidence, identify keystone habit, create improvement plan.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "execution",
+        "self-assessment",
+        "habits",
+        "performance"
+      ],
+      "category": "general",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
       "name": "rumination-interrupt",
       "source": "./general/rumination-interrupt",
       "description": "Quick-reference toolkit for interrupting rumination patterns with immediate physical and cognitive interventions in 30 seconds or less.",

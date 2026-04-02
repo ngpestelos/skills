@@ -130,6 +130,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [reaction-gap-practice](general/reaction-gap-practice/) | Name-Pause-Choose protocol for creating space between emotional trigger and behavioral response |
 | [allostatic-load-monitor](general/allostatic-load-monitor/) | Track cumulative stress: Type 1 (energy deficit) vs Type 2 (ongoing conflict) with weekly/daily assessment |
 | [dmn-reset](general/dmn-reset/) | 5-minute protocol for interrupting racing thoughts: breathwork, anchoring, reframing, gratitude, autosuggestion |
+| [execution-habits-checker](general/execution-habits-checker/) | 10-habit self-assessment from "A Message to Garcia" with evidence-based rating and keystone habit identification |
 | [rumination-interrupt](general/rumination-interrupt/) | 30-second interventions for breaking rumination: physical interrupt, CIA next-fastest-thing, high agency escape |
 | [seasonal-grief-navigator](general/seasonal-grief-navigator/) | Navigate calendar-tied grief: anniversary patterns, navigate vs fix reframing, achievable peace |
 | [cutting-identifier](general/cutting-identifier/) | Identify the single decisive action that determines success in any domain (Musashi + Lynch synthesis) |
