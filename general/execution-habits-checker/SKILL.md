@@ -4,7 +4,7 @@ description: "Self-assessment against the 10 execution habits from 'A Message to
 license: MIT
 metadata:
   author: ngpestelos
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # Execution Habits Checker
@@ -46,38 +46,6 @@ Each rating needs a specific example demonstrating it. No ratings without eviden
 ### Step 5: Create Action Plan
 For bottom-rated habits: **Trigger** (when will you practice?) → **Action** (what exactly?) → **Success indicator** (how will you know?)
 
-## Assessment Template
-
-```markdown
-## Execution Habits Assessment
-**Period**: [Time period] | **Date**: [Assessment date]
-
-| Habit | Rating | Evidence |
-|-------|--------|----------|
-| 1. Accept and Start | /5 | |
-| 2. Be Curious | /5 | |
-| 3. Sketch a Plan | /5 | |
-| 4. Ask for Resources | /5 | |
-| 5. Enlist Help | /5 | |
-| 6. Report and Show Work | /5 | |
-| 7. Underpromise, Overdeliver | /5 | |
-| 8. Expect Small Mistakes | /5 | |
-| 9. Results Before Schmoozing | /5 | |
-| 10. Action Over Voices | /5 | |
-
-**Average**: /5
-**Strengths**: | **Growth Areas**: | **Keystone Habit**:
-
-**Improvement Plan**: Trigger → Action → Success Indicator
-**Next Review**: [Date]
-```
-
-## Key Rules
-
-- Every rating requires a specific example — no vague assessments
-- Focus on 1-2 habits at a time, not all 10
-- Find the keystone habit that lifts others
-- Make improvement plans concrete (trigger → action → indicator)
-- Compare to past self, not others
+Focus on 1-2 habits at a time, not all 10. Compare to past self, not others.
 
 **Source**: "A Message to Garcia" (Acton Foundation).

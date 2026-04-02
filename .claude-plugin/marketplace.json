@@ -1071,7 +1071,7 @@
       "name": "execution-habits-checker",
       "source": "./general/execution-habits-checker",
       "description": "Self-assessment against the 10 execution habits from 'A Message to Garcia'. Rate, evidence, identify keystone habit, create improvement plan.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": {
         "name": "Nestor Pestelos"
       },
