@@ -935,6 +935,25 @@
       "license": "MIT"
     },
     {
+      "name": "framework-to-daily-workflow-integration",
+      "source": "./workflow/framework-to-daily-workflow-integration",
+      "description": "Embed abstract strategic frameworks into existing daily/weekly workflow commands as lightweight rituals. 4-step pattern: timescale mapping, daily touchpoint design, weekly audit structure, data flow wiring.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "workflow",
+        "framework",
+        "daily-ritual",
+        "operationalize",
+        "habit"
+      ],
+      "category": "workflow",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
       "name": "five-capabilities-audit",
       "source": "./general/five-capabilities-audit",
       "description": "Identify AI-era development priorities via 2-step audit across five irreplaceable human capabilities: Computation, Transformation, Variation, Selection, Attention.",

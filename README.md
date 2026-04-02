@@ -92,6 +92,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [vspt-planner](workflow/vspt-planner/) | Vision-Strategies-Projects-Tactics framework for breaking down overwhelming objectives |
 | [action-clarity-loop](workflow/action-clarity-loop/) | Generate clarity through action — minimum viable actions reveal information planning can't |
 | [iterative-refinement-workflow](workflow/iterative-refinement-workflow/) | Execute, measure, refine, repeat — continuous improvement through feedback loops |
+| [framework-to-daily-workflow-integration](workflow/framework-to-daily-workflow-integration/) | Embed abstract strategic frameworks into existing daily/weekly commands as lightweight rituals — 4-step pattern with timescale calibration and data flow wiring |
 | [parallel-development-strategy](workflow/parallel-development-strategy/) | Build features in parallel — sketch-to-detail with best possible product at every moment |
 | [first-principles-debugger](debugging/first-principles-debugger/) | First-principles debugging for complex issues that resist conventional approaches |
 | [first-principles-framework](general/first-principles-framework/) | Three-mode first-principles methodology: problem decomposition (with Rails/Stimulus patterns), foundation building (observations-to-laws), and document summarization |
