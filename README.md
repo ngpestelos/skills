@@ -94,6 +94,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [iterative-refinement-workflow](workflow/iterative-refinement-workflow/) | Execute, measure, refine, repeat — continuous improvement through feedback loops |
 | [parallel-development-strategy](workflow/parallel-development-strategy/) | Build features in parallel — sketch-to-detail with best possible product at every moment |
 | [first-principles-debugger](debugging/first-principles-debugger/) | First-principles debugging for complex issues that resist conventional approaches |
+| [first-principles-framework](general/first-principles-framework/) | Three-mode first-principles methodology: problem decomposition (with Rails/Stimulus patterns), foundation building (observations-to-laws), and document summarization |
 | [decision-timing-assessor](workflow/decision-timing-assessor/) | Framework for optimal decision timing vs. information gathering (Type I/II decisions, reversibility) |
 | [counterintuitive-analyst](general/counterintuitive-analyst/) | Systematically question popular wisdom to reveal strategic insights |
 | [emerging-market-analysis](general/emerging-market-analysis/) | 5 frameworks: governance trauma cycle, CB signaling, FX-inflation feedback, valuation floors, capital rotation |

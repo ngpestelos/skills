@@ -935,6 +935,25 @@
       "license": "MIT"
     },
     {
+      "name": "first-principles-framework",
+      "source": "./general/first-principles-framework",
+      "description": "Three-mode first-principles methodology: problem decomposition with Rails/Stimulus debugging patterns, foundation building from observations to laws, and document summarization with length calibration.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "first-principles",
+        "debugging",
+        "rails",
+        "framework",
+        "decomposition"
+      ],
+      "category": "general",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
       "name": "existential-framework-builder",
       "source": "./general/existential-framework-builder",
       "description": "Transforms vague existential distress into structured inquiry frameworks with journaling prompts across 7 angles: future, past, counterfactual, relational, existential, synthesis, application.",
