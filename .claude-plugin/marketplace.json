@@ -647,7 +647,7 @@
       "name": "cv-customization-workflow",
       "source": "./writing/cv-customization-workflow",
       "description": "Role-specific CV variants and cover letters: skills match scoring, reframing, de-AI voice pass, and two-agent quality gate.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": {
         "name": "Nestor Pestelos"
       },
