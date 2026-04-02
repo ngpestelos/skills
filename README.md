@@ -104,6 +104,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [risk-first-methodology](general/risk-first-methodology/) | Define max loss before reward, IF-THEN scenario planning, position sizing from risk |
 | [bottleneck-identifier](general/bottleneck-identifier/) | Theory of Constraints diagnostic: find THE single constraint, exploit, subordinate, elevate |
 | [capability-building-roadmap](general/capability-building-roadmap/) | Transform abstract competence goals into concrete, time-calibrated 90-day action plans |
+| [durable-strategy-design](general/durable-strategy-design/) | Build disruption-proof personal strategy: commoditization-scarcity inversion, 4-pillar architecture, personality alignment filter, uncorrelated wealth streams, binary execution gates |
 | [clerk-test](general/clerk-test/) | Rowan vs clerk diagnostic: are you executing or accumulating questions? |
 | [system-purpose-auditor](general/system-purpose-auditor/) | Evaluate systems by what they DO — POSIWID principle for diagnosing intention-reality gaps |
 | [skill-tree-generator](general/skill-tree-generator/) | Prerequisite dependency trees — trunk/branch/leaf with ZPD calibration for learning |

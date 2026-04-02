@@ -935,6 +935,25 @@
       "license": "MIT"
     },
     {
+      "name": "durable-strategy-design",
+      "source": "./general/durable-strategy-design",
+      "description": "4-step methodology for disruption-proof personal strategy: commoditization-scarcity inversion, pillar architecture with resistance tests, personality alignment filter, uncorrelated wealth streams with binary execution gates.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "strategy",
+        "competitive-advantage",
+        "disruption",
+        "career",
+        "positioning"
+      ],
+      "category": "general",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
       "name": "framework-epistemology-audit",
       "source": "./general/framework-epistemology-audit",
       "description": "Pressure-test grand frameworks with 3 tests (falsifiability, independence, predictive specificity) and 4-level Pattern Verification Hierarchy. Distinguishes structural isomorphism from metaphorical resemblance.",
