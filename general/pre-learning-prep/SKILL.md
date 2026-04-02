@@ -8,15 +8,11 @@ allowed-tools: Read, Grep, Glob, Bash
 
 Systematic knowledge review before engaging with new material — activating existing mental models to enhance retention and enable cross-domain synthesis.
 
-## Core Principle
-
-"Before learning anything new on a subject, systematically review your existing knowledge. This strengthens recall of both old and new information while creating pathways for cross-domain synthesis."
-
 ## The Two-Stage Connection Process
 
 **Stage 1: Early Connections** (before/during initial learning) — Map source structure onto existing knowledge: "How does this relate to what I already know? What frameworks apply? Where does this fit?"
 
-**Stage 2: Later Connections** (after initial learning) — Cross-disciplinary synthesis: "What patterns from other domains apply? How does this connect to unrelated topics?"
+**Stage 2: Later Connections** (after initial learning) — Cross-disciplinary synthesis: "What patterns from other domains apply? How does this connect to unrelated topics?" Pre-primed connections are stronger than hoping for serendipity.
 
 ## The Pre-Learning Checklist (5-15 min)
 
@@ -47,13 +43,6 @@ Identify 2-3 topics that might connect: related notes, opposing frameworks, diff
 
 | Phase | Actions |
 |-------|---------|
-| Before | Pre-learning prep (this skill), set up note template, note initial questions |
+| Before | Set up note template, note initial questions |
 | During | Mark resonant passages, note connections to primed topics, flag synthesis opportunities |
 | After | Complete summary layers, execute Stage 2 connections, update knowledge base |
-
-## Key Rules
-
-- Always search your knowledge base before engaging with new material — leverage accumulated knowledge
-- Pre-primed connections are stronger than hoping for serendipity
-- New information integrates better with activated knowledge (retrieval practice effect)
-- Don't skip Stage 2 (later connections) — that's where unique cross-domain insights emerge
