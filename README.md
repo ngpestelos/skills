@@ -157,6 +157,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [nix-darwin-zsh-completion](nix/nix-darwin-zsh-completion/) | Fix compinit insecure directories warning: enableGlobalCompInit vs completionInit |
 | [nix-github-release-packaging](nix/nix-github-release-packaging/) | Package GitHub release binaries as Nix derivations: fetchurl, SHA256 hash workflow |
 | [nix-template-deployment](nix/nix-template-deployment/) | Deploy shell.nix + .envrc for per-directory packages via direnv |
+| [disk-space-troubleshooting](nix/disk-space-troubleshooting/) | macOS disk space diagnosis and cleanup: Nix GC first, then caches, with 5-level risk hierarchy |
 | [nodejs-version-management](nix/nodejs-version-management/) | Node.js/npm version management in Nix flakes: synchronization, pnpm, native installers |
 | [overriding-flake-input-packages](nix/overriding-flake-input-packages/) | Fix external flake input build failures with overrideAttrs |
 | [nix-managed-plugin-workaround](nix/nix-managed-plugin-workaround/) | Install Claude Code plugins when settings.json is a nix-managed symlink |

@@ -754,6 +754,25 @@
       "license": "MIT"
     },
     {
+      "name": "disk-space-troubleshooting",
+      "source": "./nix/disk-space-troubleshooting",
+      "description": "Diagnose and resolve disk space issues on macOS with Nix. 5-level cleanup hierarchy from safe Nix GC to caches, with warning signs and Nix-specific symptom table.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "nix",
+        "disk-space",
+        "macos",
+        "garbage-collection",
+        "cache"
+      ],
+      "category": "nix",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
       "name": "nix-template-deployment",
       "source": "./nix/nix-template-deployment",
       "description": "Guides deploying nix-template shell.nix and .envrc to directories for per-directory package availability via direnv. Covers home.packages vs devShell distinction.",
