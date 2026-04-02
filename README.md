@@ -87,6 +87,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [root-cause-investigation](general/root-cause-investigation/) | Five Whys + Peeling the Onion dual-mode debugging framework |
 | [codebase-due-diligence](general/codebase-due-diligence/) | Phased reconnaissance → setup → architecture mapping → risk zone classification for unfamiliar codebases |
 | [capture-what-resonates](general/capture-what-resonates/) | Resonance Filter + Twelve Favorite Problems for deciding what to capture in a Second Brain |
+| [pre-learning-prep](general/pre-learning-prep/) | 5-15 min pre-reading checklist: search existing knowledge, activate mental models, set intentions, prime connections |
 | [five-step-optimizer](workflow/five-step-optimizer/) | Musk's Five-Step Algorithm for process optimization |
 | [vspt-planner](workflow/vspt-planner/) | Vision-Strategies-Projects-Tactics framework for breaking down overwhelming objectives |
 | [action-clarity-loop](workflow/action-clarity-loop/) | Generate clarity through action — minimum viable actions reveal information planning can't |
