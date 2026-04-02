@@ -98,6 +98,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [first-principles-framework](general/first-principles-framework/) | Three-mode first-principles methodology: problem decomposition (with Rails/Stimulus patterns), foundation building (observations-to-laws), and document summarization |
 | [decision-timing-assessor](workflow/decision-timing-assessor/) | Framework for optimal decision timing vs. information gathering (Type I/II decisions, reversibility) |
 | [counterintuitive-analyst](general/counterintuitive-analyst/) | Systematically question popular wisdom to reveal strategic insights |
+| [framework-epistemology-audit](general/framework-epistemology-audit/) | Pressure-test universal frameworks: 3 tests (falsifiability, independence, predictive specificity) + 4-level Pattern Verification Hierarchy to distinguish laws from metaphors |
 | [emerging-market-analysis](general/emerging-market-analysis/) | 5 frameworks: governance trauma cycle, CB signaling, FX-inflation feedback, valuation floors, capital rotation |
 | [regret-minimization-framework](general/regret-minimization-framework/) | 10-10-10 rule, action vs inaction regret comparison, minimum regret path selection |
 | [risk-first-methodology](general/risk-first-methodology/) | Define max loss before reward, IF-THEN scenario planning, position sizing from risk |

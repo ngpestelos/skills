@@ -935,6 +935,25 @@
       "license": "MIT"
     },
     {
+      "name": "framework-epistemology-audit",
+      "source": "./general/framework-epistemology-audit",
+      "description": "Pressure-test grand frameworks with 3 tests (falsifiability, independence, predictive specificity) and 4-level Pattern Verification Hierarchy. Distinguishes structural isomorphism from metaphorical resemblance.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "epistemology",
+        "framework",
+        "critical-thinking",
+        "cross-domain",
+        "falsifiability"
+      ],
+      "category": "general",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
       "name": "framework-to-daily-workflow-integration",
       "source": "./workflow/framework-to-daily-workflow-integration",
       "description": "Embed abstract strategic frameworks into existing daily/weekly workflow commands as lightweight rituals. 4-step pattern: timescale mapping, daily touchpoint design, weekly audit structure, data flow wiring.",
