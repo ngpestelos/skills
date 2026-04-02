@@ -4,7 +4,7 @@ description: "Quick-reference toolkit for interrupting rumination patterns with 
 license: MIT
 metadata:
   author: ngpestelos
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # Rumination Interrupt
@@ -42,23 +42,4 @@ Clear thinking (define problem outside your head) → Bias to action (physical i
 
 **Prayerful Pause**: When asked a question, pause and ask what you *actually* think rather than responding with cached positions.
 
-## Decision Tree
-
-```
-Need immediate relief (< 1 min) → Physical Interrupt
-Overwhelmed with tasks → CIA "Next Fastest Thing"
-Stuck on a decision → High Agency Escape Route
-Have 5 minutes → DMN Reset Protocol
-```
-
-## The Neuroscience
-
-DMN (Default Mode Network) autopilot cycles worry patterns automatically. Physical action interrupts DMN *physiologically*. "Your brain replays problems so many times they start to feel permanent" — permanence is illusion from repetition.
-
-## Key Rules
-
-- Stop trying to "think through" rumination — more thinking strengthens the loop
-- Don't wait until you "feel like" acting — behavioral activation precedes mental clarity
-- Don't dismiss small actions — washing one dish IS the intervention
-- Don't seek the "perfect" decision — decisions are experiments, action generates data
-- Unchecked rumination compounds over time — early intervention prevents entrenchment
+Don't dismiss small actions — washing one dish IS the intervention. Unchecked rumination compounds over time — early intervention prevents entrenchment.

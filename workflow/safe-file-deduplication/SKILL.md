@@ -4,23 +4,16 @@ description: "Multi-phase methodology for safely deduplicating large file collec
 license: MIT
 metadata:
   author: ngpestelos
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # Safe Multi-Phase File Deduplication
 
 Deduplicate large file collections using content-based analysis with multiple safety layers.
 
-## Core Principles
+**Critical**: Files with -1, -2 suffixes may contain different content. Never deduplicate based on filename alone.
 
-1. **Content over filename** — Files with -1, -2 suffixes may contain different content
-2. **Multi-phase** — Separate analysis, planning, execution, verification
-3. **Archive, don't delete** — All removals recoverable
-4. **Read-only before write** — Complete analysis before any destructive ops
-
-## Methodology
-
-### File Selection Priority
+## File Selection Priority
 When multiple files have identical content:
 1. File WITHOUT numeric suffix (base name)
 2. If all have suffixes, keep OLDEST (earliest mtime)
@@ -39,13 +32,7 @@ When multiple files have identical content:
 
 Each phase outputs JSON consumed by the next.
 
-### Quick Detection
-```bash
-find . -maxdepth 1 -name "*-[0-9]*.*" | wc -l
-```
-Recommend dedup when 500+ files with >1% suffix rate.
-
-### Content Identifiers by File Type
+## Content Identifiers by File Type
 
 | File Type | Content Identifier | Keep Priority |
 |-----------|-------------------|---------------|
@@ -54,12 +41,6 @@ Recommend dedup when 500+ files with >1% suffix rate.
 | Photos (JPG, PNG) | SHA-256 hash | Largest (highest quality) |
 | Documents (PDF, DOCX) | SHA-256 hash | Most descriptive name, then newest |
 | Videos (MP4, MOV) | Hash first 1MB + file size | Highest resolution |
-
-### Safety Mechanisms
-
-- **Backup**: `tar -czf backup.tar.gz source/` before changes
-- **Archive, don't delete**: `shutil.move(file, archive_dir)`
-- **Dry-run default**: Simulation first; live execution requires typing 'DELETE'
 
 ## Troubleshooting
 
@@ -70,9 +51,3 @@ Recommend dedup when 500+ files with >1% suffix rate.
 | Parse errors | Skip and log; review `parse_errors` in manifest |
 | Verification fails | Check execution log; rollback from archive |
 
-## Key Rules
-
-- Never deduplicate based on filename alone — always check content
-- Never permanently delete — always archive to timestamped directory
-- Never skip verification phase after execution
-- Never run single-phase all-in-one scripts — use multi-phase workflow

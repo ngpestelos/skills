@@ -1089,7 +1089,7 @@
       "name": "rumination-interrupt",
       "source": "./general/rumination-interrupt",
       "description": "Quick-reference toolkit for interrupting rumination patterns with immediate physical and cognitive interventions in 30 seconds or less.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1107,7 +1107,7 @@
       "name": "safe-file-deduplication",
       "source": "./workflow/safe-file-deduplication",
       "description": "Multi-phase methodology for safely deduplicating large file collections using content-based analysis. Covers analysis, planning, execution with dry-run, verification, and rollback.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": {
         "name": "Nestor Pestelos"
       },
