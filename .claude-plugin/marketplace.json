@@ -1066,6 +1066,24 @@
       "category": "general",
       "homepage": "https://github.com/ngpestelos/skills",
       "license": "MIT"
+    },
+    {
+      "name": "safe-file-deduplication",
+      "source": "./workflow/safe-file-deduplication",
+      "description": "Multi-phase methodology for safely deduplicating large file collections using content-based analysis. Covers analysis, planning, execution with dry-run, verification, and rollback.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "deduplication",
+        "file-management",
+        "safety",
+        "content-hash"
+      ],
+      "category": "workflow",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
     }
   ]
 }

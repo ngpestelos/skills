@@ -111,6 +111,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [clean-commit-staging](workflow/clean-commit-staging/) | Prevent pre-staged files from parallel sessions contaminating your commits |
 | [code-review-methodology](workflow/code-review-methodology/) | Review only uncommitted changes with 4-tier priority framework |
 | [knowledge-synthesis-framework](general/knowledge-synthesis-framework/) | Cross-domain pattern recognition, paradox exploration, and association surfacing for insight generation |
+| [safe-file-deduplication](workflow/safe-file-deduplication/) | Multi-phase content-based file deduplication with dry-run, archive safety, and rollback |
 | [hidden-logic-analyst](general/hidden-logic-analyst/) | Identify derived variables that determine winning vs losing — hidden advantages competitors miss |
 
 ### Decision-Making & Self-Coaching
