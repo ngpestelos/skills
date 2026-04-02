@@ -933,6 +933,25 @@
       "category": "development",
       "homepage": "https://github.com/ngpestelos/skills",
       "license": "MIT"
+    },
+    {
+      "name": "existential-framework-builder",
+      "source": "./general/existential-framework-builder",
+      "description": "Transforms vague existential distress into structured inquiry frameworks with journaling prompts across 7 angles: future, past, counterfactual, relational, existential, synthesis, application.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "existential",
+        "meaning",
+        "purpose",
+        "journaling",
+        "framework"
+      ],
+      "category": "general",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
     }
   ]
 }
