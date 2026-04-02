@@ -138,6 +138,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [looking-good-vs-being-right](general/looking-good-vs-being-right/) | Surface where social pressure compromises effectiveness — IBM trap check, appearance vs substance matrix |
 | [morning-evening-heart-setting](general/morning-evening-heart-setting/) | Guided daily recommitment ritual — Tsunetomo's morning/evening heart-setting with 3 questions, commitment statements, weekly extension |
 | [unconscious-goal-detector](general/unconscious-goal-detector/) | Reveal hidden goals behind "lack of discipline" — 5-step framework exposing that repeated failures are successful pursuit of unconscious objectives |
+| [scientist-experimenter](general/scientist-experimenter/) | Transform challenges into hypothesis-test-learn experiments — block diagnosis, reframing, impossible goal decomposition |
 
 ### Communication & Framing
 
