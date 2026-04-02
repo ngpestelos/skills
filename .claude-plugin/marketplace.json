@@ -935,6 +935,25 @@
       "license": "MIT"
     },
     {
+      "name": "custom-command-audit",
+      "source": "./claude-code/custom-command-audit",
+      "description": "3-question test for auditing custom Claude Code commands: covered by skills?, unique protocol?, actively used? Archive stale/redundant commands to .claude/archives/.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "commands",
+        "audit",
+        "claude-code",
+        "cleanup",
+        "archival"
+      ],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
       "name": "durable-strategy-design",
       "source": "./general/durable-strategy-design",
       "description": "4-step methodology for disruption-proof personal strategy: commoditization-scarcity inversion, pillar architecture with resistance tests, personality alignment filter, uncorrelated wealth streams with binary execution gates.",
