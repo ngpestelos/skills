@@ -107,6 +107,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [durable-strategy-design](general/durable-strategy-design/) | Build disruption-proof personal strategy: commoditization-scarcity inversion, 4-pillar architecture, personality alignment filter, uncorrelated wealth streams, binary execution gates |
 | [clerk-test](general/clerk-test/) | Rowan vs clerk diagnostic: are you executing or accumulating questions? |
 | [system-purpose-auditor](general/system-purpose-auditor/) | Evaluate systems by what they DO — POSIWID principle for diagnosing intention-reality gaps |
+| [systems-design-diagnostic](general/systems-design-diagnostic/) | Four failure archetypes for projects/products/orgs: hidden control, bootstrap paradox, second-system effect, innovator's dilemma |
 | [skill-tree-generator](general/skill-tree-generator/) | Prerequisite dependency trees — trunk/branch/leaf with ZPD calibration for learning |
 | [clean-commit-staging](workflow/clean-commit-staging/) | Prevent pre-staged files from parallel sessions contaminating your commits |
 | [code-review-methodology](workflow/code-review-methodology/) | Review only uncommitted changes with 4-tier priority framework |
