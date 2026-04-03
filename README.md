@@ -195,6 +195,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [skill-decomposition-methodology](claude-code/skill-decomposition-methodology/) | Refactor bloated skills (>500 lines) into focused sub-skills |
 | [claude-code-hook-development](claude-code/claude-code-hook-development/) | Create and deploy Claude Code hooks: JSON input, exit codes, transcript JSONL parsing |
 | [skill-stack-deduplication](claude-code/skill-stack-deduplication/) | Eliminate duplication across agent/skill/command layers via reference hierarchies |
+| [skill-to-prompt-porter](claude-code/skill-to-prompt-porter/) | Port skills into standalone prompts for external LLMs: methodology extraction, infrastructure stripping, modality adaptation |
 | [custom-command-audit](claude-code/custom-command-audit/) | 3-question test to evaluate custom commands for archival: covered by skills? unique protocol? actively used? |
 | [reality-filter](general/reality-filter/) | Uncertainty labeling and verification standards: evidence hierarchy, self-correction |
 | [red-team-framework-review](general/red-team-framework-review/) | Adversarial review of strategic frameworks: assumption challenges, correlated failure modes |
