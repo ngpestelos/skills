@@ -865,8 +865,8 @@
     {
       "name": "reality-filter",
       "source": "./general/reality-filter",
-      "description": "Guides proper uncertainty labeling and verification standards during technical discussions. Covers evidence hierarchy, self-correction protocol.",
-      "version": "1.0.0",
+      "description": "Uncertainty labeling, evidence hierarchy, and agent output verification. Activates when using absolute language (always, never, prevents, guarantees), making claims about implementation, or consuming agent/subprocess outputs.",
+      "version": "2.0.0",
       "author": {
         "name": "Nestor Pestelos"
       },
