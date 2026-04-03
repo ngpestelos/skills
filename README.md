@@ -51,6 +51,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [model-method-memoization-view-performance](general/model-method-memoization-view-performance/) | Memoize model methods to reduce view rendering allocations |
 | [rails-cache-performance](rails/rails-cache-performance/) | Cache invalidation, stale cache detection, request-scoped caching, TTL selection, and logging |
 | [rails-testing-patterns](rails/rails-testing-patterns/) | Integration-first test selection, factory pitfalls, and assert_select patterns |
+| [technical-pattern-extractor](rails/technical-pattern-extractor/) | Extract and generalize project-specific Rails patterns into reusable skills and knowledge notes |
 | [backend-contract-format-compliance](rails/backend-contract-format-compliance/) | Detect and resolve format mismatches between frontend/backend with save-time normalization and gradual type strengthening |
 | [diagnostic-logging-patterns](rails/diagnostic-logging-patterns/) | 3-layer strategic logging (controller → model → DB verification) with P0/P1/P2 priority and temporary debug protocol |
 | [image-cascading-fallback](rails/image-cascading-fallback/) | Defensive image rendering with cascading fallback from missing/404 URLs to alternatives and placeholders |
