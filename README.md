@@ -203,6 +203,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [git-atomic-commit-organizer](workflow/git-atomic-commit-organizer/) | Organize uncommitted changes into logical, atomic commits |
 | [source-verification](workflow/source-verification/) | Verify cited sources before publication — prevent WebFetch circular verification |
 | [state-reset-verification](workflow/state-reset-verification/) | Safe deduplication verification: backup-reset-test-restore workflow for state-independent sync systems |
+| [subagent-driven-development](workflow/subagent-driven-development/) | Execute implementation plans via fresh subagents per task with two-stage review (spec compliance then code quality) |
 | [git-stash-pull-pop](workflow/git-stash-pull-pop/) | Update from remote when pull is blocked by unstaged changes: stash, pull, pop |
 | [deployment-readiness](workflow/deployment-readiness/) | 5-phase production deployment checklist: verify, commit, PR, deploy, monitor |
 | [qmd-local-search](general/qmd-local-search/) | QMD semantic search patterns: MCP tools, index rebuild, troubleshooting |
