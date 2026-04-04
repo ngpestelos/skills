@@ -115,6 +115,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [knowledge-synthesis-framework](general/knowledge-synthesis-framework/) | Cross-domain pattern recognition, paradox exploration, and association surfacing for insight generation |
 | [safe-file-deduplication](workflow/safe-file-deduplication/) | Multi-phase content-based file deduplication with dry-run, archive safety, and rollback |
 | [hidden-logic-analyst](general/hidden-logic-analyst/) | Identify derived variables that determine winning vs losing — hidden advantages competitors miss |
+| [document-baseline-preservation](general/document-baseline-preservation/) | Prevents destructive overwrites of important documents — confirm overwrite vs dated copy before rewriting |
 
 ### Decision-Making & Self-Coaching
 
