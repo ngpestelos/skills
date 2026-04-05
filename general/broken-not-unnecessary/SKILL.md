@@ -10,7 +10,7 @@ version: 1.1.0
 
 A plan proposes removing a feature because it "rarely completes," "collects no data," or "never fires." The plan is correct about the symptom but wrong about the cause.
 
-**Example (2026-04-06):** Dealer onboarding Step 2 (Stripe Connect) "rarely completes during the wizard." Plan said: delete it. Actual reason: `POST /api/stripe/connect/onboard` requires `requireAuth` — the owner user doesn't exist yet at that wizard step, so the endpoint is unreachable. Fix: move Owner Account before Stripe Connect. Deleting it would have broken payment processing platform-wide.
+**Example:** A multi-step wizard has a payment integration step that "rarely completes." Plan said: delete it. Actual reason: the endpoint requires an authenticated session, but the user account doesn't exist yet at that wizard step. Fix: reorder steps so the account is created first. Deleting it would have broken payment processing entirely.
 
 ## Process
 
