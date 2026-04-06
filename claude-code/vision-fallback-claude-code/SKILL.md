@@ -10,13 +10,29 @@ license: MIT
 
 When vision analysis fails (403, quota exceeded, rate limited), use these fallbacks:
 
-## Method 1: Claude Code CLI
+## Method 1: Claude Code CLI (Local Images)
+
+For local image files when vision API fails or no browser session exists:
 
 ```bash
-claude "Analyze this image and extract [specific details]: [image path]"
+# Basic usage
+claude -p "Analyze these images and describe [what you need]: /path/to/image1.jpg /path/to/image2.jpg" --allowedTools Read
+
+# Cost-optimized (use Sonnet instead of default Opus)
+claude -p "Your prompt here" --model claude-sonnet-4-6 --allowedTools Read
 ```
 
-Uses Claude Code's separate API quota. Returns natural language — may need parsing.
+**Requirements:**
+- Use `-p` (prompt mode) not interactive mode
+- Include `--allowedTools Read` so Claude can access the image files
+- Use `--model claude-sonnet-4-6` for cheaper inference (Sonnet vs default Opus)
+- Multiple images can be passed in one command
+
+**Nix-managed configs:** If `~/.claude/settings.json` is a symlink to nix store, it's read-only. Either:
+- Use explicit `--model` flag per command, OR
+- Update your nix config to set `"model": "sonnet"` and rebuild
+
+**Note:** Uses Claude Code's separate API quota. Returns natural language — may need parsing.
 
 ## Method 2: Browser Accessibility Tree
 
@@ -26,8 +42,12 @@ For web pages (not local images), extract text content without vision:
 browser_snapshot(full=true)
 ```
 
+**Note:** `browser_vision` requires an active browser session (`browser_navigate` must be called first). If you get "No browser session" errors, use Method 1 for local images or navigate first for web images.
+
 Returns the full accessibility tree which often contains the text needed.
 
 ## Optimization History
 
+- **April 5, 2026**: Added `--model` flag for cost optimization (Sonnet vs Opus) and nix-managed config troubleshooting. User's settings.json was symlinked to nix store (read-only), requiring explicit `--model claude-sonnet-4-6` per command or nix config update.
+- **April 5, 2026**: Updated Method 1 with correct CLI syntax (`-p` flag, `--allowedTools Read`), added browser session requirement note for Method 2. Discovered when browser_vision failed on local images.
 - **April 1, 2026**: Five-step optimizer pass 1. Deleted "When to Use" (duplicates frontmatter), obvious steps (try normal first, parse output, update document), considerations table, troubleshooting. 73 → 14 lines (81%).
