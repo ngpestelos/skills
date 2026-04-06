@@ -1,12 +1,12 @@
 ---
 name: adversarial-plan-hardening
-description: Iterative adversarial review loop for implementation plans. Run passes, resolve BLOCKERs with version bumps, fold WARNINGs in-place, stop at 0 BLOCKERs, prepare handoff brief. Trigger keywords: red-team loop, multiple passes, harden plan, plan hardening, adversarial refinement, clean pass, handoff brief.
-version: 1.1.0
+description: Iterative adversarial review loop for implementation plans. Run passes, resolve BLOCKERs with version bumps, fold WARNINGs in-place, stop at 0 BLOCKERs, audit necessity, prepare handoff brief. Trigger keywords: red-team loop, multiple passes, harden plan, plan hardening, adversarial refinement, clean pass, necessity audit, handoff brief.
+version: 1.2.0
 ---
 
 # Adversarial Plan Hardening
 
-Iterate adversarial review passes on an implementation plan until it reaches a clean pass (0 BLOCKERs), then prepare a handoff brief for the execution agent.
+Iterate adversarial review passes on an implementation plan until it reaches a clean pass (0 BLOCKERs), audit necessity, then prepare a handoff brief for the execution agent.
 
 ## The Loop
 
@@ -14,7 +14,7 @@ Iterate adversarial review passes on an implementation plan until it reaches a c
 Plan v{N} → Adversarial Pass → Findings
   ├─ BLOCKERs found → Create v{N+1} resolving all findings → repeat
   ├─ WARNINGs only → Fold in-place (no version bump) → DONE
-  └─ Clean pass → DONE
+  └─ Clean pass → Necessity Audit → DONE
 ```
 
 ### Step 1: Run Adversarial Pass
@@ -30,6 +30,19 @@ Rotate models across passes when possible — different models catch different i
 - **Clean pass** → proceed to Step 3.
 
 Never skip a BLOCKER. Every BLOCKER must be resolved before execution.
+
+### Step 2.5: Necessity Audit (before handoff)
+
+Adversarial review checks **correctness**: does the code work, are there race conditions, are the paths right? It does NOT check **necessity**: does this component need to exist?
+
+Before preparing the handoff brief, run a necessity pass on every new piece of infrastructure in the plan:
+
+- New services, endpoints, database columns, cron jobs, environment variables, third-party integrations
+- For each: ask "what happens if we don't build this?" and "is there an existing simpler path?"
+- Red flag: **infrastructure that handles a failure mode you haven't measured**. Automated retry for a webhook you haven't seen fail. Alerting for an error you've never observed. A cache for a slow query you haven't profiled.
+- Acceptable simpler paths: manual replay + alert, existing admin tooling, "do nothing and observe first"
+
+A plan that passes many red-team rounds for correctness can still contain significant infrastructure solving for an unmeasured failure rate. Correctness review never catches this — only necessity review does.
 
 ### Step 3: Prepare Handoff Brief
 
