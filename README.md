@@ -209,6 +209,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [deployment-readiness](workflow/deployment-readiness/) | 5-phase production deployment checklist: verify, commit, PR, deploy, monitor |
 | [qmd-local-search](general/qmd-local-search/) | QMD semantic search patterns: MCP tools, index rebuild, troubleshooting |
 | [vision-fallback-claude-code](claude-code/vision-fallback-claude-code/) | Fallback when vision analysis fails: CLI delegation and browser accessibility tree extraction |
+| [agent-pipeline-design](workflow/agent-pipeline-design/) | Multi-phase agent pipeline patterns: inline vs subagent classification, claude -p delegation, state management, skill-to-skill invocation |
 
 ### Third-Party
 
