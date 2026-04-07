@@ -226,6 +226,25 @@
       "license": "MIT"
     },
     {
+      "name": "proxy-measurement-designer",
+      "source": "./general/proxy-measurement-designer",
+      "description": "Design observable proxies for measuring invisible phenomena using thermal equilibrium, calibration, and Goodhart's Law defenses.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "measurement",
+        "proxy",
+        "leading-indicators",
+        "analytics",
+        "quantification"
+      ],
+      "category": "productivity",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
       "name": "cyclomatic-complexity-reduction",
       "source": "./debugging/cyclomatic-complexity-reduction",
       "description": "Reduce cyclomatic complexity in Ruby methods via early-return extraction, guard unification, and safe attribute access helpers.",
