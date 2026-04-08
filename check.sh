@@ -12,6 +12,8 @@ check_skill() {
   local skill_name="$(basename "$skill_dir")"
   local skill_file="$skill_dir/SKILL.md"
 
+  local errors_before=$errors
+
   if [ ! -f "$skill_file" ]; then
     echo "FAIL  $skill_name: SKILL.md not found"
     errors=$((errors + 1))
@@ -89,7 +91,7 @@ print('')
     fi
   fi
 
-  if [ $errors -eq 0 ] || ! echo "$skill_name" | grep -q "FAIL"; then
+  if [ $errors -eq "$errors_before" ]; then
     echo "  ok  $skill_name ($line_count lines, v${fm_version:-?})"
   fi
 }
