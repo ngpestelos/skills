@@ -1,9 +1,9 @@
 ---
 name: activerecord-idempotent-create-patterns
-category: rails
 description: "Idempotent API endpoints using find_or_create_by! to prevent duplicate records on retries."
 license: MIT
 metadata:
+  category: rails
   author: ngpestelos
   version: "2.0.0"
 ---

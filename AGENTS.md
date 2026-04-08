@@ -1,70 +1,51 @@
 # AGENTS.md
 
-This file provides guidance to AI coding agents when working with code in this repository.
-
-## What This Is
-
-A collection of [Agent Skills](https://agentskills.io) distributed as a plugin. Skills are standalone SKILL.md files that follow the Agent Skills specification and work across multiple AI coding tools (Claude Code, Cursor, VS Code Copilot, Gemini CLI, OpenCode, Goose).
+Skills are standalone SKILL.md files compatible with Claude Code, Cursor, VS Code Copilot, Gemini CLI, OpenCode, and Goose. Spec: [agentskills.io](https://agentskills.io).
 
 ## Commands
 
 ```bash
-# Validate all skills against the Agent Skills spec
-./check.sh
-
-# Validate a single skill
-./check.sh <skill-name>
-
-# Install all skills via symlink into the agent skills directory
-./install.sh
-
-# Load skills from multiple GitHub repos (config: ~/.claude/skill-sources.txt)
-./multi-repo-loader.sh
+./check.sh                  # validate all skills
+./check.sh <skill-name>     # validate one skill
+./install.sh                # symlink skills into agent skills directory
+./multi-repo-loader.sh      # load skills from multiple repos
 ```
 
 ## Repository Structure
 
-Skills live at the top level — flat, no category subdirectories:
+Skills live flat at the top level — no category subdirectories:
 
-- `<name>/SKILL.md` — Each skill is a single markdown file with YAML frontmatter
-- `<name>/references/` — Optional supplementary files (only `database-migration-termination-safety` uses this)
-- `.claude-plugin/marketplace.json` — Plugin registry for individual skill installation
-- `check.sh` — Spec validation (name format, description length, body size, version sync)
-- `install.sh` — Idempotent symlinker, also cleans stale links
-- `multi-repo-loader.sh` — Multi-repo skill aggregator (untracked, not yet committed)
+- `<name>/SKILL.md` — single markdown file with YAML frontmatter
+- `<name>/references/` — optional supplementary files
+- `.claude-plugin/marketplace.json` — plugin registry
+- `check.sh` — spec validation (name, description, line count, version sync)
+- `install.sh` — idempotent symlinker, cleans stale links
 
 ## Skill File Format
 
-Each SKILL.md has this structure:
 ```yaml
 ---
 name: lowercase-hyphenated    # must match directory name, 1-64 chars
-category: category-name       # optional: rails, python, devops, mlops, etc.
-description: "..."             # <= 1024 chars
+description: "..."            # <= 1024 chars
 metadata:
   version: "1.0.0"            # semver, must match marketplace.json
+  category: rails             # optional: rails, nix, claude-code, frontend, security, debugging, workflow, general
 ---
 ```
-Body must be < 500 lines and < 5000 estimated tokens.
-
-### Categories
-
-The `category` frontmatter field is metadata only — it does not affect file placement. Common values: `rails`, `nix`, `claude-code`, `frontend`, `security`, `debugging`, `workflow`, `general`.
+Body: < 500 lines.
 
 ## Key Constraints
 
 - **Name must match directory**: `foo-bar/SKILL.md` must have `name: foo-bar`
-- **No consecutive hyphens** in skill names
+- **Name format**: lowercase alphanumeric + hyphens; no consecutive hyphens; must not start or end with a hyphen
 - **Version sync required**: `SKILL.md` frontmatter version must match `.claude-plugin/marketplace.json` version
 - **No non-standard frontmatter keys** outside `metadata:`
 
-## Workflow for Changes
+## Workflow
 
-**Updating a skill**: Edit SKILL.md, run `./check.sh <skill-name>`, bump version in both SKILL.md and marketplace.json.
+**Update**: Edit SKILL.md → `./check.sh <name>` → bump version in SKILL.md and marketplace.json.
 
-**Adding a skill**: Create `<name>/SKILL.md`, run `./check.sh <name>`, add entry to marketplace.json, add row to README.md skills table.
-
-Run `./check.sh <skill-name>` for spec compliance checking.
+**Add**: Create `<name>/SKILL.md` → `./check.sh <name>` → add to marketplace.json → add row to README.md.
 
 ## Versioning
 

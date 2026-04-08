@@ -1,9 +1,9 @@
 ---
 name: activerecord-query-performance-patterns
-category: rails
 description: "Three query performance techniques preventing 10-1000x PostgreSQL slowdowns: LIMIT without ORDER BY, unanchored text search, and strict_callback_checks."
 license: MIT
 metadata:
+  category: rails
   author: ngpestelos
   version: "2.0.0"
 ---

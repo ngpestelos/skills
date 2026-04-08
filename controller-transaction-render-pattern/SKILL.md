@@ -1,9 +1,9 @@
 ---
 name: controller-transaction-render-pattern
-category: rails
 description: "Prevents double render errors and connection pool pollution in Rails controllers by managing transaction boundaries before rendering."
 license: MIT
 metadata:
+  category: rails
   author: ngpestelos
   version: 1.1.0
 description: "Prevents double render errors and connection pool pollution in ActiveRecord transaction blocks. Trigger keywords: DoubleRenderError, PG::InFailedSqlTransaction, transaction render, result variable pattern, connection pool pollution."

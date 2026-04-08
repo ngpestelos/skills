@@ -1,9 +1,9 @@
 ---
 name: activerecord-graceful-corrupted-data-handling
-category: rails
 description: "Graceful handling of missing/corrupted foreign key data: defensively coded view methods that log warnings instead of crashing."
 license: MIT
 metadata:
+  category: rails
   author: ngpestelos
   version: "2.0.0"
 ---

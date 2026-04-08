@@ -1,9 +1,9 @@
 ---
 name: activerecord-eager-loading-testing-patterns
-category: rails
 description: "Testing patterns for ActiveRecord eager loading: .association.loaded? checks, bullet gem integration, performance regression tests, and query count assertions."
 license: MIT
 metadata:
+  category: rails
   author: ngpestelos
   version: "2.0.0"
 ---

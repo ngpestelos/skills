@@ -1,9 +1,9 @@
 ---
 name: activerecord-application-query-optimization
-category: rails
 description: "Prevents N+1 queries, duplicate joins, and missing eager loading in ActiveRecord. Detects common patterns via EXPLAIN ANALYZE, bullet gem warnings, and production log analysis."
 license: MIT
 metadata:
+  category: rails
   author: ngpestelos
   version: "3.0.0"
 ---

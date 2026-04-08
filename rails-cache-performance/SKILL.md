@@ -1,9 +1,10 @@
 ---
 name: rails-cache-performance
-category: rails
 description: "Rails cache invalidation, stale cache detection, request-level fragment caching, and Russian doll caching patterns."
 allowed-tools: Read, Grep, Glob
----
+
+metadata:
+  category: rails---
 
 # Rails Cache Performance
 

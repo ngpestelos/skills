@@ -1,9 +1,9 @@
 ---
 name: activerecord-transaction-boundary-optimization
-category: rails
 description: "Optimizes ActiveRecord transaction boundaries by moving read operations outside transactions, reducing lock contention and improving throughput."
 license: MIT
 metadata:
+  category: rails
   author: ngpestelos
   version: "2.0.0"
 ---

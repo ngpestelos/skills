@@ -4,9 +4,9 @@ description: "Diagnose why a Hermes skill isn't appearing in the skill index des
 version: 1.0.0
 author: Nestor Pestelos
 license: MIT
-category: hermes
 allowed-tools: [read_file, terminal]
 metadata:
+  category: hermes
   hermes:
     tags: [skills, troubleshooting, registration, symlink, discovery]
     related_skills: [skills-audit]

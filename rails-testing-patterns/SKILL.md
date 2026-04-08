@@ -1,10 +1,11 @@
 ---
 name: rails-testing-patterns
-category: rails
 description: "Test type selection prioritizing integration tests over system tests, shared context for reusable test data, and avoiding over-mocking in Rails."
 version: 2.0
 allowed-tools: Read, Grep, Glob, Bash
----
+
+metadata:
+  category: rails---
 
 # Rails Testing Pattern Selection
 

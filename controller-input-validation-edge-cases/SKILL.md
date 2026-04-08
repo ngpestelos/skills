@@ -1,9 +1,9 @@
 ---
 name: controller-input-validation-edge-cases
-category: rails
 description: "Proactive input validation in Rails controllers to prevent downstream errors: type checking, bounds validation, and early failure patterns."
 license: MIT
 metadata:
+  category: rails
   author: ngpestelos
   version: 1.1.0
 description: "Proactive input validation in Rails controllers to prevent edge case failures. Covers multi-tenant scoping, parameter fallback to model state, and bulk operation validation. (global)"
