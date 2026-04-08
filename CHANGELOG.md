@@ -4,6 +4,8 @@
 
 - **Restructure**: Flatten all skill directories from `<category>/<name>/` to `<name>/`. Rewrite `check.sh` and `install.sh` to use glob discovery instead of hardcoded category lists. Update `marketplace.json` source paths and README links. Remove firecrawl symlinks from repo root.
 - **New**: `repo-flattening` — pattern for collapsing two-level directory structures in git repos
+- **New**: `AGENTS.md` — shared project instructions for all coding agents; `CLAUDE.md` now imports via `@AGENTS.md`
+- **New**: `CHANGELOG.md`
 
 ## 2026-04-07
 
