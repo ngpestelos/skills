@@ -11,7 +11,7 @@
   "plugins": [
     {
       "name": "activejob-design-patterns",
-      "source": "./rails/activejob-design-patterns",
+      "source": "./activejob-design-patterns",
       "description": "ActiveJob architecture patterns: fatal vs non-fatal error handling, transaction safety, external API integration, async enqueuing, internal batching, and operation-based idempotency.",
       "version": "2.0.1",
       "author": {
@@ -29,7 +29,7 @@
     },
     {
       "name": "activerecord-application-query-optimization",
-      "source": "./rails/activerecord-application-query-optimization",
+      "source": "./activerecord-application-query-optimization",
       "description": "Prevents N+1 queries, duplicate joins, and missing eager loading in ActiveRecord. Covers batch preloading, SQL CASE consolidation, 8 N+1 discovery patterns, and join optimization.",
       "version": "3.0.0",
       "author": {
@@ -47,7 +47,7 @@
     },
     {
       "name": "activerecord-eager-loading-testing-patterns",
-      "source": "./rails/activerecord-eager-loading-testing-patterns",
+      "source": "./activerecord-eager-loading-testing-patterns",
       "description": "Testing patterns for ActiveRecord eager loading: .association(:name).loaded? verification, query count tests, pattern-matching counts, and anti-patterns.",
       "version": "2.0.0",
       "author": {
@@ -65,7 +65,7 @@
     },
     {
       "name": "activerecord-graceful-corrupted-data-handling",
-      "source": "./rails/activerecord-graceful-corrupted-data-handling",
+      "source": "./activerecord-graceful-corrupted-data-handling",
       "description": "Graceful handling of missing/corrupted foreign key data: .find_by for optional lookups, safe navigation with fallbacks, and callback nil guards with throw(:abort).",
       "version": "2.0.0",
       "author": {
@@ -83,7 +83,7 @@
     },
     {
       "name": "activerecord-idempotent-create-patterns",
-      "source": "./rails/activerecord-idempotent-create-patterns",
+      "source": "./activerecord-idempotent-create-patterns",
       "description": "Idempotent API endpoints using find_or_create_by! to prevent race conditions and duplicate records. Covers case-insensitive dedup and guard vs idempotent pattern.",
       "version": "2.0.0",
       "author": {
@@ -101,7 +101,7 @@
     },
     {
       "name": "activerecord-query-performance-patterns",
-      "source": "./rails/activerecord-query-performance-patterns",
+      "source": "./activerecord-query-performance-patterns",
       "description": "Three query performance techniques preventing 10-1000x PostgreSQL degradation: ILIKE index usage, two-phase DISTINCT optimization, and UNION ALL OR-splitting.",
       "version": "2.0.0",
       "author": {
@@ -119,7 +119,7 @@
     },
     {
       "name": "activerecord-transaction-boundary-optimization",
-      "source": "./rails/activerecord-transaction-boundary-optimization",
+      "source": "./activerecord-transaction-boundary-optimization",
       "description": "Optimizes ActiveRecord transaction boundaries by moving read operations outside transaction blocks to reduce lock time and contention.",
       "version": "2.0.0",
       "author": {
@@ -137,7 +137,7 @@
     },
     {
       "name": "adversarial-agent-validation",
-      "source": "./workflow/adversarial-agent-validation",
+      "source": "./adversarial-agent-validation",
       "description": "Three-agent adversarial validation pattern exploiting LLM sycophancy: Finder (find), Adversary (disprove), Referee (score).",
       "version": "2.0",
       "author": {
@@ -155,7 +155,7 @@
     },
     {
       "name": "claude-audit",
-      "source": "./claude-code/claude-audit",
+      "source": "./claude-audit",
       "description": "Audit CLAUDE.md files for redundancy, verbosity, stale references, conflicting rules, and optimization opportunities.",
       "version": "1.0.0",
       "author": {
@@ -173,7 +173,7 @@
     },
     {
       "name": "controller-input-validation-edge-cases",
-      "source": "./rails/controller-input-validation-edge-cases",
+      "source": "./controller-input-validation-edge-cases",
       "description": "Guidance on implementing comprehensive input validation in Rails controller actions before processing to prevent edge case failures.",
       "version": "1.1.0",
       "author": {
@@ -191,7 +191,7 @@
     },
     {
       "name": "controller-transaction-render-pattern",
-      "source": "./rails/controller-transaction-render-pattern",
+      "source": "./controller-transaction-render-pattern",
       "description": "Prevents double render errors and connection pool pollution in ActiveRecord transaction blocks.",
       "version": "1.1.0",
       "author": {
@@ -209,7 +209,7 @@
     },
     {
       "name": "counterintuitive-analyst",
-      "source": "./general/counterintuitive-analyst",
+      "source": "./counterintuitive-analyst",
       "description": "Framework for systematically questioning cultural trends and popular wisdom to reveal strategic insights.",
       "version": "1.0.0",
       "author": {
@@ -227,7 +227,7 @@
     },
     {
       "name": "proxy-measurement-designer",
-      "source": "./general/proxy-measurement-designer",
+      "source": "./proxy-measurement-designer",
       "description": "Design observable proxies for measuring invisible phenomena using thermal equilibrium, calibration, and Goodhart's Law defenses.",
       "version": "1.0.0",
       "author": {
@@ -246,7 +246,7 @@
     },
     {
       "name": "cyclomatic-complexity-reduction",
-      "source": "./debugging/cyclomatic-complexity-reduction",
+      "source": "./cyclomatic-complexity-reduction",
       "description": "Reduce cyclomatic complexity in Ruby methods via early-return extraction, guard unification, and safe attribute access helpers.",
       "version": "1.0.0",
       "author": {
@@ -264,7 +264,7 @@
     },
     {
       "name": "database-migration-termination-safety",
-      "source": "./general/database-migration-termination-safety",
+      "source": "./database-migration-termination-safety",
       "description": "Guidance on what happens when database migrations are terminated mid-execution, how to design safe recoverable migrations, and running long migrati...",
       "version": "2.0.0",
       "author": {
@@ -283,7 +283,7 @@
     },
     {
       "name": "dead-code-detection",
-      "source": "./debugging/dead-code-detection",
+      "source": "./dead-code-detection",
       "description": "Systematic methodology for identifying orphaned files and dead code after refactoring.",
       "version": "1.0.0",
       "author": {
@@ -301,7 +301,7 @@
     },
     {
       "name": "first-principles-debugger",
-      "source": "./debugging/first-principles-debugger",
+      "source": "./first-principles-debugger",
       "description": "Systematic first-principles methodology for debugging complex issues that resist conventional approaches.",
       "version": "1.0.0",
       "author": {
@@ -319,7 +319,7 @@
     },
     {
       "name": "five-step-optimizer",
-      "source": "./workflow/five-step-optimizer",
+      "source": "./five-step-optimizer",
       "description": "Apply Elon Musk's Five-Step Algorithm to systematically optimize any process, system, or workflow through questioning, elimination, optimization, a...",
       "version": "3.0.0",
       "author": {
@@ -338,7 +338,7 @@
     },
     {
       "name": "hook-state-cascade-patterns",
-      "source": "./claude-code/hook-state-cascade-patterns",
+      "source": "./hook-state-cascade-patterns",
       "description": "Reusable patterns for stateful Claude Code hooks: priority cascade routing, per-route daily cooldown, CWD-first state fallback, portable date parsi...",
       "version": "2.1.0",
       "author": {
@@ -356,7 +356,7 @@
     },
     {
       "name": "model-method-memoization-view-performance",
-      "source": "./general/model-method-memoization-view-performance",
+      "source": "./model-method-memoization-view-performance",
       "description": "Memoize model methods called multiple times per object during view rendering to reduce Ruby CPU and memory allocations.",
       "version": "1.1.0",
       "author": {
@@ -374,7 +374,7 @@
     },
     {
       "name": "multi-panel-formdata-sync",
-      "source": "./frontend/multi-panel-formdata-sync",
+      "source": "./multi-panel-formdata-sync",
       "description": "Fixes the querySelector('form') first-form bug when a Stimulus controller wraps a repeated list where each panel has its own hidden-field form.",
       "version": "2.0",
       "author": {
@@ -392,7 +392,7 @@
     },
     {
       "name": "rails-testing-patterns",
-      "source": "./rails/rails-testing-patterns",
+      "source": "./rails-testing-patterns",
       "description": "Test type selection prioritizing integration tests (89-95% faster than system tests).",
       "version": "2.0",
       "author": {
@@ -410,7 +410,7 @@
     },
     {
       "name": "response-diversity",
-      "source": "./general/response-diversity",
+      "source": "./response-diversity",
       "description": "Vary response framing by context (learner, engineer, family, researcher) instead of defaulting to consulting/business framing.",
       "version": "1.0.0",
       "author": {
@@ -428,7 +428,7 @@
     },
     {
       "name": "root-cause-investigation",
-      "source": "./debugging/root-cause-investigation",
+      "source": "./root-cause-investigation",
       "description": "Dual-mode investigation framework combining Five Whys (systemic root cause analysis from Toyota/IDEO) and Peeling the Onion (psychological layer ex...",
       "version": "2.0.0",
       "author": {
@@ -446,9 +446,9 @@
     },
     {
       "name": "scanned-document-extraction",
-      "source": "./general/scanned-document-extraction",
+      "source": "./scanned-document-extraction",
       "description": "Extract structured data from scanned documents (images, PDFs) into markdown notes, preserving all granular detail.",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -465,7 +465,7 @@
     },
     {
       "name": "security-patterns",
-      "source": "./security/security-patterns",
+      "source": "./security-patterns",
       "description": "Quick-reference security checklist for XSS, CSRF, PII logging, console statements, multi-tenant isolation, and state machine security in Rails view...",
       "version": "2.0.0",
       "author": {
@@ -484,7 +484,7 @@
     },
     {
       "name": "skill-decomposition-methodology",
-      "source": "./claude-code/skill-decomposition-methodology",
+      "source": "./skill-decomposition-methodology",
       "description": "Systematic methodology for refactoring bloated skills (>500 lines) into focused sub-skills.",
       "version": "2.0",
       "author": {
@@ -502,7 +502,7 @@
     },
     {
       "name": "stimulus-controller-integration",
-      "source": "./frontend/stimulus-controller-integration",
+      "source": "./stimulus-controller-integration",
       "description": "Stimulus controller patterns for AJAX initialization, CustomEvent communication, and controller reuse.",
       "version": "2.1.0",
       "author": {
@@ -520,7 +520,7 @@
     },
     {
       "name": "stimulus-form-redirect",
-      "source": "./frontend/stimulus-form-redirect",
+      "source": "./stimulus-form-redirect",
       "description": "Replace AJAX + DOM manipulation with form submission + server redirect.",
       "version": "1.0.0",
       "author": {
@@ -538,7 +538,7 @@
     },
     {
       "name": "test-plan-methodology",
-      "source": "./workflow/test-plan-methodology",
+      "source": "./test-plan-methodology",
       "description": "Systematic 4-phase test planning approach to prevent coverage blind spots.",
       "version": "1.1.0",
       "author": {
@@ -556,7 +556,7 @@
     },
     {
       "name": "ai-coding-tool-portability",
-      "source": "./claude-code/ai-coding-tool-portability",
+      "source": "./ai-coding-tool-portability",
       "description": "Guides portable configuration across Claude Code and OpenCode. Covers feature mapping, command mirroring via symlinks and home-manager, architecture layout.",
       "version": "1.0.0",
       "author": {
@@ -574,7 +574,7 @@
     },
     {
       "name": "changing-defaults-systematically",
-      "source": "./workflow/changing-defaults-systematically",
+      "source": "./changing-defaults-systematically",
       "description": "Systematically change configuration defaults and constants while ensuring zero regressions. Covers finding all references, updating code/tests/docs, comprehensive validation.",
       "version": "1.0.0",
       "author": {
@@ -592,7 +592,7 @@
     },
     {
       "name": "claude-code-hook-development",
-      "source": "./claude-code/claude-code-hook-development",
+      "source": "./claude-code-hook-development",
       "description": "Guides creating, testing, and deploying Claude Code hooks via nix-darwin. Covers hook input JSON format, exit codes, stdout context injection, transcript JSONL parsing.",
       "version": "1.0.0",
       "author": {
@@ -610,7 +610,7 @@
     },
     {
       "name": "configuring-dynamic-attribution",
-      "source": "./claude-code/configuring-dynamic-attribution",
+      "source": "./configuring-dynamic-attribution",
       "description": "Guides updating AI tool templates to use dynamic placeholders for model names instead of hardcoded values in commit attributions.",
       "version": "1.0.0",
       "author": {
@@ -628,7 +628,7 @@
     },
     {
       "name": "git-atomic-commit-organizer",
-      "source": "./workflow/git-atomic-commit-organizer",
+      "source": "./git-atomic-commit-organizer",
       "description": "Systematically analyze uncommitted changes and organize them into logical, atomic commits following best practices.",
       "version": "1.0.0",
       "author": {
@@ -646,7 +646,7 @@
     },
     {
       "name": "git-stash-pull-pop",
-      "source": "./workflow/git-stash-pull-pop",
+      "source": "./git-stash-pull-pop",
       "description": "Gracefully update a git repository from remote when you have unstaged local changes. Stashes changes, pulls, then restores them.",
       "version": "1.1.0",
       "author": {
@@ -664,7 +664,7 @@
     },
     {
       "name": "deployment-readiness",
-      "source": "./workflow/deployment-readiness",
+      "source": "./deployment-readiness",
       "description": "Systematic 5-phase checklist for production deployment: verify completion, prepare commit, create PR, deploy, and monitor.",
       "version": "1.1.0",
       "author": {
@@ -683,7 +683,7 @@
     },
     {
       "name": "cv-customization-workflow",
-      "source": "./writing/cv-customization-workflow",
+      "source": "./cv-customization-workflow",
       "description": "Role-specific CV variants and cover letters: skills match scoring, reframing, de-AI voice pass, and two-agent quality gate.",
       "version": "1.1.0",
       "author": {
@@ -702,7 +702,7 @@
     },
     {
       "name": "neovim-configuration",
-      "source": "./general/neovim-configuration",
+      "source": "./neovim-configuration",
       "description": "Guides Neovim configuration through home-manager programs.neovim module. Covers plugin management, nvim-tree, theme consistency, buffer navigation, and PATH issues.",
       "version": "1.0.0",
       "author": {
@@ -720,7 +720,7 @@
     },
     {
       "name": "nix-darwin-multi-user",
-      "source": "./nix/nix-darwin-multi-user",
+      "source": "./nix-darwin-multi-user",
       "description": "Guides multi-user nix-darwin configuration with home-manager. Covers mkDarwinConfig, sharedSystemModule, activation scripts, home-manager file conflicts.",
       "version": "1.0.0",
       "author": {
@@ -738,7 +738,7 @@
     },
     {
       "name": "nix-darwin-zsh-completion",
-      "source": "./nix/nix-darwin-zsh-completion",
+      "source": "./nix-darwin-zsh-completion",
       "description": "Fixes zsh compinit insecure directories warning in nix-darwin. Covers enableGlobalCompInit vs completionInit differences between nix-darwin and home-manager.",
       "version": "1.0.0",
       "author": {
@@ -756,7 +756,7 @@
     },
     {
       "name": "nix-github-release-packaging",
-      "source": "./nix/nix-github-release-packaging",
+      "source": "./nix-github-release-packaging",
       "description": "Packages pre-built binaries from GitHub releases as Nix derivations for home-manager. Covers stdenv.mkDerivation, fetchurl, SHA256 hash workflow.",
       "version": "1.0.0",
       "author": {
@@ -774,7 +774,7 @@
     },
     {
       "name": "disk-space-troubleshooting",
-      "source": "./nix/disk-space-troubleshooting",
+      "source": "./disk-space-troubleshooting",
       "description": "Diagnose and resolve disk space issues on macOS with Nix. 5-level cleanup hierarchy from safe Nix GC to caches, with warning signs and Nix-specific symptom table.",
       "version": "1.0.0",
       "author": {
@@ -793,7 +793,7 @@
     },
     {
       "name": "nix-template-deployment",
-      "source": "./nix/nix-template-deployment",
+      "source": "./nix-template-deployment",
       "description": "Guides deploying nix-template shell.nix and .envrc to directories for per-directory package availability via direnv. Covers home.packages vs devShell distinction.",
       "version": "1.0.1",
       "author": {
@@ -811,7 +811,7 @@
     },
     {
       "name": "nodejs-version-management",
-      "source": "./nix/nodejs-version-management",
+      "source": "./nodejs-version-management",
       "description": "Guides Node.js and npm version management in Nix flakes. Covers system packages, activation scripts, devShells, version synchronization, pnpm configuration.",
       "version": "1.0.0",
       "author": {
@@ -829,7 +829,7 @@
     },
     {
       "name": "overriding-flake-input-packages",
-      "source": "./nix/overriding-flake-input-packages",
+      "source": "./overriding-flake-input-packages",
       "description": "Guides fixing build failures in external flake inputs by overriding their derivations with overrideAttrs.",
       "version": "1.0.0",
       "author": {
@@ -847,7 +847,7 @@
     },
     {
       "name": "portable-ai-cli-patterns",
-      "source": "./claude-code/portable-ai-cli-patterns",
+      "source": "./portable-ai-cli-patterns",
       "description": "Guides dual-tool configuration for Claude Code and OpenCode. Covers compatibility matrix, single-source commands, skill/agent promotion workflow.",
       "version": "1.0.0",
       "author": {
@@ -865,7 +865,7 @@
     },
     {
       "name": "qmd-local-search",
-      "source": "./general/qmd-local-search",
+      "source": "./qmd-local-search",
       "description": "Core patterns for using QMD (Quick Markdown) semantic search. Covers MCP tool usage, search type selection, index rebuild protocol, and troubleshooting.",
       "version": "1.0.0",
       "author": {
@@ -883,7 +883,7 @@
     },
     {
       "name": "reality-filter",
-      "source": "./general/reality-filter",
+      "source": "./reality-filter",
       "description": "Uncertainty labeling, evidence hierarchy, and agent output verification. Activates when using absolute language (always, never, prevents, guarantees), making claims about implementation, or consuming agent/subprocess outputs.",
       "version": "2.0.0",
       "author": {
@@ -901,7 +901,7 @@
     },
     {
       "name": "red-team-framework-review",
-      "source": "./general/red-team-framework-review",
+      "source": "./red-team-framework-review",
       "description": "Systematic adversarial review of strategic frameworks. Challenges assumptions, identifies correlated failure modes, checks demand evidence.",
       "version": "1.0.0",
       "author": {
@@ -919,7 +919,7 @@
     },
     {
       "name": "skill-stack-deduplication",
-      "source": "./claude-code/skill-stack-deduplication",
+      "source": "./skill-stack-deduplication",
       "description": "Eliminates content duplication across Claude Code agent/skill/command layers by establishing clear separation of concerns and reference hierarchies.",
       "version": "1.0.1",
       "author": {
@@ -937,7 +937,7 @@
     },
     {
       "name": "skills-audit",
-      "source": "./claude-code/skills-audit",
+      "source": "./skills-audit",
       "description": "Inventory and audit skills for spec compliance and optimization. Two modes: triage (scan all) and deep audit (single skill).",
       "version": "1.0.0",
       "author": {
@@ -955,7 +955,7 @@
     },
     {
       "name": "custom-command-audit",
-      "source": "./claude-code/custom-command-audit",
+      "source": "./custom-command-audit",
       "description": "3-question test for auditing custom Claude Code commands: covered by skills?, unique protocol?, actively used? Archive stale/redundant commands to .claude/archives/.",
       "version": "1.0.0",
       "author": {
@@ -974,7 +974,7 @@
     },
     {
       "name": "durable-strategy-design",
-      "source": "./general/durable-strategy-design",
+      "source": "./durable-strategy-design",
       "description": "4-step methodology for disruption-proof personal strategy: commoditization-scarcity inversion, pillar architecture with resistance tests, personality alignment filter, uncorrelated wealth streams with binary execution gates.",
       "version": "1.0.0",
       "author": {
@@ -993,7 +993,7 @@
     },
     {
       "name": "framework-epistemology-audit",
-      "source": "./general/framework-epistemology-audit",
+      "source": "./framework-epistemology-audit",
       "description": "Pressure-test grand frameworks with 3 tests (falsifiability, independence, predictive specificity) and 4-level Pattern Verification Hierarchy. Distinguishes structural isomorphism from metaphorical resemblance.",
       "version": "1.0.0",
       "author": {
@@ -1012,7 +1012,7 @@
     },
     {
       "name": "framework-to-daily-workflow-integration",
-      "source": "./workflow/framework-to-daily-workflow-integration",
+      "source": "./framework-to-daily-workflow-integration",
       "description": "Embed abstract strategic frameworks into existing daily/weekly workflow commands as lightweight rituals. 4-step pattern: timescale mapping, daily touchpoint design, weekly audit structure, data flow wiring.",
       "version": "1.0.0",
       "author": {
@@ -1031,7 +1031,7 @@
     },
     {
       "name": "five-capabilities-audit",
-      "source": "./general/five-capabilities-audit",
+      "source": "./five-capabilities-audit",
       "description": "Identify AI-era development priorities via 2-step audit across five irreplaceable human capabilities: Computation, Transformation, Variation, Selection, Attention.",
       "version": "1.0.0",
       "author": {
@@ -1050,7 +1050,7 @@
     },
     {
       "name": "first-principles-framework",
-      "source": "./general/first-principles-framework",
+      "source": "./first-principles-framework",
       "description": "Three-mode first-principles methodology: problem decomposition with Rails/Stimulus debugging patterns, foundation building from observations to laws, and document summarization with length calibration.",
       "version": "1.0.0",
       "author": {
@@ -1069,7 +1069,7 @@
     },
     {
       "name": "existential-framework-builder",
-      "source": "./general/existential-framework-builder",
+      "source": "./existential-framework-builder",
       "description": "Transforms vague existential distress into structured inquiry frameworks with journaling prompts across 7 angles: future, past, counterfactual, relational, existential, synthesis, application.",
       "version": "1.0.0",
       "author": {
@@ -1088,7 +1088,7 @@
     },
     {
       "name": "execution-habits-checker",
-      "source": "./general/execution-habits-checker",
+      "source": "./execution-habits-checker",
       "description": "Self-assessment against the 10 execution habits from 'A Message to Garcia'. Rate, evidence, identify keystone habit, create improvement plan.",
       "version": "1.1.0",
       "author": {
@@ -1106,7 +1106,7 @@
     },
     {
       "name": "rumination-interrupt",
-      "source": "./general/rumination-interrupt",
+      "source": "./rumination-interrupt",
       "description": "Quick-reference toolkit for interrupting rumination patterns with immediate physical and cognitive interventions in 30 seconds or less.",
       "version": "1.1.0",
       "author": {
@@ -1124,7 +1124,7 @@
     },
     {
       "name": "safe-file-deduplication",
-      "source": "./workflow/safe-file-deduplication",
+      "source": "./safe-file-deduplication",
       "description": "Multi-phase methodology for safely deduplicating large file collections using content-based analysis. Covers analysis, planning, execution with dry-run, verification, and rollback.",
       "version": "1.1.0",
       "author": {

@@ -31,6 +31,33 @@ Ask: "Does this preparation involve any risk of failure or rejection?"
 | Template Obsession | Create perfect systems before doing the work |
 | Comfort Zone Disguise | Feels productive but avoids real risk |
 
+### Builder/Seller Pattern (Technical Founders)
+
+A specific variant where real output substitutes for market contact:
+
+**The Pattern:**
+- Build: proposals, products, skills, automations, profiles
+- Avoid: actual conversations with buyers
+- Justify: "I'm productizing," "building the machine," "scaling leverage"
+- Result: Infrastructure without market validation
+
+**Red Flags:**
+- "I need to build X before I can sell" (skills, website, audience, product)
+- 50 proposals submitted, 0 conversations had
+- Deflection strategies: "Should I build a YouTube channel?" / "I need an audience first"
+- Geography/timezone raised as blocking constraint when async channels exist
+
+**The Test:**
+- "What did I build this week?" vs "What conversations did I have?"
+- "Am I solving 'how to sell' or 'what to sell' through building?"
+- "Would 5 conversations teach me more than this infrastructure?"
+
+**The Prescription:**
+- 5 conversations > 50 proposals > 1 YouTube video
+- Ask before build. Sell before scale. Learn before systematize.
+- If geography is the objection, list 3 async channels that work across timezones.
+- If YouTube is the solution, ask: "What would I learn from a video that 5 DMs wouldn't teach me faster?"
+
 ### Action Ratio
 
 | Preparation % | Assessment |

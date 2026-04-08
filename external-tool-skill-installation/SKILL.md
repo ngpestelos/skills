@@ -76,12 +76,45 @@ ln -s ~/.agents/skills/<skill-name> ~/src/skills/<category>/<skill-name>
 | `--yes` | Skip confirmation prompts |
 | `--agent <name>` | Target specific agent only |
 
+## Important: Skills ≠ CLI Tool
+
+Installing skills only installs the **AI-compatible skill definitions** (SKILL.md files), not necessarily the actual CLI tool. The skill files describe how to use the tool, but the executable may still need to be available.
+
+### When the CLI isn't available
+
+If you get `command not found` after installing skills, check for:
+
+1. **Custom scripts**: Look for user-created wrappers like `.claude/scripts/firecrawl-fetch.py`
+2. **Alternative CLIs**: The tool may have a different package name (e.g., `firecrawl-cli` vs `firecrawl`)
+3. **Direct API usage**: Use the skill documentation to call APIs directly with curl/Python
+
+### Using skills when CLI isn't available
+
+If the skill loads but the `command not found`:
+
+```bash
+# Check for user-created wrapper scripts
+python3 .claude/scripts/<tool>-fetch.py <args>
+
+# Or call APIs directly using the skill's curl examples
+```
+
+### Credential issues with Hermes profiles
+
+If skills load but can't find API keys, see **`hermes-profile-credential-resolution`** skill. Common issue: credentials are in `~/.hermes/profiles/<profile>/.env` but tools look in `~/.hermes/.env`.
+
+Quick fix:
+```bash
+export API_KEY=$(grep "API_KEY" ~/.hermes/profiles/<profile>/.env | cut -d'=' -f2)
+```
+
 ## Troubleshooting
 
 ### Skills not found after installation
 - Check `~/.agents/skills/` directory exists
 - Verify the tool actually exposes skills (not all do)
 - Check the skill names with `ls ~/.agents/skills/`
+- Link to `~/src/skills/` for Hermes: `ln -s ~/.agents/skills/<skill-name> ~/src/skills/`
 
 ### Skills not loading in Claude Code
 - Ensure skills are in `~/.claude/skills/` or `~/src/skills/`
@@ -106,3 +139,7 @@ ls ~/.agents/skills/
 # Read a skill
 head ~/.agents/skills/<skill-name>/SKILL.md
 ```
+
+## See Also
+
+- **`hermes-profile-credential-resolution`** — When skills can't find API keys due to Hermes profile-specific .env locations

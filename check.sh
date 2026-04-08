@@ -5,8 +5,6 @@ set -e
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 MARKETPLACE="$SCRIPT_DIR/.claude-plugin/marketplace.json"
-CATEGORIES="apple claude-code debugging frontend general hermes nix rails security workflow"
-
 errors=0
 
 check_skill() {
@@ -98,27 +96,17 @@ print('')
 
 # Run checks
 if [ -n "$1" ]; then
-  # Find skill by name across all categories
-  found=0
-  for category in $CATEGORIES; do
-    if [ -d "$SCRIPT_DIR/$category/$1" ]; then
-      check_skill "$SCRIPT_DIR/$category/$1"
-      found=1
-      break
-    fi
-  done
-  if [ $found -eq 0 ]; then
+  if [ -d "$SCRIPT_DIR/$1" ]; then
+    check_skill "$SCRIPT_DIR/$1"
+  else
     echo "Skill not found: $1"
     exit 1
   fi
 else
-  for category in $CATEGORIES; do
-    category_dir="$SCRIPT_DIR/$category"
-    [ -d "$category_dir" ] || continue
-    for skill_dir in "$category_dir"/*/; do
-      [ -d "$skill_dir" ] || continue
-      check_skill "$skill_dir"
-    done
+  for skill_dir in "$SCRIPT_DIR"/*/; do
+    [ -d "$skill_dir" ] || continue
+    [ -f "${skill_dir}SKILL.md" ] || continue
+    check_skill "$skill_dir"
   done
 fi
 
@@ -128,7 +116,7 @@ if [ -f "$readme" ]; then
   link_errors=0
   while IFS= read -r line; do
     # Extract markdown link paths like (general/some-skill/)
-    echo "$line" | grep -oE '\([a-z-]+/[a-z0-9-]+/?\)' | tr -d '()' | while read -r path; do
+    echo "$line" | grep -oE '\(\./[a-z][a-z0-9-]+/?\)' | tr -d '()' | while read -r path; do
       target="$SCRIPT_DIR/$path"
       if [ ! -d "$target" ] && [ ! -d "${target%/}" ]; then
         echo "LINK  README.md: broken link → $path"

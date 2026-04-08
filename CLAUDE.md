@@ -24,27 +24,14 @@ A collection of [Agent Skills](https://agentskills.io) distributed as a Claude C
 
 ## Repository Structure
 
-Skills are organized by category at the top level:
+Skills live at the top level — flat, no category subdirectories:
 
-- `<category>/<name>/SKILL.md` — Each skill is a single markdown file with YAML frontmatter
-- `<category>/<name>/references/` — Optional supplementary files (only `database-migration-termination-safety` uses this)
+- `<name>/SKILL.md` — Each skill is a single markdown file with YAML frontmatter
+- `<name>/references/` — Optional supplementary files (only `database-migration-termination-safety` uses this)
 - `.claude-plugin/marketplace.json` — Plugin registry for individual skill installation
 - `check.sh` — Spec validation (name format, description length, body size, version sync)
 - `install.sh` — Idempotent symlinker, also cleans stale links
 - `multi-repo-loader.sh` — Multi-repo skill aggregator (untracked, not yet committed)
-
-### Category Directories
-
-| Directory | Contents |
-|-----------|----------|
-| `rails/` | ActiveJob, ActiveRecord, controller, caching, testing patterns |
-| `nix/` | nix-darwin, home-manager, flake packaging |
-| `claude-code/` | Hooks, skills tooling, portability, auditing |
-| `frontend/` | Stimulus, forms, browser optimization |
-| `security/` | Security checklists and patterns |
-| `debugging/` | Root cause analysis, complexity reduction, dead code |
-| `workflow/` | Git, testing methodology, process optimization |
-| `general/` | Everything else (default category) |
 
 ## Skill File Format
 
@@ -62,19 +49,11 @@ Body must be < 500 lines and < 5000 estimated tokens.
 
 ### Categories
 
-The `category` frontmatter field should match the directory the skill lives in:
-- `rails` - Ruby on Rails patterns
-- `nix` - Nix/nix-darwin/home-manager
-- `claude-code` - Claude Code tooling and portability
-- `frontend` - Stimulus, forms, browser optimization
-- `security` - Security patterns and audits
-- `debugging` - Root cause analysis, complexity reduction
-- `workflow` - Git, testing, process optimization
-- `general` - Default for uncategorized skills
+The `category` frontmatter field is metadata only — it does not affect file placement. Common values: `rails`, `nix`, `claude-code`, `frontend`, `security`, `debugging`, `workflow`, `general`.
 
 ## Key Constraints
 
-- **Name must match directory**: `<category>/foo-bar/SKILL.md` must have `name: foo-bar`
+- **Name must match directory**: `foo-bar/SKILL.md` must have `name: foo-bar`
 - **No consecutive hyphens** in skill names
 - **Version sync required**: `SKILL.md` frontmatter version must match `.claude-plugin/marketplace.json` version
 - **No non-standard frontmatter keys** outside `metadata:`
@@ -83,7 +62,7 @@ The `category` frontmatter field should match the directory the skill lives in:
 
 **Updating a skill**: Edit SKILL.md, run `./check.sh <skill-name>`, bump version in both SKILL.md and marketplace.json.
 
-**Adding a skill**: Create `<category>/<name>/SKILL.md`, run `./check.sh <name>`, add entry to marketplace.json, add row to README.md skills table.
+**Adding a skill**: Create `<name>/SKILL.md`, run `./check.sh <name>`, add entry to marketplace.json, add row to README.md skills table.
 
 Use `/skills-audit <skill-name>` for deeper spec compliance checking beyond what `check.sh` covers.
 
