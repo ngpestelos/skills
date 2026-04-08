@@ -4,7 +4,7 @@ This file provides guidance to AI coding agents when working with code in this r
 
 ## What This Is
 
-A collection of [Agent Skills](https://agentskills.io) distributed as a Claude Code plugin. Skills are standalone SKILL.md files that follow the Agent Skills specification and work across multiple AI coding tools (Claude Code, Cursor, VS Code Copilot, Gemini CLI, OpenCode, Goose).
+A collection of [Agent Skills](https://agentskills.io) distributed as a plugin. Skills are standalone SKILL.md files that follow the Agent Skills specification and work across multiple AI coding tools (Claude Code, Cursor, VS Code Copilot, Gemini CLI, OpenCode, Goose).
 
 ## Commands
 
@@ -15,7 +15,7 @@ A collection of [Agent Skills](https://agentskills.io) distributed as a Claude C
 # Validate a single skill
 ./check.sh <skill-name>
 
-# Install all skills via symlink to ~/.claude/skills/
+# Install all skills via symlink into the agent skills directory
 ./install.sh
 
 # Load skills from multiple GitHub repos (config: ~/.claude/skill-sources.txt)
@@ -64,7 +64,7 @@ The `category` frontmatter field is metadata only — it does not affect file pl
 
 **Adding a skill**: Create `<name>/SKILL.md`, run `./check.sh <name>`, add entry to marketplace.json, add row to README.md skills table.
 
-Use `/skills-audit <skill-name>` for deeper spec compliance checking beyond what `check.sh` covers.
+Run `./check.sh <skill-name>` for spec compliance checking.
 
 ## Versioning
 
