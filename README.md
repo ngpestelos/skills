@@ -201,6 +201,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [custom-command-audit](./custom-command-audit/) | 3-question test to evaluate custom commands for archival: covered by skills? unique protocol? actively used? |
 | [reality-filter](./reality-filter/) | Uncertainty labeling, evidence hierarchy, agent output verification, and self-correction |
 | [red-team-framework-review](./red-team-framework-review/) | Adversarial review of strategic frameworks: assumption challenges, correlated failure modes |
+| [repo-flattening](./repo-flattening/) | Flatten a two-level category/name directory structure to flat name/ in a git repo, with collision detection, script updates, and symlink restoration |
 | [changing-defaults-systematically](./changing-defaults-systematically/) | Zero-regression constant/default changes: find all references, update atomically |
 | [git-atomic-commit-organizer](./git-atomic-commit-organizer/) | Organize uncommitted changes into logical, atomic commits |
 | [source-verification](./source-verification/) | Verify cited sources before publication — prevent WebFetch circular verification |
