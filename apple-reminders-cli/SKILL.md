@@ -48,6 +48,16 @@ See `remindctl --help` for all options and date formats.
 | Permission denied | System Settings → Privacy & Security → Reminders → Enable Terminal |
 | Brew install fails | `sudo chown -R $(whoami) /opt/homebrew` |
 | Timeout/hangs | Terminal lacks Reminders permission |
+| "List not found" | Run `remindctl list` to see available lists |
+
+## Common Flags
+
+| Flag | Description |
+|------|-------------|
+| `--due <value>` | Due date/time (e.g., `tomorrow`, `2026-04-15 09:00`) |
+| `-l, --list <name>` | Target list (use `remindctl list` to see available) |
+| `-n, --notes <text>` | Additional notes for the reminder |
+| `-p, --priority <level>` | none, low, medium, high |
 
 ## Notes
 
