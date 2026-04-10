@@ -5,7 +5,7 @@ license: MIT
 metadata:
   category: rails
   author: ngpestelos
-  version: "2.0.0"
+  version: "2.1.0"
 ---
 
 # ActiveRecord Idempotent Create Patterns
@@ -23,7 +23,7 @@ def perform(name:, sale:)
   Record.create!(name: cleaned_name, sale_id: sale.id)
 end
 
-# RIGHT - Atomic find-or-create
+# RIGHT - Race-condition-recovering find-or-create
 def perform(name:, sale:)
   cleaned_name = name.strip
   Record.find_or_create_by!(sale: sale, parent_id: parent_id, name: cleaned_name) do |new_record|
@@ -33,30 +33,70 @@ def perform(name:, sale:)
 end
 ```
 
-**Requires a database-level uniqueness constraint** for true atomicity. With the constraint, race conditions resolve via retry: one creates, the other hits violation, retries, finds the record.
+**Important**: `find_or_create_by!` is **NOT atomic**. It runs SELECT first, then INSERT if no record found. There is a race condition window between these operations. However, with a database-level uniqueness constraint, the race is detected and resolved: one request creates, the other hits `RecordNotUnique`, rescues, and finds the existing record.
+
+## Choosing Between Methods
+
+Rails provides two approaches with inverted trade-offs:
+
+| Method | Strategy | Best When | Race Window |
+|--------|----------|-----------|-------------|
+| `find_or_create_by!` | SELECT → INSERT | Record likely **EXISTS** | SELECT→INSERT (common under contention) |
+| `create_or_find_by!` | INSERT → SELECT | Record likely **DOESN'T exist** | INSERT→SELECT (rare — requires DELETE to interleave) |
+
+**Use `create_or_find_by!` when**: High insert contention, idempotent endpoints, background job deduplication — most calls are for new records.
+
+**Requirements for `create_or_find_by!`**: Database unique constraints **required**; uniqueness validations on those columns must be **removed** (they break the exception flow).
+
+Both methods require database-level uniqueness constraints to prevent duplicates under concurrency.
 
 ## Case-Insensitive Duplicate Prevention
 
-`find_or_create_by!` uses exact match. Add case-insensitive check first. For concurrent race conditions, rescue `RecordInvalid` and return the winner.
+`find_or_create_by!` uses exact match. For case-insensitive matching, you have two options:
+
+### Option 1: Functional Index (Race-Safe)
+
+The only race-safe approach for case-insensitive uniqueness:
+
+```ruby
+# Migration
+add_index :records, 'LOWER(name), parent_id', unique: true
+
+# Model
+def perform(name:, sale:)
+  cleaned_name = name.strip
+  Record.find_or_create_by!(sale: sale, parent_id: parent_id, name: cleaned_name) do |new_record|
+    new_record.position = 1
+    new_record.slug = cleaned_name.parameterize
+  end
+end
+```
+
+### Option 2: Pre-Check Pattern (Best-Effort)
+
+Reduces duplicates but **does not eliminate race conditions**:
 
 ```ruby
 def perform(name:, sale:)
   cleaned_name = name.strip
 
+  # Check first (best effort, not atomic)
   existing = Record.where(sale: sale, parent_id: parent_id)
     .find_by('LOWER(name) = ?', cleaned_name.downcase)
   return existing if existing.present?
 
+  # Race window still exists here!
   Record.find_or_create_by!(sale: sale, parent_id: parent_id, name: cleaned_name) do |new_record|
     new_record.position = 1
     new_record.slug = cleaned_name.parameterize
   end
-rescue ActiveRecord::RecordInvalid
+rescue ActiveRecord::RecordNotUnique  # Catches unique constraint violation
+  # Another thread created it — find and return the winner
   Record.find_by('LOWER(name) = ?', cleaned_name.downcase)
 end
 ```
 
-For true case-insensitive atomicity: `add_index :records, 'LOWER(name), parent_id', unique: true`.
+**Note**: Rescues `RecordNotUnique` (database constraint violation), not `RecordInvalid` (validation error).
 
 ## Guard Pattern vs Idempotent Pattern
 
