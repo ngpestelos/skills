@@ -10,6 +10,45 @@
   },
   "plugins": [
     {
+      "name": "action-clarity-loop",
+      "source": "./action-clarity-loop",
+      "description": "Generate clarity through action rather than waiting for perfect understanding. Execute minimum viable actions to receive feedback unavailable through planning alone. Auto-activates when user is stuck in analysis paralysis, waiting for clarity, or asking how to proceed. Trigger keywords: action clarity, clarity through action, start before ready, iterate over plan, minimum viable action.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "action-plan-threat-assessment",
+      "source": "./action-plan-threat-assessment",
+      "description": "Stress-tests execution plans by identifying weaknesses, threats, and dangerous combinations per action item. Creates interaction matrices and orders defensive actions by urgency. Trigger keywords: weaknesses, threats, SWOT, stress-test execution, what could go wrong, action plan risks, execution risks, defensive actions.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "active-reading-to-wisdom",
+      "source": "./active-reading-to-wisdom",
+      "description": "2-step reading intention and application cycle. Sets purpose before reading, then bridges insights to concrete life actions. Trigger keywords: active reading, reading intention, book notes, wisdom extraction, reading implementation, apply what I read.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
       "name": "activejob-design-patterns",
       "source": "./activejob-design-patterns",
       "description": "ActiveJob architecture patterns: fatal vs non-fatal error handling, transaction safety, external API integration, async enqueuing, internal batching, and operation-based idempotency.",
@@ -154,6 +193,45 @@
       "license": "MIT"
     },
     {
+      "name": "adversarial-plan-hardening",
+      "source": "./adversarial-plan-hardening",
+      "description": "Iterative adversarial review loop for implementation plans. Run passes, resolve BLOCKERs with version bumps, fold WARNINGs in-place, stop at 0 BLOCKERs, audit necessity, prepare handoff brief. Trigger keywords: red-team loop, multiple passes, harden plan, plan hardening, adversarial refinement, clean pass, necessity audit, handoff brief.",
+      "version": "1.2.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "agency-diagnostic",
+      "source": "./agency-diagnostic",
+      "description": "Unified diagnostic for detecting agency blindness, Low Agency Traps, and internal obstacle voices. Prescribes immediate action antidotes. Trigger keywords: stuck, can't, blocked, paralyzed, what's stopping me, agency, low agency, procrastination, fear, doubt.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "agent-pipeline-design",
+      "source": "./agent-pipeline-design",
+      "description": "Architectural patterns for multi-phase agent pipelines that survive context limits, delegate safely, and gate on quality. Applies when designing skills that orchestrate plan\u2192execute\u2192review flows.",
+      "version": "1.1.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
       "name": "ai-coding-tool-portability",
       "source": "./ai-coding-tool-portability",
       "description": "Guides portable configuration across Claude Code and OpenCode. Covers feature mapping, command mirroring via symlinks and home-manager, architecture layout.",
@@ -168,6 +246,188 @@
         "configuration"
       ],
       "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "allostatic-load-monitor",
+      "source": "./allostatic-load-monitor",
+      "description": "Track cumulative stress burden distinguishing Type 1 (energy deficit) from Type 2 (ongoing conflict). Trigger keywords: burnout, stress load, exhausted, overwhelmed, chronic stress, allostatic, wear and tear.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "anti-vision-builder",
+      "source": "./anti-vision-builder",
+      "description": "Helps articulate the life you refuse to live - providing negative motivation and decision clarity through explicit rejection of unacceptable outcomes. Based on Dan Koe's framework. Auto-activates when user is unclear about goals, faces decision paralysis, or needs to clarify what they don't want. Trigger keywords: what I don't want, refuse to accept, won't tolerate, worst case, anti-vision, avoid at all costs, line in the sand.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "api-deprecation-migration",
+      "source": "./api-deprecation-migration",
+      "description": "Migrate a skill to a new API provider when the current service is deprecated or sunsetted.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "api-endpoint-metadata-verification",
+      "source": "./api-endpoint-metadata-verification",
+      "description": "Systematic approach to debugging missing metadata in API integrations. Auto-activates when discussing API response issues, missing attribution, incomplete data, or MCP server debugging. Covers endpoint comparison, response structure verification, and data enrichment patterns. Trigger keywords: API missing metadata, incomplete API response, unknown source, API attribution, export vs detail endpoint, MCP server missing data, enrich API data. (global)",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "apple-reminders-cli",
+      "source": "./apple-reminders-cli",
+      "description": "Use remindctl to manage Apple Reminders from terminal. Quick setup, common operations, troubleshooting. Trigger: remindctl, Apple Reminders CLI, terminal reminders.",
+      "version": "1.1.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "productivity",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "backend-contract-format-compliance",
+      "source": "./backend-contract-format-compliance",
+      "description": "Detect and resolve format mismatches between frontend and backend contracts. Save-time normalization, threshold detection, gradual type strengthening. Trigger keywords: format mismatch, wrong format, decimal vs percentage, coordinate format, contract violation, 100x difference, save-time normalization.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "background-agent-verification",
+      "source": "./background-agent-verification",
+      "description": "Prevents silent work loss from delegated background agents by requiring output verification before proceeding. Covers: agent output verification, rate limit detection, zero-output detection, execution vs reporting scoping, permission blocking, direct fallback execution. Trigger keywords: background agent, agent completed, run_in_background, agent delegation, subagent, rate limit, zero output, agent failed, verify agent output.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "debugging",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "bluebubbles-imessage-setup",
+      "source": "./bluebubbles-imessage-setup",
+      "description": "Guides BlueBubbles server setup for iMessage integration with OpenClaw. Auto-activates when configuring iMessage channels, installing BlueBubbles, or troubleshooting iMessage connectivity. Covers server installation, macOS permissions, Private API decisions, OpenClaw channel configuration, and webhook setup. Trigger keywords: bluebubbles, imessage, iMessage, Messages.app, chat.db, channel setup, webhook, Private API, SIP, AppleScript, reactions, tapback, pairing, dmPolicy. (project)",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "productivity",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "bottleneck-identifier",
+      "source": "./bottleneck-identifier",
+      "description": "Systematic diagnostic for finding THE single constraint limiting system performance. Based on Goldratt's Theory of Constraints. Trigger keywords: bottleneck, constraint, limiting factor, throughput, stuck, what's blocking, where to focus.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "broken-not-unnecessary",
+      "source": "./broken-not-unnecessary",
+      "description": "Before deleting or removing a feature that \"rarely works\" or \"never completes,\" verify WHY it fails. The failure mode often reveals an implementation bug with a fixable root cause rather than a genuine requirement to remove. Trigger keywords: rarely completes, never fires, dead code, delete step, remove feature, noop, informational screen, collects no data, always fails.",
+      "version": "1.1.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "debugging",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "browser-resource-hints-optimization",
+      "source": "./browser-resource-hints-optimization",
+      "description": "Provides guidance on using browser resource hints (preconnect, dns-prefetch, preload, prefetch) to optimize page load performance. Auto-activates when discussing CDN performance, external resources, page load optimization, layout head sections, or connection latency. Trigger keywords: preconnect, dns-prefetch, preload, prefetch, resource hints, CDN performance, page load, connection latency, external resources, unpkg, cdnjs, font loading, script loading, layout head, _head.html.erb.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "frontend",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "capability-building-roadmap",
+      "source": "./capability-building-roadmap",
+      "description": "Transforms abstract competence goals into concrete, time-bounded 90-day action plans. Dreyfus assessment, parallel pillar design, time-calibrated scheduling. Trigger keywords: roadmap, skill development, mastery, capability building, action plan for learning, how do I build expertise.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "capture-skill",
+      "source": "./capture-skill",
+      "description": "Extract patterns from the current session into a reusable skill file. Auto-activates when discussing skill creation, pattern extraction, or anti-pattern documentation. Trigger keywords: capture skill, extract pattern, create skill, new skill, anti-pattern.",
+      "version": "1.1.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "capture-what-resonates",
+      "source": "./capture-what-resonates",
+      "description": "Guides resonance-based knowledge capture decisions using Second Brain methodology. Implements the Resonance Filter, Twelve Favorite Problems framework, and PARA routing. Trigger keywords: capture, save this, should I keep, where does this go, what to capture, resonates, interesting, worth saving. (global)",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
       "homepage": "https://github.com/ngpestelos/skills",
       "license": "MIT"
     },
@@ -222,6 +482,123 @@
         "automation"
       ],
       "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "clean-commit-staging",
+      "source": "./clean-commit-staging",
+      "description": "Prevents pre-staged files from other sessions contaminating commits. Auto-activates when committing in repos with parallel sessions, background agents, or hooks that stage files. Trigger keywords: pre-staged, unexpected commit, wrong files committed, staging area contamination, parallel session commit.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "clerk-test",
+      "source": "./clerk-test",
+      "description": "Diagnostic to assess if you're approaching a task like Rowan (execution without equivocation) or like the clerk (excessive questions, avoidance). Based on 'A Message to Garcia'. Trigger keywords: should I ask, before I start, is this clear enough, do I need more info, am I overthinking, clerk test, Rowan.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "cloudflare-pages-static-site",
+      "source": "./cloudflare-pages-static-site",
+      "description": "Deploy single-page static sites to Cloudflare Pages with custom domains. No framework, no build step. Trigger keywords: static site, Cloudflare Pages, landing page, deploy website, custom domain, pages.dev.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "cloudflare-r2-bill-estimator",
+      "source": "./cloudflare-r2-bill-estimator",
+      "description": "Estimates monthly Cloudflare R2 costs from usage data. Applies free tier deductions. Trigger keywords: R2 bill, R2 cost, R2 estimate, cloudflare bill, storage cost.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "code-review-methodology",
+      "source": "./code-review-methodology",
+      "description": "Code review methodology for uncommitted changes. Priority framework and scope constraint. References security-patterns skill for detailed checklist. Trigger keywords: code review, review changes, PR review, uncommitted changes, git diff, convention check.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "codebase-due-diligence",
+      "source": "./codebase-due-diligence",
+      "description": "Phased methodology for understanding unfamiliar codebases, from rapid onboarding to comprehensive technical analysis. Produces actionable knowledge documents and feeds reusable patterns to technical-pattern-extractor. Auto-activates when joining new projects, conducting technical due diligence, or exploring unfamiliar codebases. Trigger keywords: new codebase, onboarding, due diligence, technical assessment, understand codebase, explore project, architecture review, codebase analysis, unfamiliar project, ramp up, getting started. (project)",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "codebase-explorer",
+      "source": "./codebase-explorer",
+      "description": "Interactive exploration of onboarded codebases for understanding architecture, conventions, and patterns. Supports ongoing Q&A across sessions, guided walkthroughs of key subsystems, and pattern extraction to vault. Complements /onboard (setup) and codebase-due-diligence (one-shot assessment). Trigger keywords: explore codebase, how does X work, where does Y live, walk me through, architecture question, code walkthrough, understand this project, explain this module, contribution guide, good first issue. (global)",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "commands-audit",
+      "source": "./commands-audit",
+      "description": "Audit custom commands for structural completeness across global and project scopes. Auto-activates when auditing commands, checking command quality, or inventorying slash commands. Trigger keywords: commands audit, audit commands, command quality, missing usage.",
+      "version": "1.1.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "commit",
+      "source": "./commit",
+      "description": "Organize uncommitted changes into atomic git commits with scope awareness, grouping related files and confirming before including out-of-scope changes. Auto-activates when committing, pushing, or organizing changes. Trigger keywords: commit, git commit, atomic commit, push changes, organize commits, stage files, prepare push, commit workflow.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
       "homepage": "https://github.com/ngpestelos/skills",
       "license": "MIT"
     },
@@ -298,6 +675,19 @@
       "license": "MIT"
     },
     {
+      "name": "crypto-price-scraping",
+      "source": "./crypto-price-scraping",
+      "description": "Scrape live cryptocurrency prices and market data using firecrawl from CoinMarketCap or similar sources. Extracts top cryptocurrencies, prices, market cap, and 24h/7d performance.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "productivity",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
       "name": "custom-command-audit",
       "source": "./custom-command-audit",
       "description": "3-question test for auditing custom Claude Code commands: covered by skills?, unique protocol?, actively used? Archive stale/redundant commands to .claude/archives/.",
@@ -312,6 +702,19 @@
         "cleanup",
         "archival"
       ],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "cutting-identifier",
+      "source": "./cutting-identifier",
+      "description": "Helps identify your 'cutting' - the single decisive action that determines success in any domain. Based on Sebastian Marshall's synthesis of Musashi and Lynch. Trigger keywords: what's my cutting, what matters most, identify focus, decisive action, what should I focus on, priority, single most important, what determines success.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
       "category": "claude-code",
       "homepage": "https://github.com/ngpestelos/skills",
       "license": "MIT"
@@ -391,6 +794,32 @@
       "license": "MIT"
     },
     {
+      "name": "decision-quality-framework",
+      "source": "./decision-quality-framework",
+      "description": "Unified framework for bias identification, pre-mortem failure analysis, and process-based quality scoring. Evaluates decisions through cognitive bias audit, prospective hindsight, and six-dimension scoring independent of outcome. Activates when reviewing decisions, evaluating risks, or assessing reasoning quality.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "decision-timing-assessor",
+      "source": "./decision-timing-assessor",
+      "description": "Framework for determining optimal decision timing vs. information gathering needs. Auto-activates when evaluating when to decide, assessing reversibility, or considering delayed decisions. Trigger keywords: Type I decision, Type II decision, reversibility, when to decide, gather more information, Fabian strategy.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
       "name": "deployment-readiness",
       "source": "./deployment-readiness",
       "description": "Systematic 5-phase checklist for production deployment: verify completion, prepare commit, create PR, deploy, and monitor.",
@@ -406,6 +835,19 @@
         "monitoring"
       ],
       "category": "workflow",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "diagnostic-logging-patterns",
+      "source": "./diagnostic-logging-patterns",
+      "description": "Strategic diagnostic logging for production debugging. 3-layer logging (controller \u2192 model \u2192 database verification), P0/P1/P2 priority, temporary debug protocol. Trigger keywords: staging bug, test passes production fails, insert_all debugging, parameter not received, debug logging, production debugging, P0 P1 P2 logging.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
       "homepage": "https://github.com/ngpestelos/skills",
       "license": "MIT"
     },
@@ -429,6 +871,32 @@
       "license": "MIT"
     },
     {
+      "name": "dmn-reset",
+      "source": "./dmn-reset",
+      "description": "5-minute protocol for interrupting racing thoughts through breathwork, physical anchoring, reframing, gratitude, and autosuggestion. Trigger keywords: racing thoughts, attention drift, rumination, can't focus, anxiety spike, DMN reset, Train to Greatness.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "document-baseline-preservation",
+      "source": "./document-baseline-preservation",
+      "description": "Prevents destructive overwrites of important documents. Auto-activates when rewriting, replacing, or substantially editing existing files \u2014 especially identity documents (CV, profiles), strategic documents, and any file the user may want to compare versions of. Trigger keywords: rewrite, overwrite, replace, redo, new version, update CV, reframe.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
       "name": "durable-strategy-design",
       "source": "./durable-strategy-design",
       "description": "4-step methodology for disruption-proof personal strategy: commoditization-scarcity inversion, pillar architecture with resistance tests, personality alignment filter, uncorrelated wealth streams with binary execution gates.",
@@ -444,6 +912,19 @@
         "positioning"
       ],
       "category": "general",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "emerging-market-analysis",
+      "source": "./emerging-market-analysis",
+      "description": "Systematic framework for analyzing emerging market economies and equities. Governance shock cycles, central bank signaling, exchange rate constraints, valuation floors, capital rotation timing. Trigger keywords: emerging market, BSP, PSEi, Philippine economy, peso, central bank, governance shock, political risk, EM laggard, valuation floor, capital rotation, currency crisis.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
       "homepage": "https://github.com/ngpestelos/skills",
       "license": "MIT"
     },
@@ -481,6 +962,32 @@
         "framework"
       ],
       "category": "general",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "external-tool-skill-installation",
+      "source": "./external-tool-skill-installation",
+      "description": "Install external tool skills (like Firecrawl) that expose AI-compatible skill files. Use when adding tools that provide `skills add` functionality or when the CLI's `init` command doesn't directly expose skills.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "financial-decision-heuristics",
+      "source": "./financial-decision-heuristics",
+      "description": "Practical decision-making tools for specific financial choices including the ATM Test, risk assessment, asset vs liability analysis, and lifestyle management. Auto-activates when discussing ATM test, risk assessment, asset vs liability, trading up, lifestyle creep, spending decision, purchase decision, asymmetric risk, downside exposure, carrying cost.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
       "homepage": "https://github.com/ngpestelos/skills",
       "license": "MIT"
     },
@@ -598,6 +1105,19 @@
       "license": "MIT"
     },
     {
+      "name": "frontend-design",
+      "source": "./frontend-design",
+      "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, or applications. Generates creative, polished code that avoids generic AI aesthetics.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
       "name": "git-atomic-commit-organizer",
       "source": "./git-atomic-commit-organizer",
       "description": "Systematically analyze uncommitted changes and organize them into logical, atomic commits following best practices.",
@@ -634,6 +1154,58 @@
       "license": "MIT"
     },
     {
+      "name": "hermes-profile-credential-resolution",
+      "source": "./hermes-profile-credential-resolution",
+      "description": "Resolve credential location mismatches when Hermes profiles use profile-specific .env files but scripts/tools look in default locations. Handles firecrawl and other API key resolution issues.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "hermes-profile-skill-awareness",
+      "source": "./hermes-profile-skill-awareness",
+      "description": "Make a Hermes profile aware of a skill that lives in a project repository. Updates profile SOUL.md with skill documentation, invocation patterns, and key features.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "hermes-profiles-version-control",
+      "source": "./hermes-profiles-version-control",
+      "description": "Manage Hermes profiles in git. Move profiles to version control with symlinks. Trigger: hermes profiles git, profile version control, profiles in repo.",
+      "version": "1.1.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "hidden-logic-analyst",
+      "source": "./hidden-logic-analyst",
+      "description": "Identifies derived variables not explicitly written down that determine winning vs losing in any domain. Auto-activates for competitive analysis, strategic advantage identification, or hidden variable discovery. Trigger keywords: hidden logic, derived variables, winning factors, hidden advantage, competitive edge, what determines winning.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
       "name": "hook-state-cascade-patterns",
       "source": "./hook-state-cascade-patterns",
       "description": "Reusable patterns for stateful Claude Code hooks: priority cascade routing, per-route daily cooldown, CWD-first state fallback, portable date parsi...",
@@ -652,6 +1224,110 @@
       "license": "MIT"
     },
     {
+      "name": "image-cascading-fallback",
+      "source": "./image-cascading-fallback",
+      "description": "Defensive image rendering with automatic fallback from missing/404 URLs to alternative sources and placeholders. Auto-activates for image fallback, 404 handling, S3 missing images, client-side fallback cascade. Trigger keywords: image fallback, 404 detection, missing images, placeholder, cascading URLs, IMG onerror, background-image fallback.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "init-nix-shell",
+      "source": "./init-nix-shell",
+      "description": "Initialize a nix shell environment with Claude Code in a target project directory. Auto-activates when setting up nix-shell for a project, deploying shell.nix templates, or configuring direnv for Nix. Trigger keywords: init nix shell, nix-shell setup, shell.nix template, direnv nix, nix environment.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "nix",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "interest-discovery",
+      "source": "./interest-discovery",
+      "description": "Discover genuine interests through behavioral evidence and conversational exploration. Trigger keywords: what interests me, discover interests, find my passion, interest archaeology, genuine curiosity, deep interest.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "iterative-refinement-workflow",
+      "source": "./iterative-refinement-workflow",
+      "description": "Systematic workflow for executing, measuring, and refining any work through continuous feedback loops. Auto-activates when user needs continuous improvement, feedback loops, or measurement-driven refinement. Trigger keywords: iterative refinement, execution cycle, continuous improvement, feedback loop, measure iterate improve, refinement workflow.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "knowledge-synthesis-framework",
+      "source": "./knowledge-synthesis-framework",
+      "description": "Unified framework for cross-domain pattern recognition, paradox exploration, and association surfacing. Combines methodology transfer across domains, productive tension analysis, and connection discovery into a single synthesis practice.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "learn",
+      "source": "./learn",
+      "description": "Extract learnings from the current conversation session and persist them as new skills, memory entries, or workflow improvements. Reviews approaches used, errors resolved, and user corrections to propose actionable changes. Auto-activates when reviewing what was learned, extracting patterns, or persisting session insights. Trigger keywords: learn, session learnings, what did we learn, extract patterns, persist insights, capture learnings, skill proposal.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "life-reset-protocol",
+      "source": "./life-reset-protocol",
+      "description": "Structured 1-day protocol for radical life clarity through morning psychological excavation, mid-day autopilot interruption, and evening synthesis. Based on Dan Koe's framework. Trigger keywords: life reset, feel stuck, need direction, what do I want, clarity, life change, reset my life, start over, find my path.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "looking-good-vs-being-right",
+      "source": "./looking-good-vs-being-right",
+      "description": "Surfaces where social pressure is compromising effectiveness. Based on Lynch's insight that investors 'would rather look good than be right.' Auto-activates when user is influenced by others' opinions, worried about perception, or making safe choices. Trigger keywords: social pressure, appearance vs substance, safe choice, conventional wisdom, fear of judgment.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
       "name": "model-method-memoization-view-performance",
       "source": "./model-method-memoization-view-performance",
       "description": "Memoize model methods called multiple times per object during view rendering to reduce Ruby CPU and memory allocations.",
@@ -666,6 +1342,19 @@
         "views"
       ],
       "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "morning-evening-heart-setting",
+      "source": "./morning-evening-heart-setting",
+      "description": "Guided daily recommitment ritual based on Tsunetomo's teaching to 'set one's heart right every morning and evening.' Provides structured reflection for maintaining focus on cutting. Trigger keywords: morning reflection, evening review, daily practice, set my heart, daily ritual, recommit, daily focus, start the day, end the day.",
+      "version": "1.1.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
       "homepage": "https://github.com/ngpestelos/skills",
       "license": "MIT"
     },
@@ -702,6 +1391,19 @@
         "plugins"
       ],
       "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "nix-darwin-activation-scripts",
+      "source": "./nix-darwin-activation-scripts",
+      "description": "Reliable nix-darwin activation scripts. Auto-activates when editing postActivation blocks, adding installers to darwin-rebuild, or debugging silent activation failures. Covers ownership guards, user-scoped execution, error surfacing, temp file downloads, gated cleanup, and Nix escaping. Trigger keywords: postActivation, activation script, darwin-rebuild, silent failure, sudo -u, chown, stat, ARG_MAX.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "nix",
       "homepage": "https://github.com/ngpestelos/skills",
       "license": "MIT"
     },
@@ -760,6 +1462,19 @@
       "license": "MIT"
     },
     {
+      "name": "nix-managed-plugin-workaround",
+      "source": "./nix-managed-plugin-workaround",
+      "description": "Workaround for installing Claude Code plugins when settings.json is a nix-managed symlink. Copies plugin skill files directly instead of using `claude plugin install`. Trigger keywords: plugin install, EACCES, nix symlink, settings.json readonly, plugin skill copy.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
       "name": "nix-template-deployment",
       "source": "./nix-template-deployment",
       "description": "Guides deploying nix-template shell.nix and .envrc to directories for per-directory package availability via direnv. Covers home.packages vs devShell distinction.",
@@ -796,6 +1511,32 @@
       "license": "MIT"
     },
     {
+      "name": "onboard",
+      "source": "./onboard",
+      "description": "Initialize a project with CLAUDE.md, install dependencies, and produce an orientation summary of directory structure and key files. Detects language/framework automatically and skips steps already completed. Auto-activates when onboarding to a new codebase, setting up a project, or generating CLAUDE.md. Trigger keywords: onboard, new project, setup project, CLAUDE.md setup, project orientation, initialize project, codebase setup.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "openclaw-installation",
+      "source": "./openclaw-installation",
+      "description": "Guides OpenClaw installation from source on Nix-managed macOS. Auto-activates when installing, building, or troubleshooting OpenClaw. Covers prerequisites (pnpm via Nix), cloning, building, onboarding wizard, and daemon setup. Trigger keywords: openclaw, open-claw, pnpm install, pnpm build, ui:build, onboard, install-daemon, gateway daemon, launchd, personal AI assistant. (project)",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "productivity",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
       "name": "overriding-flake-input-packages",
       "source": "./overriding-flake-input-packages",
       "description": "Guides fixing build failures in external flake inputs by overriding their derivations with overrideAttrs.",
@@ -814,6 +1555,58 @@
       "license": "MIT"
     },
     {
+      "name": "parallel-development-strategy",
+      "source": "./parallel-development-strategy",
+      "description": "Build features and foundation simultaneously through iterative refinement. Maintain 'best possible product at every moment.' Sketch-to-detail approach ensures completeness and shippability throughout. Trigger keywords: parallel development, breadth first, sketch to detail, MVP strategy, all features simultaneously, minimum viable product, product steering.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "parallel-git-contention",
+      "source": "./parallel-git-contention",
+      "description": "Prevents silent incomplete staging when parallel agents run concurrent git operations (git rm, git add, git mv). Auto-activates when spawning multiple agents that modify git-tracked files. Trigger keywords: parallel agents git, concurrent git rm, incomplete staging, git index lock, batch git operations, parallel file deletion.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "workflow",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "parallel-skills-audit",
+      "source": "./parallel-skills-audit",
+      "description": "Triage all skills then spawn parallel agents to deep-audit flagged ones. Auto-activates when batch auditing skills or optimizing multiple skills at once. Trigger keywords: parallel audit, batch audit, audit all skills, bulk optimize skills.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "philippine-cinema-search",
+      "source": "./philippine-cinema-search",
+      "description": "Find Philippine movie release dates and cinema info via ClickTheCity \u2014 bypasses Google CAPTCHA issues.",
+      "version": "2.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "productivity",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
       "name": "portable-ai-cli-patterns",
       "source": "./portable-ai-cli-patterns",
       "description": "Guides dual-tool configuration for Claude Code and OpenCode. Covers compatibility matrix, single-source commands, skill/agent promotion workflow.",
@@ -828,6 +1621,32 @@
         "dual-tool"
       ],
       "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "pre-learning-prep",
+      "source": "./pre-learning-prep",
+      "description": "Systematic knowledge review before engaging with new material. Auto-activates before learning sessions, courses, or book studies. Trigger keywords: pre-learning, before reading, activate prior knowledge, prepare to learn. (global)",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "preparation-procrastination-detector",
+      "source": "./preparation-procrastination-detector",
+      "description": "Flags when endless preparation substitutes for action. Auto-activates when discussing getting ready, preparation cycles, or analysis paralysis before execution. Trigger keywords: preparation, procrastination, getting ready, analysis paralysis, planning trap, execution delay.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
       "homepage": "https://github.com/ngpestelos/skills",
       "license": "MIT"
     },
@@ -869,6 +1688,32 @@
       "license": "MIT"
     },
     {
+      "name": "quick-document-summary",
+      "source": "./quick-document-summary",
+      "description": "Concise verbal summaries of documents without modifying files. Returns structured overview in conversation. Trigger keywords: summarize this, explain this doc, what's this about, give me the gist, quick summary, TL;DR.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "rails-cache-performance",
+      "source": "./rails-cache-performance",
+      "description": "",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
       "name": "rails-testing-patterns",
       "source": "./rails-testing-patterns",
       "description": "Test type selection prioritizing integration tests (89-95% faster than system tests).",
@@ -883,6 +1728,19 @@
         "factories"
       ],
       "category": "rails",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "reaction-gap-practice",
+      "source": "./reaction-gap-practice",
+      "description": "Guides creation of space between emotional trigger and behavioral response using Name-Pause-Choose protocol. Trigger keywords: emotional reaction, manage emotions, impulse control, stimulus response, anger management, frustration, overreaction, emotional regulation.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
       "homepage": "https://github.com/ngpestelos/skills",
       "license": "MIT"
     },
@@ -905,6 +1763,32 @@
       "license": "MIT"
     },
     {
+      "name": "recall",
+      "source": "./recall",
+      "description": "Restore project memory context by reading MEMORY.md and summarizing recent memory additions and modifications within a configurable time window (24h, 2d, 1w, etc.). Groups by type and flags stale candidates. Auto-activates when recalling memory, restoring context, or checking what was learned. Trigger keywords: recall, recall memory, what do I know, memory summary, context restoration, memory inventory, stale memory.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "recap",
+      "source": "./recap",
+      "description": "Summarize recent git commits for context restoration at session start or after context-switching, grouping by directory or theme and highlighting resume points. Supports configurable time windows (24h, 2d, 1w, etc.). Auto-activates when recapping changes, reviewing recent work, or restoring session context. Trigger keywords: recap, recent changes, what happened, git summary, context restore, session start, pick up where I left off.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
       "name": "red-team-framework-review",
       "source": "./red-team-framework-review",
       "description": "Systematic adversarial review of strategic frameworks. Challenges assumptions, identifies correlated failure modes, checks demand evidence.",
@@ -923,11 +1807,50 @@
       "license": "MIT"
     },
     {
+      "name": "reflect",
+      "source": "./reflect",
+      "description": "Summarize the current conversation session to answer 'where were we?' after interruptions or complex threads. Reviews progress, decisions, next steps, and open questions for quick re-orientation. Auto-activates when reflecting on session, asking where we left off, or needing orientation. Trigger keywords: reflect, where were we, session summary, what were we doing, catch me up, re-orient, session progress.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "regret-minimization-framework",
+      "source": "./regret-minimization-framework",
+      "description": "Evaluate decisions through future regret across time horizons. 10-10-10 rule, action vs inaction regret, minimum regret path. Trigger keywords: regret minimization, 10-10-10 rule, will I regret, future self, long-term decision, life choice.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
       "name": "repo-flattening",
       "description": "Flatten a two-level category/name directory structure to flat name/ in a git repo.",
       "version": "1.1",
       "source": "./repo-flattening",
       "category": "workflow"
+    },
+    {
+      "name": "research",
+      "source": "./research",
+      "description": "Systematic first-principles research via web search producing actionable knowledge documents with layered summarization (executive summary, highlights, context) and source citations. Decomposes topics, executes parallel searches, and scores discoverability. Auto-activates when researching topics, gathering evidence, or producing research documents. Trigger keywords: research, investigate, deep dive, literature review, evidence gathering, web search, fact check, source verification.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
     },
     {
       "name": "response-diversity",
@@ -944,6 +1867,19 @@
         "communication"
       ],
       "category": "productivity",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "risk-first-methodology",
+      "source": "./risk-first-methodology",
+      "description": "Systematic risk management and scenario planning. Define maximum loss BEFORE considering reward; prepare IF-THEN responses instead of predictions. Trigger keywords: risk management, stop loss, position size, risk reward, maximum loss, define risk, risk first, scenario planning, if-then, contingency plan.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
       "homepage": "https://github.com/ngpestelos/skills",
       "license": "MIT"
     },
@@ -1021,6 +1957,32 @@
       "license": "MIT"
     },
     {
+      "name": "scientist-experimenter",
+      "source": "./scientist-experimenter",
+      "description": "Transforms challenges into experiments using hypothesis-test-learn cycles. Auto-activates when user faces uncertainty, fears failure, views goals as impossible, is paralyzed by fear of wrong decisions, is stuck waiting for conditions/permission, or is in analysis paralysis. Trigger keywords: impossible, can't fail, afraid to try, what if it doesn't work, too risky, scared, uncertain, don't know how, never done this, stuck, waiting, permission, approval, paralysis, can't decide, not ready, need to wait, blocked, hesitating.",
+      "version": "1.1.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "seasonal-grief-navigator",
+      "source": "./seasonal-grief-navigator",
+      "description": "Navigation strategies for calendar-tied grief patterns \u2014 anniversary grief and seasonal emotional waves. Navigate vs Fix reframing, achievable peace, external-internal plane separation. Trigger keywords: anniversary grief, seasonal sadness, December difficult, why still sad, everything good but sad, grief calendar, recurring sadness, holiday grief.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
       "name": "security-patterns",
       "source": "./security-patterns",
       "description": "Quick-reference security checklist for XSS, CSRF, PII logging, console statements, multi-tenant isolation, and state machine security in Rails view...",
@@ -1036,6 +1998,45 @@
         "web-security"
       ],
       "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "session",
+      "source": "./session",
+      "description": "Structured dump of the current conversation session \u2014 files read and written, searches performed, tools invoked, agents spawned, and open items. Omits empty sections for a concise overview. Auto-activates when asking for session summary, context dump, or what tools were used. Trigger keywords: session, session context, session dump, what did we do, files touched, session summary, tools used, context dump.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "shared-memory-across-machines",
+      "source": "./shared-memory-across-machines",
+      "description": "Store Claude Code memory in project repos with symlinks for cross-machine sync. Auto-activates when setting up memory for new projects, migrating memory, or troubleshooting memory sync. Trigger keywords: shared memory, memory sync, cross-machine, memory symlink, portable memory.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "skill-automation-readiness",
+      "source": "./skill-automation-readiness",
+      "description": "Prepare skills and scripts for background/cron automation. Adds quiet modes, random selection, idempotency, and exit codes. Use when: cron jobs, background agents, scheduled tasks. Trigger: automate skill, cron-ready, background mode, daemonize.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
       "homepage": "https://github.com/ngpestelos/skills",
       "license": "MIT"
     },
@@ -1058,6 +2059,32 @@
       "license": "MIT"
     },
     {
+      "name": "skill-pattern-alignment",
+      "source": "./skill-pattern-alignment",
+      "description": "Refactor a skill to match an existing reference skill's structure, conventions, and patterns.",
+      "version": "1.1.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "skill-registration-troubleshooting",
+      "source": "./skill-registration-troubleshooting",
+      "description": "Diagnose why a Hermes skill isn't appearing in the skill index despite having a valid SKILL.md file. Auto-activates when skills aren't discovered after symlink creation, skill_view fails for existing skills, or skill count doesn't increase. Covers circular symlink detection, directory structure validation, and skill loader behavior.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
       "name": "skill-stack-deduplication",
       "source": "./skill-stack-deduplication",
       "description": "Eliminates content duplication across Claude Code agent/skill/command layers by establishing clear separation of concerns and reference hierarchies.",
@@ -1076,6 +2103,32 @@
       "license": "MIT"
     },
     {
+      "name": "skill-to-prompt-porter",
+      "source": "./skill-to-prompt-porter",
+      "description": "Port Claude Code skills into standalone prompts for external LLMs (Grok, ChatGPT, Gemini) \u2014 methodology extraction, infrastructure stripping, modality adaptation",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "skill-tree-generator",
+      "source": "./skill-tree-generator",
+      "description": "Generates prerequisite dependency trees for efficiently learning or re-learning a concept. Maps trunk (fundamentals) \u2192 branches (core skills) \u2192 leaves (applications) with learning sequence and ZPD calibration. Trigger keywords: skill tree, learning path, prerequisites, what do I need to learn first, how to learn, study plan, dependency map, learning order, re-learn, brush up on.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
       "name": "skills-audit",
       "source": "./skills-audit",
       "description": "Inventory and audit skills for spec compliance and optimization. Two modes: triage (scan all) and deep audit (single skill).",
@@ -1090,6 +2143,58 @@
         "optimization"
       ],
       "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "source-verification",
+      "source": "./source-verification",
+      "description": "Verifies external sources cited in drafts before publication. Prevents circular verification via WebFetch and enforces evidence tiers for attributed claims. Trigger keywords: verify sources, fact-check, cited claim, publication ready, source URL, WebFetch verification, dead link.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "state-reset-verification",
+      "source": "./state-reset-verification",
+      "description": "Safe methodology for verifying deduplication works independently of state files through backup-reset-test-restore workflow",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "static-html-app-development",
+      "source": "./static-html-app-development",
+      "description": "Patterns for building and testing static HTML/CSS/JS apps deployed to Cloudflare Pages. Prevents file:// localStorage trap, provides browser-based test suite pattern. Auto-activates when building static sites, using open index.html, generating file:// URLs, debugging localStorage issues, or creating vanilla JS apps. Trigger keywords: static site, vanilla JS, localStorage blocked, file:// URL, browser test, Cloudflare Pages app, open index.html.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "steel-manning-technique",
+      "source": "./steel-manning-technique",
+      "description": "Present the strongest, most charitable version of opposing arguments before engaging. Manual protocol for live discussions, LLM-assisted variant for complex decisions.",
+      "version": "2.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "general",
       "homepage": "https://github.com/ngpestelos/skills",
       "license": "MIT"
     },
@@ -1130,6 +2235,71 @@
       "license": "MIT"
     },
     {
+      "name": "subagent-driven-development",
+      "source": "./subagent-driven-development",
+      "description": "Execute implementation plans by dispatching fresh subagents per task with two-stage review (spec compliance then code quality)",
+      "version": "1.1.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "system-purpose-auditor",
+      "source": "./system-purpose-auditor",
+      "description": "Evaluates systems by what they actually DO, not stated intentions \u2014 Stafford Beer's POSIWID principle. Diagnoses intention-reality gaps in organizations, habits, and workflows. Trigger keywords: POSIWID, system purpose, intention vs reality, what it actually does, stated vs actual, system audit.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "systems-design-diagnostic",
+      "source": "./systems-design-diagnostic",
+      "description": "Analyze projects, products, or organizations against four systems design archetypes that predict failure patterns (apenwarr/Freeman/Brooks/Christensen)",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "technical-pattern-extractor",
+      "source": "./technical-pattern-extractor",
+      "description": "Extract and generalize project-specific Rails patterns into reusable skills and knowledge notes",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "term-definer",
+      "source": "./term-definer",
+      "description": "Context-aware definitions with adaptive complexity. Simple words get concise definitions; technical terms get etymology, multiple senses, and cross-domain treatment. Trigger keywords: define, what does X mean, explain term, etymology, word origin, affect vs effect.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
       "name": "test-plan-methodology",
       "source": "./test-plan-methodology",
       "description": "Systematic 4-phase test planning approach to prevent coverage blind spots.",
@@ -1144,6 +2314,58 @@
         "quality"
       ],
       "category": "development",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "unconscious-goal-detector",
+      "source": "./unconscious-goal-detector",
+      "description": "Identifies hidden goals driving 'lack of discipline' and self-sabotage patterns. Based on Dan Koe's insight that all behavior is goal-oriented - 'failures' often pursue unconscious goals like safety or approval. Trigger keywords: why do I keep, self-sabotage, can't stay disciplined, keep failing, procrastination, why can't I, always give up.",
+      "version": "1.1.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "update-memory",
+      "source": "./update-memory",
+      "description": "Persist session learnings to memory files. Auto-activates when updating memory, saving learnings, or persisting session context. Trigger keywords: update memory, save memory, persist learnings, remember this.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "vision-fallback-claude-code",
+      "source": "./vision-fallback-claude-code",
+      "description": "Fallback patterns when vision analysis fails due to API limits. Two methods: Claude Code CLI delegation and browser accessibility tree. Trigger: vision API limits exceeded, 403 errors, monthly quota reached, image extraction failed.",
+      "version": "2.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "vspt-planner",
+      "source": "./vspt-planner",
+      "description": "Break down overwhelming objectives into actionable components using the Vision-Strategies-Projects-Tactics framework. Enables immediate forward movement on any goal. Auto-activates when user faces overwhelming tasks, unclear starting points, or complex multi-step objectives. Trigger keywords: overwhelming, don't know where to start, break this down, too big, VSPT, how do I approach, planning help.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
       "homepage": "https://github.com/ngpestelos/skills",
       "license": "MIT"
     }
