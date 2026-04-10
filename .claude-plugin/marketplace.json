@@ -69,8 +69,8 @@
     {
       "name": "activerecord-application-query-optimization",
       "source": "./activerecord-application-query-optimization",
-      "description": "Prevents N+1 queries, duplicate joins, and missing eager loading in ActiveRecord. Covers batch preloading, SQL CASE consolidation, 8 N+1 discovery patterns, and join optimization.",
-      "version": "3.0.0",
+      "description": "Prevents N+1 queries, duplicate joins, and missing eager loading in ActiveRecord. Covers batch preloading, SQL CASE consolidation, strict loading, eager load method selection, and join optimization.",
+      "version": "3.1.0",
       "author": {
         "name": "Nestor Pestelos"
       },

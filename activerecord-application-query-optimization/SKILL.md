@@ -5,7 +5,7 @@ license: MIT
 metadata:
   category: rails
   author: ngpestelos
-  version: "3.0.0"
+  version: "3.1.0"
 ---
 
 # ActiveRecord Query Performance
@@ -57,13 +57,47 @@ N separate COUNT queries → 1 query with `SUM(CASE WHEN ... THEN 1 ELSE 0 END)`
 | # | Suspect When | Wrong | Right |
 |---|-------------|-------|-------|
 | 1 | Service returns relation rendered by template | `Product.where(...)` without includes | Add `.includes(:variants, variants: [:images])` |
-| 2 | `.limit()` on eager-loaded association | `product.variants.limit(6)` (triggers new query) | `product.variants.first(6)` (in-memory) |
-| 3 | `.where()` on eager-loaded association | `product.variants.where(active: true)` (new query) | `product.variants.select { \|v\| v.active? }` (in-memory) |
+| 2 | `.limit()` on eager-loaded association | `product.variants.limit(6)` (triggers new query) | `product.variants.first(6)` (in-memory — only works if already eager-loaded) |
+| 3 | `.where()` on eager-loaded association | `product.variants.where(active: true)` (new query) | `product.variants.select { \|v\| v.active? }` (in-memory — only works if already eager-loaded) |
 | 4 | Filtering "has no children" | `orders.select { \|o\| o.line_items.blank? }` | `Order.left_joins(:line_items).where(line_items: { id: nil })` |
 | 5 | Model method traverses associations (flat_map) | `Product.includes(:color_variants)` | `Product.includes(color_variants: :artworks)` |
-| 6 | `.any?` on has_many :through | `product.customizations.any?` (COUNT query) | `product.line_items.any? { \|li\| li.custom_values.present? }` |
+| 6 | `.any?` on has_many :through | `product.customizations.any?` (COUNT query) | `product.line_items.any? { \|li\| li.custom_values.present? }` (in-memory — only if line_items already loaded) |
 | 7 | Rendering images/attachments | `Variant.includes(:images)` | `Variant.includes(images: { attachment: :blob })` |
 | 8 | Detail-heavy pages | Partial includes | Include full chain: variants → prices, option_values, images → attachment → blob |
+
+**Note on patterns 2, 3, 6**: The "in-memory" alternatives only avoid queries if the parent association was already eager-loaded. If the association is not loaded, `first(6)` and `select` will still trigger queries (though `first(6)` uses `LIMIT 6` which is cheaper than loading all). Choose based on whether you expect the data to be preloaded in context.
+
+## Eager Loading Methods
+
+Rails provides three ways to eager-load associations. Understanding the difference helps you choose the right tool:
+
+| Method | SQL Strategy | Use When |
+|--------|--------------|----------|
+| `preload` | Separate queries (one per association) | Simple associations, no filtering on joined tables |
+| `eager_load` | LEFT OUTER JOIN (single query) | Need to filter or order by joined table columns |
+| `includes` | Rails decides (preload or eager_load) | Default choice; use `.references(:table)` to force JOIN when filtering |
+
+**Key**: `includes` without `references` uses separate queries. Add `.references(:association)` when your `where` clause references the joined table.
+
+## Strict Loading (Rails 6.1+)
+
+Catch N+1 queries during development before they hit production:
+
+```ruby
+# config/environments/development.rb
+config.active_record.strict_loading_by_default = true
+
+# Or per-query
+User.strict_loading.includes(:orders).find(1)
+```
+
+Raises `ActiveRecord::StrictLoadingViolationError` immediately when code attempts to lazy-load an association that wasn't eager-loaded.
+
+**Best practice**: Enable in test environment to catch N+1s in CI:
+```ruby
+# config/environments/test.rb
+config.active_record.strict_loading_by_default = true
+```
 
 ## Join Optimization
 
