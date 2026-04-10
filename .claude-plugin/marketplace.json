@@ -709,8 +709,8 @@
     {
       "name": "cutting-identifier",
       "source": "./cutting-identifier",
-      "description": "Helps identify your 'cutting' - the single decisive action that determines success in any domain. Based on Sebastian Marshall's synthesis of Musashi and Lynch. Trigger keywords: what's my cutting, what matters most, identify focus, decisive action, what should I focus on, priority, single most important, what determines success.",
-      "version": "1.0.0",
+      "description": "Identify your cutting — the single decisive action that determines success via scarcity test. Trigger: what's my cutting, decisive action.",
+      "version": "1.2.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1348,8 +1348,8 @@
     {
       "name": "morning-evening-heart-setting",
       "source": "./morning-evening-heart-setting",
-      "description": "Guided daily recommitment ritual based on Tsunetomo's teaching to 'set one's heart right every morning and evening.' Provides structured reflection for maintaining focus on cutting. Trigger keywords: morning reflection, evening review, daily practice, set my heart, daily ritual, recommit, daily focus, start the day, end the day.",
-      "version": "1.1.0",
+      "description": "Daily recommitment ritual for maintaining focus on decisive action. Trigger: morning reflection, evening review, set my heart.",
+      "version": "1.3.1",
       "author": {
         "name": "Nestor Pestelos"
       },

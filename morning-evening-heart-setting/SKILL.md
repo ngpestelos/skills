@@ -1,37 +1,43 @@
 ---
 name: morning-evening-heart-setting
-description: "Guided daily recommitment ritual based on Tsunetomo's teaching to 'set one's heart right every morning and evening.' Provides structured reflection for maintaining focus on cutting. Trigger keywords: morning reflection, evening review, daily practice, set my heart, daily ritual, recommit, daily focus, start the day, end the day."
-version: 1.1.0
+description: "Daily recommitment ritual for maintaining focus on decisive action. Trigger: morning reflection, evening review, set my heart."
+version: 1.3.0
 ---
 
-# Morning/Evening Heart-Setting Practice
+# Morning/Evening Heart-Setting
 
-## Core Principle
+Daily recommitment prevents drift. Without resetting, calculation replaces commitment.
 
-**Tsunetomo**: "If by setting one's heart right every morning and evening, one is able to live as though his body were already dead, he gains freedom in the Way."
+## Prerequisites
 
-Daily recommitment prevents drift. Without deliberate resetting, the loss-and-gain mind gradually takes over and cutting is abandoned for calculation. The practice works through consistency — every morning and evening, not when you feel like it.
+- `cutting-identifier` — your single decisive action
+- `loss-and-gain-mind-audit` — recognizing calculation traps
 
-## Morning Heart-Setting (5-10 minutes)
+## Output
 
-### Three Morning Questions
+Write in daily journal: `YYYYMMDD.md`
 
-1. **"What is my cutting today?"** — What single outcome matters most? If I accomplish only one thing, what should it be?
+## Morning (2 min)
 
-2. **"Where might my conviction waver?"** — What fears or calculations might distract me? What "IBM" choice might tempt me toward safety?
+Answer: **"What is my cutting today, and where might I waver?"**
 
-3. **"If I accept that I might fail, what would I do?"** — The Tsunetomo test. Remove fear-based hesitation. Commit regardless of outcome.
+## Evening (2 min)
 
-## Evening Heart-Setting (5-10 minutes)
+Answer: **"Did I cut or scatter? What would I do differently?"**
 
-### Three Evening Questions
+## Is It Working?
 
-1. **"Did I cut, or did I scatter?"** — Where did I stay focused? Where did I drift? What percentage of energy went to cutting vs non-cutting?
+| Yes | No |
+|-----|-----|
+| I can state my cutting in one breath | I'm unsure what my cutting is |
+| I know where I wavered today | I forgot to do the practice |
 
-2. **"Where did hesitation prevent action?"** — Where did the loss-and-gain mind take over? Where did I choose "looking good" over "being right"?
+## Boundaries
 
-3. **"What would I do differently with the same circumstances?"** — Not regret, but learning. Specific adjustment, not general self-criticism.
+**Skip when:** Physical incapacity, already in flow
+**Abandon when:** 30 days of practice → no change in decisive action
 
-## Weekly Extension (Optional)
+## Troubleshooting
 
-Every 7 days: (1) What calculating prevents commitment? (2) Is my cutting still correct? (3) Who would I be if I fully committed?
+**Don't know your cutting?** Run `cutting-identifier`.
+**Don't know where you wavered?** You probably didn't — note "no wavering today" and watch for patterns over the week.
