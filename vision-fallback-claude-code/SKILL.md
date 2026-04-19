@@ -12,6 +12,8 @@ When vision analysis fails (403, quota exceeded, rate limited), use these fallba
 
 ## Method 1: Claude Code CLI (Local Images)
 
+### Option A: Direct terminal command
+
 For local image files when vision API fails or no browser session exists:
 
 ```bash
@@ -34,6 +36,23 @@ claude -p "Your prompt here" --model claude-sonnet-4-6 --allowedTools Read
 
 **Note:** Uses Claude Code's separate API quota. Returns natural language — may need parsing.
 
+### Option B: Delegate to subagent
+
+Use `delegate_task` with `acp_command: "claude"` to spawn a Claude Code subagent for complex OCR tasks:
+
+```python
+delegate_task(
+    goal="Extract text and describe the content of the image at /path/to/image.jpg",
+    context="Use Claude Code's vision capabilities or tesseract OCR to extract all text from the image.",
+    toolsets=["terminal"],
+    acp_command="claude"
+)
+```
+
+**When to use:** Multi-step processing needed, parsing required, or when you want the subagent to handle tool failures gracefully.
+
+**Note:** Subagent may use tesseract OCR (`tesseract <image> stdout`) as a fallback if Claude's vision fails.
+
 ## Method 2: Browser Accessibility Tree
 
 For web pages (not local images), extract text content without vision:
@@ -48,6 +67,7 @@ Returns the full accessibility tree which often contains the text needed.
 
 ## Optimization History
 
+- **April 15, 2026**: Added Option B (delegate_task approach) and tesseract OCR note. Discovered when vision_analyze failed with 500 error on KGR advisory image; subagent successfully used tesseract + sips for extraction.
 - **April 5, 2026**: Added `--model` flag for cost optimization (Sonnet vs Opus) and nix-managed config troubleshooting. User's settings.json was symlinked to nix store (read-only), requiring explicit `--model claude-sonnet-4-6` per command or nix config update.
 - **April 5, 2026**: Updated Method 1 with correct CLI syntax (`-p` flag, `--allowedTools Read`), added browser session requirement note for Method 2. Discovered when browser_vision failed on local images.
 - **April 1, 2026**: Five-step optimizer pass 1. Deleted "When to Use" (duplicates frontmatter), obvious steps (try normal first, parse output, update document), considerations table, troubleshooting. 73 → 14 lines (81%).

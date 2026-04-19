@@ -33,3 +33,25 @@ Group related files and for each group:
 
 - Never commit sensitive data, large binaries, or temp files (.DS_Store, .swp)
 - Never commit out-of-scope files without user confirmation
+
+## Troubleshooting
+
+### "Cannot pull with rebase: You have unstaged changes"
+
+When `git pull --rebase` fails because of unstaged changes, stash them temporarily:
+
+**If commits are already made (just need to push):**
+```bash
+git stash
+git pull --rebase
+git push
+git stash pop
+```
+
+**If still need to commit:**
+```bash
+git stash push -m "temp"
+git pull --rebase
+git stash pop
+# Then proceed with add/commit/push
+```

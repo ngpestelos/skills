@@ -27,6 +27,18 @@ Use `collection:` parameter to scope searches. If `qmd_*` tools are missing, use
 - **Always re-embed after adding documents**: `qmd update && qmd embed` — without this, new content is invisible to vector search
 - **Never run concurrent `qmd update`/`qmd embed`** — use `qmd-safe-update` wrapper which handles locking
 - **Match search type to query** — don't use `qmd_query` for simple keyword lookups; it's slower for no benefit
+- **Collection path must match actual folder name** — the path argument to `qmd collection add` must be the literal directory name on disk (e.g., `1 Areas`, `2 Resources`), NOT an alias or shorthand. Using incorrect paths creates empty collections silently (0 files indexed)
+
+## Adding Collections
+
+Correct pattern:
+```bash
+qmd collection add "1 Areas" --name "areas"
+qmd collection add "2 Resources" --name "resources"
+qmd collection add "0 Projects" --name "projects"
+```
+
+The `--name` parameter sets the collection alias for queries. The path (first argument) must match the actual folder name exactly — spaces, numbers, and case matter.
 
 ## Index Rebuild Protocol
 

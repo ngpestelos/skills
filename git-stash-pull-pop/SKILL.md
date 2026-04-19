@@ -40,12 +40,33 @@ git commit -m "<message>"
 git push
 ```
 
+## Handling Rebase with Committed Changes
+
+When you've already committed but remote has diverged:
+
+```bash
+# Pull with rebase
+git pull --rebase
+
+# If merge conflicts occur, resolve them, then:
+git add <conflicted-files>
+
+# In automated/non-interactive contexts, bypass editor:
+GIT_EDITOR=true git rebase --continue
+
+# Push
+git push
+```
+
+**Critical for automation**: The `GIT_EDITOR=true` pattern prevents the default editor (nano/vim) from opening during `rebase --continue`, which would otherwise hang or fail in cron/CI environments.
+
 ## Pitfalls
 
 - **Do not use `git checkout -- .`** — discards your changes permanently
 - **Do not commit before pulling** — creates unnecessary merge commits
 - **Merge conflicts on pop** — resolve normally, then `git stash drop`
 - **Stash is stack-based** — `pop` applies and removes; `apply` keeps it in stash
+- **Rebase editor hang in automation** — Use `GIT_EDITOR=true git rebase --continue` to bypass interactive editor prompts
 
 ## Alternatives
 
