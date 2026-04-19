@@ -1,8 +1,8 @@
 ---
 name: nodejs-version-management
-description: "Guides Node.js and npm version management in Nix flakes. Auto-activates when working with nodejs versions, npm upgrades, or version notices. Covers system packages, activation scripts, devShells, version synchronization, pnpm global configuration. Trigger keywords: nodejs, npm, version, upgrade, nodejs_22, nodejs_23, nodejs_24, npm notice, node version, npm install -g, undefined variable, devShell, direnv, buildInputs, pnpm, corepack, nodePackages, EACCES, nix store immutable, pnpm setup, PNPM_HOME."
+description: "Guides Node.js and npm version management in Nix flakes. Auto-activates when working with nodejs versions, npm upgrades, or version notices. Covers system packages, activation scripts, devShells, version synchronization, pnpm global configuration, runtime resolution for pnpm-installed global scripts. Trigger keywords: nodejs, npm, version, upgrade, nodejs_22, nodejs_23, nodejs_24, npm notice, node version, npm install -g, undefined variable, devShell, direnv, buildInputs, pnpm, corepack, nodePackages, EACCES, nix store immutable, pnpm setup, PNPM_HOME, exec: node: not found, .local/share/pnpm, PATH shadowing, /etc/profiles/per-user, non-interactive shell, gws, firecrawl."
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Managing Node.js Versions in Nix
@@ -79,19 +79,42 @@ export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$HOME/.local/bin:$PNPM_HOME:$PATH:/opt/homebrew/bin"
 ```
 
-## Isolating Node Runtime for npm CLI Tools
+## Making `node` Available to pnpm-Installed Global Scripts
 
-When an npm CLI tool needs `node` at runtime but you want to avoid system-wide Node (version conflicts with project devShells):
+`nodePackages.pnpm` exposes `pnpm` in the nix profile but **not** `node` — node is only a transitive runtime dep, not a top-level symlink at `/etc/profiles/per-user/$USER/bin/node`. pnpm-installed global scripts (`~/.local/share/pnpm/<tool>`) use a shebang that looks for `node` on PATH, so without `node` exposed somewhere, they fail with `exec: node: not found` in fresh non-interactive shells.
+
+### Preferred fix: add `nodejs` to `home.packages`
 
 ```nix
-# Wrapper injects Node only for this tool
+home.packages = with pkgs; [
+  nodePackages.pnpm
+  nodejs          # exposes `node` in the nix profile; raw pnpm scripts resolve it
+];
+```
+
+One line, fixes every pnpm-global tool at once, no per-tool wrappers. `pkgs.nodejs` resolves to the same store derivation that `nodePackages.pnpm` references transitively — no version skew.
+
+### Fallback: per-tool wrapper
+
+Use only when you specifically need a different node version for one tool than what's globally available:
+
+```nix
 (pkgs.writeShellScriptBin "gws" ''
   export PATH="${pkgs.nodejs}/bin:$PATH"
   exec "$HOME/.local/share/pnpm/gws" "$@"
 '')
 ```
 
-Auto-install on new machines via activation:
+**Wrapper shadowing gotcha (Apr 2026)**: Wrappers live at `/etc/profiles/per-user/$USER/bin/<tool>`. If `~/.local/share/pnpm` comes **earlier** in PATH (typical, because `.zshrc` does `export PATH="$PNPM_HOME:$PATH"`), the raw pnpm script wins and the wrapper never runs. Diagnose with:
+
+```bash
+echo $PATH | tr ':' '\n' | nl | grep -E "(pnpm|profiles/per-user)"
+# If pnpm appears BEFORE profiles/per-user, wrappers are shadowed.
+```
+
+Fixes: (a) add `nodejs` to `home.packages` (preferred — makes wrapper unnecessary), or (b) reorder PATH so `/etc/profiles/per-user/$USER/bin` comes first.
+
+### Auto-install global packages
 
 ```nix
 activation.installGlobalNpmPackages = lib.hm.dag.entryAfter ["setupPnpm"] ''
@@ -103,7 +126,10 @@ activation.installGlobalNpmPackages = lib.hm.dag.entryAfter ["setupPnpm"] ''
 '';
 ```
 
-**Discovery (Mar 2026)**: `@googleworkspace/cli` installed via pnpm failed with `exec: node: not found`. The wrapper pattern injects Node only for the specific tool without polluting devShells.
+### Discoveries
+
+- **Mar 2026**: `@googleworkspace/cli` installed via pnpm failed with `exec: node: not found`. First fix was the wrapper pattern.
+- **Apr 2026**: Wrapper pattern was shadowed by PATH ordering; never ran. Root-cause fix is adding `nodejs` to `home.packages`. Commit: `dotfiles/31fb91a`.
 
 ## Violation Detection
 

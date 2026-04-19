@@ -178,7 +178,7 @@
       "name": "adversarial-agent-validation",
       "source": "./adversarial-agent-validation",
       "description": "Three-agent adversarial validation pattern exploiting LLM sycophancy: Finder (find), Adversary (disprove), Referee (score).",
-      "version": "2.0",
+      "version": "2.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1495,8 +1495,8 @@
     {
       "name": "nodejs-version-management",
       "source": "./nodejs-version-management",
-      "description": "Guides Node.js and npm version management in Nix flakes. Covers system packages, activation scripts, devShells, version synchronization, pnpm configuration.",
-      "version": "1.0.0",
+      "description": "Guides Node.js and npm version management in Nix flakes. Covers system packages, activation scripts, devShells, version synchronization, pnpm configuration, runtime resolution for pnpm-installed global scripts.",
+      "version": "1.1.0",
       "author": {
         "name": "Nestor Pestelos"
       },
