@@ -26,6 +26,22 @@ remindctl authorize  # Grant Terminal access when prompted
 remindctl add "Buy milk" --due tomorrow
 ```
 
+## Hermes/Agent Usage Pattern
+
+**Delegate to Claude Code**: When an AI agent (Hermes) needs to check or manage reminders, delegate to Claude Code rather than executing directly. This avoids permission issues and provides better error handling.
+
+```python
+# Pattern: Load skill, then delegate
+delegate_task(
+    goal="Check Apple Reminders using remindctl. Show today's reminders and upcoming week's reminders.",
+    context="User wants to see their Apple Reminders. Use remindctl to fetch today's and this week's reminders.",
+    toolsets=["terminal"],
+    acp_command="claude"
+)
+```
+
+**Why delegate**: Claude Code runs in a local environment where `remindctl authorize` has already been granted Reminders access. Direct execution from Hermes may fail due to sandboxed permissions or missing authorization.
+
 ## Usage
 
 ```bash

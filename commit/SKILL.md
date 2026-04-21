@@ -23,7 +23,7 @@ Determine scope:
 Group related files and for each group:
 1. `git add` only relevant files (never `git add .` or `-A`)
 2. Commit with heredoc format, imperative mood, <=50 char subject, explain "why" not "what"
-3. Include `Co-Authored-By` line for the current model
+3. Include `Co-Authored-By: ${HERMES_PROFILE:-Hermes} (${HERMES_MODEL:-unknown}) &lt;${HERMES_PROFILE:-hermes}@hermes.ai&gt;` for Hermes agent commits (detect via $HERMES_PROFILE/$HERMES_MODEL env if available). Applies to cron jobs/profile commits (e.g., Jackie (grok-4-1-fast) &lt;jackie@hermes.ai&gt;).
 
 ## Step 3: Push
 
