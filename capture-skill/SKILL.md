@@ -1,6 +1,6 @@
 ---
 name: capture-skill
-version: 1.1
+version: 1.2
 description: "Extract patterns from the current session into a reusable skill file. Auto-activates when discussing skill creation, pattern extraction, or anti-pattern documentation. Trigger keywords: capture skill, extract pattern, create skill, new skill, anti-pattern."
 allowed-tools: Read, Grep, Glob, Bash
 ---
@@ -53,3 +53,11 @@ Required sections: `# Heading` (human-readable), Purpose line, then content sect
 - If skills repo has `check.sh`, run it against the skill
 
 **Present**: Show proposed skill (or diff for updates). Ask if the pattern is captured correctly. After approval, write files.
+
+## Phase 4: Optimize first version (new skills only)
+
+**Skip for updates.** For newly-created skills only, run the `five-step-optimizer` skill against the file you just wrote, then show the user the optimized diff and the resulting line/token count.
+
+First drafts reliably over-include sections Claude already knows (verification steps, generic ops hygiene) or that don't change execution (discovery context, "when to use" duplicates of frontmatter). Running the optimizer once at creation forces a pass of Step 1 (question every requirement) and Step 2 (delete) before the skill calcifies. Updates skip this because their content has already been lived-with.
+
+Bump `version` to 1.1 after optimization to reflect the post-optimize state.
