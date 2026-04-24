@@ -5,7 +5,7 @@ license: MIT
 metadata:
   category: rails
   author: ngpestelos
-  version: "2.1.0"
+  version: "2.1.1"
 ---
 
 # ActiveRecord Idempotent Create Patterns

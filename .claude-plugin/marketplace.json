@@ -13,7 +13,7 @@
       "name": "action-clarity-loop",
       "source": "./action-clarity-loop",
       "description": "Generate clarity through action rather than waiting for perfect understanding. Execute minimum viable actions to receive feedback unavailable through planning alone. Auto-activates when user is stuck in analysis paralysis, waiting for clarity, or asking how to proceed. Trigger keywords: action clarity, clarity through action, start before ready, iterate over plan, minimum viable action.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -26,7 +26,7 @@
       "name": "action-plan-threat-assessment",
       "source": "./action-plan-threat-assessment",
       "description": "Stress-tests execution plans by identifying weaknesses, threats, and dangerous combinations per action item. Creates interaction matrices and orders defensive actions by urgency. Trigger keywords: weaknesses, threats, SWOT, stress-test execution, what could go wrong, action plan risks, execution risks, defensive actions.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -52,7 +52,7 @@
       "name": "activejob-design-patterns",
       "source": "./activejob-design-patterns",
       "description": "ActiveJob architecture patterns: fatal vs non-fatal error handling, transaction safety, external API integration, async enqueuing, internal batching, and operation-based idempotency.",
-      "version": "2.0.1",
+      "version": "2.0.2",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -88,7 +88,7 @@
       "name": "activerecord-eager-loading-testing-patterns",
       "source": "./activerecord-eager-loading-testing-patterns",
       "description": "Testing patterns for ActiveRecord eager loading: .association(:name).loaded? verification, query count tests, pattern-matching counts, and anti-patterns.",
-      "version": "2.0.0",
+      "version": "2.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -106,7 +106,7 @@
       "name": "activerecord-graceful-corrupted-data-handling",
       "source": "./activerecord-graceful-corrupted-data-handling",
       "description": "Graceful handling of missing/corrupted foreign key data: .find_by for optional lookups, safe navigation with fallbacks, and callback nil guards with throw(:abort).",
-      "version": "2.0.0",
+      "version": "2.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -124,7 +124,7 @@
       "name": "activerecord-idempotent-create-patterns",
       "source": "./activerecord-idempotent-create-patterns",
       "description": "Idempotent API endpoints using find_or_create_by! and create_or_find_by! to prevent race conditions and duplicate records. Covers method selection, case-insensitive dedup patterns, and guard vs idempotent pattern.",
-      "version": "2.1.0",
+      "version": "2.1.1",
       "author": {
         "name": "Nestor Pestelos"
       },

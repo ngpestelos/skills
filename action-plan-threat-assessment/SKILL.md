@@ -1,6 +1,8 @@
 ---
 name: action-plan-threat-assessment
 description: "Stress-tests execution plans by identifying weaknesses, threats, and dangerous combinations per action item. Creates interaction matrices and orders defensive actions by urgency. Trigger keywords: weaknesses, threats, SWOT, stress-test execution, what could go wrong, action plan risks, execution risks, defensive actions."
+metadata:
+  version: "1.0.1"
 ---
 
 # Action Plan Threat Assessment
@@ -54,8 +56,3 @@ Identify the 5-8 most dangerous W+T combinations:
 First defensive action must be executable today — if it's "research which platform," the assessment has become preparation-as-protection. Order remainder by urgency.
 
 **Always include one meta-threat that flags the assessment itself as potential avoidance.**
-
-## Optimization History
-
-- **March 13, 2026**: Five-step optimizer pass 1. 264 → 88 lines (67%).
-- **April 1, 2026**: Five-step optimizer pass 2. Deleted "consult existing analyses" step (generic norm), Core Principles #2 and #4 (restated by structure), week-specific urgency tiers (arbitrary), 4/6 key rules (implicit), discovery footnote. Merged W and T into one step. 88 → 42 lines (52%).
