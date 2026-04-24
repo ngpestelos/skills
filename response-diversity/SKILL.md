@@ -1,6 +1,8 @@
 ---
 name: response-diversity
 description: Vary response framing by context (learner, engineer, family, researcher) instead of defaulting to consulting/business framing. Auto-activates when framing responses, explaining concepts, or presenting analysis.
+metadata:
+  version: "1.0.0"
 ---
 
 # Response Diversity

@@ -2,6 +2,8 @@
 name: codebase-due-diligence
 description: Phased methodology for understanding unfamiliar codebases, from rapid onboarding to comprehensive technical analysis. Produces actionable knowledge documents and feeds reusable patterns to technical-pattern-extractor. Auto-activates when joining new projects, conducting technical due diligence, or exploring unfamiliar codebases. Trigger keywords: new codebase, onboarding, due diligence, technical assessment, understand codebase, explore project, architecture review, codebase analysis, unfamiliar project, ramp up, getting started. (project)
 allowed-tools: Read, Grep, Glob, Bash, Agent
+metadata:
+  version: "1.0.0"
 ---
 
 # Codebase Due Diligence

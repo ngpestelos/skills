@@ -1,11 +1,11 @@
 ---
 name: apple-reminders-cli
-version: 1.1.0
 description: "Use remindctl to manage Apple Reminders from terminal. Quick setup, common operations, troubleshooting. Trigger: remindctl, Apple Reminders CLI, terminal reminders."
 author: Hermes Agent
 license: MIT
 platforms: [macos]
 metadata:
+  version: "1.1.1"
   hermes:
     tags: [apple, reminders, macos, cli, productivity]
 ---

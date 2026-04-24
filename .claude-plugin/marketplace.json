@@ -305,7 +305,7 @@
       "name": "apple-reminders-cli",
       "source": "./apple-reminders-cli",
       "description": "Use remindctl to manage Apple Reminders from terminal. Quick setup, common operations, troubleshooting. Trigger: remindctl, Apple Reminders CLI, terminal reminders.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1597,7 +1597,7 @@
       "name": "philippine-cinema-search",
       "source": "./philippine-cinema-search",
       "description": "Find Philippine movie release dates and cinema info via ClickTheCity \u2014 bypasses Google CAPTCHA issues.",
-      "version": "2.0.0",
+      "version": "2.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },

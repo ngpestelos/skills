@@ -1,13 +1,9 @@
 ---
 name: philippine-cinema-search
-version: 2.0
-description: "Find Philippine movie release dates and cinema info via ClickTheCity — bypasses Google CAPTCHA issues."
-triggers:
-  - "when will [movie] be shown in the Philippines"
-  - "Philippines movie release date"
-  - "cinema schedule Philippines"
-  - "movie showing Philippines"
+description: "Find Philippine movie release dates and cinema info via ClickTheCity — bypasses Google CAPTCHA issues. Trigger: when will [movie] be shown in the Philippines, Philippines movie release date, cinema schedule Philippines, movie showing Philippines."
 allowed-tools: browser_navigate, browser_snapshot, browser_click
+metadata:
+  version: "2.0.1"
 ---
 
 # Philippine Cinema Search

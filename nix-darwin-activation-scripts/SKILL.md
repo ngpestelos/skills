@@ -2,6 +2,8 @@
 name: nix-darwin-activation-scripts
 description: "Reliable nix-darwin activation scripts. Auto-activates when editing postActivation blocks, adding installers to darwin-rebuild, or debugging silent activation failures. Covers ownership guards, user-scoped execution, error surfacing, temp file downloads, gated cleanup, and Nix escaping. Trigger keywords: postActivation, activation script, darwin-rebuild, silent failure, sudo -u, chown, stat, ARG_MAX."
 allowed-tools: Read, Grep, Glob, Bash
+metadata:
+  version: "1.0.0"
 ---
 
 # Reliable nix-darwin Activation Scripts

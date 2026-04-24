@@ -2,20 +2,15 @@
 name: bluebubbles-imessage-setup
 description: "Guides BlueBubbles server setup for iMessage integration with OpenClaw. Auto-activates when configuring iMessage channels, installing BlueBubbles, or troubleshooting iMessage connectivity. Covers server installation, macOS permissions, Private API decisions, OpenClaw channel configuration, and webhook setup. Trigger keywords: bluebubbles, imessage, iMessage, Messages.app, chat.db, channel setup, webhook, Private API, SIP, AppleScript, reactions, tapback, pairing, dmPolicy. (project)"
 allowed-tools: Read, Grep, Glob, Bash
+metadata:
+  version: "1.0.0"
 ---
 
 # Setting Up BlueBubbles iMessage Integration
 
-## Instructions
+BlueBubbles is the recommended iMessage channel (preferred over legacy `imsg` CLI). macOS GUI app only — `.dmg` from GitHub releases, not available via Homebrew or Nix. Onboarding is interactive: both the BlueBubbles wizard and OpenClaw channel config require user input — do not expect a scriptable setup path.
 
-### Core Principles
-
-1. **BlueBubbles is the recommended iMessage channel** -- preferred over legacy `imsg` CLI
-2. **macOS GUI app only** -- `.dmg` from GitHub releases, NOT available via Homebrew or Nix
-3. **Private API is optional** -- basic send/receive works without it; skip unless you need reactions, edit, unsend
-4. **Onboarding is interactive** -- both BlueBubbles wizard and OpenClaw channel config require user input
-
-### Architecture
+## Architecture
 
 BlueBubbles runs as a local server on macOS with three layers:
 
@@ -25,13 +20,13 @@ BlueBubbles runs as a local server on macOS with three layers:
 
 OpenClaw connects via HTTP (REST API + webhooks) on localhost.
 
-### Setup Steps
+## Setup Steps
 
-#### 1. Install BlueBubbles Server
+### 1. Install BlueBubbles Server
 
 Download `.dmg` from [GitHub releases](https://github.com/BlueBubblesApp/BlueBubbles-Server/releases). App is unsigned -- right-click > Open to bypass Gatekeeper, or allow in System Settings > Privacy & Security.
 
-#### 2. Grant macOS Permissions
+### 2. Grant macOS Permissions
 
 In **System Settings > Privacy & Security**, grant BlueBubbles:
 - **Full Disk Access** (read chat.db)
@@ -39,7 +34,7 @@ In **System Settings > Privacy & Security**, grant BlueBubbles:
 - **Automation** (AppleScript -> Messages.app)
 - **Contacts** (optional, for name resolution)
 
-#### 3. Configure BlueBubbles Server Wizard
+### 3. Configure BlueBubbles Server Wizard
 
 - **Server Password** -- required for API auth; always set one
 - **Proxy Setup** -- None for local-only (OpenClaw on same Mac)
@@ -47,7 +42,7 @@ In **System Settings > Privacy & Security**, grant BlueBubbles:
 - **Private API** -- skip unless SIP already disabled
 - **Open FindMy on Startup** -- uncheck
 
-#### 4. Configure OpenClaw
+### 4. Configure OpenClaw
 
 ```json5
 {
@@ -62,7 +57,7 @@ In **System Settings > Privacy & Security**, grant BlueBubbles:
 }
 ```
 
-#### 5. Start and Pair
+### 5. Start and Pair
 
 ```bash
 openclaw gateway
@@ -70,7 +65,7 @@ openclaw pairing list bluebubbles
 openclaw pairing approve bluebubbles <CODE>
 ```
 
-### Private API Decision
+## Private API Decision
 
 Requires **disabling SIP** -- significant security trade-off. Never disable SIP just for basic send/receive.
 
@@ -84,7 +79,7 @@ Requires **disabling SIP** -- significant security trade-off. Never disable SIP 
 
 **Recommendation**: Start without. Add later if needed.
 
-### Quick Reference
+## Quick Reference
 
 | Question | Answer |
 |----------|--------|
@@ -93,7 +88,7 @@ Requires **disabling SIP** -- significant security trade-off. Never disable SIP 
 | Just send/receive? | Skip Private API |
 | Need reactions/edit/unsend? | Requires Private API (SIP disabled) |
 
-### Access Control (dmPolicy)
+## Access Control (dmPolicy)
 
 | Policy | Behavior |
 |--------|----------|
@@ -102,7 +97,7 @@ Requires **disabling SIP** -- significant security trade-off. Never disable SIP 
 | `open` | Accepts all DMs |
 | `disabled` | Blocks all DMs |
 
-### Headless/VM Workaround
+## Headless/VM Workaround
 
 Messages.app can go idle on headless setups. Use a LaunchAgent to poke it every 5 minutes:
 
@@ -119,7 +114,7 @@ end try
 
 See `~/src/openclaw/docs/channels/bluebubbles.md` for the full LaunchAgent plist.
 
-### Integration
+## Integration
 
 - **Related Skills**: [OpenClaw Installation](../openclaw-installation/SKILL.md)
 - **OpenClaw Docs**: `~/src/openclaw/docs/channels/bluebubbles.md`

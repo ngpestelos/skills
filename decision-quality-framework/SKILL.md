@@ -2,6 +2,8 @@
 name: decision-quality-framework
 description: Unified framework for bias identification, pre-mortem failure analysis, and process-based quality scoring. Evaluates decisions through cognitive bias audit, prospective hindsight, and six-dimension scoring independent of outcome. Activates when reviewing decisions, evaluating risks, or assessing reasoning quality.
 allowed-tools: Read, Grep, Glob
+metadata:
+  version: "1.0.0"
 ---
 
 # Decision Quality Framework

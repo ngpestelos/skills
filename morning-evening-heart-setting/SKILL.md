@@ -1,7 +1,8 @@
 ---
 name: morning-evening-heart-setting
 description: "Daily recommitment ritual for maintaining focus on decisive action. Trigger: morning reflection, evening review, set my heart."
-version: 1.3.0
+metadata:
+  version: "1.3.1"
 ---
 
 # Morning/Evening Heart-Setting

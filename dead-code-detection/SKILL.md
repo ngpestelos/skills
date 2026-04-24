@@ -2,6 +2,8 @@
 name: dead-code-detection
 description: "Systematic methodology for identifying orphaned files and dead code after refactoring. Auto-activates when cleaning up after refactoring, verifying old implementations can be safely removed, periodic codebase hygiene, or asking what can be deleted after a feature migration."
 allowed-tools: Read, Grep, Glob, Bash
+metadata:
+  version: "1.0.0"
 ---
 
 # Dead Code Detection

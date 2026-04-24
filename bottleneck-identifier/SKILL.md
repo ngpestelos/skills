@@ -1,6 +1,8 @@
 ---
 name: bottleneck-identifier
 description: "Systematic diagnostic for finding THE single constraint limiting system performance. Based on Goldratt's Theory of Constraints. Trigger keywords: bottleneck, constraint, limiting factor, throughput, stuck, what's blocking, where to focus."
+metadata:
+  version: "1.0.0"
 ---
 
 # Bottleneck Identifier
@@ -28,8 +30,3 @@ All other elements support the constraint. Don't optimize non-constraints — it
 Only after exploiting and subordinating: invest in, add resources to, or redesign the constraint. Then the bottleneck shifts — return to Step 1.
 
 **Watch for sacred cow blindness** — refusing to see constraints in cherished processes or beliefs.
-
-## Optimization History
-
-- **March 13, 2026**: Five-step optimizer pass 1. 155 → 52 lines (66%).
-- **April 1, 2026**: Five-step optimizer pass 2. Deleted Goldratt quote (restated by steps), Map the System (generic), Repeat (obvious), 3/4 anti-patterns (restate steps). 7 → 5 steps. 52 → 22 lines (58%).
