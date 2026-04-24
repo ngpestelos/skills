@@ -13,7 +13,7 @@
       "name": "action-clarity-loop",
       "source": "./action-clarity-loop",
       "description": "Generate clarity through action rather than waiting for perfect understanding. Execute minimum viable actions to receive feedback unavailable through planning alone. Auto-activates when user is stuck in analysis paralysis, waiting for clarity, or asking how to proceed. Trigger keywords: action clarity, clarity through action, start before ready, iterate over plan, minimum viable action.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": {
         "name": "Nestor Pestelos"
       },
