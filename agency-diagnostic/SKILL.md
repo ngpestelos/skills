@@ -1,6 +1,8 @@
 ---
 name: agency-diagnostic
 description: "Unified diagnostic for detecting agency blindness, Low Agency Traps, and internal obstacle voices. Prescribes immediate action antidotes. Trigger keywords: stuck, can't, blocked, paralyzed, what's stopping me, agency, low agency, procrastination, fear, doubt."
+metadata:
+  version: "1.0.1"
 ---
 
 # Agency Diagnostic
@@ -48,8 +50,3 @@ Capture: "I can't [action] because [constraint]." Then apply:
 ## Always end with:
 
 **"What ONE thing can you do in the next 5 minutes?"**
-
-## Optimization History
-
-- **March 13, 2026**: Five-step optimizer pass 1. 334 → 72 lines (78%).
-- **April 1, 2026**: Five-step optimizer pass 2. Compressed blindness to intro + pattern table, deleted audit process (antidotes in table), deleted cycle note (restated everywhere), 4/6 key rules (implicit), sources. 72 → 38 lines (47%).

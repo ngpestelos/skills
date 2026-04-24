@@ -142,7 +142,7 @@
       "name": "activerecord-query-performance-patterns",
       "source": "./activerecord-query-performance-patterns",
       "description": "Three query performance techniques preventing 10-1000x PostgreSQL degradation: ILIKE index usage, two-phase DISTINCT optimization, and UNION ALL OR-splitting.",
-      "version": "2.0.0",
+      "version": "2.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -160,7 +160,7 @@
       "name": "activerecord-transaction-boundary-optimization",
       "source": "./activerecord-transaction-boundary-optimization",
       "description": "Optimizes ActiveRecord transaction boundaries by moving read operations outside transaction blocks to reduce lock time and contention.",
-      "version": "2.0.0",
+      "version": "2.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -196,7 +196,7 @@
       "name": "adversarial-plan-hardening",
       "source": "./adversarial-plan-hardening",
       "description": "Iterative adversarial review loop for implementation plans. Run passes, resolve BLOCKERs with version bumps, fold WARNINGs in-place, stop at 0 BLOCKERs, audit necessity, prepare handoff brief. Trigger keywords: red-team loop, multiple passes, harden plan, plan hardening, adversarial refinement, clean pass, necessity audit, handoff brief.",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -209,7 +209,7 @@
       "name": "agency-diagnostic",
       "source": "./agency-diagnostic",
       "description": "Unified diagnostic for detecting agency blindness, Low Agency Traps, and internal obstacle voices. Prescribes immediate action antidotes. Trigger keywords: stuck, can't, blocked, paralyzed, what's stopping me, agency, low agency, procrastination, fear, doubt.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -222,7 +222,7 @@
       "name": "agent-pipeline-design",
       "source": "./agent-pipeline-design",
       "description": "Architectural patterns for multi-phase agent pipelines that survive context limits, delegate safely, and gate on quality. Applies when designing skills that orchestrate plan\u2192execute\u2192review flows.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -235,7 +235,7 @@
       "name": "ai-coding-tool-portability",
       "source": "./ai-coding-tool-portability",
       "description": "Guides portable configuration across Claude Code and OpenCode. Covers feature mapping, command mirroring via symlinks and home-manager, architecture layout.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -253,7 +253,7 @@
       "name": "allostatic-load-monitor",
       "source": "./allostatic-load-monitor",
       "description": "Track cumulative stress burden distinguishing Type 1 (energy deficit) from Type 2 (ongoing conflict). Trigger keywords: burnout, stress load, exhausted, overwhelmed, chronic stress, allostatic, wear and tear.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },

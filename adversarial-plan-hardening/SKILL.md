@@ -1,7 +1,8 @@
 ---
 name: adversarial-plan-hardening
 description: Iterative adversarial review loop for implementation plans. Run passes, resolve BLOCKERs with version bumps, fold WARNINGs in-place, stop at 0 BLOCKERs, audit necessity, prepare handoff brief. Trigger keywords: red-team loop, multiple passes, harden plan, plan hardening, adversarial refinement, clean pass, necessity audit, handoff brief.
-version: 1.2.0
+metadata:
+  version: "1.2.1"
 ---
 
 # Adversarial Plan Hardening

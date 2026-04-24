@@ -5,7 +5,7 @@ license: MIT
 metadata:
   category: rails
   author: ngpestelos
-  version: "2.0.0"
+  version: "2.0.1"
 ---
 
 # ActiveRecord Query Performance Patterns

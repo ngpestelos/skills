@@ -2,7 +2,7 @@
 name: ai-coding-tool-portability
 description: "Guides portable configuration across Claude Code and OpenCode. Auto-activates when adding commands, mirroring configuration, or deciding where to put tool-specific features. Covers feature mapping, command mirroring via symlinks and home-manager, architecture layout. Trigger keywords: opencode, portability, commands mirroring, AGENTS.md, tool switching."
 metadata:
-  version: 1.0.0
+  version: "1.0.1"
 ---
 
 # AI Coding Tool Portability

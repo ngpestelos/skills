@@ -1,7 +1,8 @@
 ---
 name: agent-pipeline-design
 description: "Architectural patterns for multi-phase agent pipelines that survive context limits, delegate safely, and gate on quality. Applies when designing skills that orchestrate plan→execute→review flows."
-version: 1.1.0
+metadata:
+  version: "1.1.1"
 ---
 
 # Designing Agent Pipelines

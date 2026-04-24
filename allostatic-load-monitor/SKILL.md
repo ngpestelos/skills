@@ -1,6 +1,8 @@
 ---
 name: allostatic-load-monitor
 description: "Track cumulative stress burden distinguishing Type 1 (energy deficit) from Type 2 (ongoing conflict). Trigger keywords: burnout, stress load, exhausted, overwhelmed, chronic stress, allostatic, wear and tear."
+metadata:
+  version: "1.0.1"
 ---
 
 # Allostatic Load Monitor
@@ -30,8 +32,3 @@ description: "Track cumulative stress burden distinguishing Type 1 (energy defic
 | Both | DMN reset, quality social time, nature, professional support |
 
 **Type 1 and Type 2 co-occur** — check for both. Fix Type 1 (resources) before addressing Type 2 (conflict).
-
-## Optimization History
-
-- **March 13, 2026**: Five-step optimizer pass 1. 202 → 78 lines (61%).
-- **April 2, 2026**: Five-step optimizer pass 2. Reduced weekly assessment to scoring only, deleted 3/5 rules, source wikilink. 78 → 22 lines (72%).
