@@ -1,13 +1,11 @@
 ---
 name: skill-to-prompt-porter
 description: Port Claude Code skills into standalone prompts for external LLMs (Grok, ChatGPT, Gemini) — methodology extraction, infrastructure stripping, modality adaptation
-version: 1.0.0
-trigger: portable prompt, Grok prompt, export skill, standalone prompt, external LLM, ChatGPT prompt
+metadata:
+  version: "1.0.1"
 ---
 
 # Porting Skills to Standalone LLM Prompts
-
-Transform Claude Code skills into self-contained prompts that work on any LLM platform.
 
 ## Core Principles
 

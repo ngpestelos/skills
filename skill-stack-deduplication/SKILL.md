@@ -2,7 +2,7 @@
 name: skill-stack-deduplication
 description: "Eliminates content duplication across Claude Code agent/skill/command file layers by establishing clear separation of concerns. Auto-activates when reviewing skill architecture, auditing agent definitions, refactoring command files, or when duplicate content detected across .claude/ files. Covers reference hierarchy design, responsibility assignment, content deduplication, cross-reference verification. Trigger keywords: deduplication, separation of concerns, skill stack, agent refactor, command refactor, duplicate content, layer responsibility, reference hierarchy, context window optimization."
 metadata:
-  version: 1.0.1
+  version: "1.0.2"
 ---
 
 # Skill Stack Deduplication

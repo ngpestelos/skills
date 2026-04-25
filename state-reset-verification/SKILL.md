@@ -1,8 +1,8 @@
 ---
 name: state-reset-verification
-description: Safe methodology for verifying deduplication works independently of state files through backup-reset-test-restore workflow
-version: 1.0.0
-trigger: state reset, verify deduplication, state file testing, filesystem deduplication, state independence, reset verification
+description: "Safe methodology for verifying deduplication works independently of state files through backup-reset-test-restore workflow. Trigger keywords: state reset, verify deduplication, state file testing, filesystem deduplication, state independence, reset verification."
+metadata:
+  version: "1.0.1"
 ---
 
 # State Reset Verification for Deduplication Systems

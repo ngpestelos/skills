@@ -1,19 +1,11 @@
 ---
 name: skill-pattern-alignment
-version: 1.1
-description: "Refactor a skill to match an existing reference skill's structure, conventions, and patterns."
-triggers:
-  - "match this skill to"
-  - "align this skill with"
-  - "refactor to match"
-  - "use same pattern as"
-  - "skills should be consistent"
+version: 1.1.1
+description: "Refactor a skill to match an existing reference skill's structure, conventions, and patterns. Trigger keywords: match this skill to, align this skill with, refactor to match, use same pattern as, skills should be consistent."
 allowed-tools: Read, Grep, Write
 ---
 
 # Skill Pattern Alignment
-
-Refactor a skill to match an existing reference skill's structure and conventions.
 
 ## Steps
 

@@ -1,15 +1,10 @@
 ---
 name: skill-registration-troubleshooting
 description: "Diagnose why a Hermes skill isn't appearing in the skill index despite having a valid SKILL.md file. Auto-activates when skills aren't discovered after symlink creation, skill_view fails for existing skills, or skill count doesn't increase. Covers circular symlink detection, directory structure validation, and skill loader behavior."
-version: 1.0.0
-author: Nestor Pestelos
-license: MIT
-allowed-tools: [read_file, terminal]
+allowed-tools: Read, Bash
 metadata:
+  version: "1.0.1"
   category: hermes
-  hermes:
-    tags: [skills, troubleshooting, registration, symlink, discovery]
-    related_skills: [skills-audit]
 ---
 
 # Skill Registration Troubleshooting
@@ -95,12 +90,8 @@ readlink -f ~/.claude/skills/<skill-name>
 
 - Skills are indexed at **gateway startup**
 - New symlinks require **restart** to appear
-- Circular symlinks cause **silent skipping** (skill excluded from index)
+- Circular symlinks cause **silent skipping** — loader traverses recursively; any symlink cycle silently excludes the skill with no error messages
 - Invalid YAML causes **partial loading** or errors
-
-## Key Insight
-
-The skill loader traverses directories recursively. Any symlink that creates a cycle will cause the skill to be silently excluded from the index without error messages.
 
 ## Recovery Protocol
 

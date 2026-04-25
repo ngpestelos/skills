@@ -1,13 +1,11 @@
 ---
 name: skill-decomposition-methodology
-version: 2.0
+version: 2.0.1
 description: "Methodology for refactoring bloated skills (>500 lines) into focused sub-skills. Activates when /skills-audit flags BLOAT or LARGE, or when a skill mixes 3+ distinct domains."
 allowed-tools: Read, Grep, Glob
 ---
 
 # Skill Decomposition Methodology
-
-> **Purpose**: Decompose oversized skills into focused sub-skills without losing content or breaking cross-references.
 
 ## Trigger
 

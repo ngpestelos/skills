@@ -1,6 +1,8 @@
 ---
 name: source-verification
 description: "Verifies external sources cited in drafts before publication. Prevents circular verification via WebFetch and enforces evidence tiers for attributed claims. Trigger keywords: verify sources, fact-check, cited claim, publication ready, source URL, WebFetch verification, dead link."
+metadata:
+  version: "1.0.1"
 ---
 
 # Source Verification
@@ -31,7 +33,3 @@ Verify every attributed claim traces to a live, independently confirmable source
 |-------|--------|------|--------|--------|
 |       |        |      |        |        |
 ```
-
-## Optimization History
-
-- 2026-04-05: Five-step optimizer. Deleted: detection signals block (vague), redundant "Rule" summary under WebFetch Trap, Pre-Publication Checklist (fully covered by Tiers + Protocol), example rows in Verification Table. Folded "user must visit URL" into Tier 1. Moved Tiers before Protocol. 51→38 lines (-25%).

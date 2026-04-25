@@ -1,11 +1,11 @@
 ---
 name: skill-tree-generator
 description: "Generates prerequisite dependency trees for efficiently learning or re-learning a concept. Maps trunk (fundamentals) → branches (core skills) → leaves (applications) with learning sequence and ZPD calibration. Trigger keywords: skill tree, learning path, prerequisites, what do I need to learn first, how to learn, study plan, dependency map, learning order, re-learn, brush up on."
+metadata:
+  version: "1.0.1"
 ---
 
 # Skill Tree Generator
-
-Given a target concept or skill, generate a prerequisite dependency tree enabling efficient learning or re-learning.
 
 ## Theoretical Foundation
 

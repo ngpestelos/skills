@@ -2057,7 +2057,7 @@
       "name": "skill-decomposition-methodology",
       "source": "./skill-decomposition-methodology",
       "description": "Systematic methodology for refactoring bloated skills (>500 lines) into focused sub-skills.",
-      "version": "2.0",
+      "version": "2.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -2075,7 +2075,7 @@
       "name": "skill-pattern-alignment",
       "source": "./skill-pattern-alignment",
       "description": "Refactor a skill to match an existing reference skill's structure, conventions, and patterns.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -2088,7 +2088,7 @@
       "name": "skill-registration-troubleshooting",
       "source": "./skill-registration-troubleshooting",
       "description": "Diagnose why a Hermes skill isn't appearing in the skill index despite having a valid SKILL.md file. Auto-activates when skills aren't discovered after symlink creation, skill_view fails for existing skills, or skill count doesn't increase. Covers circular symlink detection, directory structure validation, and skill loader behavior.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -2101,7 +2101,7 @@
       "name": "skill-stack-deduplication",
       "source": "./skill-stack-deduplication",
       "description": "Eliminates content duplication across Claude Code agent/skill/command layers by establishing clear separation of concerns and reference hierarchies.",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -2119,7 +2119,7 @@
       "name": "skill-to-prompt-porter",
       "source": "./skill-to-prompt-porter",
       "description": "Port Claude Code skills into standalone prompts for external LLMs (Grok, ChatGPT, Gemini) — methodology extraction, infrastructure stripping, modality adaptation",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -2132,7 +2132,7 @@
       "name": "skill-tree-generator",
       "source": "./skill-tree-generator",
       "description": "Generates prerequisite dependency trees for efficiently learning or re-learning a concept. Maps trunk (fundamentals) → branches (core skills) → leaves (applications) with learning sequence and ZPD calibration. Trigger keywords: skill tree, learning path, prerequisites, what do I need to learn first, how to learn, study plan, dependency map, learning order, re-learn, brush up on.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -2163,7 +2163,7 @@
       "name": "source-verification",
       "source": "./source-verification",
       "description": "Verifies external sources cited in drafts before publication. Prevents circular verification via WebFetch and enforces evidence tiers for attributed claims. Trigger keywords: verify sources, fact-check, cited claim, publication ready, source URL, WebFetch verification, dead link.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -2176,7 +2176,7 @@
       "name": "state-reset-verification",
       "source": "./state-reset-verification",
       "description": "Safe methodology for verifying deduplication works independently of state files through backup-reset-test-restore workflow",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
