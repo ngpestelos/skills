@@ -5,7 +5,7 @@ license: MIT
 compatibility: Ruby on Rails applications with view rendering performance issues.
 metadata:
   author: ngpestelos
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # Memoizing Model Methods for View Performance

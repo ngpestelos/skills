@@ -2,7 +2,7 @@
 name: neovim-configuration
 description: "Guides Neovim configuration through home-manager programs.neovim module. Auto-activates when working with Neovim plugins, themes, nvim-tree, lualine, or LSP setup in flake.nix. Covers plugin management, file explorer configuration, theme consistency, duplicate installation prevention, and PATH issues. Trigger keywords: neovim, nvim-tree, lualine, colorscheme, theme, plugin, extraLuaConfig, home-manager, buildInputs, devShells, direnv, duplicate, PATH, theme not found, buffer, NvimTreeFocus, NvimTreeResize."
 metadata:
-  version: 1.0.0
+  version: "1.0.1"
 ---
 
 # Configuring Neovim in Nix Home-Manager

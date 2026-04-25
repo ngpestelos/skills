@@ -1,8 +1,9 @@
 ---
 name: multi-panel-formdata-sync
-version: 2.0
 description: "Fixes the querySelector('form') first-form bug in controllers wrapping repeated panels with per-item forms. Trigger: wrong form submitted, hidden field from first panel, querySelector form first, FormData sync."
 allowed-tools: Read, Grep, Glob, Bash
+metadata:
+  version: "2.0.1"
 ---
 
 # Multi-Panel FormData Sync

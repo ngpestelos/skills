@@ -1,6 +1,8 @@
 ---
 name: life-reset-protocol
 description: "Structured 1-day protocol for radical life clarity through morning psychological excavation, mid-day autopilot interruption, and evening synthesis. Based on Dan Koe's framework. Trigger keywords: life reset, feel stuck, need direction, what do I want, clarity, life change, reset my life, start over, find my path."
+metadata:
+  version: "1.0.1"
 ---
 
 # Life Reset Protocol

@@ -2,14 +2,12 @@
 name: nix-darwin-zsh-completion
 description: "Fixes zsh compinit insecure directories warning in nix-darwin. Auto-activates when troubleshooting compinit warnings, zsh completion issues, or /etc/zshrc generation. Covers enableGlobalCompInit, completionInit differences between nix-darwin and home-manager, system vs user zsh init ordering. Trigger keywords: compinit, insecure directories, compaudit, enableGlobalCompInit, completionInit, /etc/zshrc, zsh completion, compinit -u."
 metadata:
-  version: 1.0.0
+  version: "1.0.1"
 ---
 
 # Fixing zsh compinit Insecure Directories Warning
 
-## Instructions
-
-### Core Principles
+## Core Principles
 
 1. `/etc/zshrc` (nix-darwin) runs **before** `~/.zshrc` (home-manager) — system-level compinit triggers the warning before home-manager can fix it
 2. nix-darwin and home-manager have **different** zsh option names — don't confuse them

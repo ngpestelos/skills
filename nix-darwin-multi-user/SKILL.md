@@ -2,7 +2,7 @@
 name: nix-darwin-multi-user
 description: "Guides multi-user nix-darwin configuration with home-manager. Auto-activates when adding users, configuring home-manager for multiple accounts, or troubleshooting per-user activation. Covers mkDarwinConfig, sharedSystemModule, activation scripts, home-manager file conflicts, dotted-username flake key escaping, portable rebuild helper. Trigger keywords: multi-user, usernames, mkDarwinConfig, sharedSystemModule, home-manager activation, users.users, agent user, second user, per-user, activation script, .zshrc conflict, unmanaged file, darwin-rebuild alias, rebuild script, flake attribute dots, dotted username, hostname-user output."
 metadata:
-  version: 1.1.0
+  version: "1.1.1"
 ---
 
 # Configuring Multi-User nix-darwin Systems
@@ -151,7 +151,7 @@ Nix CLI treats `.` as attribute path separator. An output keyed `"ascalon-agent.
 ascalon-agent_nestor_pestelos = mkDarwinConfig { activeUser = "agent.nestor.pestelos"; ... };
 ```
 
-Discovered 2026-04-21 after splitting `darwinConfigurations` into per-user outputs (commit 577b5e2). Error: `flake does not provide attribute 'darwinConfigurations.ascalon-agent.nestor.pestelos.system'`.
+Symptom error: `flake does not provide attribute 'darwinConfigurations.ascalon-agent.nestor.pestelos.system'`.
 
 ### Rebuild alias/script bootstrap chicken-and-egg
 

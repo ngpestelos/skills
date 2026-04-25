@@ -2,6 +2,8 @@
 name: looking-good-vs-being-right
 description: "Surfaces where social pressure is compromising effectiveness. Based on Lynch's insight that investors 'would rather look good than be right.' Auto-activates when user is influenced by others' opinions, worried about perception, or making safe choices. Trigger keywords: social pressure, appearance vs substance, safe choice, conventional wisdom, fear of judgment."
 allowed-tools: Read, Grep, Glob
+metadata:
+  version: "1.0.1"
 ---
 
 # Looking Good vs Being Right Assessment

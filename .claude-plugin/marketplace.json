@@ -1318,7 +1318,7 @@
       "name": "life-reset-protocol",
       "source": "./life-reset-protocol",
       "description": "Structured 1-day protocol for radical life clarity through morning psychological excavation, mid-day autopilot interruption, and evening synthesis. Based on Dan Koe's framework. Trigger keywords: life reset, feel stuck, need direction, what do I want, clarity, life change, reset my life, start over, find my path.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1331,7 +1331,7 @@
       "name": "looking-good-vs-being-right",
       "source": "./looking-good-vs-being-right",
       "description": "Surfaces where social pressure is compromising effectiveness. Based on Lynch's insight that investors 'would rather look good than be right.' Auto-activates when user is influenced by others' opinions, worried about perception, or making safe choices. Trigger keywords: social pressure, appearance vs substance, safe choice, conventional wisdom, fear of judgment.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1344,7 +1344,7 @@
       "name": "model-method-memoization-view-performance",
       "source": "./model-method-memoization-view-performance",
       "description": "Memoize model methods called multiple times per object during view rendering to reduce Ruby CPU and memory allocations.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1375,7 +1375,7 @@
       "name": "multi-panel-formdata-sync",
       "source": "./multi-panel-formdata-sync",
       "description": "Fixes the querySelector('form') first-form bug when a Stimulus controller wraps a repeated list where each panel has its own hidden-field form.",
-      "version": "2.0",
+      "version": "2.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1393,7 +1393,7 @@
       "name": "neovim-configuration",
       "source": "./neovim-configuration",
       "description": "Guides Neovim configuration through home-manager programs.neovim module. Covers plugin management, nvim-tree, theme consistency, buffer navigation, and PATH issues.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1424,7 +1424,7 @@
       "name": "nix-darwin-multi-user",
       "source": "./nix-darwin-multi-user",
       "description": "Guides multi-user nix-darwin configuration with home-manager. Covers mkDarwinConfig, sharedSystemModule, activation scripts, home-manager file conflicts.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1442,7 +1442,7 @@
       "name": "nix-darwin-zsh-completion",
       "source": "./nix-darwin-zsh-completion",
       "description": "Fixes zsh compinit insecure directories warning in nix-darwin. Covers enableGlobalCompInit vs completionInit differences between nix-darwin and home-manager.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1460,7 +1460,7 @@
       "name": "nix-github-release-packaging",
       "source": "./nix-github-release-packaging",
       "description": "Packages pre-built binaries from GitHub releases as Nix derivations for home-manager. Covers stdenv.mkDerivation, fetchurl, SHA256 hash workflow.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },

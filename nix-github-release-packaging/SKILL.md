@@ -2,12 +2,10 @@
 name: nix-github-release-packaging
 description: "Packages pre-built binaries from GitHub releases as Nix derivations for home-manager. Auto-activates when adding CLI tools from GitHub, creating Nix packages for Go/Rust binaries, or troubleshooting fetchurl hash mismatches. Covers stdenv.mkDerivation with fetchurl, SHA256 hash workflow, Homebrew cask naming collisions, darwin_arm64 targeting. Trigger keywords: GitHub release, pre-built binary, fetchurl, stdenv.mkDerivation, hash mismatch, nix-prefetch-url, homebrew cask, Go CLI, Rust CLI, home.packages."
 metadata:
-  version: 1.0.0
+  version: "1.0.1"
 ---
 
 # Packaging GitHub Release Binaries for Nix
-
-Package pre-built CLI tools from GitHub releases into home-manager via Nix derivations.
 
 ## Decision Tree
 
