@@ -2,11 +2,9 @@
 name: hidden-logic-analyst
 description: "Identifies derived variables not explicitly written down that determine winning vs losing in any domain. Auto-activates for competitive analysis, strategic advantage identification, or hidden variable discovery. Trigger keywords: hidden logic, derived variables, winning factors, hidden advantage, competitive edge, what determines winning."
 allowed-tools: Read, Grep, Glob
+metadata:
+  version: "1.0.1"
 ---
-
-# Hidden Logic Analyst
-
-Identify derived variables not explicitly written down that determine winning vs. losing in any domain.
 
 **Core Principle**: "Everything has value equal to the amount it increases your chance to win. If it doesn't make you more likely to win, it has no value."
 

@@ -3,10 +3,8 @@ name: hook-state-cascade-patterns
 description: "Reusable patterns for stateful Claude Code hooks: priority cascade routing, per-route daily cooldown, CWD-first state fallback, portable date parsing (GNU/BSD), live file verification. Trigger keywords: hook cascade, cooldown, route priority, state fallback, date epoch portable, hook state, daily limit."
 metadata:
   category: claude-code
-  version: "2.1.0"
+  version: "2.1.1"
 ---
-
-# Stateful Hook Cascade Patterns
 
 **Principles**: First match wins (exit after first suggestion). Daily limit per route via JSON cooldown (not hourly). Verify stale state against filesystem before suggesting.
 

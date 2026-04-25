@@ -1196,7 +1196,7 @@
       "name": "hermes-profiles-version-control",
       "source": "./hermes-profiles-version-control",
       "description": "Manage Hermes profiles in git. Move profiles to version control with symlinks. Trigger: hermes profiles git, profile version control, profiles in repo.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1209,7 +1209,7 @@
       "name": "hidden-logic-analyst",
       "source": "./hidden-logic-analyst",
       "description": "Identifies derived variables not explicitly written down that determine winning vs losing in any domain. Auto-activates for competitive analysis, strategic advantage identification, or hidden variable discovery. Trigger keywords: hidden logic, derived variables, winning factors, hidden advantage, competitive edge, what determines winning.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1222,7 +1222,7 @@
       "name": "hook-state-cascade-patterns",
       "source": "./hook-state-cascade-patterns",
       "description": "Reusable patterns for stateful Claude Code hooks: priority cascade routing, per-route daily cooldown, CWD-first state fallback, portable date parsi...",
-      "version": "2.1.0",
+      "version": "2.1.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1240,7 +1240,7 @@
       "name": "image-cascading-fallback",
       "source": "./image-cascading-fallback",
       "description": "Defensive image rendering with automatic fallback from missing/404 URLs to alternative sources and placeholders. Auto-activates for image fallback, 404 handling, S3 missing images, client-side fallback cascade. Trigger keywords: image fallback, 404 detection, missing images, placeholder, cascading URLs, IMG onerror, background-image fallback.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1253,7 +1253,7 @@
       "name": "init-nix-shell",
       "source": "./init-nix-shell",
       "description": "Initialize a nix shell environment with Claude Code in a target project directory. Auto-activates when setting up nix-shell for a project, deploying shell.nix templates, or configuring direnv for Nix. Trigger keywords: init nix shell, nix-shell setup, shell.nix template, direnv nix, nix environment.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1266,7 +1266,7 @@
       "name": "interest-discovery",
       "source": "./interest-discovery",
       "description": "Discover genuine interests through behavioral evidence and conversational exploration. Trigger keywords: what interests me, discover interests, find my passion, interest archaeology, genuine curiosity, deep interest.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1279,7 +1279,7 @@
       "name": "iterative-refinement-workflow",
       "source": "./iterative-refinement-workflow",
       "description": "Systematic workflow for executing, measuring, and refining any work through continuous feedback loops. Auto-activates when user needs continuous improvement, feedback loops, or measurement-driven refinement. Trigger keywords: iterative refinement, execution cycle, continuous improvement, feedback loop, measure iterate improve, refinement workflow.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1292,7 +1292,7 @@
       "name": "knowledge-synthesis-framework",
       "source": "./knowledge-synthesis-framework",
       "description": "Unified framework for cross-domain pattern recognition, paradox exploration, and association surfacing. Combines methodology transfer across domains, productive tension analysis, and connection discovery into a single synthesis practice.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },

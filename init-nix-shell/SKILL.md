@@ -1,11 +1,10 @@
 ---
 name: init-nix-shell
-version: 1.0
 description: "Initialize a nix shell environment with Claude Code in a target project directory. Auto-activates when setting up nix-shell for a project, deploying shell.nix templates, or configuring direnv for Nix. Trigger keywords: init nix shell, nix-shell setup, shell.nix template, direnv nix, nix environment."
 allowed-tools: Read, Grep, Glob, Bash
+metadata:
+  version: "1.0.1"
 ---
-
-# Init Nix Shell
 
 > **Purpose**: Deploy a shell.nix + .envrc template to a target directory for per-project nix shell with Claude Code.
 

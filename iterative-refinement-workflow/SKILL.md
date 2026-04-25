@@ -1,11 +1,9 @@
 ---
 name: iterative-refinement-workflow
 description: "Systematic workflow for executing, measuring, and refining any work through continuous feedback loops. Auto-activates when user needs continuous improvement, feedback loops, or measurement-driven refinement. Trigger keywords: iterative refinement, execution cycle, continuous improvement, feedback loop, measure iterate improve, refinement workflow."
+metadata:
+  version: "1.0.1"
 ---
-
-# Iterative Refinement Workflow
-
-Execute, measure, refine, repeat. Systematic improvement through continuous feedback loops.
 
 ## The 4-Step Cycle
 

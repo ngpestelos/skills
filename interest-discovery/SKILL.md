@@ -2,11 +2,9 @@
 name: interest-discovery
 description: "Discover genuine interests through behavioral evidence and conversational exploration. Trigger keywords: what interests me, discover interests, find my passion, interest archaeology, genuine curiosity, deep interest."
 allowed-tools: Read, Grep, Glob
+metadata:
+  version: "1.0.1"
 ---
-
-# Interest Discovery Explorer
-
-Discover genuine interests — fascinations where learning feels like play, not obligation.
 
 ## Method 1: Behavioral Evidence (Primary)
 

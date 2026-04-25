@@ -1,16 +1,14 @@
 ---
 name: hermes-profiles-version-control
-version: 1.1.0
 description: "Manage Hermes profiles in git. Move profiles to version control with symlinks. Trigger: hermes profiles git, profile version control, profiles in repo."
 author: Hermes Agent
 license: MIT
 platforms: [any]
 metadata:
+  version: "1.1.1"
   hermes:
     tags: [hermes, profiles, version-control, git, configuration]
 ---
-
-# Hermes Profiles Version Control
 
 Centralize Hermes profiles in git while keeping runtime state local.
 

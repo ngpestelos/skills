@@ -2,11 +2,9 @@
 name: image-cascading-fallback
 description: "Defensive image rendering with automatic fallback from missing/404 URLs to alternative sources and placeholders. Auto-activates for image fallback, 404 handling, S3 missing images, client-side fallback cascade. Trigger keywords: image fallback, 404 detection, missing images, placeholder, cascading URLs, IMG onerror, background-image fallback."
 allowed-tools: Read, Grep, Glob, Edit, Write
+metadata:
+  version: "1.0.1"
 ---
-
-# Image Cascading Fallback Pattern
-
-Defensive image rendering with automatic fallback from missing/404 URLs to alternative sources and placeholders.
 
 ## Server-Side: Fallback URL Generation
 

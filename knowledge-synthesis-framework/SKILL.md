@@ -2,11 +2,9 @@
 name: knowledge-synthesis-framework
 description: Unified framework for cross-domain pattern recognition, paradox exploration, and association surfacing. Combines methodology transfer across domains, productive tension analysis, and connection discovery into a single synthesis practice.
 allowed-tools: Read, Grep, Glob
+metadata:
+  version: "1.0.1"
 ---
-
-# Knowledge Synthesis Framework
-
-Generate insights through three complementary practices: cross-domain pattern recognition, paradox exploration, and systematic association surfacing.
 
 ## Section 1: Cross-Domain Pattern Recognition
 
