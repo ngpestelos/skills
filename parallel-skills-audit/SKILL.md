@@ -1,13 +1,12 @@
 ---
 name: parallel-skills-audit
-version: 1.0
 description: "Triage all skills then spawn parallel agents to deep-audit flagged ones. Auto-activates when batch auditing skills or optimizing multiple skills at once. Trigger keywords: parallel audit, batch audit, audit all skills, bulk optimize skills."
 allowed-tools: Read, Grep, Glob, Bash
+metadata:
+  version: "1.0.1"
 ---
 
 # Parallel Skills Audit
-
-> **Purpose**: Triage all skills, then spawn parallel agents to deep-audit flagged skills.
 
 ## Step 1: Triage
 

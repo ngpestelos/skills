@@ -1,6 +1,8 @@
 ---
 name: nix-managed-plugin-workaround
 description: "Workaround for installing Claude Code plugins when settings.json is a nix-managed symlink. Copies plugin skill files directly instead of using `claude plugin install`. Trigger keywords: plugin install, EACCES, nix symlink, settings.json readonly, plugin skill copy."
+metadata:
+  version: "1.0.1"
 ---
 
 # Installing Claude Code Plugins on Nix-Managed Systems
@@ -35,8 +37,3 @@ When `~/.claude/settings.json` is a nix-darwin symlink, `claude plugin install` 
    ```
 
 4. **Activate**: Run `install.sh` or restart Claude Code. Won't appear in `claude plugin list` — loads as a regular skill. Updates require manual re-clone.
-
-## Optimization History
-
-- **March 18, 2026**: Five-step pass 1. 66 → 42 lines (36%).
-- **April 1, 2026**: Five-step pass 2. Deleted discovery context (restates intro), allowed-tools. 42 → 30 lines (29%).

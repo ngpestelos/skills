@@ -1,6 +1,8 @@
 ---
 name: parallel-git-contention
 description: "Prevents silent incomplete staging when parallel agents run concurrent git operations (git rm, git add, git mv). Auto-activates when spawning multiple agents that modify git-tracked files. Trigger keywords: parallel agents git, concurrent git rm, incomplete staging, git index lock, batch git operations, parallel file deletion."
+metadata:
+  version: "1.0.0"
 ---
 
 # Parallel Git Index Contention
@@ -37,7 +39,3 @@ subprocess.run(['git', 'rm', '--quiet'] + batch, ...)
 for f in files: f.unlink()
 # Then in main session: git add -u "2 Resources/Readwise/Highlights/"
 ```
-
-## Optimization History
-
-- **March 23, 2026**: Created from batch highlight compilation session. 5 agents, 60K files, only 3K staged.

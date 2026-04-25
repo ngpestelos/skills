@@ -2,7 +2,7 @@
 name: nix-template-deployment
 description: "Guides deploying nix-template shell.nix and .envrc to directories for per-directory package availability via direnv. Auto-activates when troubleshooting 'command not found' for Nix packages, setting up dev environments in directories, or working with nix-template. Covers home.packages vs devShell distinction, template customization, direnv activation. Trigger keywords: command not found, shell.nix, .envrc, nix-template, direnv allow, home.packages, devShell, buildInputs, per-directory, package not available."
 metadata:
-  version: 1.0.1
+  version: "1.0.2"
 ---
 
 # Deploying Nix Shell Templates

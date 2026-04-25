@@ -2,7 +2,7 @@
 name: overriding-flake-input-packages
 description: "Guides fixing build failures in external flake inputs by overriding their derivations. Auto-activates when an external package fails to build due to missing dependencies, native compilation errors, or node-gyp failures. Covers overrideAttrs, nativeBuildInputs, buildInputs, node-gyp/Python requirements. Trigger keywords: overrideAttrs, flake input, build failure, node-gyp, python, nativeBuildInputs, better-sqlite3, native addon, install script exited, gyp ERR."
 metadata:
-  version: 1.0.0
+  version: "1.0.1"
 ---
 
 # Overriding External Flake Input Packages

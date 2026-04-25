@@ -2,7 +2,7 @@
 name: nodejs-version-management
 description: "Guides Node.js and npm version management in Nix flakes. Auto-activates when working with nodejs versions, npm upgrades, or version notices. Covers system packages, activation scripts, devShells, version synchronization, pnpm global configuration, runtime resolution for pnpm-installed global scripts. Trigger keywords: nodejs, npm, version, upgrade, nodejs_22, nodejs_23, nodejs_24, npm notice, node version, npm install -g, undefined variable, devShell, direnv, buildInputs, pnpm, corepack, nodePackages, EACCES, nix store immutable, pnpm setup, PNPM_HOME, exec: node: not found, .local/share/pnpm, PATH shadowing, /etc/profiles/per-user, non-interactive shell, gws, firecrawl."
 metadata:
-  version: 1.1.0
+  version: "1.1.1"
 ---
 
 # Managing Node.js Versions in Nix
@@ -125,11 +125,6 @@ activation.installGlobalNpmPackages = lib.hm.dag.entryAfter ["setupPnpm"] ''
   fi
 '';
 ```
-
-### Discoveries
-
-- **Mar 2026**: `@googleworkspace/cli` installed via pnpm failed with `exec: node: not found`. First fix was the wrapper pattern.
-- **Apr 2026**: Wrapper pattern was shadowed by PATH ordering; never ran. Root-cause fix is adding `nodejs` to `home.packages`. Commit: `dotfiles/31fb91a`.
 
 ## Violation Detection
 

@@ -2,13 +2,13 @@
 name: openclaw-installation
 description: "Guides OpenClaw installation from source on Nix-managed macOS. Auto-activates when installing, building, or troubleshooting OpenClaw. Covers prerequisites (pnpm via Nix), cloning, building, onboarding wizard, and daemon setup. Trigger keywords: openclaw, open-claw, pnpm install, pnpm build, ui:build, onboard, install-daemon, gateway daemon, launchd, personal AI assistant. (project)"
 allowed-tools: Read, Grep, Glob, Bash
+metadata:
+  version: "1.0.1"
 ---
 
 # Installing OpenClaw from Source
 
-## Instructions
-
-### Core Principles
+## Core Principles
 
 1. **pnpm via Nix only** — never `npm install -g pnpm` or `corepack enable` on Nix-managed Node.js (EACCES on `/nix/store/`). See [nodejs-version-management](../../nix/nodejs-version-management/SKILL.md).
 2. **Build order**: `ui:build` before `build` — skipping causes incomplete output.

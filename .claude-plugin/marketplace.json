@@ -221,7 +221,7 @@
     {
       "name": "agent-pipeline-design",
       "source": "./agent-pipeline-design",
-      "description": "Architectural patterns for multi-phase agent pipelines that survive context limits, delegate safely, and gate on quality. Applies when designing skills that orchestrate plan\u2192execute\u2192review flows.",
+      "description": "Architectural patterns for multi-phase agent pipelines that survive context limits, delegate safely, and gate on quality. Applies when designing skills that orchestrate plan→execute→review flows.",
       "version": "1.1.1",
       "author": {
         "name": "Nestor Pestelos"
@@ -722,7 +722,7 @@
     {
       "name": "cutting-identifier",
       "source": "./cutting-identifier",
-      "description": "Identify your cutting \u2014 the single decisive action that determines success via scarcity test. Trigger: what's my cutting, decisive action.",
+      "description": "Identify your cutting — the single decisive action that determines success via scarcity test. Trigger: what's my cutting, decisive action.",
       "version": "1.2.2",
       "author": {
         "name": "Nestor Pestelos"
@@ -854,7 +854,7 @@
     {
       "name": "diagnostic-logging-patterns",
       "source": "./diagnostic-logging-patterns",
-      "description": "Strategic diagnostic logging for production debugging. 3-layer logging (controller \u2192 model \u2192 database verification), P0/P1/P2 priority, temporary debug protocol. Trigger keywords: staging bug, test passes production fails, insert_all debugging, parameter not received, debug logging, production debugging, P0 P1 P2 logging.",
+      "description": "Strategic diagnostic logging for production debugging. 3-layer logging (controller → model → database verification), P0/P1/P2 priority, temporary debug protocol. Trigger keywords: staging bug, test passes production fails, insert_all debugging, parameter not received, debug logging, production debugging, P0 P1 P2 logging.",
       "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
@@ -899,7 +899,7 @@
     {
       "name": "document-baseline-preservation",
       "source": "./document-baseline-preservation",
-      "description": "Prevents destructive overwrites of important documents. Auto-activates when rewriting, replacing, or substantially editing existing files \u2014 especially identity documents (CV, profiles), strategic documents, and any file the user may want to compare versions of. Trigger keywords: rewrite, overwrite, replace, redo, new version, update CV, reframe.",
+      "description": "Prevents destructive overwrites of important documents. Auto-activates when rewriting, replacing, or substantially editing existing files — especially identity documents (CV, profiles), strategic documents, and any file the user may want to compare versions of. Trigger keywords: rewrite, overwrite, replace, redo, new version, update CV, reframe.",
       "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
@@ -1478,7 +1478,7 @@
       "name": "nix-managed-plugin-workaround",
       "source": "./nix-managed-plugin-workaround",
       "description": "Workaround for installing Claude Code plugins when settings.json is a nix-managed symlink. Copies plugin skill files directly instead of using `claude plugin install`. Trigger keywords: plugin install, EACCES, nix symlink, settings.json readonly, plugin skill copy.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1491,7 +1491,7 @@
       "name": "nix-template-deployment",
       "source": "./nix-template-deployment",
       "description": "Guides deploying nix-template shell.nix and .envrc to directories for per-directory package availability via direnv. Covers home.packages vs devShell distinction.",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1509,7 +1509,7 @@
       "name": "nodejs-version-management",
       "source": "./nodejs-version-management",
       "description": "Guides Node.js and npm version management in Nix flakes. Covers system packages, activation scripts, devShells, version synchronization, pnpm configuration, runtime resolution for pnpm-installed global scripts.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1540,7 +1540,7 @@
       "name": "openclaw-installation",
       "source": "./openclaw-installation",
       "description": "Guides OpenClaw installation from source on Nix-managed macOS. Auto-activates when installing, building, or troubleshooting OpenClaw. Covers prerequisites (pnpm via Nix), cloning, building, onboarding wizard, and daemon setup. Trigger keywords: openclaw, open-claw, pnpm install, pnpm build, ui:build, onboard, install-daemon, gateway daemon, launchd, personal AI assistant. (project)",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1553,7 +1553,7 @@
       "name": "overriding-flake-input-packages",
       "source": "./overriding-flake-input-packages",
       "description": "Guides fixing build failures in external flake inputs by overriding their derivations with overrideAttrs.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1597,7 +1597,7 @@
       "name": "parallel-skills-audit",
       "source": "./parallel-skills-audit",
       "description": "Triage all skills then spawn parallel agents to deep-audit flagged ones. Auto-activates when batch auditing skills or optimizing multiple skills at once. Trigger keywords: parallel audit, batch audit, audit all skills, bulk optimize skills.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1609,7 +1609,7 @@
     {
       "name": "philippine-cinema-search",
       "source": "./philippine-cinema-search",
-      "description": "Find Philippine movie release dates and cinema info via ClickTheCity \u2014 bypasses Google CAPTCHA issues.",
+      "description": "Find Philippine movie release dates and cinema info via ClickTheCity — bypasses Google CAPTCHA issues.",
       "version": "2.0.1",
       "author": {
         "name": "Nestor Pestelos"
@@ -1985,7 +1985,7 @@
     {
       "name": "seasonal-grief-navigator",
       "source": "./seasonal-grief-navigator",
-      "description": "Navigation strategies for calendar-tied grief patterns \u2014 anniversary grief and seasonal emotional waves. Navigate vs Fix reframing, achievable peace, external-internal plane separation. Trigger keywords: anniversary grief, seasonal sadness, December difficult, why still sad, everything good but sad, grief calendar, recurring sadness, holiday grief.",
+      "description": "Navigation strategies for calendar-tied grief patterns — anniversary grief and seasonal emotional waves. Navigate vs Fix reframing, achievable peace, external-internal plane separation. Trigger keywords: anniversary grief, seasonal sadness, December difficult, why still sad, everything good but sad, grief calendar, recurring sadness, holiday grief.",
       "version": "1.0.0",
       "author": {
         "name": "Nestor Pestelos"
@@ -2017,7 +2017,7 @@
     {
       "name": "session",
       "source": "./session",
-      "description": "Structured dump of the current conversation session \u2014 files read and written, searches performed, tools invoked, agents spawned, and open items. Omits empty sections for a concise overview. Auto-activates when asking for session summary, context dump, or what tools were used. Trigger keywords: session, session context, session dump, what did we do, files touched, session summary, tools used, context dump.",
+      "description": "Structured dump of the current conversation session — files read and written, searches performed, tools invoked, agents spawned, and open items. Omits empty sections for a concise overview. Auto-activates when asking for session summary, context dump, or what tools were used. Trigger keywords: session, session context, session dump, what did we do, files touched, session summary, tools used, context dump.",
       "version": "1.0.0",
       "author": {
         "name": "Nestor Pestelos"
@@ -2118,7 +2118,7 @@
     {
       "name": "skill-to-prompt-porter",
       "source": "./skill-to-prompt-porter",
-      "description": "Port Claude Code skills into standalone prompts for external LLMs (Grok, ChatGPT, Gemini) \u2014 methodology extraction, infrastructure stripping, modality adaptation",
+      "description": "Port Claude Code skills into standalone prompts for external LLMs (Grok, ChatGPT, Gemini) — methodology extraction, infrastructure stripping, modality adaptation",
       "version": "1.0.0",
       "author": {
         "name": "Nestor Pestelos"
@@ -2131,7 +2131,7 @@
     {
       "name": "skill-tree-generator",
       "source": "./skill-tree-generator",
-      "description": "Generates prerequisite dependency trees for efficiently learning or re-learning a concept. Maps trunk (fundamentals) \u2192 branches (core skills) \u2192 leaves (applications) with learning sequence and ZPD calibration. Trigger keywords: skill tree, learning path, prerequisites, what do I need to learn first, how to learn, study plan, dependency map, learning order, re-learn, brush up on.",
+      "description": "Generates prerequisite dependency trees for efficiently learning or re-learning a concept. Maps trunk (fundamentals) → branches (core skills) → leaves (applications) with learning sequence and ZPD calibration. Trigger keywords: skill tree, learning path, prerequisites, what do I need to learn first, how to learn, study plan, dependency map, learning order, re-learn, brush up on.",
       "version": "1.0.0",
       "author": {
         "name": "Nestor Pestelos"
@@ -2263,7 +2263,7 @@
     {
       "name": "system-purpose-auditor",
       "source": "./system-purpose-auditor",
-      "description": "Evaluates systems by what they actually DO, not stated intentions \u2014 Stafford Beer's POSIWID principle. Diagnoses intention-reality gaps in organizations, habits, and workflows. Trigger keywords: POSIWID, system purpose, intention vs reality, what it actually does, stated vs actual, system audit.",
+      "description": "Evaluates systems by what they actually DO, not stated intentions — Stafford Beer's POSIWID principle. Diagnoses intention-reality gaps in organizations, habits, and workflows. Trigger keywords: POSIWID, system purpose, intention vs reality, what it actually does, stated vs actual, system audit.",
       "version": "1.0.0",
       "author": {
         "name": "Nestor Pestelos"

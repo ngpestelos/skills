@@ -1,11 +1,11 @@
 ---
 name: parallel-development-strategy
 description: "Build features and foundation simultaneously through iterative refinement. Maintain 'best possible product at every moment.' Sketch-to-detail approach ensures completeness and shippability throughout. Trigger keywords: parallel development, breadth first, sketch to detail, MVP strategy, all features simultaneously, minimum viable product, product steering."
+metadata:
+  version: "1.0.0"
 ---
 
 # Parallel Development Strategy
-
-Build features and foundation simultaneously. Maintain "best possible product at every moment."
 
 ## The Sketch-to-Detail Metaphor
 
