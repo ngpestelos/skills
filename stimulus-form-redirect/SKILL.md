@@ -1,6 +1,8 @@
 ---
 name: stimulus-form-redirect
 description: "Replace AJAX + DOM manipulation with form submission + server redirect. Trigger keywords: form submission redirect, fetch to form submit, DOM manipulation removal, window.location.href, simplify Stimulus controller, handleSuccess pattern, AJAX to redirect, bulk form submit."
+metadata:
+  version: "1.0.1"
 ---
 
 # Stimulus Form Redirect

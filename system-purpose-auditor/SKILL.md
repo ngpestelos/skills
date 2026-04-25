@@ -1,6 +1,8 @@
 ---
 name: system-purpose-auditor
 description: "Evaluates systems by what they actually DO, not stated intentions — Stafford Beer's POSIWID principle. Diagnoses intention-reality gaps in organizations, habits, and workflows. Trigger keywords: POSIWID, system purpose, intention vs reality, what it actually does, stated vs actual, system audit."
+metadata:
+  version: "1.0.1"
 ---
 
 # System Purpose Auditor (POSIWID)

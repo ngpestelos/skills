@@ -1,8 +1,8 @@
 ---
 name: subagent-driven-development
-description: Execute implementation plans by dispatching fresh subagents per task with two-stage review (spec compliance then code quality)
-version: 1.1.0
-trigger: execute plan, dispatch subagents, parallel implementation, plan execution, delegate tasks
+description: "Execute implementation plans by dispatching fresh subagents per task with two-stage review (spec compliance then code quality). Trigger keywords: execute plan, dispatch subagents, parallel implementation, plan execution, delegate tasks."
+metadata:
+  version: "1.1.1"
 ---
 
 # Subagent-Driven Development

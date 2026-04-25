@@ -2189,7 +2189,7 @@
       "name": "static-html-app-development",
       "source": "./static-html-app-development",
       "description": "Patterns for building and testing static HTML/CSS/JS apps deployed to Cloudflare Pages. Prevents file:// localStorage trap, provides browser-based test suite pattern. Auto-activates when building static sites, using open index.html, generating file:// URLs, debugging localStorage issues, or creating vanilla JS apps. Trigger keywords: static site, vanilla JS, localStorage blocked, file:// URL, browser test, Cloudflare Pages app, open index.html.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -2202,7 +2202,7 @@
       "name": "steel-manning-technique",
       "source": "./steel-manning-technique",
       "description": "Present the strongest, most charitable version of opposing arguments before engaging. Manual protocol for live discussions, LLM-assisted variant for complex decisions.",
-      "version": "2.0.0",
+      "version": "2.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -2215,7 +2215,7 @@
       "name": "stimulus-controller-integration",
       "source": "./stimulus-controller-integration",
       "description": "Stimulus controller patterns for AJAX initialization, CustomEvent communication, and controller reuse.",
-      "version": "2.1.0",
+      "version": "2.1.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -2233,7 +2233,7 @@
       "name": "stimulus-form-redirect",
       "source": "./stimulus-form-redirect",
       "description": "Replace AJAX + DOM manipulation with form submission + server redirect.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -2250,8 +2250,8 @@
     {
       "name": "subagent-driven-development",
       "source": "./subagent-driven-development",
-      "description": "Execute implementation plans by dispatching fresh subagents per task with two-stage review (spec compliance then code quality)",
-      "version": "1.1.0",
+      "description": "Execute implementation plans by dispatching fresh subagents per task with two-stage review (spec compliance then code quality). Trigger keywords: execute plan, dispatch subagents, parallel implementation, plan execution, delegate tasks.",
+      "version": "1.1.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -2264,7 +2264,7 @@
       "name": "system-purpose-auditor",
       "source": "./system-purpose-auditor",
       "description": "Evaluates systems by what they actually DO, not stated intentions — Stafford Beer's POSIWID principle. Diagnoses intention-reality gaps in organizations, habits, and workflows. Trigger keywords: POSIWID, system purpose, intention vs reality, what it actually does, stated vs actual, system audit.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -2276,8 +2276,8 @@
     {
       "name": "systems-design-diagnostic",
       "source": "./systems-design-diagnostic",
-      "description": "Analyze projects, products, or organizations against four systems design archetypes that predict failure patterns (apenwarr/Freeman/Brooks/Christensen)",
-      "version": "1.0.0",
+      "description": "Analyze projects, products, or organizations against four systems design archetypes that predict failure patterns (apenwarr/Freeman/Brooks/Christensen). Trigger keywords: systems design, hidden control, power structure, bootstrap problem, chicken-egg, rewrite proposal, second-system, innovator's dilemma, disruption risk, why projects fail.",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -2289,8 +2289,8 @@
     {
       "name": "technical-pattern-extractor",
       "source": "./technical-pattern-extractor",
-      "description": "Extract and generalize project-specific Rails patterns into reusable skills and knowledge notes",
-      "version": "1.0.0",
+      "description": "Extract and generalize project-specific Rails patterns into reusable skills and knowledge notes. Trigger keywords: extract pattern, generalize skill, port pattern, Rails pattern, technical pattern, reusable pattern.",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },

@@ -1,8 +1,8 @@
 ---
 name: technical-pattern-extractor
-description: Extract and generalize project-specific Rails patterns into reusable skills and knowledge notes
-version: 1.0.0
-trigger: extract pattern, generalize skill, port pattern, Rails pattern, technical pattern, reusable pattern
+description: "Extract and generalize project-specific Rails patterns into reusable skills and knowledge notes. Trigger keywords: extract pattern, generalize skill, port pattern, Rails pattern, technical pattern, reusable pattern."
+metadata:
+  version: "1.0.1"
 ---
 
 # Technical Pattern Extractor

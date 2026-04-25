@@ -1,8 +1,8 @@
 ---
 name: systems-design-diagnostic
-description: Analyze projects, products, or organizations against four systems design archetypes that predict failure patterns (apenwarr/Freeman/Brooks/Christensen)
-version: 1.0.0
-trigger: systems design, hidden control, power structure, bootstrap problem, chicken-egg, rewrite proposal, second-system, innovator's dilemma, disruption risk, why projects fail
+description: "Analyze projects, products, or organizations against four systems design archetypes that predict failure patterns (apenwarr/Freeman/Brooks/Christensen). Trigger keywords: systems design, hidden control, power structure, bootstrap problem, chicken-egg, rewrite proposal, second-system, innovator's dilemma, disruption risk, why projects fail."
+metadata:
+  version: "1.0.1"
 ---
 
 # Systems Design Diagnostic

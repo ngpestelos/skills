@@ -4,7 +4,7 @@ description: "Stimulus controller patterns for AJAX initialization, CustomEvent 
 license: MIT
 metadata:
   author: ngpestelos
-  version: "2.1.0"
+  version: "2.1.1"
 ---
 
 # Stimulus Controller Integration

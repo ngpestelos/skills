@@ -2,6 +2,8 @@
 name: static-html-app-development
 description: "Patterns for building and testing static HTML/CSS/JS apps deployed to Cloudflare Pages. Prevents file:// localStorage trap, provides browser-based test suite pattern. Auto-activates when building static sites, using open index.html, generating file:// URLs, debugging localStorage issues, or creating vanilla JS apps. Trigger keywords: static site, vanilla JS, localStorage blocked, file:// URL, browser test, Cloudflare Pages app, open index.html."
 allowed-tools: Read, Grep, Glob, Bash
+metadata:
+  version: "1.0.1"
 ---
 
 # Static HTML App Development

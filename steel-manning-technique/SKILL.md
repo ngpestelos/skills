@@ -1,13 +1,12 @@
 ---
 name: steel-manning-technique
-version: 2.0
 description: "Present the strongest, most charitable version of opposing arguments before engaging. Manual protocol for live discussions, LLM-assisted variant for complex decisions."
 allowed-tools: Read, Write, Search
+metadata:
+  version: "2.0.1"
 ---
 
 # Steel-Manning Technique
-
-> **Purpose**: Strengthen critical thinking by engaging with the strongest version of opposing views rather than weak caricatures.
 
 **Core Principle**: The opposite of strawmanning. Strengthen the opposing argument — then engage with that stronger version.
 
@@ -97,11 +96,3 @@ For complex decisions or adversarial pressure-testing.
 | Ego Protection | Reframe: finding flaws early is cheap |
 | False Charity | Verify summary is fair with the opponent |
 
----
-
-## Related Skills
-
-- [[Strawman Arguments]] — The fallacy this prevents
-- [[Red Teaming]] — Structured adversarial analysis
-- [[Confirmation Bias]] — The cognitive trap this addresses
-- [[Decision Quality Framework]] — Process-based decision evaluation
