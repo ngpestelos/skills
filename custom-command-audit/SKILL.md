@@ -1,6 +1,8 @@
 ---
 name: custom-command-audit
 description: Systematic methodology for evaluating custom commands for archival by checking skill coverage, unique value, and active usage. Auto-activates when auditing commands, reviewing command inventory, cleaning up commands, retiring commands, archiving commands. Trigger keywords: audit commands, command inventory, archive command, retire command, command cleanup, review commands, command sprawl, too many commands.
+metadata:
+  version: 1.0.1
 ---
 
 ## Three-Question Test

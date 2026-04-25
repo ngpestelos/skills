@@ -619,7 +619,7 @@
       "name": "configuring-dynamic-attribution",
       "source": "./configuring-dynamic-attribution",
       "description": "Guides updating AI tool templates to use dynamic placeholders for model names instead of hardcoded values in commit attributions.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -637,7 +637,7 @@
       "name": "controller-input-validation-edge-cases",
       "source": "./controller-input-validation-edge-cases",
       "description": "Guidance on implementing comprehensive input validation in Rails controller actions before processing to prevent edge case failures.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -655,7 +655,7 @@
       "name": "controller-transaction-render-pattern",
       "source": "./controller-transaction-render-pattern",
       "description": "Prevents double render errors and connection pool pollution in ActiveRecord transaction blocks.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -673,7 +673,7 @@
       "name": "counterintuitive-analyst",
       "source": "./counterintuitive-analyst",
       "description": "Framework for systematically questioning cultural trends and popular wisdom to reveal strategic insights.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -691,7 +691,7 @@
       "name": "crypto-price-scraping",
       "source": "./crypto-price-scraping",
       "description": "Scrape live cryptocurrency prices and market data using firecrawl from CoinMarketCap or similar sources. Extracts top cryptocurrencies, prices, market cap, and 24h/7d performance.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -704,7 +704,7 @@
       "name": "custom-command-audit",
       "source": "./custom-command-audit",
       "description": "3-question test for auditing custom Claude Code commands: covered by skills?, unique protocol?, actively used? Archive stale/redundant commands to .claude/archives/.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -723,7 +723,7 @@
       "name": "cutting-identifier",
       "source": "./cutting-identifier",
       "description": "Identify your cutting \u2014 the single decisive action that determines success via scarcity test. Trigger: what's my cutting, decisive action.",
-      "version": "1.2.1",
+      "version": "1.2.2",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -736,7 +736,7 @@
       "name": "cv-customization-workflow",
       "source": "./cv-customization-workflow",
       "description": "Role-specific CV variants and cover letters: skills match scoring, reframing, de-AI voice pass, and two-agent quality gate.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "author": {
         "name": "Nestor Pestelos"
       },

@@ -2,7 +2,7 @@
 name: cv-customization-workflow
 description: "Operational workflow for producing role-specific CV variants and cover letters from a generic base. Covers requirements mapping, honest gap analysis, adversarial review, de-AI voice pass, and two-agent cover letter quality gates. Trigger keywords: CV, resume, cover letter, customize, job posting, tailor, skills match, red-team CV, gap bridging, scale numbers, quantify experience."
 metadata:
-  version: 1.1.0
+  version: 1.1.1
 ---
 
 # CV Customization Workflow

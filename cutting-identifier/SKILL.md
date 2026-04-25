@@ -1,7 +1,8 @@
 ---
 name: cutting-identifier
 description: "Identify your cutting — the single decisive action that determines success."
-version: 1.2.0
+metadata:
+  version: 1.2.2
 ---
 
 # Cutting Identifier

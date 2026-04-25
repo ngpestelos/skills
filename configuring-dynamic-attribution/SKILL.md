@@ -2,12 +2,10 @@
 name: configuring-dynamic-attribution
 description: "Guides updating AI tool templates to use dynamic placeholders for model names instead of hardcoded values. Auto-activates when working with commit templates, co-author attributions, or model-specific references. Trigger keywords: dynamic attribution, model detection, commit template, co-author, placeholder, hardcoded model, attribution template."
 metadata:
-  version: 1.0.0
+  version: 1.0.1
 ---
 
 # Configuring Dynamic Model Attribution
-
-Guides updating AI tool templates to use dynamic placeholders for model names instead of hardcoded values. Ensures accurate co-author attributions across model changes.
 
 ## Required Patterns
 
@@ -46,22 +44,9 @@ Use the appropriate co-author attribution based on the AI tool being used:
 - **Claude Code**: `Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>`  # Version-specific
 ```
 
-## Trigger Keywords
-- dynamic attribution
-- model detection
-- commit template
-- co-author
-- placeholder
-- hardcoded model
-- attribution template
+## Violation Detection
 
-## Violation Detection Commands
 ```bash
 # Find hardcoded model attributions
 grep -r "Co-Authored-By: [A-Za-z].* <noreply@" .claude/commands/ .opencode/commands/
 ```
-
-## Integration Notes
-- Applied in commit.md for /commit command
-- Supports portability between OpenCode and Claude Code
-- Related to AI tool configuration and commit best practices

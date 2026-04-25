@@ -1,8 +1,8 @@
 ---
 name: crypto-price-scraping
-version: 1.0
-description: Scrape live cryptocurrency prices and market data using firecrawl from CoinMarketCap or similar sources. Extracts top cryptocurrencies, prices, market cap, and 24h/7d performance.
-trigger: cryptocurrency prices, crypto prices, bitcoin price, ethereum price, market cap, coinmarketcap, scrape crypto, top 10 crypto
+description: "Scrape live cryptocurrency prices and market data using firecrawl from CoinMarketCap or similar sources. Extracts top cryptocurrencies, prices, market cap, and 24h/7d performance. Trigger keywords: cryptocurrency prices, crypto prices, bitcoin price, ethereum price, market cap, coinmarketcap, scrape crypto, top 10 crypto."
+metadata:
+  version: 1.0.1
 allowed-tools:
   - Bash
   - Read
@@ -11,8 +11,6 @@ allowed-tools:
 ---
 
 # Cryptocurrency Price Scraping
-
-> **Purpose:** Extract live cryptocurrency prices and market data from CoinMarketCap using firecrawl.
 
 ## Quick Start
 

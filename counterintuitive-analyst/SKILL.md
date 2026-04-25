@@ -1,6 +1,8 @@
 ---
 name: counterintuitive-analyst
 description: "Framework for systematically questioning cultural trends and popular wisdom to reveal strategic insights. Distinguishes evidence-based contrarianism from reflexive disagreement. Trigger keywords: counterintuitive, contrarian, question conventional wisdom, popular but wrong, against the grain, cultural trend. (project)"
+metadata:
+  version: 1.0.1
 ---
 
 # Counterintuitive Analyst
@@ -57,7 +59,3 @@ Test: Is there evidence? What would need to be true? Who has succeeded this way?
 - "Popular therefore wrong" is as lazy as "popular therefore right"
 - The skill is knowing WHEN the crowd is right and when it's wrong
 
-## Optimization History
-
-- **March 17, 2026**: Second five-step pass. Deleted Core Philosophy quote (motivational, not instructional), Step 4 historical examples (Napoleon/Dot-Com — generic, Claude knows these), Step 5 philosophical framework (Biblical/Stoic — context-setting, not methodology). Merged historical check into Step 2 table. Moved quick check to top. Removed social cost rule (obvious). 72 → 56 lines (22%).
-- **March 13, 2026**: First five-step pass. 260 → 72 lines (72%).
