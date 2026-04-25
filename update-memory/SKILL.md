@@ -1,13 +1,14 @@
 ---
 name: update-memory
-version: 1.0
 description: "Persist session learnings to memory files. Auto-activates when updating memory, saving learnings, or persisting session context. Trigger keywords: update memory, save memory, persist learnings, remember this."
 allowed-tools: Read, Grep, Glob, Bash
+metadata:
+  version: "1.0.1"
 ---
 
 # Update Memory
 
-> **Purpose**: Persist session learnings to memory files. Run mid-session or before ending.
+Run mid-session or before ending to capture session learnings.
 
 ## Steps
 

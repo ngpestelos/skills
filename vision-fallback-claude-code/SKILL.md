@@ -1,9 +1,10 @@
 ---
 name: vision-fallback-claude-code
 description: "Fallback patterns when vision analysis fails due to API limits. Two methods: Claude Code CLI delegation and browser accessibility tree. Trigger: vision API limits exceeded, 403 errors, monthly quota reached, image extraction failed."
-version: 2.0.0
-author: ngpestelos
 license: MIT
+metadata:
+  author: ngpestelos
+  version: "2.0.1"
 ---
 
 # Vision Fallback
@@ -65,9 +66,3 @@ browser_snapshot(full=true)
 
 Returns the full accessibility tree which often contains the text needed.
 
-## Optimization History
-
-- **April 15, 2026**: Added Option B (delegate_task approach) and tesseract OCR note. Discovered when vision_analyze failed with 500 error on KGR advisory image; subagent successfully used tesseract + sips for extraction.
-- **April 5, 2026**: Added `--model` flag for cost optimization (Sonnet vs Opus) and nix-managed config troubleshooting. User's settings.json was symlinked to nix store (read-only), requiring explicit `--model claude-sonnet-4-6` per command or nix config update.
-- **April 5, 2026**: Updated Method 1 with correct CLI syntax (`-p` flag, `--allowedTools Read`), added browser session requirement note for Method 2. Discovered when browser_vision failed on local images.
-- **April 1, 2026**: Five-step optimizer pass 1. Deleted "When to Use" (duplicates frontmatter), obvious steps (try normal first, parse output, update document), considerations table, troubleshooting. 73 → 14 lines (81%).

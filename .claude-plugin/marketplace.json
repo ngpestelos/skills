@@ -2303,7 +2303,7 @@
       "name": "term-definer",
       "source": "./term-definer",
       "description": "Context-aware definitions with adaptive complexity. Simple words get concise definitions; technical terms get etymology, multiple senses, and cross-domain treatment. Trigger keywords: define, what does X mean, explain term, etymology, word origin, affect vs effect.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -2316,7 +2316,7 @@
       "name": "test-plan-methodology",
       "source": "./test-plan-methodology",
       "description": "Systematic 4-phase test planning approach to prevent coverage blind spots.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -2334,7 +2334,7 @@
       "name": "unconscious-goal-detector",
       "source": "./unconscious-goal-detector",
       "description": "Identifies hidden goals driving 'lack of discipline' and self-sabotage patterns. Based on Dan Koe's insight that all behavior is goal-oriented - 'failures' often pursue unconscious goals like safety or approval. Trigger keywords: why do I keep, self-sabotage, can't stay disciplined, keep failing, procrastination, why can't I, always give up.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -2347,7 +2347,7 @@
       "name": "update-memory",
       "source": "./update-memory",
       "description": "Persist session learnings to memory files. Auto-activates when updating memory, saving learnings, or persisting session context. Trigger keywords: update memory, save memory, persist learnings, remember this.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -2360,7 +2360,7 @@
       "name": "vision-fallback-claude-code",
       "source": "./vision-fallback-claude-code",
       "description": "Fallback patterns when vision analysis fails due to API limits. Two methods: Claude Code CLI delegation and browser accessibility tree. Trigger: vision API limits exceeded, 403 errors, monthly quota reached, image extraction failed.",
-      "version": "2.0.0",
+      "version": "2.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },

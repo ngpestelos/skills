@@ -1,16 +1,15 @@
 ---
 name: unconscious-goal-detector
 description: "Identifies hidden goals driving 'lack of discipline' and self-sabotage patterns. Based on Dan Koe's insight that all behavior is goal-oriented - 'failures' often pursue unconscious goals like safety or approval. Trigger keywords: why do I keep, self-sabotage, can't stay disciplined, keep failing, procrastination, why can't I, always give up."
-version: 1.1.0
+metadata:
+  version: "1.1.1"
 ---
 
 # Unconscious Goal Detector
 
-Reveal the hidden goals behind apparent "lack of discipline" — exposing that repeated behavioral patterns are actually successful pursuit of unconscious objectives like safety, approval, or avoidance.
-
 ## Core Principle
 
-**All human behavior is goal-oriented.** When someone "fails" repeatedly at a stated goal, they're actually succeeding at an unstated goal: pursuing safety over growth, seeking approval over authenticity, avoiding failure over attempting success, or maintaining identity over changing it.
+**All human behavior is goal-oriented.** When someone "fails" repeatedly at a stated goal, they're succeeding at an unstated goal: pursuing safety over growth, seeking approval over authenticity, avoiding failure over attempting success, or maintaining identity over changing it.
 
 The behavior isn't broken. The goals are hidden.
 

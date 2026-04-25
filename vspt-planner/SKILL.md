@@ -1,6 +1,8 @@
 ---
 name: vspt-planner
 description: "Break down overwhelming objectives into actionable components using the Vision-Strategies-Projects-Tactics framework. Enables immediate forward movement on any goal. Auto-activates when user faces overwhelming tasks, unclear starting points, or complex multi-step objectives. Trigger keywords: overwhelming, don't know where to start, break this down, too big, VSPT, how do I approach, planning help."
+metadata:
+  version: "1.0.0"
 ---
 
 # VSPT Planner

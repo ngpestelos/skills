@@ -1,6 +1,8 @@
 ---
 name: term-definer
 description: "Context-aware definitions with adaptive complexity. Simple words get concise definitions; technical terms get etymology, multiple senses, and cross-domain treatment. Trigger keywords: define, what does X mean, explain term, etymology, word origin, affect vs effect."
+metadata:
+  version: "1.0.1"
 ---
 
 # Term Definer
@@ -15,6 +17,3 @@ Label etymological claims as `[Speculation]` unless citing authoritative sources
 
 **Pitfalls**: Avoid circular definitions (defining terms using variations of themselves). Don't define unfamiliar terms with equally unfamiliar jargon.
 
-## Optimization History
-
-- **April 1, 2026**: Five-step optimizer pass 1. Deleted Purpose (restates description), Trigger list (duplicates frontmatter), 3 output templates (Claude generates naturally), Reality Filter step (global rule), Quality Checks (generic), Output table (restates tiers), Quality Standard (generic). 101 → 12 lines (88%).
