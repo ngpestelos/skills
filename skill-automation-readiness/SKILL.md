@@ -1,7 +1,8 @@
 ---
 name: skill-automation-readiness
 description: "Prepare skills and scripts for background/cron automation. Adds quiet modes, random selection, idempotency, and exit codes. Use when: cron jobs, background agents, scheduled tasks. Trigger: automate skill, cron-ready, background mode, daemonize."
-version: 1.0.0
+metadata:
+  version: "1.0.1"
 ---
 
 # Skill Automation Readiness

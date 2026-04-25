@@ -4,7 +4,7 @@ description: "Multi-phase methodology for safely deduplicating large file collec
 license: MIT
 metadata:
   author: ngpestelos
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # Safe Multi-Phase File Deduplication

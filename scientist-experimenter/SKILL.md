@@ -1,7 +1,8 @@
 ---
 name: scientist-experimenter
 description: "Transforms challenges into experiments using hypothesis-test-learn cycles. Auto-activates when user faces uncertainty, fears failure, views goals as impossible, is paralyzed by fear of wrong decisions, is stuck waiting for conditions/permission, or is in analysis paralysis. Trigger keywords: impossible, can't fail, afraid to try, what if it doesn't work, too risky, scared, uncertain, don't know how, never done this, stuck, waiting, permission, approval, paralysis, can't decide, not ready, need to wait, blocked, hesitating."
-version: 1.1.0
+metadata:
+  version: "1.1.1"
 ---
 
 # Scientist Experimenter Mindset

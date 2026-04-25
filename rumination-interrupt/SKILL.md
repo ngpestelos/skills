@@ -4,7 +4,7 @@ description: "Quick-reference toolkit for interrupting rumination patterns with 
 license: MIT
 metadata:
   author: ngpestelos
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # Rumination Interrupt

@@ -5,7 +5,7 @@ license: MIT
 compatibility: Ruby on Rails applications with ERB templates and JavaScript frontends.
 metadata:
   author: ngpestelos
-  version: "2.0.0"
+  version: "2.0.1"
 ---
 
 # Security-First Quick Reference

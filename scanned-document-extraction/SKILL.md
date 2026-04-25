@@ -4,12 +4,12 @@ description: Extract structured data from scanned documents (images, PDFs) into 
 license: MIT
 metadata:
   author: ngpestelos
-  version: "1.2.0"
+  version: "1.2.1"
 ---
 
 # Scanned Document Extraction
 
-Extract all structured data from scanned images and PDFs into searchable, readable markdown. The purpose of extraction is to make scanned data queryable — compressing it into summaries defeats that purpose. Every line item, quantity, unit price, date, and reference number visible in the scan must appear in the output.
+Every line item, quantity, unit price, date, and reference number visible in the scan must appear in the output. Compressing into summaries defeats the purpose — make the data queryable.
 
 ## OCR Method (How to Extract)
 
@@ -31,8 +31,7 @@ The `--dangerously-skip-permissions` flag auto-approves file access and enables 
 
 Locate all `![[embedded]]` files referenced in the note. Read every image and PDF — do not skip any attachment.
 
-**For images:** Use the OCR method above (Claude Code delegation).  
-**For PDFs:** Use `pdftotext` or `pdf2txt.py` if available; otherwise delegate to Claude Code.
+**For images:** Use the OCR method above (Claude Code delegation). **For PDFs:** Use `pdftotext` or `pdf2txt.py` if available; otherwise delegate to Claude Code.
 
 For each scanned document, extract into the appropriate format:
 

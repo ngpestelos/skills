@@ -1,6 +1,8 @@
 ---
 name: seasonal-grief-navigator
 description: "Navigation strategies for calendar-tied grief patterns — anniversary grief and seasonal emotional waves. Navigate vs Fix reframing, achievable peace, external-internal plane separation. Trigger keywords: anniversary grief, seasonal sadness, December difficult, why still sad, everything good but sad, grief calendar, recurring sadness, holiday grief."
+metadata:
+  version: "1.0.1"
 ---
 
 # Navigating Seasonal Grief Patterns
@@ -30,8 +32,3 @@ Success metric: "Did I recognize the pattern?" not "Am I over it?"
 ```
 
 **Never offer solutions to eliminate grief** — calendar grief persists for decades; this is integration, not failure. **Distinguish from rumination** — "Am I stuck in a thought loop?" (rumination → action) vs. "Is it December again?" (calendar grief → navigation).
-
-## Optimization History
-
-- **March 13, 2026**: Five-step optimizer pass 1. 335 → 52 lines (84%).
-- **April 1, 2026**: Five-step optimizer pass 2. Deleted 2 principles (restated by steps), resource wikilinks, 4/6 key rules (restate principles), vault source paths. 5 → 4 steps. 52 → 22 lines (58%).

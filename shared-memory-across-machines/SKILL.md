@@ -2,6 +2,8 @@
 name: shared-memory-across-machines
 description: "Store Claude Code memory in project repos with symlinks for cross-machine sync. Auto-activates when setting up memory for new projects, migrating memory, or troubleshooting memory sync. Trigger keywords: shared memory, memory sync, cross-machine, memory symlink, portable memory."
 allowed-tools: Read, Grep, Glob, Bash
+metadata:
+  version: "1.0.1"
 ---
 
 # Sharing Claude Code Memory Across Machines

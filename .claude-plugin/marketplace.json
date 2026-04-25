@@ -1918,7 +1918,7 @@
       "name": "rumination-interrupt",
       "source": "./rumination-interrupt",
       "description": "Quick-reference toolkit for interrupting rumination patterns with immediate physical and cognitive interventions in 30 seconds or less.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1936,7 +1936,7 @@
       "name": "safe-file-deduplication",
       "source": "./safe-file-deduplication",
       "description": "Multi-phase methodology for safely deduplicating large file collections using content-based analysis. Covers analysis, planning, execution with dry-run, verification, and rollback.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1954,7 +1954,7 @@
       "name": "scanned-document-extraction",
       "source": "./scanned-document-extraction",
       "description": "Extract structured data from scanned documents (images, PDFs) into markdown notes, preserving all granular detail.",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1973,7 +1973,7 @@
       "name": "scientist-experimenter",
       "source": "./scientist-experimenter",
       "description": "Transforms challenges into experiments using hypothesis-test-learn cycles. Auto-activates when user faces uncertainty, fears failure, views goals as impossible, is paralyzed by fear of wrong decisions, is stuck waiting for conditions/permission, or is in analysis paralysis. Trigger keywords: impossible, can't fail, afraid to try, what if it doesn't work, too risky, scared, uncertain, don't know how, never done this, stuck, waiting, permission, approval, paralysis, can't decide, not ready, need to wait, blocked, hesitating.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1986,7 +1986,7 @@
       "name": "seasonal-grief-navigator",
       "source": "./seasonal-grief-navigator",
       "description": "Navigation strategies for calendar-tied grief patterns — anniversary grief and seasonal emotional waves. Navigate vs Fix reframing, achievable peace, external-internal plane separation. Trigger keywords: anniversary grief, seasonal sadness, December difficult, why still sad, everything good but sad, grief calendar, recurring sadness, holiday grief.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1999,7 +1999,7 @@
       "name": "security-patterns",
       "source": "./security-patterns",
       "description": "Quick-reference security checklist for XSS, CSRF, PII logging, console statements, multi-tenant isolation, and state machine security in Rails view...",
-      "version": "2.0.0",
+      "version": "2.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -2031,7 +2031,7 @@
       "name": "shared-memory-across-machines",
       "source": "./shared-memory-across-machines",
       "description": "Store Claude Code memory in project repos with symlinks for cross-machine sync. Auto-activates when setting up memory for new projects, migrating memory, or troubleshooting memory sync. Trigger keywords: shared memory, memory sync, cross-machine, memory symlink, portable memory.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -2044,7 +2044,7 @@
       "name": "skill-automation-readiness",
       "source": "./skill-automation-readiness",
       "description": "Prepare skills and scripts for background/cron automation. Adds quiet modes, random selection, idempotency, and exit codes. Use when: cron jobs, background agents, scheduled tasks. Trigger: automate skill, cron-ready, background mode, daemonize.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
