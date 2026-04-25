@@ -2,11 +2,11 @@
 name: pre-learning-prep
 description: "Systematic knowledge review before engaging with new material. Auto-activates before learning sessions, courses, or book studies. Trigger keywords: pre-learning, before reading, activate prior knowledge, prepare to learn. (global)"
 allowed-tools: Read, Grep, Glob, Bash
+metadata:
+  version: "1.0.1"
 ---
 
 # Pre-Learning Prep
-
-Systematic knowledge review before engaging with new material — activating existing mental models to enhance retention and enable cross-domain synthesis.
 
 ## The Two-Stage Connection Process
 

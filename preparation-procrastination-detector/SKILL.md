@@ -1,11 +1,11 @@
 ---
 name: preparation-procrastination-detector
 description: "Flags when endless preparation substitutes for action. Auto-activates when discussing getting ready, preparation cycles, or analysis paralysis before execution. Trigger keywords: preparation, procrastination, getting ready, analysis paralysis, planning trap, execution delay."
+metadata:
+  version: "1.0.1"
 ---
 
 # Preparation Procrastination Detector
-
-Flag when "getting ready" substitutes for action — endless preparation becomes a comfortable alternative to risking failure.
 
 ## The Detection Framework
 

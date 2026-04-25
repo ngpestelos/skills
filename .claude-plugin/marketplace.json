@@ -1623,7 +1623,7 @@
       "name": "portable-ai-cli-patterns",
       "source": "./portable-ai-cli-patterns",
       "description": "Guides dual-tool configuration for Claude Code and OpenCode. Covers compatibility matrix, single-source commands, skill/agent promotion workflow.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1641,7 +1641,7 @@
       "name": "pre-learning-prep",
       "source": "./pre-learning-prep",
       "description": "Systematic knowledge review before engaging with new material. Auto-activates before learning sessions, courses, or book studies. Trigger keywords: pre-learning, before reading, activate prior knowledge, prepare to learn. (global)",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1654,7 +1654,7 @@
       "name": "preparation-procrastination-detector",
       "source": "./preparation-procrastination-detector",
       "description": "Flags when endless preparation substitutes for action. Auto-activates when discussing getting ready, preparation cycles, or analysis paralysis before execution. Trigger keywords: preparation, procrastination, getting ready, analysis paralysis, planning trap, execution delay.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1667,7 +1667,7 @@
       "name": "proxy-measurement-designer",
       "source": "./proxy-measurement-designer",
       "description": "Design observable proxies for measuring invisible phenomena using thermal equilibrium, calibration, and Goodhart's Law defenses.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1686,7 +1686,7 @@
       "name": "qmd-local-search",
       "source": "./qmd-local-search",
       "description": "Core patterns for using QMD (Quick Markdown) semantic search. Covers MCP tool usage, search type selection, index rebuild protocol, and troubleshooting.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1704,7 +1704,7 @@
       "name": "quick-document-summary",
       "source": "./quick-document-summary",
       "description": "Concise verbal summaries of documents without modifying files. Returns structured overview in conversation. Trigger keywords: summarize this, explain this doc, what's this about, give me the gist, quick summary, TL;DR.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1716,8 +1716,8 @@
     {
       "name": "rails-cache-performance",
       "source": "./rails-cache-performance",
-      "description": "",
-      "version": "1.0.0",
+      "description": "Rails cache invalidation, stale cache detection, request-level fragment caching, and Russian doll caching patterns.",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1730,7 +1730,7 @@
       "name": "rails-testing-patterns",
       "source": "./rails-testing-patterns",
       "description": "Test type selection prioritizing integration tests (89-95% faster than system tests).",
-      "version": "2.0",
+      "version": "2.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },

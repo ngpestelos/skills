@@ -4,12 +4,10 @@ description: Design observable proxies for measuring invisible phenomena. Auto-a
 license: MIT
 metadata:
   author: ngpestelos
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Proxy Measurement Designer
-
-Design observable proxies for measuring invisible phenomena — the universal strategy for quantifying what can't be directly observed.
 
 **Core principle**: "Measurement is never direct observation — it's always inference from observable effects to invisible causes. A thermometer measures its own temperature; it becomes useful only when reaching equilibrium with what you're trying to measure."
 

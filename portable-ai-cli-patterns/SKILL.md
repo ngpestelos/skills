@@ -2,15 +2,14 @@
 name: portable-ai-cli-patterns
 description: "Guides dual-tool configuration for Claude Code and OpenCode. Auto-activates when working with cross-tool command deployment, AGENTS.md decisions, skill/command sharing, or promoting project-local skills/agents to global scope. Covers compatibility matrix, single-source commands via home-manager, forbidden duplication patterns, skill/agent promotion workflow. Trigger keywords: opencode, claude code, ai cli, dual tool, commands deployment, AGENTS.md, backward compatibility, portable commands, promote skill, global skill."
 metadata:
-  version: 1.0.0
+  version: "1.0.1"
 ---
 
 # Portable AI CLI Patterns
 
-## Context
-Supports both **Claude Code** and **OpenCode** as AI CLI tools. OpenCode provides backward compatibility with Claude Code's file conventions, allowing most configuration to be shared from a single source.
+OpenCode provides backward compatibility with Claude Code's file conventions — most configuration is shared from a single source.
 
-### Compatibility Matrix
+## Compatibility Matrix
 
 | Asset | Claude Code | OpenCode | Shared? |
 |-------|------------|----------|---------|
@@ -23,7 +22,7 @@ Supports both **Claude Code** and **OpenCode** as AI CLI tools. OpenCode provide
 | `.opencode/commands/` (project) | Not read | Native | No |
 | `settings.json` / hooks | Claude Code only | No equivalent | No |
 
-### Required Patterns
+## Required Patterns
 
 ### Single-source commands via home-manager
 All global commands are authored once in `config/claude/commands/` and deployed to both tools via `home.file` entries in `flake.nix`:
@@ -44,7 +43,7 @@ Do NOT create an `AGENTS.md` unless content must genuinely differ between tools.
 ### Skills in .claude/skills/ only
 Do NOT duplicate skills into `.opencode/skills/`. OpenCode discovers `.claude/skills/` via backward compatibility.
 
-### Forbidden Patterns
+## Forbidden Patterns
 
 ### No AGENTS.md alongside CLAUDE.md
 Creating `AGENTS.md` when `CLAUDE.md` suffices causes maintenance divergence. Only create it if OpenCode needs materially different instructions.

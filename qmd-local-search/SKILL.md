@@ -2,7 +2,7 @@
 name: qmd-local-search
 description: "Core patterns for using QMD (Quick Markdown) semantic search. Auto-activates when discussing local search, semantic search, vector search, QMD MCP tools, or index management. Covers MCP tool usage, search type selection, index rebuild protocol, and troubleshooting. Trigger keywords: qmd, semantic search, vector search, local search, qmd_query, qmd_search, qmd_vsearch, embedding, collection, database corruption, SQLite error, UNIQUE constraint, rebuild index, failed to reconnect, qmd-mcp-server, model download, 404."
 metadata:
-  version: 1.0.0
+  version: "1.0.1"
 ---
 
 # QMD Local Search
