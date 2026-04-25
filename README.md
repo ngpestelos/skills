@@ -225,6 +225,7 @@ This symlinks every skill into `~/.claude/skills/` so they stay in sync with `gi
 | [vision-fallback-claude-code](./vision-fallback-claude-code/) | Fallback when vision analysis fails: CLI delegation and browser accessibility tree extraction |
 | [agent-pipeline-design](./agent-pipeline-design/) | Multi-phase agent pipeline patterns: inline vs subagent classification, claude -p delegation, state management, skill-to-skill invocation |
 | [adversarial-plan-hardening](./adversarial-plan-hardening/) | Iterative adversarial review loop for plans — run passes, resolve BLOCKERs, fold WARNINGs, audit necessity, prepare handoff |
+| [eval-gated-bulk-edits](./eval-gated-bulk-edits/) | Run bulk LLM-driven content edits with mechanical + LLM-judge gating, canary regression injection, and pilot-then-scale phasing |
 | [api-deprecation-migration](./api-deprecation-migration/) | Migrate a skill to a new API provider when the current service is deprecated or sunsetted |
 | [api-endpoint-metadata-verification](./api-endpoint-metadata-verification/) | Debug missing metadata in API integrations — endpoint comparison, response structure verification, data enrichment |
 | [capture-skill](./capture-skill/) | Extract patterns from the current session into a reusable skill file |

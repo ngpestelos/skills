@@ -942,6 +942,26 @@
       "license": "MIT"
     },
     {
+      "name": "eval-gated-bulk-edits",
+      "source": "./eval-gated-bulk-edits",
+      "description": "Methodology for safely running bulk LLM-driven content edits across many files using mechanical + LLM-judge gating, canary regression injection, and pilot-then-scale phasing.",
+      "version": "1.1.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [
+        "bulk-edit",
+        "eval-gating",
+        "optimizer",
+        "canary",
+        "cross-model-judge",
+        "pilot-then-scale"
+      ],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
       "name": "execution-habits-checker",
       "source": "./execution-habits-checker",
       "description": "Self-assessment against the 10 execution habits from 'A Message to Garcia'. Rate, evidence, identify keystone habit, create improvement plan.",
