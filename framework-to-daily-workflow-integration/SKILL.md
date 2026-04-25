@@ -1,6 +1,8 @@
 ---
 name: framework-to-daily-workflow-integration
 description: "Embeds abstract strategic frameworks into existing daily/weekly workflow commands as lightweight rituals. Auto-activates when user wants to operationalize a framework, make a concept part of their daily routine, or integrate theory into practice. Trigger keywords: operationalize, daily workflow, make this part of my routine, integrate into morning, daily ritual, weekly audit."
+metadata:
+  version: "1.0.0"
 ---
 
 ## Core Principles

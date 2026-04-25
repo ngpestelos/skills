@@ -1,9 +1,9 @@
 ---
 name: five-capabilities-audit
 description: "Assesses development priorities using the Five Fundamental Human Capabilities framework (Computation, Transformation, Variation, Selection, Attention). Auto-activates when user seeks skill development guidance, wants to leverage AI effectively, or asks about irreplaceable human capabilities. Trigger keywords: what should I develop, AI-proof skills, human advantage, where to focus, capability gaps, irreplaceable, what AI can't do, skill priority."
+metadata:
+  version: "1.0.1"
 ---
-
-Identify development priorities across five domains where humans remain irreplaceable in the AI era.
 
 ## The Five Capabilities
 

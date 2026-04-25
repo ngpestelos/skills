@@ -2,10 +2,8 @@
 name: git-atomic-commit-organizer
 description: Systematically analyze uncommitted changes and organize them into logical, atomic commits following best practices. Auto-activates when organizing git commits, multiple uncommitted changes, git cleanup, atomic commits. Trigger keywords: prepare commits, organize commits, git cleanup, atomic commits, logical commits, uncommitted changes, git organization, commit organization, multiple changes.
 metadata:
-  version: 1.0.0
+  version: "1.0.1"
 ---
-
-# Git Atomic Commit Organizer
 
 Principles for organizing messy uncommitted changes into clean, atomic commits. **For execution, use `/commit`.**
 

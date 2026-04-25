@@ -2,12 +2,8 @@
 name: git-stash-pull-pop
 description: Gracefully update a git repository from remote when you have unstaged local changes. Stashes changes, pulls, then restores them. Auto-activates when pull is blocked by uncommitted files. Trigger keywords: update repo with local changes, git pull blocked by unstaged files, sync with uncommitted work, pull with changes.
 metadata:
-  version: 1.1.0
+  version: "1.1.1"
 ---
-
-# Git Stash-Pull-Pop Workflow
-
-Update from remote when you have local uncommitted changes that you want to preserve and commit after pulling.
 
 ## Steps
 

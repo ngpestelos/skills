@@ -1,15 +1,13 @@
 ---
 name: hermes-profile-credential-resolution
-version: 1.0
-description: Resolve credential location mismatches when Hermes profiles use profile-specific .env files but scripts/tools look in default locations. Handles firecrawl and other API key resolution issues.
-trigger: hermes profile credentials, api key not found, firecrawl credentials, skill can't find api key, profile .env, credential location
+description: Resolve credential location mismatches when Hermes profiles use profile-specific .env files but scripts/tools look in default locations. Handles firecrawl and other API key resolution issues. Trigger keywords: hermes profile credentials, api key not found, firecrawl credentials, skill can't find api key, profile .env, credential location
 allowed-tools:
   - Bash
   - Read
   - Grep
+metadata:
+  version: "1.0.1"
 ---
-
-# Hermes Profile Credential Resolution
 
 > **Problem:** Hermes stores credentials in profile-specific `.env` files (`~/.hermes/profiles/<profile>/.env`), but scripts and tools often look in the default location (`~/.hermes/.env`), causing "API key not found" errors even when credentials are configured.
 

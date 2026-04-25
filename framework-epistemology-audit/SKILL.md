@@ -1,6 +1,8 @@
 ---
 name: framework-epistemology-audit
 description: "Systematic epistemological audit of grand frameworks claiming universality. Applies three pressure tests (falsifiability, independence, predictive specificity), classifies claims using 4-level Pattern Verification Hierarchy, and distinguishes lenses from laws. Auto-activates when evaluating 'universal laws,' cross-domain frameworks, or 'everything is X' claims. Trigger keywords: pressure test, universal law, everything is, cross-domain, lens vs law, verify pattern, framework audit."
+metadata:
+  version: "1.0.1"
 ---
 
 ## Core Principles
