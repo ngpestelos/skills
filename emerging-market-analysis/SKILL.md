@@ -1,6 +1,8 @@
 ---
 name: emerging-market-analysis
 description: "Systematic framework for analyzing emerging market economies and equities. Governance shock cycles, central bank signaling, exchange rate constraints, valuation floors, capital rotation timing. Trigger keywords: emerging market, BSP, PSEi, Philippine economy, peso, central bank, governance shock, political risk, EM laggard, valuation floor, capital rotation, currency crisis."
+metadata:
+  version: "1.0.1"
 ---
 
 # Emerging Market Analysis Framework
@@ -66,8 +68,3 @@ Rate Cuts → Yield Differential Narrows → Capital Outflows → Currency Weake
 | Small vs large cap | Small caps leading |
 | Value vs growth | Value outperforming |
 
-## Optimization History
-
-- **March 13, 2026**: Five-step optimizer pass 1. 279 → 92 lines (67%).
-- **March 23, 2026**: Five-step optimizer pass 2. 92 → 64 lines (30%).
-- **April 1, 2026**: Five-step optimizer pass 3. Deleted "reading signals" (generic CB), "policy space" paragraph (restates table), "confirm" bullets (generic), rotation prose intro (restated by table). 64 → 48 lines (25%).

@@ -1,11 +1,9 @@
 ---
 name: financial-decision-heuristics
 description: Practical decision-making tools for specific financial choices including the ATM Test, risk assessment, asset vs liability analysis, and lifestyle management. Auto-activates when discussing ATM test, risk assessment, asset vs liability, trading up, lifestyle creep, spending decision, purchase decision, asymmetric risk, downside exposure, carrying cost.
+metadata:
+  version: "1.0.1"
 ---
-
-# Financial Decision Heuristics
-
-Practical, immediately applicable decision-making tools for purchases, investments, career moves, and lifestyle decisions.
 
 ## The ATM Test (Anton Kreil)
 Your liquid savings is **the only score that tells you if you are right or wrong** about how you're spending your time. Monthly: check all balances, compare to last month/year, ask "Is my time valued correctly?"
@@ -34,8 +32,3 @@ For every purchase: ongoing cost to own? Opportunity cost of capital? New obliga
 ## Sequence Rule
 Build yourself first (skills, capabilities), then invest in assets. Order matters more than speed.
 
-## Optimization History
-
-- **March 13, 2026**: Five-step optimizer pass 1. 331 → 72 lines (78%).
-- **March 23, 2026**: Five-step optimizer pass 2. 72 → 46 lines (36%).
-- **April 1, 2026**: Five-step optimizer pass 3. Deleted Freedom Milestones (reference table, not heuristic), favorable/unfavorable examples (generic), Acting Dead Test (mindset, not financial), Time ROI framing (generic). Kept sequence insight as standalone. 46 → 33 lines (28%).

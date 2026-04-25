@@ -1,6 +1,8 @@
 ---
 name: existential-framework-builder
 description: "Transforms vague existential distress into structured inquiry frameworks. Auto-activates when discussing meaning loss, peace absence, life direction confusion, joy disappearance, or mortality awareness. Creates journaling templates, audit frameworks, and tracking systems. Trigger keywords: meaning, purpose, peace, existential, dread, joy loss, direction, what I want, midlife, mortality, not at peace, don't know what I want, work lost joy."
+metadata:
+  version: "1.0.1"
 ---
 
 Transform vague existential distress into structured, actionable inquiry. Create audit frameworks with journaling prompts, not advice or philosophical lectures.

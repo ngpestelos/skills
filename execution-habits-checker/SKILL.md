@@ -4,12 +4,10 @@ description: "Self-assessment against the 10 execution habits from 'A Message to
 license: MIT
 metadata:
   author: ngpestelos
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # Execution Habits Checker
-
-Assess execution capacity against the 10 action-oriented habits from "A Message to Garcia" — distinguishing people who deliver from those who ask endless questions.
 
 ## The 10 Execution Habits
 

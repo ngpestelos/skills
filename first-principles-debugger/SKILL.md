@@ -2,11 +2,9 @@
 name: first-principles-debugger
 description: "Systematic first-principles methodology for debugging complex issues that resist conventional approaches. Auto-activates when: bug persists after multiple fix attempts, 'it worked before' with no obvious change, cross-layer issues spanning Rails/Stimulus/database, or 'impossible' behavior contradicting expectations. Trigger keywords: root cause, first principles, doesn't make sense, should work but doesn't, mysterious bug, works sometimes, inconsistent behavior, what's actually happening."
 allowed-tools: Read, Grep, Glob, Bash
+metadata:
+  version: "1.0.1"
 ---
-
-# First-Principles Debugger
-
-## Method
 
 ### Step 1: Define the Problem Precisely
 

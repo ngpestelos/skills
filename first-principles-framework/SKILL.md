@@ -1,9 +1,9 @@
 ---
 name: first-principles-framework
 description: "Unified first-principles methodology with three modes. Analysis decomposes problems to foundational elements with Rails debugging patterns. Foundation Building creates educational documents from observations to laws. Summarization preserves logical structure of first-principles documents. Trigger keywords: first principles, fundamental truth, decompose, root cause, observation to law, foundation document, first-principles summary."
+metadata:
+  version: "1.0.1"
 ---
-
-Apply first-principles thinking across three modes: analyzing problems, building educational foundations, and summarizing first-principles documents.
 
 ## Mode 1: Analysis (Problem Decomposition)
 

@@ -1,6 +1,8 @@
 ---
 name: durable-strategy-design
 description: "Methodology for constructing personal competitive strategies that survive disruption by combining paradox-first framing, pillar architecture, personality alignment, wealth diversification with correlation analysis, phased execution with validation gates, and evidence grounding. Auto-activates when designing career strategy, competitive positioning, wealth building plans, or any multi-domain personal strategy that must withstand technological or market disruption. Trigger keywords: durable strategy, competitive advantage, disruption-proof, career strategy design, wealth strategy, positioning strategy, personality-aligned strategy, strategy that survives, build resilient plan, AI-proof career."
+metadata:
+  version: "1.0.1"
 ---
 
 ## Steps

@@ -913,7 +913,7 @@
       "name": "durable-strategy-design",
       "source": "./durable-strategy-design",
       "description": "4-step methodology for disruption-proof personal strategy: commoditization-scarcity inversion, pillar architecture with resistance tests, personality alignment filter, uncorrelated wealth streams with binary execution gates.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -932,7 +932,7 @@
       "name": "emerging-market-analysis",
       "source": "./emerging-market-analysis",
       "description": "Systematic framework for analyzing emerging market economies and equities. Governance shock cycles, central bank signaling, exchange rate constraints, valuation floors, capital rotation timing. Trigger keywords: emerging market, BSP, PSEi, Philippine economy, peso, central bank, governance shock, political risk, EM laggard, valuation floor, capital rotation, currency crisis.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -945,7 +945,7 @@
       "name": "execution-habits-checker",
       "source": "./execution-habits-checker",
       "description": "Self-assessment against the 10 execution habits from 'A Message to Garcia'. Rate, evidence, identify keystone habit, create improvement plan.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -963,7 +963,7 @@
       "name": "existential-framework-builder",
       "source": "./existential-framework-builder",
       "description": "Transforms vague existential distress into structured inquiry frameworks with journaling prompts across 7 angles: future, past, counterfactual, relational, existential, synthesis, application.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -995,7 +995,7 @@
       "name": "financial-decision-heuristics",
       "source": "./financial-decision-heuristics",
       "description": "Practical decision-making tools for specific financial choices including the ATM Test, risk assessment, asset vs liability analysis, and lifestyle management. Auto-activates when discussing ATM test, risk assessment, asset vs liability, trading up, lifestyle creep, spending decision, purchase decision, asymmetric risk, downside exposure, carrying cost.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1008,7 +1008,7 @@
       "name": "first-principles-debugger",
       "source": "./first-principles-debugger",
       "description": "Systematic first-principles methodology for debugging complex issues that resist conventional approaches.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1026,7 +1026,7 @@
       "name": "first-principles-framework",
       "source": "./first-principles-framework",
       "description": "Three-mode first-principles methodology: problem decomposition with Rails/Stimulus debugging patterns, foundation building from observations to laws, and document summarization with length calibration.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
