@@ -2,7 +2,7 @@
 name: changing-defaults-systematically
 description: "Systematically change configuration defaults and constants while ensuring zero regressions. Auto-activates when changing default values, updating constants, optimizing settings, or modifying hardcoded values. Covers: finding all references, updating code/tests/docs, comprehensive validation, atomic commits. Trigger keywords: change default, update default, modify constant, change configuration, update setting, optimize default, change constant value."
 metadata:
-  version: 1.0.0
+  version: "1.0.1"
 ---
 
 # Changing Defaults Systematically

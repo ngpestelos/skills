@@ -2,19 +2,12 @@
 name: claude-code-hook-development
 description: "Guides creating, testing, and deploying Claude Code hooks via nix-darwin. Auto-activates when creating hook scripts, configuring settings.json hooks section, or adding UserPromptSubmit handlers. Covers hook input JSON format, exit codes, stdout context injection, nix-darwin deployment with executable flag. Trigger keywords: hook, UserPromptSubmit, settings.json hooks, hook script, exit code, stdin JSON, transcript_path."
 metadata:
-  version: 1.0.0
+  version: "1.0.1"
 ---
 
 # Developing Claude Code Hooks
 
-> **Purpose**: Create shell-based Claude Code hooks that receive JSON on stdin and inject context or block prompts, deployed via nix-darwin home.file entries.
-
-## Core Principles
-
-1. **Hooks are shell scripts** that receive JSON on stdin, communicate via stdout (context) or exit codes (pass/block)
-2. **Deploy through nix-darwin** using `home.file` with `executable = true` for hooks, `force = true` for config
-3. **settings.json is the hook registry** — declare hooks with type, command path, and timeout
-4. **Hooks must be fast** — they run on every prompt; keep logic minimal and timeouts under 10 seconds
+Shell scripts receive JSON on stdin, communicate via stdout (context) or exit codes (pass/block). Deploy via nix-darwin `home.file`. Keep timeouts under 10 seconds — hooks run on every prompt.
 
 ## Required Patterns
 

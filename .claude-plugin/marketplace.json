@@ -422,7 +422,7 @@
       "name": "capture-what-resonates",
       "source": "./capture-what-resonates",
       "description": "Guides resonance-based knowledge capture decisions using Second Brain methodology. Implements the Resonance Filter, Twelve Favorite Problems framework, and PARA routing. Trigger keywords: capture, save this, should I keep, where does this go, what to capture, resonates, interesting, worth saving. (global)",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -435,7 +435,7 @@
       "name": "changing-defaults-systematically",
       "source": "./changing-defaults-systematically",
       "description": "Systematically change configuration defaults and constants while ensuring zero regressions. Covers finding all references, updating code/tests/docs, comprehensive validation.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -471,7 +471,7 @@
       "name": "claude-code-hook-development",
       "source": "./claude-code-hook-development",
       "description": "Guides creating, testing, and deploying Claude Code hooks via nix-darwin. Covers hook input JSON format, exit codes, stdout context injection, transcript JSONL parsing.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -486,10 +486,23 @@
       "license": "MIT"
     },
     {
+      "name": "claude-code-skill-dedup",
+      "source": "./claude-code-skill-dedup",
+      "description": "Detect and remove duplicate /slash-command registrations in Claude Code caused by the same name existing in multiple source locations (.claude/commands/, .claude/skills/, ~/.claude/skills/). Auto-activates when slash commands appear multiple times in /help or the available skills list, or when investigating duplicate command entries. Trigger keywords: duplicate command, duplicate skill, appears twice, multiple registrations, slash command list, commands skills overlap.",
+      "version": "1.1.1",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "claude-code",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
       "name": "clean-commit-staging",
       "source": "./clean-commit-staging",
       "description": "Prevents pre-staged files from other sessions contaminating commits. Auto-activates when committing in repos with parallel sessions, background agents, or hooks that stage files. Trigger keywords: pre-staged, unexpected commit, wrong files committed, staging area contamination, parallel session commit.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -515,7 +528,7 @@
       "name": "cloudflare-pages-static-site",
       "source": "./cloudflare-pages-static-site",
       "description": "Deploy single-page static sites to Cloudflare Pages with custom domains. No framework, no build step. Trigger keywords: static site, Cloudflare Pages, landing page, deploy website, custom domain, pages.dev.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -528,7 +541,7 @@
       "name": "cloudflare-r2-bill-estimator",
       "source": "./cloudflare-r2-bill-estimator",
       "description": "Estimates monthly Cloudflare R2 costs from usage data. Applies free tier deductions. Trigger keywords: R2 bill, R2 cost, R2 estimate, cloudflare bill, storage cost.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -567,7 +580,7 @@
       "name": "codebase-explorer",
       "source": "./codebase-explorer",
       "description": "Interactive exploration of onboarded codebases for understanding architecture, conventions, and patterns. Supports ongoing Q&A across sessions, guided walkthroughs of key subsystems, and pattern extraction to vault. Complements /onboard (setup) and codebase-due-diligence (one-shot assessment). Trigger keywords: explore codebase, how does X work, where does Y live, walk me through, architecture question, code walkthrough, understand this project, explain this module, contribution guide, good first issue. (global)",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },

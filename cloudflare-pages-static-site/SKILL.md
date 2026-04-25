@@ -1,6 +1,8 @@
 ---
 name: cloudflare-pages-static-site
 description: "Deploy single-page static sites to Cloudflare Pages with custom domains. No framework, no build step. Trigger keywords: static site, Cloudflare Pages, landing page, deploy website, custom domain, pages.dev."
+metadata:
+  version: "1.0.1"
 ---
 
 # Deploying Static Sites to Cloudflare Pages
@@ -30,8 +32,3 @@ Ship static HTML/CSS with custom domain in under an hour.
 
 - **Over-engineering v1**: Single-page site doesn't need React/Tailwind/CMS. `index.html` + `style.css` ships in 30 minutes.
 - **Workers vs Pages**: For static sites, use Pages/Connect to Git flow, not Workers/wrangler.
-
-## Optimization History
-
-- **March 23, 2026**: Five-step optimizer pass 1. 56 → 46 lines.
-- **April 2, 2026**: Five-step optimizer pass 2. Merged DNS gotchas into DNS section, compressed domain transfer, deleted WordPress note, 3/5 anti-patterns. 46 → 20 lines (57%).

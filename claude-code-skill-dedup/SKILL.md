@@ -1,8 +1,9 @@
 ---
 name: claude-code-skill-dedup
 description: "Detect and remove duplicate /slash-command registrations in Claude Code caused by the same name existing in multiple source locations (.claude/commands/, .claude/skills/, ~/.claude/skills/). Auto-activates when slash commands appear multiple times in /help or the available skills list, or when investigating duplicate command entries. Trigger keywords: duplicate command, duplicate skill, appears twice, multiple registrations, slash command list, commands skills overlap."
-version: 1.1.0
-author: Nestor Pestelos
+metadata:
+  author: Nestor Pestelos
+  version: "1.1.1"
 ---
 
 # Claude Code Skill Dedup

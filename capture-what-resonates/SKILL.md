@@ -2,6 +2,8 @@
 name: capture-what-resonates
 description: "Guides resonance-based knowledge capture decisions using Second Brain methodology. Implements the Resonance Filter, Twelve Favorite Problems framework, and PARA routing. Trigger keywords: capture, save this, should I keep, where does this go, what to capture, resonates, interesting, worth saving. (global)"
 allowed-tools: Read
+metadata:
+  version: "1.0.1"
 ---
 
 # Capture What Resonates

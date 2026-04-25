@@ -2,6 +2,8 @@
 name: codebase-explorer
 description: "Interactive exploration of onboarded codebases for understanding architecture, conventions, and patterns. Supports ongoing Q&A across sessions, guided walkthroughs of key subsystems, and pattern extraction to vault. Complements /onboard (setup) and codebase-due-diligence (one-shot assessment). Trigger keywords: explore codebase, how does X work, where does Y live, walk me through, architecture question, code walkthrough, understand this project, explain this module, contribution guide, good first issue. (global)"
 allowed-tools: Read, Grep, Glob, Bash, Agent, Write, Edit
+metadata:
+  version: "1.0.1"
 ---
 
 # Codebase Explorer
