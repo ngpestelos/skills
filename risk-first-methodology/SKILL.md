@@ -1,6 +1,8 @@
 ---
 name: risk-first-methodology
 description: "Systematic risk management and scenario planning. Define maximum loss BEFORE considering reward; prepare IF-THEN responses instead of predictions. Trigger keywords: risk management, stop loss, position size, risk reward, maximum loss, define risk, risk first, scenario planning, if-then, contingency plan."
+metadata:
+  version: "1.0.1"
 ---
 
 # Risk-First Methodology
@@ -46,8 +48,3 @@ IF [observable condition] THEN [specific action] BECAUSE [reasoning] WITH [risk 
 - **Observable triggers only** — "feels bullish" is not a condition
 - **Never move stops** — "it'll turn around" = deleting risk management
 - **Never oversize from conviction** — conviction doesn't reduce risk
-
-## Optimization History
-
-- **March 13, 2026**: Five-step optimizer pass 1. 188 → 88 lines (53%).
-- **April 1, 2026**: Five-step optimizer pass 2. Merged Phase 3 into Phase 1, deleted Phase 5 (obvious), cross-domain table (generic), 3/6 principles (restate phases), 3/5 pitfalls (restate principles), origin note. 5 → 3 phases. 88 → 34 lines (61%).

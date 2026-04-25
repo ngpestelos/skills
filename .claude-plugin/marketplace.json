@@ -1748,7 +1748,7 @@
       "name": "reaction-gap-practice",
       "source": "./reaction-gap-practice",
       "description": "Guides creation of space between emotional trigger and behavioral response using Name-Pause-Choose protocol. Trigger keywords: emotional reaction, manage emotions, impulse control, stimulus response, anger management, frustration, overreaction, emotional regulation.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1761,7 +1761,7 @@
       "name": "reality-filter",
       "source": "./reality-filter",
       "description": "Uncertainty labeling, evidence hierarchy, and agent output verification. Activates when using absolute language (always, never, prevents, guarantees), making claims about implementation, or consuming agent/subprocess outputs.",
-      "version": "2.0.0",
+      "version": "2.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1805,7 +1805,7 @@
       "name": "red-team-framework-review",
       "source": "./red-team-framework-review",
       "description": "Systematic adversarial review of strategic frameworks. Challenges assumptions, identifies correlated failure modes, checks demand evidence.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1836,7 +1836,7 @@
       "name": "regret-minimization-framework",
       "source": "./regret-minimization-framework",
       "description": "Evaluate decisions through future regret across time horizons. 10-10-10 rule, action vs inaction regret, minimum regret path. Trigger keywords: regret minimization, 10-10-10 rule, will I regret, future self, long-term decision, life choice.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1848,7 +1848,7 @@
     {
       "name": "repo-flattening",
       "description": "Flatten a two-level category/name directory structure to flat name/ in a git repo.",
-      "version": "1.1",
+      "version": "1.1.1",
       "source": "./repo-flattening",
       "category": "workflow"
     },
@@ -1856,7 +1856,7 @@
       "name": "research",
       "source": "./research",
       "description": "Systematic first-principles research via web search producing actionable knowledge documents with layered summarization (executive summary, highlights, context) and source citations. Decomposes topics, executes parallel searches, and scores discoverability. Auto-activates when researching topics, gathering evidence, or producing research documents. Trigger keywords: research, investigate, deep dive, literature review, evidence gathering, web search, fact check, source verification.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1887,7 +1887,7 @@
       "name": "risk-first-methodology",
       "source": "./risk-first-methodology",
       "description": "Systematic risk management and scenario planning. Define maximum loss BEFORE considering reward; prepare IF-THEN responses instead of predictions. Trigger keywords: risk management, stop loss, position size, risk reward, maximum loss, define risk, risk first, scenario planning, if-then, contingency plan.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1900,7 +1900,7 @@
       "name": "root-cause-investigation",
       "source": "./root-cause-investigation",
       "description": "Dual-mode investigation framework combining Five Whys (systemic root cause analysis from Toyota/IDEO) and Peeling the Onion (psychological layer ex...",
-      "version": "2.0.0",
+      "version": "2.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },

@@ -2,7 +2,7 @@
 name: red-team-framework-review
 description: "Systematic adversarial review of strategic frameworks and thesis documents. Challenges assumptions, identifies correlated failure modes, checks demand evidence, and surfaces survivorship bias. Auto-activates when reviewing strategy documents, competitive positioning, or multi-pillar frameworks. Trigger keywords: red-team, stress-test, challenge assumptions, adversarial review, devil's advocate, what's wrong with this."
 metadata:
-  version: 1.0.0
+  version: "1.0.1"
 ---
 
 # Red-Teaming Strategic Frameworks

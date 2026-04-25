@@ -2,7 +2,7 @@
 name: reality-filter
 description: "Uncertainty labeling, evidence hierarchy, and agent output verification. Activates when using absolute language (always, never, prevents, guarantees), making claims about implementation, or consuming agent/subprocess outputs."
 metadata:
-  version: 2.0.0
+  version: "2.0.1"
 ---
 
 # Reality Filter

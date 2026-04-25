@@ -2,7 +2,7 @@
 name: repo-flattening
 description: "Flatten a two-level category/name directory structure to flat name/ in a git repo. Covers pre-flight collision detection, bulk git mv, updating shell discovery scripts, JSON path registries, and Markdown links. Trigger keywords: flatten directory, remove category dirs, flat structure, restructure repo, two-level to flat."
 metadata:
-  version: "1.1"
+  version: "1.1.1"
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
@@ -116,9 +116,3 @@ If the repo is installed via symlinks (e.g., `install.sh`), run it immediately a
 - **JSON registry version fields** — if the migrated entry has a different version than the file on disk (e.g., from a parallel untracked edit), `check.sh` will flag a version mismatch. Update the registry version to match the file.
 - **Stale symlinks blocking `rmdir`** — `rmdir` may fail on a category dir even after all real files are moved. Dangling symlinks inside won't appear in `git status`. Investigate with `ls -la <dir>/`, `rm` each symlink individually, then retry `rmdir`. Never use `rm -rf` here — if real content is present, you want the explicit failure.
 - **Cross-location collisions (vault variant)** — when flattening a vault with both `vault-ops/<name>` and root `<name>`, two copies may exist at different versions. Resolution: (1) compare `version:` in frontmatter — keep higher semver; (2) if no version, compare `git log --follow` modification date — keep more recent; (3) if identical, delete either. `git rm -r` the losing copy before `git mv` to avoid move conflicts.
-
-## Discovery Context
-
-- **Date**: 2026-04-08
-- **Repo**: `~/src/skills` — 154 skills across 13 category dirs → flat
-- **Collision**: `root-cause-investigation` in both `debugging/` and `general/` — kept `general/` (more complete). `scanned-document-extraction` in `general/` (v1.1.0, tracked) and root (v1.2.0, untracked) — kept root copy.

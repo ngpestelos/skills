@@ -1,11 +1,11 @@
 ---
 name: reaction-gap-practice
 description: "Guides creation of space between emotional trigger and behavioral response using Name-Pause-Choose protocol. Trigger keywords: emotional reaction, manage emotions, impulse control, stimulus response, anger management, frustration, overreaction, emotional regulation."
+metadata:
+  version: "1.0.1"
 ---
 
 # Reaction Gap Practice
-
-"Between stimulus and response there is a space." — Frankl. This skill widens that space.
 
 ## Name-Pause-Choose Protocol
 

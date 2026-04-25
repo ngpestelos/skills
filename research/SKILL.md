@@ -1,8 +1,9 @@
 ---
 name: research
-version: 1.0
 description: "Systematic first-principles research via web search producing actionable knowledge documents with layered summarization (executive summary, highlights, context) and source citations. Decomposes topics, executes parallel searches, and scores discoverability. Auto-activates when researching topics, gathering evidence, or producing research documents. Trigger keywords: research, investigate, deep dive, literature review, evidence gathering, web search, fact check, source verification."
 allowed-tools: Read, Grep, Glob, Bash, WebSearch, WebFetch
+metadata:
+  version: "1.0.1"
 ---
 
 # Structured Research

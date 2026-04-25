@@ -2,6 +2,8 @@
 name: root-cause-investigation
 description: Dual-mode investigation framework combining Five Whys (systemic root cause) and Peeling the Onion (psychological layers) for complete problem diagnosis across technical and human dimensions.
 allowed-tools: Read, Grep, Glob
+metadata:
+  version: "2.0.1"
 ---
 
 # Root Cause Investigation
