@@ -1,6 +1,8 @@
 ---
 name: decision-timing-assessor
 description: Framework for determining optimal decision timing vs. information gathering needs. Auto-activates when evaluating when to decide, assessing reversibility, or considering delayed decisions. Trigger keywords: Type I decision, Type II decision, reversibility, when to decide, gather more information, Fabian strategy.
+metadata:
+  version: "1.0.1"
 ---
 
 # Decision Timing Assessor
@@ -47,8 +49,3 @@ Three questions (2 min): Can this be undone? What happens if I wait a week? What
 ## The Fabian Strategy
 
 Strategic delay when time is on your side. Tactics: "Let me think about it" under pressure, small steps keeping options open, let time erode bad options. Do NOT apply when: genuinely time-limited opportunity, delay has real costs, using delay to avoid discomfort rather than gain advantage.
-
-## Optimization History
-
-- **March 13, 2026**: First pass. Deleted Decision Timing Template, Integration with Other Skills, Common Mistakes, When to Apply, Strategic Wisdom quotes. 350 → 62 lines (82% reduction).
-- **March 17, 2026**: Second pass. Deleted Value of Waiting pseudo-formula (bullets do the work), Option Value table (generic life advice), Key Principles (duplicated framework). Moved 2-min assessment to Quick Mode header for short-circuit. Compressed Fabian Strategy to single paragraph. Removed Step 1 items 3-4 (covered by Step 2 bullets). 62 → 42 lines (32% reduction).

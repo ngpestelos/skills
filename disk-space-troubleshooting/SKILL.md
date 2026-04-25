@@ -2,7 +2,7 @@
 name: disk-space-troubleshooting
 description: "Provides guidance on diagnosing and resolving disk space issues on macOS, particularly for Nix users. Covers Nix garbage collection, cache cleanup, large file discovery, and safe deletion patterns. Trigger keywords: disk full, no space left, NoSpaceLeft, nix-collect-garbage, free space, disk usage, df -h, du -sh, cache cleanup, 100% disk."
 metadata:
-  version: 1.0.0
+  version: "1.0.1"
 ---
 
 # Troubleshooting Disk Space Issues on macOS

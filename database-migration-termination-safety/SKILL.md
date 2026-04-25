@@ -5,12 +5,10 @@ license: MIT
 compatibility: Ruby on Rails with PostgreSQL. Heroku section requires Heroku CLI.
 metadata:
   author: ngpestelos
-  version: "2.0.0"
+  version: "2.0.1"
 ---
 
 # Database Migration Termination Safety
-
-> **Purpose**: Know what happens when migrations are terminated mid-execution, design safe recoverable migrations, and run long migrations on Heroku.
 
 ## Termination Safety Reference
 

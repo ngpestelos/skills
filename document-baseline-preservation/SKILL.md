@@ -1,7 +1,8 @@
 ---
 name: document-baseline-preservation
 description: "Prevents destructive overwrites of important documents. Auto-activates when rewriting, replacing, or substantially editing existing files — especially identity documents (CV, profiles), strategic documents, and any file the user may want to compare versions of. Trigger keywords: rewrite, overwrite, replace, redo, new version, update CV, reframe."
-version: 1.0.0
+metadata:
+  version: "1.0.1"
 ---
 
 # Preserving Document Baselines Before Editing

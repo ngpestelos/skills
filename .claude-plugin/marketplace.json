@@ -755,7 +755,7 @@
       "name": "cyclomatic-complexity-reduction",
       "source": "./cyclomatic-complexity-reduction",
       "description": "Reduce cyclomatic complexity in Ruby methods via early-return extraction, guard unification, and safe attribute access helpers.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -773,7 +773,7 @@
       "name": "database-migration-termination-safety",
       "source": "./database-migration-termination-safety",
       "description": "Guidance on what happens when database migrations are terminated mid-execution, how to design safe recoverable migrations, and running long migrati...",
-      "version": "2.0.0",
+      "version": "2.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -823,7 +823,7 @@
       "name": "decision-timing-assessor",
       "source": "./decision-timing-assessor",
       "description": "Framework for determining optimal decision timing vs. information gathering needs. Auto-activates when evaluating when to decide, assessing reversibility, or considering delayed decisions. Trigger keywords: Type I decision, Type II decision, reversibility, when to decide, gather more information, Fabian strategy.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -836,7 +836,7 @@
       "name": "deployment-readiness",
       "source": "./deployment-readiness",
       "description": "Systematic 5-phase checklist for production deployment: verify completion, prepare commit, create PR, deploy, and monitor.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -855,7 +855,7 @@
       "name": "diagnostic-logging-patterns",
       "source": "./diagnostic-logging-patterns",
       "description": "Strategic diagnostic logging for production debugging. 3-layer logging (controller \u2192 model \u2192 database verification), P0/P1/P2 priority, temporary debug protocol. Trigger keywords: staging bug, test passes production fails, insert_all debugging, parameter not received, debug logging, production debugging, P0 P1 P2 logging.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -868,7 +868,7 @@
       "name": "disk-space-troubleshooting",
       "source": "./disk-space-troubleshooting",
       "description": "Diagnose and resolve disk space issues on macOS with Nix. 5-level cleanup hierarchy from safe Nix GC to caches, with warning signs and Nix-specific symptom table.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -887,7 +887,7 @@
       "name": "dmn-reset",
       "source": "./dmn-reset",
       "description": "5-minute protocol for interrupting racing thoughts through breathwork, physical anchoring, reframing, gratitude, and autosuggestion. Trigger keywords: racing thoughts, attention drift, rumination, can't focus, anxiety spike, DMN reset, Train to Greatness.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -900,7 +900,7 @@
       "name": "document-baseline-preservation",
       "source": "./document-baseline-preservation",
       "description": "Prevents destructive overwrites of important documents. Auto-activates when rewriting, replacing, or substantially editing existing files \u2014 especially identity documents (CV, profiles), strategic documents, and any file the user may want to compare versions of. Trigger keywords: rewrite, overwrite, replace, redo, new version, update CV, reframe.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },

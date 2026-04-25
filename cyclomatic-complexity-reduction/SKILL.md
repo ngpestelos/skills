@@ -2,6 +2,8 @@
 name: cyclomatic-complexity-reduction
 description: "Reduce cyclomatic complexity in Ruby methods via early-return extraction, guard unification, and safe attribute access helpers. Auto-activates when RuboCop flags Metrics/CyclomaticComplexity, refactoring nested conditionals, or reducing CC scores. Trigger keywords: cyclomatic complexity, CC too high, nested conditionals, early return extraction."
 allowed-tools: Read, Grep, Glob, Bash
+metadata:
+  version: "1.0.1"
 ---
 
 # Reducing Cyclomatic Complexity in Ruby Methods
@@ -79,7 +81,3 @@ Extracted methods with 4+ early-return guards often land at CC=8 (limit 7). This
 - Further splitting would scatter related logic across too many methods
 
 Document the tradeoff in the commit message rather than contorting code to hit CC=7.
-
-## Discovery Context
-
-- **2026-03-16**: Extracted from `validate_tenant_context` refactoring (CC=30→4) in `BaseValidationStrategy`. RuboCop `Style/SafeNavigation` suggested `&.` but that would break duck-typing safety. Nil dealer association guard caught by code review agent.

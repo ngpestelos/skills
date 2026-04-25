@@ -1,6 +1,8 @@
 ---
 name: diagnostic-logging-patterns
 description: "Strategic diagnostic logging for production debugging. 3-layer logging (controller → model → database verification), P0/P1/P2 priority, temporary debug protocol. Trigger keywords: staging bug, test passes production fails, insert_all debugging, parameter not received, debug logging, production debugging, P0 P1 P2 logging."
+metadata:
+  version: "1.0.1"
 ---
 
 # Diagnostic Logging Patterns
@@ -59,8 +61,3 @@ end
 2. **Deploy** to staging, reproduce, filter with `grep "[DEBUG]"`
 3. **Analyze** parameter flow, identify gap
 4. **Remove** after root cause identified
-
-## Optimization History
-
-- **March 13, 2026**: Five-step optimizer pass 1. 363 → 105 lines (71%).
-- **April 1, 2026**: Five-step optimizer pass 2. Deleted Layer 3 standalone (duplicate of Layer 2 verification), Log Filtering section (shown in every example), Pattern summaries (code speaks for itself). 105 → 42 lines (60%).

@@ -1,6 +1,8 @@
 ---
 name: dmn-reset
 description: "5-minute protocol for interrupting racing thoughts through breathwork, physical anchoring, reframing, gratitude, and autosuggestion. Trigger keywords: racing thoughts, attention drift, rumination, can't focus, anxiety spike, DMN reset, Train to Greatness."
+metadata:
+  version: "1.0.1"
 ---
 
 # DMN Reset
@@ -26,8 +28,3 @@ Repeat slowly, synchronized with breathing:
 - **Default**: "I am choosing healthy choices toward my goals"
 - **Firefighting**: "I respond with calm systematic thinking"
 - **Recovery**: "I am actively rebuilding my energy and curiosity"
-
-## Optimization History
-
-- **March 13, 2026**: Five-step optimizer pass 1. 368 → 68 lines (82%).
-- **April 1, 2026**: Five-step optimizer pass 2. Deleted DMN intro (restated by protocol), conversational flow (generic), documentation template, 30-day protocol (generic habit), 4/5 principles, source ref. 68 → 22 lines (68%).

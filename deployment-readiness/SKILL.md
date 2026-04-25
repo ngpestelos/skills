@@ -2,7 +2,7 @@
 name: deployment-readiness
 description: "Guides systematic preparation for production deployment when major feature work or test coverage expansion is complete. Automatically activates when discussing deployment readiness, production deployment, commit preparation, pull request creation, or post-deployment monitoring. Trigger keywords: deployment readiness, production deployment, commit preparation, pull request creation, deployment checklist, git commit message, post-deployment monitoring, ready to deploy, uncommitted changes."
 metadata:
-  version: 1.1.0
+  version: "1.1.1"
 ---
 
 # Deployment Readiness
