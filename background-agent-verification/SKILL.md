@@ -2,6 +2,8 @@
 name: background-agent-verification
 description: "Prevents silent work loss from delegated background agents by requiring output verification before proceeding. Covers: agent output verification, rate limit detection, zero-output detection, execution vs reporting scoping, permission blocking, direct fallback execution. Trigger keywords: background agent, agent completed, run_in_background, agent delegation, subagent, rate limit, zero output, agent failed, verify agent output."
 allowed-tools: Read, Grep, Glob, Bash
+metadata:
+  version: "1.0.1"
 ---
 
 # Verifying Background Agent Output
@@ -50,10 +52,3 @@ With many concurrent agents (8+), some get ALL file modification tools auto-deni
 Agent produces detailed plans but creates zero files. Detection: long detailed output but `git status` shows no changes.
 
 **Fix**: Re-launch with Python-only file operations (pathlib + subprocess) or launch in smaller waves (5, then 5).
-
-*Discovery: Feb 7, 2026 — 5 agents scoped as reporters instead of executors; 3 hit rate limits returning "completed" with 0 output. Feb 10, 2026 — 2 of 10 agents had all file tools auto-denied.*
-
-## Optimization History
-
-- **March 13, 2026**: Applied five-step optimizer. 204 → 84 lines (65%).
-- **March 23, 2026**: Five-step optimizer pass 2. Deleted Direct Fallback pattern (obvious from Pattern 1), Verification Checklist table (restated patterns), 4 redundant Key Rules (restated core principles). Merged duplicate-check into Pattern 1. Renumbered 5→4 patterns. 84 → 55 lines (35%).

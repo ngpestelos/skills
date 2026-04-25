@@ -1,6 +1,8 @@
 ---
 name: api-endpoint-metadata-verification
 description: Systematic approach to debugging missing metadata in API integrations. Auto-activates when discussing API response issues, missing attribution, incomplete data, or MCP server debugging. Covers endpoint comparison, response structure verification, and data enrichment patterns. Trigger keywords: API missing metadata, incomplete API response, unknown source, API attribution, export vs detail endpoint, MCP server missing data, enrich API data. (global)
+metadata:
+  version: "1.0.1"
 ---
 
 # API Endpoint Metadata Verification
@@ -54,7 +56,3 @@ grep -l "Unknown Source" output_directory/*.md | wc -l  # Should be 0
 `/highlights/` returned only `['id', 'text', 'book_id', 'updated', 'readwise_url']` — no attribution. Switched to `/export/` (books with nested highlights), enriched each highlight with parent book metadata. Fixed 71 imports.
 
 Reference implementation: `readwise-mcp-server/server.py:886-973`
-
-## Optimization History
-
-- **March 13, 2026**: Applied five-step optimizer. Deleted Purpose blockquote (~2 lines), Trigger section (~5 lines, duplicates frontmatter), Core Principles (~5 lines, merged into key rules), Forbidden Patterns with wrong/right code (~16 lines, merged into key rules), full Readwise example code block (~8 lines, condensed to summary), Output section (~4 lines), Integration section (~8 lines), footer (~2 lines). Preserved methodology steps, comparison table, enrichment pattern, verification. 132 → 58 lines (56%).

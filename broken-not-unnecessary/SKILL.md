@@ -1,7 +1,8 @@
 ---
 name: broken-not-unnecessary
 description: Before deleting or removing a feature that "rarely works" or "never completes," verify WHY it fails. The failure mode often reveals an implementation bug with a fixable root cause rather than a genuine requirement to remove. Trigger keywords: rarely completes, never fires, dead code, delete step, remove feature, noop, informational screen, collects no data, always fails.
-version: 1.1.0
+metadata:
+  version: "1.1.1"
 ---
 
 # Broken Not Unnecessary

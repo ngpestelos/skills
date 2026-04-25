@@ -8,6 +8,8 @@ triggers:
   - "api is shutting down"
   - "service is ending"
 allowed-tools: Read, Write, terminal
+metadata:
+  version: "1.0.1"
 ---
 
 # API Deprecation Migration

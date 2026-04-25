@@ -1,6 +1,8 @@
 ---
 name: anti-vision-builder
 description: "Helps articulate the life you refuse to live - providing negative motivation and decision clarity through explicit rejection of unacceptable outcomes. Based on Dan Koe's framework. Auto-activates when user is unclear about goals, faces decision paralysis, or needs to clarify what they don't want. Trigger keywords: what I don't want, refuse to accept, won't tolerate, worst case, anti-vision, avoid at all costs, line in the sand."
+metadata:
+  version: "1.0.1"
 ---
 
 # Anti-Vision Builder
@@ -34,8 +36,3 @@ TOWARD: Reject immediately
 AWAY: Consider further
 NEUTRAL: Examine more closely
 ```
-
-## Optimization History
-
-- **March 13, 2026**: Five-step optimizer pass 1. 218 → 55 lines (75%).
-- **April 1, 2026**: Five-step optimizer pass 2. Merged Steps 1+2 (future projection + worst realistic = same question). Deleted Core Principle preamble, static examples, daily check-in, 4 of 5 key rules (implicit in prompts). Kept external-focus constraint in Step 5. 55 → 30 lines (45%).

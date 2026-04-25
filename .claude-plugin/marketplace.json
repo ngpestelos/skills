@@ -266,7 +266,7 @@
       "name": "anti-vision-builder",
       "source": "./anti-vision-builder",
       "description": "Helps articulate the life you refuse to live - providing negative motivation and decision clarity through explicit rejection of unacceptable outcomes. Based on Dan Koe's framework. Auto-activates when user is unclear about goals, faces decision paralysis, or needs to clarify what they don't want. Trigger keywords: what I don't want, refuse to accept, won't tolerate, worst case, anti-vision, avoid at all costs, line in the sand.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -279,7 +279,7 @@
       "name": "api-deprecation-migration",
       "source": "./api-deprecation-migration",
       "description": "Migrate a skill to a new API provider when the current service is deprecated or sunsetted.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -292,7 +292,7 @@
       "name": "api-endpoint-metadata-verification",
       "source": "./api-endpoint-metadata-verification",
       "description": "Systematic approach to debugging missing metadata in API integrations. Auto-activates when discussing API response issues, missing attribution, incomplete data, or MCP server debugging. Covers endpoint comparison, response structure verification, and data enrichment patterns. Trigger keywords: API missing metadata, incomplete API response, unknown source, API attribution, export vs detail endpoint, MCP server missing data, enrich API data. (global)",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -318,7 +318,7 @@
       "name": "backend-contract-format-compliance",
       "source": "./backend-contract-format-compliance",
       "description": "Detect and resolve format mismatches between frontend and backend contracts. Save-time normalization, threshold detection, gradual type strengthening. Trigger keywords: format mismatch, wrong format, decimal vs percentage, coordinate format, contract violation, 100x difference, save-time normalization.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -331,7 +331,7 @@
       "name": "background-agent-verification",
       "source": "./background-agent-verification",
       "description": "Prevents silent work loss from delegated background agents by requiring output verification before proceeding. Covers: agent output verification, rate limit detection, zero-output detection, execution vs reporting scoping, permission blocking, direct fallback execution. Trigger keywords: background agent, agent completed, run_in_background, agent delegation, subagent, rate limit, zero output, agent failed, verify agent output.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -370,7 +370,7 @@
       "name": "broken-not-unnecessary",
       "source": "./broken-not-unnecessary",
       "description": "Before deleting or removing a feature that \"rarely works\" or \"never completes,\" verify WHY it fails. The failure mode often reveals an implementation bug with a fixable root cause rather than a genuine requirement to remove. Trigger keywords: rarely completes, never fires, dead code, delete step, remove feature, noop, informational screen, collects no data, always fails.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -383,7 +383,7 @@
       "name": "browser-resource-hints-optimization",
       "source": "./browser-resource-hints-optimization",
       "description": "Provides guidance on using browser resource hints (preconnect, dns-prefetch, preload, prefetch) to optimize page load performance. Auto-activates when discussing CDN performance, external resources, page load optimization, layout head sections, or connection latency. Trigger keywords: preconnect, dns-prefetch, preload, prefetch, resource hints, CDN performance, page load, connection latency, external resources, unpkg, cdnjs, font loading, script loading, layout head, _head.html.erb.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -396,7 +396,7 @@
       "name": "capability-building-roadmap",
       "source": "./capability-building-roadmap",
       "description": "Transforms abstract competence goals into concrete, time-bounded 90-day action plans. Dreyfus assessment, parallel pillar design, time-calibrated scheduling. Trigger keywords: roadmap, skill development, mastery, capability building, action plan for learning, how do I build expertise.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },

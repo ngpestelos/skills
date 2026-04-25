@@ -1,6 +1,8 @@
 ---
 name: backend-contract-format-compliance
 description: "Detect and resolve format mismatches between frontend and backend contracts. Save-time normalization, threshold detection, gradual type strengthening. Trigger keywords: format mismatch, wrong format, decimal vs percentage, coordinate format, contract violation, 100x difference, save-time normalization."
+metadata:
+  version: "1.0.1"
 ---
 
 # Backend Contract Format Compliance
@@ -56,8 +58,3 @@ end
 ```
 
 **Gradual type strengthening**: Phase 1: log mismatches → Phase 2: deprecation warnings → Phase 3: reject invalid formats.
-
-## Optimization History
-
-- **March 13, 2026**: Five-step optimizer pass 1. 138 → 68 lines (51%).
-- **April 1, 2026**: Five-step optimizer pass 2. Deleted symptoms (generic), threshold selection (obvious), dead REFERENCE.md references. 68 → 38 lines (44%).

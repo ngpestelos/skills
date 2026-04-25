@@ -2,6 +2,8 @@
 name: browser-resource-hints-optimization
 description: "Provides guidance on using browser resource hints (preconnect, dns-prefetch, preload, prefetch) to optimize page load performance. Auto-activates when discussing CDN performance, external resources, page load optimization, layout head sections, or connection latency. Trigger keywords: preconnect, dns-prefetch, preload, prefetch, resource hints, CDN performance, page load, connection latency, external resources, unpkg, cdnjs, font loading, script loading, layout head, _head.html.erb."
 allowed-tools: Read, Grep, Glob
+metadata:
+  version: "1.0.1"
 ---
 
 # Browser Resource Hints Optimization
@@ -39,8 +41,3 @@ Saves ~200-400ms per domain on initial page load (DNS ~50-100ms + TCP ~50-100ms 
 - Only preconnect to 2-4 critical domains — browser limits concurrent connections
 - Never place resource hints after stylesheets — browser already blocked on download
 - Missing `crossorigin` on CDN resources means browser can't reuse the connection for CORS fetch
-
-## Optimization History
-
-- **March 13, 2026**: Applied five-step optimizer. 157 → 67 lines (61%).
-- **March 23, 2026**: Five-step optimizer pass 2. Deleted Common External Domains table (project-specific, goes stale — grep views instead) and Violation Detection section (standard grep patterns). 67 → 42 lines (37%).
