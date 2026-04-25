@@ -221,7 +221,7 @@
     {
       "name": "agent-pipeline-design",
       "source": "./agent-pipeline-design",
-      "description": "Architectural patterns for multi-phase agent pipelines that survive context limits, delegate safely, and gate on quality. Applies when designing skills that orchestrate plan→execute→review flows.",
+      "description": "Architectural patterns for multi-phase agent pipelines that survive context limits, delegate safely, and gate on quality. Applies when designing skills that orchestrate plan\u2192execute\u2192review flows.",
       "version": "1.1.1",
       "author": {
         "name": "Nestor Pestelos"
@@ -409,7 +409,7 @@
       "name": "capture-skill",
       "source": "./capture-skill",
       "description": "Extract patterns from the current session into a reusable skill file. Auto-activates when discussing skill creation, pattern extraction, or anti-pattern documentation. Trigger keywords: capture skill, extract pattern, create skill, new skill, anti-pattern.",
-      "version": "1.1.0",
+      "version": "1.2.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -593,7 +593,7 @@
       "name": "commands-audit",
       "source": "./commands-audit",
       "description": "Audit custom commands for structural completeness across global and project scopes. Auto-activates when auditing commands, checking command quality, or inventorying slash commands. Trigger keywords: commands audit, audit commands, command quality, missing usage.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -606,7 +606,7 @@
       "name": "commit",
       "source": "./commit",
       "description": "Organize uncommitted changes into atomic git commits with scope awareness, grouping related files and confirming before including out-of-scope changes. Auto-activates when committing, pushing, or organizing changes. Trigger keywords: commit, git commit, atomic commit, push changes, organize commits, stage files, prepare push, commit workflow.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -722,7 +722,7 @@
     {
       "name": "cutting-identifier",
       "source": "./cutting-identifier",
-      "description": "Identify your cutting — the single decisive action that determines success via scarcity test. Trigger: what's my cutting, decisive action.",
+      "description": "Identify your cutting \u2014 the single decisive action that determines success via scarcity test. Trigger: what's my cutting, decisive action.",
       "version": "1.2.2",
       "author": {
         "name": "Nestor Pestelos"
@@ -854,7 +854,7 @@
     {
       "name": "diagnostic-logging-patterns",
       "source": "./diagnostic-logging-patterns",
-      "description": "Strategic diagnostic logging for production debugging. 3-layer logging (controller → model → database verification), P0/P1/P2 priority, temporary debug protocol. Trigger keywords: staging bug, test passes production fails, insert_all debugging, parameter not received, debug logging, production debugging, P0 P1 P2 logging.",
+      "description": "Strategic diagnostic logging for production debugging. 3-layer logging (controller \u2192 model \u2192 database verification), P0/P1/P2 priority, temporary debug protocol. Trigger keywords: staging bug, test passes production fails, insert_all debugging, parameter not received, debug logging, production debugging, P0 P1 P2 logging.",
       "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
@@ -899,7 +899,7 @@
     {
       "name": "document-baseline-preservation",
       "source": "./document-baseline-preservation",
-      "description": "Prevents destructive overwrites of important documents. Auto-activates when rewriting, replacing, or substantially editing existing files — especially identity documents (CV, profiles), strategic documents, and any file the user may want to compare versions of. Trigger keywords: rewrite, overwrite, replace, redo, new version, update CV, reframe.",
+      "description": "Prevents destructive overwrites of important documents. Auto-activates when rewriting, replacing, or substantially editing existing files \u2014 especially identity documents (CV, profiles), strategic documents, and any file the user may want to compare versions of. Trigger keywords: rewrite, overwrite, replace, redo, new version, update CV, reframe.",
       "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
@@ -1305,7 +1305,7 @@
       "name": "learn",
       "source": "./learn",
       "description": "Extract learnings from the current conversation session and persist them as new skills, memory entries, or workflow improvements. Reviews approaches used, errors resolved, and user corrections to propose actionable changes. Auto-activates when reviewing what was learned, extracting patterns, or persisting session insights. Trigger keywords: learn, session learnings, what did we learn, extract patterns, persist insights, capture learnings, skill proposal.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1527,7 +1527,7 @@
       "name": "onboard",
       "source": "./onboard",
       "description": "Initialize a project with CLAUDE.md, install dependencies, and produce an orientation summary of directory structure and key files. Detects language/framework automatically and skips steps already completed. Auto-activates when onboarding to a new codebase, setting up a project, or generating CLAUDE.md. Trigger keywords: onboard, new project, setup project, CLAUDE.md setup, project orientation, initialize project, codebase setup.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1609,7 +1609,7 @@
     {
       "name": "philippine-cinema-search",
       "source": "./philippine-cinema-search",
-      "description": "Find Philippine movie release dates and cinema info via ClickTheCity — bypasses Google CAPTCHA issues.",
+      "description": "Find Philippine movie release dates and cinema info via ClickTheCity \u2014 bypasses Google CAPTCHA issues.",
       "version": "2.0.1",
       "author": {
         "name": "Nestor Pestelos"
@@ -1779,7 +1779,7 @@
       "name": "recall",
       "source": "./recall",
       "description": "Restore project memory context by reading MEMORY.md and summarizing recent memory additions and modifications within a configurable time window (24h, 2d, 1w, etc.). Groups by type and flags stale candidates. Auto-activates when recalling memory, restoring context, or checking what was learned. Trigger keywords: recall, recall memory, what do I know, memory summary, context restoration, memory inventory, stale memory.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1792,7 +1792,7 @@
       "name": "recap",
       "source": "./recap",
       "description": "Summarize recent git commits for context restoration at session start or after context-switching, grouping by directory or theme and highlighting resume points. Supports configurable time windows (24h, 2d, 1w, etc.). Auto-activates when recapping changes, reviewing recent work, or restoring session context. Trigger keywords: recap, recent changes, what happened, git summary, context restore, session start, pick up where I left off.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1823,7 +1823,7 @@
       "name": "reflect",
       "source": "./reflect",
       "description": "Summarize the current conversation session to answer 'where were we?' after interruptions or complex threads. Reviews progress, decisions, next steps, and open questions for quick re-orientation. Auto-activates when reflecting on session, asking where we left off, or needing orientation. Trigger keywords: reflect, where were we, session summary, what were we doing, catch me up, re-orient, session progress.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -1985,7 +1985,7 @@
     {
       "name": "seasonal-grief-navigator",
       "source": "./seasonal-grief-navigator",
-      "description": "Navigation strategies for calendar-tied grief patterns — anniversary grief and seasonal emotional waves. Navigate vs Fix reframing, achievable peace, external-internal plane separation. Trigger keywords: anniversary grief, seasonal sadness, December difficult, why still sad, everything good but sad, grief calendar, recurring sadness, holiday grief.",
+      "description": "Navigation strategies for calendar-tied grief patterns \u2014 anniversary grief and seasonal emotional waves. Navigate vs Fix reframing, achievable peace, external-internal plane separation. Trigger keywords: anniversary grief, seasonal sadness, December difficult, why still sad, everything good but sad, grief calendar, recurring sadness, holiday grief.",
       "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
@@ -2017,8 +2017,8 @@
     {
       "name": "session",
       "source": "./session",
-      "description": "Structured dump of the current conversation session — files read and written, searches performed, tools invoked, agents spawned, and open items. Omits empty sections for a concise overview. Auto-activates when asking for session summary, context dump, or what tools were used. Trigger keywords: session, session context, session dump, what did we do, files touched, session summary, tools used, context dump.",
-      "version": "1.0.0",
+      "description": "Structured dump of the current conversation session \u2014 files read and written, searches performed, tools invoked, agents spawned, and open items. Omits empty sections for a concise overview. Auto-activates when asking for session summary, context dump, or what tools were used. Trigger keywords: session, session context, session dump, what did we do, files touched, session summary, tools used, context dump.",
+      "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
       },
@@ -2118,7 +2118,7 @@
     {
       "name": "skill-to-prompt-porter",
       "source": "./skill-to-prompt-porter",
-      "description": "Port Claude Code skills into standalone prompts for external LLMs (Grok, ChatGPT, Gemini) — methodology extraction, infrastructure stripping, modality adaptation",
+      "description": "Port Claude Code skills into standalone prompts for external LLMs (Grok, ChatGPT, Gemini) \u2014 methodology extraction, infrastructure stripping, modality adaptation",
       "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
@@ -2131,7 +2131,7 @@
     {
       "name": "skill-tree-generator",
       "source": "./skill-tree-generator",
-      "description": "Generates prerequisite dependency trees for efficiently learning or re-learning a concept. Maps trunk (fundamentals) → branches (core skills) → leaves (applications) with learning sequence and ZPD calibration. Trigger keywords: skill tree, learning path, prerequisites, what do I need to learn first, how to learn, study plan, dependency map, learning order, re-learn, brush up on.",
+      "description": "Generates prerequisite dependency trees for efficiently learning or re-learning a concept. Maps trunk (fundamentals) \u2192 branches (core skills) \u2192 leaves (applications) with learning sequence and ZPD calibration. Trigger keywords: skill tree, learning path, prerequisites, what do I need to learn first, how to learn, study plan, dependency map, learning order, re-learn, brush up on.",
       "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"
@@ -2263,7 +2263,7 @@
     {
       "name": "system-purpose-auditor",
       "source": "./system-purpose-auditor",
-      "description": "Evaluates systems by what they actually DO, not stated intentions — Stafford Beer's POSIWID principle. Diagnoses intention-reality gaps in organizations, habits, and workflows. Trigger keywords: POSIWID, system purpose, intention vs reality, what it actually does, stated vs actual, system audit.",
+      "description": "Evaluates systems by what they actually DO, not stated intentions \u2014 Stafford Beer's POSIWID principle. Diagnoses intention-reality gaps in organizations, habits, and workflows. Trigger keywords: POSIWID, system purpose, intention vs reality, what it actually does, stated vs actual, system audit.",
       "version": "1.0.1",
       "author": {
         "name": "Nestor Pestelos"

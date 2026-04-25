@@ -1,8 +1,9 @@
 ---
 name: capture-skill
-version: 1.2
 description: "Extract patterns from the current session into a reusable skill file. Auto-activates when discussing skill creation, pattern extraction, or anti-pattern documentation. Trigger keywords: capture skill, extract pattern, create skill, new skill, anti-pattern."
 allowed-tools: Read, Grep, Glob, Bash
+metadata:
+  version: "1.2.1"
 ---
 
 # Capture Skill

@@ -1,8 +1,9 @@
 ---
 name: session
-version: 1.0
 description: "Structured dump of the current conversation session — files read and written, searches performed, tools invoked, agents spawned, and open items. Omits empty sections for a concise overview. Auto-activates when asking for session summary, context dump, or what tools were used. Trigger keywords: session, session context, session dump, what did we do, files touched, session summary, tools used, context dump."
 allowed-tools: Read, Grep, Glob, Bash
+metadata:
+  version: "1.0.1"
 ---
 
 # Session Context

@@ -1,8 +1,9 @@
 ---
 name: onboard
-version: 1.0
 description: "Initialize a project with CLAUDE.md, install dependencies, and produce an orientation summary of directory structure and key files. Detects language/framework automatically and skips steps already completed. Auto-activates when onboarding to a new codebase, setting up a project, or generating CLAUDE.md. Trigger keywords: onboard, new project, setup project, CLAUDE.md setup, project orientation, initialize project, codebase setup."
 allowed-tools: Read, Grep, Glob, Bash
+metadata:
+  version: "1.0.1"
 ---
 
 # Project Onboard

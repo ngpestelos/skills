@@ -1,8 +1,9 @@
 ---
 name: recall
-version: 1.0
 description: "Restore project memory context by reading MEMORY.md and summarizing recent memory additions and modifications within a configurable time window (24h, 2d, 1w, etc.). Groups by type and flags stale candidates. Auto-activates when recalling memory, restoring context, or checking what was learned. Trigger keywords: recall, recall memory, what do I know, memory summary, context restoration, memory inventory, stale memory."
 allowed-tools: Read, Grep, Glob, Bash
+metadata:
+  version: "1.0.1"
 ---
 
 # Memory Recall

@@ -1,8 +1,9 @@
 ---
 name: commands-audit
-version: 1.1
 description: "Audit custom commands for structural completeness across global and project scopes. Auto-activates when auditing commands, checking command quality, or inventorying slash commands. Trigger keywords: commands audit, audit commands, command quality, missing usage."
 allowed-tools: Read, Grep, Glob, Bash
+metadata:
+  version: "1.1.1"
 ---
 
 # Commands Audit
