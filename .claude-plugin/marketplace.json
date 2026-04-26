@@ -1187,6 +1187,19 @@
       "license": "MIT"
     },
     {
+      "name": "hermes-profile-continuity",
+      "source": "./hermes-profile-continuity",
+      "description": "Add cross-session state to a Hermes profile so it stops re-doing work or re-flagging the same issues every restart. For monitoring, observation, or stateful agent roles where a fresh wake-up means losing context that the model needs in order to compare across time. Trigger keywords: hermes profile memory, cross-session state, re-flagging gaps, persistent state, profile continuity, monitoring state, OODA state, profile state file.",
+      "version": "1.1.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "hermes",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
       "name": "hermes-profile-credential-resolution",
       "source": "./hermes-profile-credential-resolution",
       "description": "Resolve credential location mismatches when Hermes profiles use profile-specific .env files but scripts/tools look in default locations. Handles firecrawl and other API key resolution issues.",
