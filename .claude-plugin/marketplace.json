@@ -1213,6 +1213,19 @@
       "license": "MIT"
     },
     {
+      "name": "hermes-profile-review",
+      "source": "./hermes-profile-review",
+      "description": "Structured review workflow for an existing Hermes profile: discovery, tier findings by severity, surface to user, execute approved subset. Use when asked to review/audit/check a Hermes profile (SOUL.md + runtime + cron + skills referenced). Distinct from hermes-profile-creation (new profile) and hermes-profile-continuity (adding state). Trigger keywords: review profile, audit profile, review SOUL.md, check profile, hermes profile review, profile drift, review <name>, audit <name>.",
+      "version": "1.1.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "hermes",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
       "name": "hermes-profile-skill-awareness",
       "source": "./hermes-profile-skill-awareness",
       "description": "Make a Hermes profile aware of a skill that lives in a project repository. Updates profile SOUL.md with skill documentation, invocation patterns, and key features.",
