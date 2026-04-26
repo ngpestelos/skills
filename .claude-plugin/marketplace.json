@@ -1226,6 +1226,19 @@
       "license": "MIT"
     },
     {
+      "name": "hermes-profile-role-adaptation",
+      "source": "./hermes-profile-role-adaptation",
+      "description": "When porting a pattern (Output Style, state protocol, cron) between Hermes profiles, adapt for the target role's modes and privacy boundaries — don't paste verbatim from Selma/Sensei. Use when cloning Selma's structure to a new profile, when a profile has multiple operational modes with different format needs, or when private/sacred content shouldn't leak into git-tracked state. Trigger keywords: profile pattern porting, cross-profile, role adaptation, mode-aware output, privacy scoping, sacred mode, paste verbatim, mirror profile.",
+      "version": "1.1.0",
+      "author": {
+        "name": "Nestor Pestelos"
+      },
+      "keywords": [],
+      "category": "hermes",
+      "homepage": "https://github.com/ngpestelos/skills",
+      "license": "MIT"
+    },
+    {
       "name": "hermes-profile-skill-awareness",
       "source": "./hermes-profile-skill-awareness",
       "description": "Make a Hermes profile aware of a skill that lives in a project repository. Updates profile SOUL.md with skill documentation, invocation patterns, and key features.",
