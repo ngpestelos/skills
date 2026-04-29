@@ -1,8 +1,8 @@
 ---
 name: nix-darwin-multi-user
-description: "Guides multi-user nix-darwin configuration with home-manager. Auto-activates when adding users, configuring home-manager for multiple accounts, or troubleshooting per-user activation. Covers mkDarwinConfig, sharedSystemModule, activation scripts, home-manager file conflicts, dotted-username flake key escaping, portable rebuild helper. Trigger keywords: multi-user, usernames, mkDarwinConfig, sharedSystemModule, home-manager activation, users.users, agent user, second user, per-user, activation script, .zshrc conflict, unmanaged file, darwin-rebuild alias, rebuild script, flake attribute dots, dotted username, hostname-user output."
+description: "Guides multi-user nix-darwin configuration with home-manager. Auto-activates when adding users, configuring home-manager for multiple accounts, or troubleshooting per-user activation. Covers mkDarwinConfig, sharedSystemModule, activation scripts, home-manager file conflicts, dotted-username flake key escaping, portable rebuild helper, per-user package breakage. Trigger keywords: multi-user, usernames, mkDarwinConfig, sharedSystemModule, home-manager activation, users.users, agent user, second user, per-user, activation script, .zshrc conflict, unmanaged file, darwin-rebuild alias, rebuild script, flake attribute dots, dotted username, hostname-user output, per-user package disappears, direnv hook broken, fasd hook broken, shell init eval, environment.systemPackages, no such file or directory direnv."
 metadata:
-  version: "1.1.1"
+  version: "1.2.0"
 ---
 
 # Configuring Multi-User nix-darwin Systems
@@ -152,6 +152,40 @@ ascalon-agent_nestor_pestelos = mkDarwinConfig { activeUser = "agent.nestor.pest
 ```
 
 Symptom error: `flake does not provide attribute 'darwinConfigurations.ascalon-agent.nestor.pestelos.system'`.
+
+### Per-user package breakage when the other user rebuilds
+
+**Symptom**: `_direnv_hook:2: no such file or directory: /etc/profiles/per-user/<user>/bin/direnv` (or same for `fasd`, `starship`, etc.) on every prompt after the other user ran `rebuild`.
+
+**Root cause**: `home-manager.useUserPackages = true` stores each user's packages at `/etc/profiles/per-user/<user>/`. Each flake output only applies home-manager for one `activeUser`. When user B rebuilds, nix-darwin replaces `/etc/static` with a store path containing only user B's profile — removing user A's `/etc/profiles/per-user/<user>/` symlink entirely.
+
+Secondary: tools like `direnv` and `fasd` embed their own absolute path when generating their shell hook (`direnv hook zsh` uses `os.Executable()`). After the profile disappears, the hardcoded path in `_direnv_hook` / `_fasd_hook` no longer exists.
+
+**Fix**: Move shared shell-init binaries from `home.packages` to `environment.systemPackages` in `sharedSystemModule`. The system path `/run/current-system/sw/bin/<binary>` is always present after any rebuild since `sharedSystemModule` is included in every flake output.
+
+```nix
+# sharedSystemModule — add after environment.systemPath block
+environment.systemPackages = with pkgs; [ direnv fasd ];
+```
+
+Remove the same binaries from `home.packages` in `mkUserConfig` to avoid redundancy.
+
+Also guard any `eval` in `initContent` that embeds a path:
+
+```nix
+initContent = ''
+  if command -v direnv >/dev/null 2>&1; then
+    eval "$(direnv hook zsh)"
+  fi
+  if command -v fasd >/dev/null 2>&1; then
+    eval "$(fasd --init auto)"
+  fi
+'';
+```
+
+**Which binaries to move**: Any binary that (a) is in `home.packages`, (b) is unconditionally eval'd in `initContent`, and (c) both users need. Binaries with user-specific config or data dirs (redis, postgres, mlx-lm) stay per-user.
+
+**After fix**: existing shells retain the broken hook in memory — close and reopen them. New shells will use `/run/current-system/sw/bin/<binary>` going forward.
 
 ### Rebuild alias/script bootstrap chicken-and-egg
 
