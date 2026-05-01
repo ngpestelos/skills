@@ -6,7 +6,7 @@ allowed-tools:
   - Read
   - Grep
 metadata:
-  version: "1.0.1"
+  version: "1.1.0"
 ---
 
 > **Problem:** Hermes stores credentials in profile-specific `.env` files (`~/.hermes/profiles/<profile>/.env`), but scripts and tools often look in the default location (`~/.hermes/.env`), causing "API key not found" errors even when credentials are configured.
@@ -72,6 +72,19 @@ done
 | `~/.hermes/.env` | Default Hermes env (may be empty or missing) |
 | `~/.agents/skills/` | Skills installed via `npx skills add` |
 | `~/src/skills/` | Hermes skill search path |
+
+## Gateway Invocation Form Affects Env Resolution
+
+The launchd plist's `ProgramArguments` determines which `.env` the gateway loads:
+
+| Invocation                       | Env file loaded                          |
+|----------------------------------|------------------------------------------|
+| `hermes gateway run` (no flag)   | `~/.hermes/.env`                         |
+| `hermes -p <name> gateway run`   | `~/.hermes/profiles/<name>/.env`         |
+
+**Before adding/removing `-p <name>` in a launchd plist**, verify the target `.env` exists. Switching forms without migrating the env file makes the gateway start, fail to load tokens, and crash with errors like `[Discord] No bot token configured` — KeepAlive then restart-loops it.
+
+A given profile config in `hermes-config/profiles/<name>/` can be deployed in either form depending on the machine — default-form on machines where it's the only/primary profile (top-level `~/.hermes/config.yaml` symlink), named-profile form on machines where it runs alongside others (`hermes profile create <name>`). Per-machine memory like `project_hermes_profiles.md` documents which form is active where — read it before changing the launchd invocation.
 
 ## See Also
 
